@@ -1,0 +1,9 @@
+H:\KhachHang\TQK_BinhDuong\QuanLyKho\bin\Debug\QuanLyKho.exe
+H:\KhachHang\TQK_BinhDuong\QuanLyKho\bin\Debug\QuanLyKho.pdb
+H:\KhachHang\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\ResolveAssemblyReference.cache
+H:\KhachHang\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\QuanLyKho.Properties.Resources.resources
+H:\KhachHang\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+H:\KhachHang\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+H:\KhachHang\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\QuanLyKho.exe
+H:\KhachHang\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\QuanLyKho.pdb
+H:\KhachHang\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\QuanLyKho.FrmMain.resources
