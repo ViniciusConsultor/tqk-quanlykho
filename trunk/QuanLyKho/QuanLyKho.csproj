@@ -59,6 +59,18 @@
     <Compile Include="FrmNhanVien.Designer.cs">
       <DependentUpon>FrmNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmThayDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThayDoiMatKhau.Designer.cs">
+      <DependentUpon>FrmThayDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTTDoanhNghiep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTTDoanhNghiep.Designer.cs">
+      <DependentUpon>FrmTTDoanhNghiep.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmMain.resx">
@@ -66,6 +78,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNhanVien.resx">
       <DependentUpon>FrmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThayDoiMatKhau.resx">
+      <DependentUpon>FrmThayDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTTDoanhNghiep.resx">
+      <DependentUpon>FrmTTDoanhNghiep.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -89,6 +107,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LM.ico" />
+    <None Include="Resources\157_GetPermission_48x48_72.png" />
+    <None Include="Resources\1415_Paintbrush_256x256.png" />
+    <None Include="Resources\Connection.png" />
     <None Include="Resources\2uparrow.png" />
     <None Include="Resources\1downarrow.png" />
     <None Include="Resources\2dowarrow.png" />

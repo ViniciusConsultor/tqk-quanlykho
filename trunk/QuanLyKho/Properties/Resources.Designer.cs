@@ -74,9 +74,23 @@ namespace QuanLyKho.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap _1415_Paintbrush_256x256 {
+            get {
+                object obj = ResourceManager.GetObject("1415_Paintbrush_256x256", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap _1447_eraser_48x48 {
             get {
                 object obj = ResourceManager.GetObject("1447_eraser_48x48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap _157_GetPermission_48x48_72 {
+            get {
+                object obj = ResourceManager.GetObject("157_GetPermission_48x48_72", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -140,6 +154,13 @@ namespace QuanLyKho.Properties {
         internal static System.Drawing.Bitmap CongNoGroup {
             get {
                 object obj = ResourceManager.GetObject("CongNoGroup", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Connection {
+            get {
+                object obj = ResourceManager.GetObject("Connection", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

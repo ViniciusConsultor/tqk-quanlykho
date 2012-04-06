@@ -65,5 +65,17 @@ namespace QuanLyKho
             
         }
 
+        private void btnDoanhNghiep_Click(object sender, EventArgs e)
+        {
+            FrmTTDoanhNghiep frmDoanhNghiep = new FrmTTDoanhNghiep();
+            frmDoanhNghiep.ShowDialog();
+        }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            FrmThayDoiMatKhau frmThayDoiMatKhau = new FrmThayDoiMatKhau();
+            frmThayDoiMatKhau.ShowDialog();
+        }
+
     }
 }
