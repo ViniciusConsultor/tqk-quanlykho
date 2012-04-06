@@ -36,6 +36,7 @@
     <ApplicationIcon>LM.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=10.2.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar2, Version=10.2.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.Instrumentation, Version=10.2.0.1, Culture=neutral, PublicKeyToken=bc4a9d761ea44ef0, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -52,10 +53,19 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNhanVien.Designer.cs">
+      <DependentUpon>FrmNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNhanVien.resx">
+      <DependentUpon>FrmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,6 +89,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LM.ico" />
+    <None Include="Resources\2uparrow.png" />
+    <None Include="Resources\1downarrow.png" />
+    <None Include="Resources\2dowarrow.png" />
+    <None Include="Resources\1downarrow11.png" />
+    <None Include="Resources\1downarrow1.png" />
+    <None Include="Resources\DangNhapLai.png" />
+    <None Include="Resources\ex.png" />
+    <None Include="Resources\112_Minus_Green_16x16_72.png" />
+    <None Include="Resources\Rename.png" />
+    <None Include="Resources\112_Plus_Green_16x16_72.png" />
     <None Include="Resources\networkexplorer_dll_21_101.png" />
     <None Include="Resources\networkexplorer_dll_21_10.png" />
     <None Include="Resources\info.png" />
