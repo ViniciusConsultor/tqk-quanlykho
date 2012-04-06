@@ -60,9 +60,58 @@ namespace QuanLyKho.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap _112_Minus_Green_16x16_72 {
+            get {
+                object obj = ResourceManager.GetObject("112_Minus_Green_16x16_72", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap _112_Plus_Green_16x16_72 {
+            get {
+                object obj = ResourceManager.GetObject("112_Plus_Green_16x16_72", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap _1447_eraser_48x48 {
             get {
                 object obj = ResourceManager.GetObject("1447_eraser_48x48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap _1downarrow {
+            get {
+                object obj = ResourceManager.GetObject("1downarrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap _1downarrow1 {
+            get {
+                object obj = ResourceManager.GetObject("1downarrow1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap _1downarrow11 {
+            get {
+                object obj = ResourceManager.GetObject("1downarrow11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap _2dowarrow {
+            get {
+                object obj = ResourceManager.GetObject("2dowarrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap _2uparrow {
+            get {
+                object obj = ResourceManager.GetObject("2uparrow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -95,6 +144,13 @@ namespace QuanLyKho.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap DangNhapLai {
+            get {
+                object obj = ResourceManager.GetObject("DangNhapLai", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap db_comit {
             get {
                 object obj = ResourceManager.GetObject("db_comit", resourceCulture);
@@ -119,6 +175,13 @@ namespace QuanLyKho.Properties {
         internal static System.Drawing.Bitmap docgia {
             get {
                 object obj = ResourceManager.GetObject("docgia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ex {
+            get {
+                object obj = ResourceManager.GetObject("ex", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -210,6 +273,13 @@ namespace QuanLyKho.Properties {
         internal static System.Drawing.Bitmap PhanQuyenSuDungNhapLieu {
             get {
                 object obj = ResourceManager.GetObject("PhanQuyenSuDungNhapLieu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Rename {
+            get {
+                object obj = ResourceManager.GetObject("Rename", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
