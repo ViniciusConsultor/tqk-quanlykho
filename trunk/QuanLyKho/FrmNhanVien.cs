@@ -15,5 +15,10 @@ namespace QuanLyKho
         {
             InitializeComponent();
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Function.CloseForm();
+        }
     }
 }

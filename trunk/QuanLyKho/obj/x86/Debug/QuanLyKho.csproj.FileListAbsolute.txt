@@ -10,3 +10,4 @@ H:\KhachHang\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\QuanLyKho.exe
 H:\KhachHang\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\QuanLyKho.pdb
 H:\KhachHang\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\QuanLyKho.FrmTTDoanhNghiep.resources
 H:\KhachHang\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\QuanLyKho.FrmThayDoiMatKhau.resources
+H:\KhachHang\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\QuanLyKho.FrmLogin.resources

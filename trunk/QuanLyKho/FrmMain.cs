@@ -24,29 +24,39 @@ namespace QuanLyKho
                 if (tabControlName.Tabs[i].Name == tabName)
                 {
                     re = i;
-                    break;
+                    return re;
                 }
             }
             return re;
         }
 
-        void TabCreating(string strTextSuperTabItem, string strNameSuperTabItem, string strNameSuperTabControlPanel, Office2007RibbonForm Form)
+        void CreateTab(SuperTabControl tabControlName, string strTextSuperTabItem, string strNameSuperTabItem, string strNameSuperTabControlPanel, Office2007RibbonForm Form)
         {
-            SuperTabItem sti = new SuperTabItem();
-            sti.Name = strNameSuperTabItem;
-            sti.Text = strTextSuperTabItem;
-            SuperTabControlPanel stcp = new SuperTabControlPanel();
-            stcp.Name = strNameSuperTabControlPanel;
-            stcp.Dock = DockStyle.Fill;
-            stcMenu.Controls.Add(stcp);
-            sti.AttachedControl = stcp;
-            stcMenu.SelectedPanel = stcp;
-            stcMenu.Tabs.Add(sti);
-            Form.TopLevel = false;
-            Form.Parent = stcp;
-            Form.Show();
-            Form.Dock = DockStyle.Fill;
-            stcMenu.SelectedTab = sti;
+            int intCheck = CheckExist(tabControlName, strNameSuperTabItem);
+            if (intCheck > -1)
+            {
+                tabControlName.SelectedTabIndex = intCheck;
+                Variable.stiSelected = tabControlName.SelectedTab;
+            }
+            else
+            {
+                SuperTabItem sti = new SuperTabItem();
+                sti.Name = strNameSuperTabItem;
+                sti.Text = strTextSuperTabItem;
+                SuperTabControlPanel stcp = new SuperTabControlPanel();
+                stcp.Name = strNameSuperTabControlPanel;
+                stcp.Dock = DockStyle.Fill;
+                tabControlName.Controls.Add(stcp);
+                sti.AttachedControl = stcp;
+                tabControlName.SelectedPanel = stcp;
+                tabControlName.Tabs.Add(sti);
+                Form.TopLevel = false;
+                Form.Parent = stcp;
+                Form.Show();
+                Form.Dock = DockStyle.Fill;
+                tabControlName.SelectedTab = sti;
+                Variable.stiSelected = sti;
+            }
         }
 
         private void btnNhapKho_Click(object sender, EventArgs e)
@@ -57,7 +67,7 @@ namespace QuanLyKho
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
             FrmNhanVien frm = new FrmNhanVien();
-            TabCreating("Nhân Viên", "stiNhanVien", "stcpNhanVien", frm);
+            CreateTab(stcMenu ,"Nhân Viên", "stiNhanVien", "stcpNhanVien", frm);            
         }
 
         private void btnBoPhan_Click(object sender, EventArgs e)
@@ -77,5 +87,17 @@ namespace QuanLyKho
             frmThayDoiMatKhau.ShowDialog();
         }
 
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            lbNgayThang.Text = "Hôm nay là ngày : " + DateTime.Today.ToShortDateString();
+            FrmLogin frmLogin = new FrmLogin();
+            frmLogin.ShowDialog();
+        }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            FrmLogin frmLogin = new FrmLogin();
+            frmLogin.ShowDialog();
+        }
     }
 }
