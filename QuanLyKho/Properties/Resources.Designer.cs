@@ -60,6 +60,13 @@ namespace QuanLyKho.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap _112_DownArrowShort_Blue_32x32_72 {
+            get {
+                object obj = ResourceManager.GetObject("112_DownArrowShort_Blue_32x32_72", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap _112_Minus_Green_16x16_72 {
             get {
                 object obj = ResourceManager.GetObject("112_Minus_Green_16x16_72", resourceCulture);
@@ -70,6 +77,20 @@ namespace QuanLyKho.Properties {
         internal static System.Drawing.Bitmap _112_Plus_Green_16x16_72 {
             get {
                 object obj = ResourceManager.GetObject("112_Plus_Green_16x16_72", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap _112_UpArrowShort_Blue_32x32_72 {
+            get {
+                object obj = ResourceManager.GetObject("112_UpArrowShort_Blue_32x32_72", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap _138_PushPin_32x32_72 {
+            get {
+                object obj = ResourceManager.GetObject("138_PushPin_32x32_72", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +137,13 @@ namespace QuanLyKho.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap _2608_GoldLock_48x48 {
+            get {
+                object obj = ResourceManager.GetObject("2608_GoldLock_48x48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap _2dowarrow {
             get {
                 object obj = ResourceManager.GetObject("2dowarrow", resourceCulture);
@@ -140,6 +168,20 @@ namespace QuanLyKho.Properties {
         internal static System.Drawing.Bitmap book {
             get {
                 object obj = ResourceManager.GetObject("book", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap bophan__3_ {
+            get {
+                object obj = ResourceManager.GetObject("bophan (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap CongCu {
+            get {
+                object obj = ResourceManager.GetObject("CongCu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +238,20 @@ namespace QuanLyKho.Properties {
         internal static System.Drawing.Bitmap docgia {
             get {
                 object obj = ResourceManager.GetObject("docgia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap DoiMatKhau {
+            get {
+                object obj = ResourceManager.GetObject("DoiMatKhau", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Encrypt {
+            get {
+                object obj = ResourceManager.GetObject("Encrypt", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,6 +319,13 @@ namespace QuanLyKho.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Network_ConnectTo {
+            get {
+                object obj = ResourceManager.GetObject("Network_ConnectTo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap networkexplorer_dll_21_10 {
             get {
                 object obj = ResourceManager.GetObject("networkexplorer_dll_21_10", resourceCulture);
@@ -273,6 +336,13 @@ namespace QuanLyKho.Properties {
         internal static System.Drawing.Bitmap networkexplorer_dll_21_101 {
             get {
                 object obj = ResourceManager.GetObject("networkexplorer_dll_21_101", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap NganHang {
+            get {
+                object obj = ResourceManager.GetObject("NganHang", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -336,6 +406,13 @@ namespace QuanLyKho.Properties {
         internal static System.Drawing.Bitmap ThuChiGroup {
             get {
                 object obj = ResourceManager.GetObject("ThuChiGroup", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap wab_exe_10_13 {
+            get {
+                object obj = ResourceManager.GetObject("wab_exe_10_13", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

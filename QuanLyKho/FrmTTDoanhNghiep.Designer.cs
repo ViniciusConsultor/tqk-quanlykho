@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.labelX9 = new DevComponents.DotNetBar.LabelX();
             this.textBoxX7 = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -48,24 +47,10 @@
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.btnThoat = new DevComponents.DotNetBar.ButtonX();
             this.btnOK = new DevComponents.DotNetBar.ButtonX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // labelX1
-            // 
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelX1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelX1.Location = new System.Drawing.Point(0, 0);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(399, 29);
-            this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "Thông Tin Công Ty";
-            this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // groupPanel1
             // 
@@ -87,7 +72,7 @@
             this.groupPanel1.Controls.Add(this.labelX3);
             this.groupPanel1.Controls.Add(this.labelX2);
             this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupPanel1.Location = new System.Drawing.Point(0, 29);
+            this.groupPanel1.Location = new System.Drawing.Point(0, 42);
             this.groupPanel1.Name = "groupPanel1";
             this.groupPanel1.Size = new System.Drawing.Size(399, 238);
             // 
@@ -315,7 +300,7 @@
             this.groupPanel2.Controls.Add(this.btnThoat);
             this.groupPanel2.Controls.Add(this.btnOK);
             this.groupPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupPanel2.Location = new System.Drawing.Point(0, 267);
+            this.groupPanel2.Location = new System.Drawing.Point(0, 280);
             this.groupPanel2.Name = "groupPanel2";
             this.groupPanel2.Size = new System.Drawing.Size(399, 38);
             // 
@@ -352,6 +337,7 @@
             // 
             this.btnThoat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnThoat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.Image = global::QuanLyKho.Properties.Resources.DeleteAll;
             this.btnThoat.Location = new System.Drawing.Point(207, 7);
             this.btnThoat.Name = "btnThoat";
@@ -372,9 +358,27 @@
             this.btnOK.TabIndex = 0;
             this.btnOK.Text = "OK";
             // 
+            // labelX1
+            // 
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelX1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelX1.Image = global::QuanLyKho.Properties.Resources.NganHang;
+            this.labelX1.Location = new System.Drawing.Point(0, 0);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.PaddingLeft = 75;
+            this.labelX1.Size = new System.Drawing.Size(399, 42);
+            this.labelX1.TabIndex = 0;
+            this.labelX1.Text = "  Thông Tin Công Ty";
+            // 
             // FrmTTDoanhNghiep
             // 
-            this.ClientSize = new System.Drawing.Size(399, 305);
+            this.AcceptButton = this.btnOK;
+            this.CancelButton = this.btnThoat;
+            this.ClientSize = new System.Drawing.Size(399, 318);
             this.Controls.Add(this.groupPanel2);
             this.Controls.Add(this.groupPanel1);
             this.Controls.Add(this.labelX1);
