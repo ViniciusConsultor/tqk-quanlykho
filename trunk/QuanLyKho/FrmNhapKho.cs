@@ -15,5 +15,11 @@ namespace QuanLyKho
         {
             InitializeComponent();
         }
+
+        private void FrmNhapKho_Load(object sender, EventArgs e)
+        {
+
+
+        }
     }
 }
