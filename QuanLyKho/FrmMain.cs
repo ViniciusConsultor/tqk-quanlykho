@@ -18,16 +18,16 @@ namespace QuanLyKho
 
         int CheckExist(SuperTabControl tabControlName, string tabName)
         {
-            int re = -1;
+            int intIndex = -1;
             for (int i = 0; i < tabControlName.Tabs.Count; i++)
             {
                 if (tabControlName.Tabs[i].Name == tabName)
                 {
-                    re = i;
-                    return re;
+                    intIndex = i;
+                    return intIndex;
                 }
             }
-            return re;
+            return intIndex;
         }
 
         void CreateTab(SuperTabControl tabControlName, string strTextSuperTabItem, string strNameSuperTabItem, string strNameSuperTabControlPanel, Office2007RibbonForm Form)
@@ -61,7 +61,8 @@ namespace QuanLyKho
 
         private void btnNhapKho_Click(object sender, EventArgs e)
         {
-
+            FrmNhapKho frm = new FrmNhapKho();
+            CreateTab(stcMenu, "Nhập Kho", "stiNhapKho", "stcpNhapKho", frm);
         }
 
         private void btnNhanVien_Click(object sender, EventArgs e)
@@ -72,7 +73,8 @@ namespace QuanLyKho
 
         private void btnBoPhan_Click(object sender, EventArgs e)
         {
-            
+            FrmBoPhan frm = new FrmBoPhan();
+            CreateTab(stcMenu, "Bộ Phận", "stiBoPhan", "stcpBoPhan", frm);
         }
 
         private void btnDoanhNghiep_Click(object sender, EventArgs e)
@@ -98,6 +100,64 @@ namespace QuanLyKho
         {
             FrmLogin frmLogin = new FrmLogin();
             frmLogin.ShowDialog();
+        }
+
+        private void btnNhomHang_Click(object sender, EventArgs e)
+        {
+            FrmNhomHang frm = new FrmNhomHang();
+            CreateTab(stcMenu, "Nhóm Hàng", "stiNhomHang", "stcpNhomHang", frm);
+        }
+
+        private void btnKhoHang_Click(object sender, EventArgs e)
+        {
+            FrmKhoHang frm = new FrmKhoHang();
+            CreateTab(stcMenu, "Kho Hàng", "stiKhoHang", "stcpKhoHang", frm);
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            FrmLogin frmLogin = new FrmLogin();
+            frmLogin.ShowDialog();
+        }
+
+        private void btnDoiMatKhau_Click(object sender, EventArgs e)
+        {
+            FrmThayDoiMatKhau frmThayDoiMatKhau = new FrmThayDoiMatKhau();
+            frmThayDoiMatKhau.ShowDialog();
+        }
+
+        private void btnThoatX_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMatHang_Click(object sender, EventArgs e)
+        {
+            FrmMatHang frm = new FrmMatHang();
+            CreateTab(stcMenu, "Mặt Hàng", "stiMatHang", "stcpMatHang", frm);
+        }
+
+        private void btnDonViTinh_Click(object sender, EventArgs e)
+        {
+            FrmDonViTinh frm = new FrmDonViTinh();
+            CreateTab(stcMenu, "Đơn Vị Tính", "stiDonViTinh", "stcpDonViTinh", frm);
+        }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+            FrmKhachHang frm = new FrmKhachHang();
+            CreateTab(stcMenu, "Khách Hàng", "stiKhachHang", "stcpKhachHang", frm);
+        }
+
+        private void btnNhaCungCap_Click(object sender, EventArgs e)
+        {
+            FrmNhaCungCap frm = new FrmNhaCungCap();
+            CreateTab(stcMenu, "Nhà Cung Cấp", "stiNhaCungCap", "stcpNhaCungCap", frm);
         }
     }
 }

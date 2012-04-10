@@ -51,6 +51,7 @@
     <ApplicationIcon>LM.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Keyboard, Version=10.2.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=10.2.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar2, Version=10.2.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.Instrumentation, Version=10.2.0.1, Culture=neutral, PublicKeyToken=bc4a9d761ea44ef0, processorArchitecture=MSIL" />
@@ -62,6 +63,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmBoPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBoPhan.Designer.cs">
+      <DependentUpon>FrmBoPhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDonViTinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDonViTinh.Designer.cs">
+      <DependentUpon>FrmDonViTinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKhachHang.Designer.cs">
+      <DependentUpon>FrmKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKhoHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKhoHang.Designer.cs">
+      <DependentUpon>FrmKhoHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,11 +99,35 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMatHang.Designer.cs">
+      <DependentUpon>FrmMatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNhaCungCap.Designer.cs">
+      <DependentUpon>FrmNhaCungCap.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmNhanVien.Designer.cs">
       <DependentUpon>FrmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNhapKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNhapKho.Designer.cs">
+      <DependentUpon>FrmNhapKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNhomHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNhomHang.Designer.cs">
+      <DependentUpon>FrmNhomHang.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmThayDoiMatKhau.cs">
       <SubType>Form</SubType>
@@ -96,14 +145,38 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Variable.cs" />
+    <EmbeddedResource Include="FrmBoPhan.resx">
+      <DependentUpon>FrmBoPhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDonViTinh.resx">
+      <DependentUpon>FrmDonViTinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKhachHang.resx">
+      <DependentUpon>FrmKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKhoHang.resx">
+      <DependentUpon>FrmKhoHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMatHang.resx">
+      <DependentUpon>FrmMatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNhaCungCap.resx">
+      <DependentUpon>FrmNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmNhanVien.resx">
       <DependentUpon>FrmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNhapKho.resx">
+      <DependentUpon>FrmNhapKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNhomHang.resx">
+      <DependentUpon>FrmNhomHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmThayDoiMatKhau.resx">
       <DependentUpon>FrmThayDoiMatKhau.cs</DependentUpon>
@@ -121,6 +194,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -13,12 +13,17 @@ namespace QuanLyKho
     {
         public FrmNhanVien()
         {
-            InitializeComponent();
+            InitializeComponent();           
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Function.CloseForm();
+        }
+
+        private void FrmNhanVien_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
