@@ -14,14 +14,6 @@ namespace DTO
             set { _maKho = value; }
         }
 
-        private string _maNV;
-
-        public string MaNV
-        {
-            get { return _maNV; }
-            set { _maNV = value; }
-        }
-
         private string _tenKho;
 
         public string TenKho

@@ -14,14 +14,6 @@ namespace DTO
             set { _maNCC = value; }
         }
 
-        private string _maKV;
-
-        public string MaKV
-        {
-            get { return _maKV; }
-            set { _maKV = value; }
-        }
-
         private string _tenNCC;
 
         public string TenNCC

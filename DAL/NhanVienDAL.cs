@@ -15,10 +15,9 @@ namespace DAL
             string strQuery = "Insert Into NHANVIEN Values(";
             strQuery += "N" + dtoNhanVien.MaNV + "',";
             strQuery += "N" + dtoNhanVien.MaBP + "',";
-            strQuery += "N" + dtoNhanVien.UserName + "',";
-            strQuery += "N" + dtoNhanVien.PassWord + "',";
-            strQuery += "N" + dtoNhanVien.ChucVu + "',";
             strQuery += "N" + dtoNhanVien.TenNV + "',";
+            strQuery += "N" + dtoNhanVien.MatKhau + "',";
+            strQuery += "N" + dtoNhanVien.ChucVu + "',";
             strQuery += "N" + dtoNhanVien.DiaChi + "',";
             strQuery += "N" + dtoNhanVien.NgaySinh + "',";
             strQuery += "N" + dtoNhanVien.CMND + "',";
@@ -30,16 +29,15 @@ namespace DAL
         public bool UpdateNhanVien(NhanVienDTO dtoNhanVien)
         {
             string strQuery = "Update NHANVIEN Set ";
-            strQuery += "MABP = N'" + dtoNhanVien.MaBP + "',";
-            strQuery += "USERNAME = N'" + dtoNhanVien.UserName + "',";
-            strQuery += "PASSWORD = N'" + dtoNhanVien.PassWord + "',";
+            strQuery += "MABOPHAN = N'" + dtoNhanVien.MaBP + "',";
+            strQuery += "TENNHANIEN = N'" + dtoNhanVien.TenNV + "',";
+            strQuery += "MATKHAU = N'" + dtoNhanVien.MatKhau + "',";
             strQuery += "CHUCVU = N'" + dtoNhanVien.ChucVu + "',";
-            strQuery += "TENNV = N'" + dtoNhanVien.TenNV + "',";
             strQuery += "DIACHI = N'" + dtoNhanVien.DiaChi + "',";
             strQuery += "NGAYSINH = N'" + dtoNhanVien.NgaySinh + "',";
-            strQuery += "SCMND = N'" + dtoNhanVien.CMND + "',";
-            strQuery += "SDT = N'" + dtoNhanVien.SoDT + "', ";
-            strQuery += "Where MANV = N'" + dtoNhanVien.MaNV + "'";
+            strQuery += "CMND = N'" + dtoNhanVien.CMND + "',";
+            strQuery += "SODIENTHOAI = N'" + dtoNhanVien.SoDT + "', ";
+            strQuery += "Where MANHANIEN = N'" + dtoNhanVien.MaNV + "'";
             return dp.ExecuteNonQuery(strQuery);
 
         }

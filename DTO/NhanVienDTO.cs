@@ -22,20 +22,20 @@ namespace DTO
             set { _maBP = value; }
         }
 
-        private string _userName;
+        private string _tenNV;
 
-        public string UserName
+        public string TenNV
         {
-            get { return _userName; }
-            set { _userName = value; }
+            get { return _tenNV; }
+            set { _tenNV = value; }
         }
 
-        private string _passWord;
+        private string _matKhau;
 
-        public string PassWord
+        public string MatKhau
         {
-            get { return _passWord; }
-            set { _passWord = value; }
+            get { return _matKhau; }
+            set { _matKhau = value; }
         }
 
         private string _chucVu;
@@ -45,15 +45,7 @@ namespace DTO
             get { return _chucVu; }
             set { _chucVu = value; }
         }
-
-        private string _tenNV;
-
-        public string TenNV
-        {
-            get { return _tenNV; }
-            set { _tenNV = value; }
-        }
-
+       
         private string _diaChi;
 
         public string DiaChi
@@ -70,20 +62,20 @@ namespace DTO
             set { _ngaySinh = value; }
         }
 
-        private string _cMND;
+        private string _soCMND;
 
         public string CMND
         {
-            get { return _cMND; }
-            set { _cMND = value; }
+            get { return _soCMND; }
+            set { _soCMND = value; }
         }
 
-        private string _soDT;
+        private string _soDienThoai;
 
         public string SoDT
         {
-            get { return _soDT; }
-            set { _soDT = value; }
+            get { return _soDienThoai; }
+            set { _soDienThoai = value; }
         }
 
         private string _tinhTrang;
