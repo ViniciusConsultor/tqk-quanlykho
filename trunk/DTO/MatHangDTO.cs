@@ -14,14 +14,6 @@ namespace DTO
             set { _maMH = value; }
         }
 
-        private string _maTH;
-
-        public string MaTH
-        {
-            get { return _maTH; }
-            set { _maTH = value; }
-        }
-
         private string _maNH;
 
         public string MaNH
@@ -54,36 +46,12 @@ namespace DTO
             set { _maDonViTinh = value; }
         }
 
-        private int _soLuong;
+        private int _tonDau;
 
-        public int SoLuong
+        public int TonDau
         {
-            get { return _soLuong; }
-            set { _soLuong = value; }
-        }
-
-        private DateTime _hanSuDung;
-
-        public DateTime HanSD
-        {
-            get { return _hanSuDung; }
-            set { _hanSuDung = value; }
-        }
-
-        private double _giaMua;
-
-        public double GiaMua
-        {
-            get { return _giaMua; }
-            set { _giaMua = value; }
-        }
-
-        private double _giaBan;
-
-        public double GiaBan
-        {
-            get { return _giaBan; }
-            set { _giaBan = value; }
+            get { return _tonDau; }
+            set { _tonDau = value; }
         }
 
         private string _moTa;

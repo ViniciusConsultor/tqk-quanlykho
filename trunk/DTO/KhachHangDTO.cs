@@ -14,14 +14,6 @@ namespace DTO
             set { _maKH = value; }
         }
 
-        private string _maKV;
-
-        public string MaKV
-        {
-            get { return _maKV; }
-            set { _maKV = value; }
-        }
-
         private string _tenKH;
 
         public string TenKH
@@ -76,30 +68,6 @@ namespace DTO
         {
             get { return _fax; }
             set { _fax = value; }
-        }
-
-        private string _webSite;
-
-        public string WebSite
-        {
-            get { return _webSite; }
-            set { _webSite = value; }
-        }
-
-        private string _yaHoo;
-
-        public string YaHoo
-        {
-            get { return _yaHoo; }
-            set { _yaHoo = value; }
-        }
-
-        private string _skype;
-
-        public string Skype
-        {
-            get { return _skype; }
-            set { _skype = value; }
         }
 
         private string _tinhTrang;
