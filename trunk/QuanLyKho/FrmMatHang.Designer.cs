@@ -57,16 +57,7 @@
             this.labelItem16 = new DevComponents.DotNetBar.LabelItem();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.colSoTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaMatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenMatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colKho = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDonViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGiaMua = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvMatHang = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
@@ -78,9 +69,17 @@
             this.bar1 = new DevComponents.DotNetBar.Bar();
             this.labelItem15 = new DevComponents.DotNetBar.LabelItem();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.colSoTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaMatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenMatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colKho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDonViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupPanel1.SuspendLayout();
             this.groupPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMatHang)).BeginInit();
             this.groupPanel4.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             this.groupPanel5.SuspendLayout();
@@ -179,6 +178,7 @@
             this.btnThoat.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Far;
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // labelItem12
             // 
@@ -199,7 +199,7 @@
             this.labelX2.Location = new System.Drawing.Point(0, 2);
             this.labelX2.Name = "labelX2";
             this.labelX2.PaddingLeft = 400;
-            this.labelX2.Size = new System.Drawing.Size(785, 51);
+            this.labelX2.Size = new System.Drawing.Size(883, 51);
             this.labelX2.TabIndex = 3;
             this.labelX2.Text = "   Quản Lý Mặt Hàng";
             // 
@@ -263,7 +263,7 @@
             this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel1.Location = new System.Drawing.Point(0, 0);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(789, 519);
+            this.groupPanel1.Size = new System.Drawing.Size(887, 529);
             // 
             // 
             // 
@@ -298,12 +298,12 @@
             // 
             this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel3.Controls.Add(this.dataGridViewX1);
+            this.groupPanel3.Controls.Add(this.dgvMatHang);
             this.groupPanel3.Controls.Add(this.groupPanel4);
             this.groupPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel3.Location = new System.Drawing.Point(0, 85);
             this.groupPanel3.Name = "groupPanel3";
-            this.groupPanel3.Size = new System.Drawing.Size(787, 432);
+            this.groupPanel3.Size = new System.Drawing.Size(885, 442);
             // 
             // 
             // 
@@ -334,10 +334,10 @@
             this.groupPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel3.TabIndex = 1;
             // 
-            // dataGridViewX1
+            // dgvMatHang
             // 
-            this.dataGridViewX1.AllowUserToAddRows = false;
-            this.dataGridViewX1.BackgroundColor = System.Drawing.Color.White;
+            this.dgvMatHang.AllowUserToAddRows = false;
+            this.dgvMatHang.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -345,18 +345,17 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewX1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewX1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvMatHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvMatHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMatHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSoTT,
             this.colMaMatHang,
             this.colTenMatHang,
+            this.Column1,
             this.colKho,
             this.colDonViTinh,
-            this.colSoLuong,
-            this.colGiaMua,
-            this.colGiaBan,
-            this.colMoTa});
+            this.colMoTa,
+            this.Column2});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -364,13 +363,13 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewX1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewX1.EnableHeadersVisualStyles = false;
-            this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dataGridViewX1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewX1.Name = "dataGridViewX1";
-            this.dataGridViewX1.ReadOnly = true;
+            this.dgvMatHang.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvMatHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvMatHang.EnableHeadersVisualStyles = false;
+            this.dgvMatHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dgvMatHang.Location = new System.Drawing.Point(0, 0);
+            this.dgvMatHang.Name = "dgvMatHang";
+            this.dgvMatHang.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -378,69 +377,9 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewX1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewX1.Size = new System.Drawing.Size(785, 397);
-            this.dataGridViewX1.TabIndex = 13;
-            // 
-            // colSoTT
-            // 
-            this.colSoTT.HeaderText = "Số TT";
-            this.colSoTT.Name = "colSoTT";
-            this.colSoTT.ReadOnly = true;
-            this.colSoTT.Width = 80;
-            // 
-            // colMaMatHang
-            // 
-            this.colMaMatHang.HeaderText = "Mã Mặt Hàng";
-            this.colMaMatHang.Name = "colMaMatHang";
-            this.colMaMatHang.ReadOnly = true;
-            this.colMaMatHang.Width = 120;
-            // 
-            // colTenMatHang
-            // 
-            this.colTenMatHang.HeaderText = "Tên Mặt Hàng";
-            this.colTenMatHang.Name = "colTenMatHang";
-            this.colTenMatHang.ReadOnly = true;
-            this.colTenMatHang.Width = 150;
-            // 
-            // colKho
-            // 
-            this.colKho.HeaderText = "Kho";
-            this.colKho.Name = "colKho";
-            this.colKho.ReadOnly = true;
-            this.colKho.Width = 120;
-            // 
-            // colDonViTinh
-            // 
-            this.colDonViTinh.HeaderText = "Đơn Vị Tính";
-            this.colDonViTinh.Name = "colDonViTinh";
-            this.colDonViTinh.ReadOnly = true;
-            this.colDonViTinh.Width = 120;
-            // 
-            // colSoLuong
-            // 
-            this.colSoLuong.HeaderText = "Số Lượng";
-            this.colSoLuong.Name = "colSoLuong";
-            this.colSoLuong.ReadOnly = true;
-            // 
-            // colGiaMua
-            // 
-            this.colGiaMua.HeaderText = "Giá Mua";
-            this.colGiaMua.Name = "colGiaMua";
-            this.colGiaMua.ReadOnly = true;
-            // 
-            // colGiaBan
-            // 
-            this.colGiaBan.HeaderText = "Giá Bán";
-            this.colGiaBan.Name = "colGiaBan";
-            this.colGiaBan.ReadOnly = true;
-            // 
-            // colMoTa
-            // 
-            this.colMoTa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colMoTa.HeaderText = "Mô Tả";
-            this.colMoTa.Name = "colMoTa";
-            this.colMoTa.ReadOnly = true;
+            this.dgvMatHang.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvMatHang.Size = new System.Drawing.Size(883, 407);
+            this.dgvMatHang.TabIndex = 13;
             // 
             // groupPanel4
             // 
@@ -452,9 +391,9 @@
             this.groupPanel4.Controls.Add(this.buttonX2);
             this.groupPanel4.Controls.Add(this.buttonX1);
             this.groupPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupPanel4.Location = new System.Drawing.Point(0, 397);
+            this.groupPanel4.Location = new System.Drawing.Point(0, 407);
             this.groupPanel4.Name = "groupPanel4";
-            this.groupPanel4.Size = new System.Drawing.Size(785, 33);
+            this.groupPanel4.Size = new System.Drawing.Size(883, 33);
             // 
             // 
             // 
@@ -561,7 +500,7 @@
             this.groupPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupPanel2.Location = new System.Drawing.Point(0, 0);
             this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(787, 85);
+            this.groupPanel2.Size = new System.Drawing.Size(885, 85);
             // 
             // 
             // 
@@ -600,7 +539,7 @@
             this.groupPanel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupPanel5.Location = new System.Drawing.Point(0, 53);
             this.groupPanel5.Name = "groupPanel5";
-            this.groupPanel5.Size = new System.Drawing.Size(785, 29);
+            this.groupPanel5.Size = new System.Drawing.Size(883, 29);
             // 
             // 
             // 
@@ -660,7 +599,7 @@
             this.bar1.MenuBar = true;
             this.bar1.Name = "bar1";
             this.bar1.RoundCorners = false;
-            this.bar1.Size = new System.Drawing.Size(783, 24);
+            this.bar1.Size = new System.Drawing.Size(881, 24);
             this.bar1.Stretch = true;
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
             this.bar1.TabIndex = 8;
@@ -684,20 +623,83 @@
             this.labelX1.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelX1.Location = new System.Drawing.Point(0, 0);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(785, 2);
+            this.labelX1.Size = new System.Drawing.Size(883, 2);
             this.labelX1.TabIndex = 2;
+            // 
+            // colSoTT
+            // 
+            this.colSoTT.DataPropertyName = "Số TT";
+            this.colSoTT.HeaderText = "Số TT";
+            this.colSoTT.Name = "colSoTT";
+            this.colSoTT.ReadOnly = true;
+            this.colSoTT.Width = 80;
+            // 
+            // colMaMatHang
+            // 
+            this.colMaMatHang.DataPropertyName = "MAMATHANG";
+            this.colMaMatHang.HeaderText = "Mã Mặt Hàng";
+            this.colMaMatHang.Name = "colMaMatHang";
+            this.colMaMatHang.ReadOnly = true;
+            this.colMaMatHang.Width = 120;
+            // 
+            // colTenMatHang
+            // 
+            this.colTenMatHang.DataPropertyName = "TENMATHANG";
+            this.colTenMatHang.HeaderText = "Tên Mặt Hàng";
+            this.colTenMatHang.Name = "colTenMatHang";
+            this.colTenMatHang.ReadOnly = true;
+            this.colTenMatHang.Width = 150;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "TENNHOMHANG";
+            this.Column1.HeaderText = "Nhóm Hàng";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // colKho
+            // 
+            this.colKho.DataPropertyName = "TENKHO";
+            this.colKho.HeaderText = "Kho";
+            this.colKho.Name = "colKho";
+            this.colKho.ReadOnly = true;
+            this.colKho.Width = 120;
+            // 
+            // colDonViTinh
+            // 
+            this.colDonViTinh.DataPropertyName = "DONVITINH";
+            this.colDonViTinh.HeaderText = "Đơn Vị Tính";
+            this.colDonViTinh.Name = "colDonViTinh";
+            this.colDonViTinh.ReadOnly = true;
+            this.colDonViTinh.Width = 120;
+            // 
+            // colMoTa
+            // 
+            this.colMoTa.DataPropertyName = "MOTA";
+            this.colMoTa.HeaderText = "Mô Tả";
+            this.colMoTa.Name = "colMoTa";
+            this.colMoTa.ReadOnly = true;
+            this.colMoTa.Width = 120;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "TONDAU";
+            this.Column2.HeaderText = "Tồn Đầu";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // FrmMatHang
             // 
-            this.ClientSize = new System.Drawing.Size(789, 519);
+            this.ClientSize = new System.Drawing.Size(887, 529);
             this.ControlBox = false;
             this.Controls.Add(this.groupPanel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMatHang";
+            this.Load += new System.EventHandler(this.FrmMatHang_Load);
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMatHang)).EndInit();
             this.groupPanel4.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
             this.groupPanel5.ResumeLayout(false);
@@ -734,7 +736,7 @@
         private DevComponents.DotNetBar.LabelItem labelItem16;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX1;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dgvMatHang;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel4;
         private DevComponents.DotNetBar.ButtonX buttonX3;
         private DevComponents.DotNetBar.ButtonX buttonX4;
@@ -749,11 +751,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colSoTT;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaMatHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenMatHang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colKho;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDonViTinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSoLuong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colGiaMua;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colGiaBan;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMoTa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

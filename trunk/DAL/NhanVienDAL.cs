@@ -10,6 +10,12 @@ namespace DAL
     {
         DataProvider dp = new DataProvider();
 
+        public DataTable GetNhanVien()
+        {
+            string strQuery = "Select * From NHANVIEN nv, BOPHAN bp Where nv.TINHTRANG = 1 and nv.MABOPHAN = bp.MABOPHAN ";
+            return dp.ExecuteQuery(strQuery);
+        }
+
         public bool InsertNhanVien(NhanVienDTO dtoNhanVien)
         {
             string strQuery = "Insert Into NHANVIEN Values(";
@@ -36,7 +42,7 @@ namespace DAL
             strQuery += "DIACHI = N'" + dtoNhanVien.DiaChi + "',";
             strQuery += "NGAYSINH = N'" + dtoNhanVien.NgaySinh + "',";
             strQuery += "CMND = N'" + dtoNhanVien.CMND + "',";
-            strQuery += "SODIENTHOAI = N'" + dtoNhanVien.SoDT + "', ";
+            strQuery += "SODIENTHOAI = N'" + dtoNhanVien.SoDT + "' ";
             strQuery += "Where MANHANIEN = N'" + dtoNhanVien.MaNV + "'";
             return dp.ExecuteNonQuery(strQuery);
 
@@ -44,7 +50,7 @@ namespace DAL
 
         public bool DelNhanVien(string strMaNV)
         {
-            string strQuery = "Update NHANVIEN Set TINHTRANG = False where MANV = N'" + strMaNV + "'";
+            string strQuery = "Update NHANVIEN Set TINHTRANG = False where MANHANVIEN = N'" + strMaNV + "'";
             return dp.ExecuteNonQuery(strQuery);
         }
 
