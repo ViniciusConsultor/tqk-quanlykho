@@ -33,7 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelItem4 = new DevComponents.DotNetBar.LabelItem();
             this.labelItem16 = new DevComponents.DotNetBar.LabelItem();
-            this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.dgvDonViTinh = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.colSoTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaDonViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTenDonViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,7 +72,7 @@
             this.labelItem14 = new DevComponents.DotNetBar.LabelItem();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDonViTinh)).BeginInit();
             this.groupPanel1.SuspendLayout();
             this.groupPanel3.SuspendLayout();
             this.groupPanel4.SuspendLayout();
@@ -91,10 +91,10 @@
             this.labelItem16.Name = "labelItem16";
             this.labelItem16.Text = "     ";
             // 
-            // dataGridViewX1
+            // dgvDonViTinh
             // 
-            this.dataGridViewX1.AllowUserToAddRows = false;
-            this.dataGridViewX1.BackgroundColor = System.Drawing.Color.White;
+            this.dgvDonViTinh.AllowUserToAddRows = false;
+            this.dgvDonViTinh.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -102,9 +102,9 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewX1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewX1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDonViTinh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvDonViTinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDonViTinh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSoTT,
             this.colMaDonViTinh,
             this.colTenDonViTinh});
@@ -115,13 +115,13 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewX1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewX1.EnableHeadersVisualStyles = false;
-            this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dataGridViewX1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewX1.Name = "dataGridViewX1";
-            this.dataGridViewX1.ReadOnly = true;
+            this.dgvDonViTinh.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvDonViTinh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDonViTinh.EnableHeadersVisualStyles = false;
+            this.dgvDonViTinh.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dgvDonViTinh.Location = new System.Drawing.Point(0, 0);
+            this.dgvDonViTinh.Name = "dgvDonViTinh";
+            this.dgvDonViTinh.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -129,18 +129,20 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewX1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewX1.Size = new System.Drawing.Size(787, 399);
-            this.dataGridViewX1.TabIndex = 13;
+            this.dgvDonViTinh.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvDonViTinh.Size = new System.Drawing.Size(787, 399);
+            this.dgvDonViTinh.TabIndex = 13;
             // 
             // colSoTT
             // 
+            this.colSoTT.DataPropertyName = "Số TT";
             this.colSoTT.HeaderText = "Số TT";
             this.colSoTT.Name = "colSoTT";
             this.colSoTT.ReadOnly = true;
             // 
             // colMaDonViTinh
             // 
+            this.colMaDonViTinh.DataPropertyName = "MADONVITINH";
             this.colMaDonViTinh.HeaderText = "Mã Đơn Vị Tính";
             this.colMaDonViTinh.Name = "colMaDonViTinh";
             this.colMaDonViTinh.ReadOnly = true;
@@ -149,6 +151,7 @@
             // colTenDonViTinh
             // 
             this.colTenDonViTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colTenDonViTinh.DataPropertyName = "DONVITINH";
             this.colTenDonViTinh.HeaderText = "Tên Nhóm Hàng";
             this.colTenDonViTinh.Name = "colTenDonViTinh";
             this.colTenDonViTinh.ReadOnly = true;
@@ -217,7 +220,7 @@
             // 
             this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel3.Controls.Add(this.dataGridViewX1);
+            this.groupPanel3.Controls.Add(this.dgvDonViTinh);
             this.groupPanel3.Controls.Add(this.groupPanel4);
             this.groupPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel3.Location = new System.Drawing.Point(0, 85);
@@ -553,6 +556,7 @@
             this.btnThoat.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Far;
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // labelItem7
             // 
@@ -642,7 +646,8 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmDonViTinh";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).EndInit();
+            this.Load += new System.EventHandler(this.FrmDonViTinh_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDonViTinh)).EndInit();
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel3.ResumeLayout(false);
             this.groupPanel4.ResumeLayout(false);
@@ -657,7 +662,7 @@
 
         private DevComponents.DotNetBar.LabelItem labelItem4;
         private DevComponents.DotNetBar.LabelItem labelItem16;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX1;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dgvDonViTinh;
         private DevComponents.DotNetBar.LabelItem labelItem15;
         private DevComponents.DotNetBar.LabelItem labelItem17;
         private DevComponents.DotNetBar.LabelItem labelItem18;

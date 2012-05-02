@@ -31,13 +31,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.dgvNhaCungCap = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.colSoTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaNhaCungCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTenNhaCungCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelItem16 = new DevComponents.DotNetBar.LabelItem();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
@@ -75,7 +80,7 @@
             this.labelItem14 = new DevComponents.DotNetBar.LabelItem();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNhaCungCap)).BeginInit();
             this.groupPanel1.SuspendLayout();
             this.groupPanel3.SuspendLayout();
             this.groupPanel4.SuspendLayout();
@@ -84,10 +89,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridViewX1
+            // dgvNhaCungCap
             // 
-            this.dataGridViewX1.AllowUserToAddRows = false;
-            this.dataGridViewX1.BackgroundColor = System.Drawing.Color.White;
+            this.dgvNhaCungCap.AllowUserToAddRows = false;
+            this.dgvNhaCungCap.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -95,15 +100,20 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewX1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewX1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvNhaCungCap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvNhaCungCap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNhaCungCap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSoTT,
             this.colMaNhaCungCap,
             this.colTenNhaCungCap,
+            this.Column1,
+            this.Column3,
+            this.Column2,
+            this.colDiaChi,
             this.colDienThoai,
+            this.Column4,
             this.colFax,
-            this.colDiaChi});
+            this.Column5});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -111,13 +121,13 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewX1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewX1.EnableHeadersVisualStyles = false;
-            this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dataGridViewX1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewX1.Name = "dataGridViewX1";
-            this.dataGridViewX1.ReadOnly = true;
+            this.dgvNhaCungCap.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvNhaCungCap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvNhaCungCap.EnableHeadersVisualStyles = false;
+            this.dgvNhaCungCap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dgvNhaCungCap.Location = new System.Drawing.Point(0, 0);
+            this.dgvNhaCungCap.Name = "dgvNhaCungCap";
+            this.dgvNhaCungCap.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -125,12 +135,13 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewX1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewX1.Size = new System.Drawing.Size(775, 429);
-            this.dataGridViewX1.TabIndex = 13;
+            this.dgvNhaCungCap.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvNhaCungCap.Size = new System.Drawing.Size(775, 429);
+            this.dgvNhaCungCap.TabIndex = 13;
             // 
             // colSoTT
             // 
+            this.colSoTT.DataPropertyName = "Số TT";
             this.colSoTT.HeaderText = "Số TT";
             this.colSoTT.Name = "colSoTT";
             this.colSoTT.ReadOnly = true;
@@ -138,6 +149,7 @@
             // 
             // colMaNhaCungCap
             // 
+            this.colMaNhaCungCap.DataPropertyName = "MANHACUNGCAP";
             this.colMaNhaCungCap.HeaderText = "Mã Nhà Cung Cấp";
             this.colMaNhaCungCap.Name = "colMaNhaCungCap";
             this.colMaNhaCungCap.ReadOnly = true;
@@ -145,30 +157,70 @@
             // 
             // colTenNhaCungCap
             // 
+            this.colTenNhaCungCap.DataPropertyName = "TENNHACUNGCAP";
             this.colTenNhaCungCap.HeaderText = "Tên Nhà Cung Cấp";
             this.colTenNhaCungCap.Name = "colTenNhaCungCap";
             this.colTenNhaCungCap.ReadOnly = true;
             this.colTenNhaCungCap.Width = 150;
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MASOTHUE";
+            this.Column1.HeaderText = "Mã Số Thuế";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "SOTAIKHOAN";
+            this.Column3.HeaderText = "Số Tài Khoản";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "NGANHANG";
+            this.Column2.HeaderText = "Ngân Hàng";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // colDiaChi
+            // 
+            this.colDiaChi.DataPropertyName = "DIACHI";
+            this.colDiaChi.HeaderText = "Địa Chỉ";
+            this.colDiaChi.Name = "colDiaChi";
+            this.colDiaChi.ReadOnly = true;
+            this.colDiaChi.Width = 150;
+            // 
             // colDienThoai
             // 
+            this.colDienThoai.DataPropertyName = "SODIENTHOAI";
             this.colDienThoai.HeaderText = "Điện Thoại";
             this.colDienThoai.Name = "colDienThoai";
             this.colDienThoai.ReadOnly = true;
-            this.colDienThoai.Width = 120;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "EMAIL";
+            this.Column4.HeaderText = "Email";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 150;
             // 
             // colFax
             // 
+            this.colFax.DataPropertyName = "FAX";
             this.colFax.HeaderText = "Fax";
             this.colFax.Name = "colFax";
             this.colFax.ReadOnly = true;
             // 
-            // colDiaChi
+            // Column5
             // 
-            this.colDiaChi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colDiaChi.HeaderText = "Địa Chỉ";
-            this.colDiaChi.Name = "colDiaChi";
-            this.colDiaChi.ReadOnly = true;
+            this.Column5.DataPropertyName = "WEBSITE";
+            this.Column5.HeaderText = "WebSite";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // labelItem16
             // 
@@ -219,7 +271,7 @@
             // 
             this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel3.Controls.Add(this.dataGridViewX1);
+            this.groupPanel3.Controls.Add(this.dgvNhaCungCap);
             this.groupPanel3.Controls.Add(this.groupPanel4);
             this.groupPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel3.Location = new System.Drawing.Point(0, 85);
@@ -580,6 +632,7 @@
             this.btnThoat.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Far;
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // labelItem7
             // 
@@ -670,7 +723,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmNhaCungCap";
             this.Text = "FrmNhaCungCap";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).EndInit();
+            this.Load += new System.EventHandler(this.FrmNhaCungCap_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNhaCungCap)).EndInit();
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel3.ResumeLayout(false);
             this.groupPanel4.ResumeLayout(false);
@@ -683,7 +737,7 @@
 
         #endregion
 
-        private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX1;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dgvNhaCungCap;
         private DevComponents.DotNetBar.LabelItem labelItem16;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
@@ -724,8 +778,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colSoTT;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaNhaCungCap;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenNhaCungCap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDienThoai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colFax;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDiaChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDienThoai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFax;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

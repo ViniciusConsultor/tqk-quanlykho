@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
+using DTO;
+using DAL;
 
 namespace QuanLyKho
 {
@@ -21,7 +23,24 @@ namespace QuanLyKho
             Function.CloseForm();
         }
 
+        NhanVienDAL dalNhanVien = new NhanVienDAL();
+        CFunction cf = new CFunction();
+
         private void FrmNhanVien_Load(object sender, EventArgs e)
+        {
+            DataTable dtNhanVien = new DataTable();
+            dtNhanVien = dalNhanVien.GetNhanVien();
+            dtNhanVien = cf.AutoNumberedTable(dtNhanVien);
+            dgvNhanVien.AutoGenerateColumns = false;
+            dgvNhanVien.DataSource = dtNhanVien;
+        }
+
+        private void labelX2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelItem7_Click(object sender, EventArgs e)
         {
 
         }

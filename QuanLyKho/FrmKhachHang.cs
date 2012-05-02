@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
+using DTO;
+using DAL;
 
 namespace QuanLyKho
 {
@@ -14,6 +16,24 @@ namespace QuanLyKho
         public FrmKhachHang()
         {
             InitializeComponent();
+        }
+
+        KhachHangDAL dalKhachHang = new KhachHangDAL();
+        CFunction cf = new CFunction();
+
+        private void FrmKhachHang_Load(object sender, EventArgs e)
+        {
+            DataTable dtKhachHang = new DataTable();
+            dtKhachHang = dalKhachHang.GetAllKhachHang();
+            dtKhachHang = cf.AutoNumberedTable(dtKhachHang);
+            dgvKhachHang.AutoGenerateColumns = false;
+            dgvKhachHang.DataSource = dtKhachHang;
+
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Function.CloseForm();
         }
     }
 }

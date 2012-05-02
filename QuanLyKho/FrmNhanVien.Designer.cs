@@ -38,6 +38,7 @@
             this.colMaNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTenNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colBoPhan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -184,6 +185,7 @@
             this.colMaNhanVien,
             this.colTenNhanVien,
             this.colBoPhan,
+            this.Column1,
             this.colNgaySinh,
             this.colCMND,
             this.colSoDienThoai,
@@ -215,6 +217,7 @@
             // 
             // colSoTT
             // 
+            this.colSoTT.DataPropertyName = "Số TT";
             this.colSoTT.HeaderText = "Số TT";
             this.colSoTT.Name = "colSoTT";
             this.colSoTT.ReadOnly = true;
@@ -222,6 +225,7 @@
             // 
             // colMaNhanVien
             // 
+            this.colMaNhanVien.DataPropertyName = "MANHANVIEN";
             this.colMaNhanVien.HeaderText = "Mã Nhân Viên";
             this.colMaNhanVien.Name = "colMaNhanVien";
             this.colMaNhanVien.ReadOnly = true;
@@ -229,6 +233,7 @@
             // 
             // colTenNhanVien
             // 
+            this.colTenNhanVien.DataPropertyName = "TENNHANVIEN";
             this.colTenNhanVien.HeaderText = "Tên Nhân Viên";
             this.colTenNhanVien.Name = "colTenNhanVien";
             this.colTenNhanVien.ReadOnly = true;
@@ -236,13 +241,22 @@
             // 
             // colBoPhan
             // 
+            this.colBoPhan.DataPropertyName = "TENBOPHAN";
             this.colBoPhan.HeaderText = "Bộ Phận";
             this.colBoPhan.Name = "colBoPhan";
             this.colBoPhan.ReadOnly = true;
             this.colBoPhan.Width = 150;
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "CHUCVU";
+            this.Column1.HeaderText = "Chức Vụ";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
             // colNgaySinh
             // 
+            this.colNgaySinh.DataPropertyName = "NGAYSINH";
             this.colNgaySinh.HeaderText = "Ngày Sinh";
             this.colNgaySinh.Name = "colNgaySinh";
             this.colNgaySinh.ReadOnly = true;
@@ -250,12 +264,14 @@
             // 
             // colCMND
             // 
+            this.colCMND.DataPropertyName = "CMND";
             this.colCMND.HeaderText = "CMND";
             this.colCMND.Name = "colCMND";
             this.colCMND.ReadOnly = true;
             // 
             // colSoDienThoai
             // 
+            this.colSoDienThoai.DataPropertyName = "SODIENTHOAI";
             this.colSoDienThoai.HeaderText = "Số Điện Thoại";
             this.colSoDienThoai.Name = "colSoDienThoai";
             this.colSoDienThoai.ReadOnly = true;
@@ -264,6 +280,7 @@
             // colDiaChi
             // 
             this.colDiaChi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colDiaChi.DataPropertyName = "DIACHI";
             this.colDiaChi.HeaderText = "Địa Chỉ";
             this.colDiaChi.Name = "colDiaChi";
             this.colDiaChi.ReadOnly = true;
@@ -608,6 +625,7 @@
             this.labelItem9,
             this.labelItem11});
             this.labelItem7.Text = "     ";
+            this.labelItem7.Click += new System.EventHandler(this.labelItem7_Click);
             // 
             // labelItem8
             // 
@@ -668,6 +686,7 @@
             this.labelX2.Size = new System.Drawing.Size(905, 51);
             this.labelX2.TabIndex = 3;
             this.labelX2.Text = "   Quản Lý Nhân Viên";
+            this.labelX2.Click += new System.EventHandler(this.labelX2_Click);
             // 
             // labelX1
             // 
@@ -748,6 +767,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaNhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenNhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn colBoPhan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNgaySinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCMND;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSoDienThoai;
