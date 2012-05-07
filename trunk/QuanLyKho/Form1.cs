@@ -9,9 +9,9 @@ using DevComponents.DotNetBar;
 
 namespace QuanLyKho
 {
-    public partial class Form1 : DevComponents.DotNetBar.Office2007Form
+    public partial class FrmNhapNhomHang : DevComponents.DotNetBar.Office2007Form
     {
-        public Form1()
+        public FrmNhapNhomHang()
         {
             InitializeComponent();
         }

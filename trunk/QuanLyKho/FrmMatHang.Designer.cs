@@ -58,6 +58,14 @@
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.dgvMatHang = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.colSoTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaMatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenMatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colKho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDonViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
@@ -69,14 +77,6 @@
             this.bar1 = new DevComponents.DotNetBar.Bar();
             this.labelItem15 = new DevComponents.DotNetBar.LabelItem();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.colSoTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaMatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenMatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colKho = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDonViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupPanel1.SuspendLayout();
             this.groupPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatHang)).BeginInit();
@@ -381,6 +381,68 @@
             this.dgvMatHang.Size = new System.Drawing.Size(883, 407);
             this.dgvMatHang.TabIndex = 13;
             // 
+            // colSoTT
+            // 
+            this.colSoTT.DataPropertyName = "Số TT";
+            this.colSoTT.HeaderText = "Số TT";
+            this.colSoTT.Name = "colSoTT";
+            this.colSoTT.ReadOnly = true;
+            this.colSoTT.Width = 80;
+            // 
+            // colMaMatHang
+            // 
+            this.colMaMatHang.DataPropertyName = "MAMATHANG";
+            this.colMaMatHang.HeaderText = "Mã Mặt Hàng";
+            this.colMaMatHang.Name = "colMaMatHang";
+            this.colMaMatHang.ReadOnly = true;
+            this.colMaMatHang.Width = 120;
+            // 
+            // colTenMatHang
+            // 
+            this.colTenMatHang.DataPropertyName = "TENMATHANG";
+            this.colTenMatHang.HeaderText = "Tên Mặt Hàng";
+            this.colTenMatHang.Name = "colTenMatHang";
+            this.colTenMatHang.ReadOnly = true;
+            this.colTenMatHang.Width = 150;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "TENNHOMHANG";
+            this.Column1.HeaderText = "Nhóm Hàng";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // colKho
+            // 
+            this.colKho.DataPropertyName = "TENKHO";
+            this.colKho.HeaderText = "Kho";
+            this.colKho.Name = "colKho";
+            this.colKho.ReadOnly = true;
+            this.colKho.Width = 120;
+            // 
+            // colDonViTinh
+            // 
+            this.colDonViTinh.DataPropertyName = "DONVITINH";
+            this.colDonViTinh.HeaderText = "Đơn Vị Tính";
+            this.colDonViTinh.Name = "colDonViTinh";
+            this.colDonViTinh.ReadOnly = true;
+            this.colDonViTinh.Width = 120;
+            // 
+            // colMoTa
+            // 
+            this.colMoTa.DataPropertyName = "MOTA";
+            this.colMoTa.HeaderText = "Mô Tả";
+            this.colMoTa.Name = "colMoTa";
+            this.colMoTa.ReadOnly = true;
+            this.colMoTa.Width = 120;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "TONDAU";
+            this.Column2.HeaderText = "Tồn Đầu";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
             // groupPanel4
             // 
             this.groupPanel4.CanvasColor = System.Drawing.SystemColors.Control;
@@ -625,68 +687,6 @@
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(883, 2);
             this.labelX1.TabIndex = 2;
-            // 
-            // colSoTT
-            // 
-            this.colSoTT.DataPropertyName = "Số TT";
-            this.colSoTT.HeaderText = "Số TT";
-            this.colSoTT.Name = "colSoTT";
-            this.colSoTT.ReadOnly = true;
-            this.colSoTT.Width = 80;
-            // 
-            // colMaMatHang
-            // 
-            this.colMaMatHang.DataPropertyName = "MAMATHANG";
-            this.colMaMatHang.HeaderText = "Mã Mặt Hàng";
-            this.colMaMatHang.Name = "colMaMatHang";
-            this.colMaMatHang.ReadOnly = true;
-            this.colMaMatHang.Width = 120;
-            // 
-            // colTenMatHang
-            // 
-            this.colTenMatHang.DataPropertyName = "TENMATHANG";
-            this.colTenMatHang.HeaderText = "Tên Mặt Hàng";
-            this.colTenMatHang.Name = "colTenMatHang";
-            this.colTenMatHang.ReadOnly = true;
-            this.colTenMatHang.Width = 150;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "TENNHOMHANG";
-            this.Column1.HeaderText = "Nhóm Hàng";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // colKho
-            // 
-            this.colKho.DataPropertyName = "TENKHO";
-            this.colKho.HeaderText = "Kho";
-            this.colKho.Name = "colKho";
-            this.colKho.ReadOnly = true;
-            this.colKho.Width = 120;
-            // 
-            // colDonViTinh
-            // 
-            this.colDonViTinh.DataPropertyName = "DONVITINH";
-            this.colDonViTinh.HeaderText = "Đơn Vị Tính";
-            this.colDonViTinh.Name = "colDonViTinh";
-            this.colDonViTinh.ReadOnly = true;
-            this.colDonViTinh.Width = 120;
-            // 
-            // colMoTa
-            // 
-            this.colMoTa.DataPropertyName = "MOTA";
-            this.colMoTa.HeaderText = "Mô Tả";
-            this.colMoTa.Name = "colMoTa";
-            this.colMoTa.ReadOnly = true;
-            this.colMoTa.Width = 120;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "TONDAU";
-            this.Column2.HeaderText = "Tồn Đầu";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             // 
             // FrmMatHang
             // 
