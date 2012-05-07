@@ -24,4 +24,5 @@ D:\DongHien\TQK_BinhDuong\QuanLyKho\bin\Debug\DAL.dll
 D:\DongHien\TQK_BinhDuong\QuanLyKho\bin\Debug\DTO.dll
 D:\DongHien\TQK_BinhDuong\QuanLyKho\bin\Debug\DAL.pdb
 D:\DongHien\TQK_BinhDuong\QuanLyKho\bin\Debug\DTO.pdb
-D:\DongHien\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\QuanLyKho.FrmNhapNhomHang.resources
+D:\DongHien\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\QuanLyKho.FrmNhapKhachHang.resources
+D:\DongHien\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\QuanLyKho.FrmNhapMatHang.resources

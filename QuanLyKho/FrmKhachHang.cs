@@ -35,5 +35,12 @@ namespace QuanLyKho
         {
             Function.CloseForm();
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            FrmNhapKhachHang frmNhapKhachHang = new FrmNhapKhachHang();
+            frmNhapKhachHang.MdiParent = this;
+            frmNhapKhachHang.Show();
+        }
     }
 }
