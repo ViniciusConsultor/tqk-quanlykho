@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnXoa = new DevComponents.DotNetBar.ButtonItem();
             this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
             this.labelItem4 = new DevComponents.DotNetBar.LabelItem();
@@ -61,12 +61,13 @@
             this.colSoTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaSoThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNganHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
@@ -93,6 +94,7 @@
             this.btnXoa.Image = global::QuanLyKho.Properties.Resources._112_Minus_Green_16x16_72;
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // labelItem1
             // 
@@ -134,6 +136,7 @@
             this.btnCapNhat.ImageFixedSize = new System.Drawing.Size(16, 16);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Text = "Cập Nhật";
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // labelItem5
             // 
@@ -341,46 +344,48 @@
             this.dgvKhachHang.AllowUserToAddRows = false;
             this.dgvKhachHang.AllowUserToDeleteRows = false;
             this.dgvKhachHang.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvKhachHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvKhachHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKhachHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSoTT,
             this.colMaKhachHang,
             this.colTenKhachHang,
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
+            this.colDiaChi,
+            this.colMaSoThue,
             this.colSoDienThoai,
-            this.colDiaChi});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvKhachHang.DefaultCellStyle = dataGridViewCellStyle5;
+            this.colEmail,
+            this.colSoTaiKhoan,
+            this.colNganHang,
+            this.colGhiChu});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvKhachHang.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvKhachHang.EnableHeadersVisualStyles = false;
             this.dgvKhachHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvKhachHang.Location = new System.Drawing.Point(0, 0);
             this.dgvKhachHang.Name = "dgvKhachHang";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvKhachHang.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvKhachHang.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKhachHang.Size = new System.Drawing.Size(750, 417);
             this.dgvKhachHang.TabIndex = 13;
             // 
@@ -405,30 +410,18 @@
             this.colTenKhachHang.Name = "colTenKhachHang";
             this.colTenKhachHang.Width = 200;
             // 
-            // Column1
+            // colDiaChi
             // 
-            this.Column1.DataPropertyName = "SOTAIKHOAN";
-            this.Column1.HeaderText = "Số Tài Khoản";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 150;
+            this.colDiaChi.DataPropertyName = "DIACHI";
+            this.colDiaChi.HeaderText = "Địa Chỉ";
+            this.colDiaChi.Name = "colDiaChi";
+            this.colDiaChi.Width = 200;
             // 
-            // Column2
+            // colMaSoThue
             // 
-            this.Column2.DataPropertyName = "NGANHANG";
-            this.Column2.HeaderText = "Ngân Hàng";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "MASOTHUE";
-            this.Column3.HeaderText = "Mã Số Thuế";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "FAX";
-            this.Column4.HeaderText = "Fax";
-            this.Column4.Name = "Column4";
+            this.colMaSoThue.DataPropertyName = "MASOTHUE";
+            this.colMaSoThue.HeaderText = "Mã Số Thuế";
+            this.colMaSoThue.Name = "colMaSoThue";
             // 
             // colSoDienThoai
             // 
@@ -437,12 +430,33 @@
             this.colSoDienThoai.Name = "colSoDienThoai";
             this.colSoDienThoai.Width = 120;
             // 
-            // colDiaChi
+            // colEmail
             // 
-            this.colDiaChi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colDiaChi.DataPropertyName = "DIACHI";
-            this.colDiaChi.HeaderText = "Địa Chỉ";
-            this.colDiaChi.Name = "colDiaChi";
+            this.colEmail.DataPropertyName = "EMAIL";
+            this.colEmail.HeaderText = "Email";
+            this.colEmail.Name = "colEmail";
+            this.colEmail.Width = 150;
+            // 
+            // colSoTaiKhoan
+            // 
+            this.colSoTaiKhoan.DataPropertyName = "SOTAIKHOAN";
+            this.colSoTaiKhoan.HeaderText = "Số Tài Khoản";
+            this.colSoTaiKhoan.Name = "colSoTaiKhoan";
+            this.colSoTaiKhoan.Width = 150;
+            // 
+            // colNganHang
+            // 
+            this.colNganHang.DataPropertyName = "NGANHANG";
+            this.colNganHang.HeaderText = "Ngân Hàng";
+            this.colNganHang.Name = "colNganHang";
+            this.colNganHang.Width = 150;
+            // 
+            // colGhiChu
+            // 
+            this.colGhiChu.DataPropertyName = "GHICHU";
+            this.colGhiChu.HeaderText = "Ghi Chú";
+            this.colGhiChu.Name = "colGhiChu";
+            this.colGhiChu.Width = 200;
             // 
             // groupPanel4
             // 
@@ -737,7 +751,6 @@
         private DevComponents.DotNetBar.LabelItem labelItem16;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dgvKhachHang;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel4;
         private DevComponents.DotNetBar.ButtonX buttonX3;
         private DevComponents.DotNetBar.ButtonX buttonX4;
@@ -752,11 +765,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colSoTT;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaKhachHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenKhachHang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSoDienThoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDiaChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaSoThue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSoDienThoai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSoTaiKhoan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNganHang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colGhiChu;
+        public DevComponents.DotNetBar.Controls.DataGridViewX dgvKhachHang;
     }
 }

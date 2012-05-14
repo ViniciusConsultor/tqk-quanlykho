@@ -138,6 +138,18 @@
     <Compile Include="FrmNhapMatHang.Designer.cs">
       <DependentUpon>FrmNhapMatHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmNhapNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNhapNhaCungCap.Designer.cs">
+      <DependentUpon>FrmNhapNhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNhapNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNhapNhanVien.Designer.cs">
+      <DependentUpon>FrmNhapNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmNhomHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +199,9 @@
     <EmbeddedResource Include="FrmNhanVien.resx">
       <DependentUpon>FrmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmNhapKhachHang.af-ZA.resx">
+      <DependentUpon>FrmNhapKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmNhapKhachHang.resx">
       <DependentUpon>FrmNhapKhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +210,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNhapMatHang.resx">
       <DependentUpon>FrmNhapMatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNhapNhaCungCap.resx">
+      <DependentUpon>FrmNhapNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNhapNhanVien.resx">
+      <DependentUpon>FrmNhapNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNhomHang.resx">
       <DependentUpon>FrmNhomHang.cs</DependentUpon>

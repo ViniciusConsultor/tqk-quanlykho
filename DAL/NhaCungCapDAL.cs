@@ -26,8 +26,7 @@ namespace DAL
             strQuery += "N'" + dtoNhaCungCap.NganHang + "',";
             strQuery += "N'" + dtoNhaCungCap.SoDienThoai + "',";
             strQuery += "N'" + dtoNhaCungCap.Email + "',";
-            strQuery += "N'" + dtoNhaCungCap.Fax + "',";
-            strQuery += "N'" + dtoNhaCungCap.WebSite + "',True)";
+            strQuery += "N'" + dtoNhaCungCap.GhiChu + "',True)";
             return dp.ExecuteNonQuery(strQuery);
         }
 
@@ -41,8 +40,7 @@ namespace DAL
             strQuery += "NGANHANG = N'" + dtoNhaCungCap.NganHang + "',";
             strQuery += "SODIENTHOAI = N'" + dtoNhaCungCap.SoDienThoai + "',";
             strQuery += "EMAIL = N'" + dtoNhaCungCap.Email + "',";
-            strQuery += "FAX = N'" + dtoNhaCungCap.Fax + "',";
-            strQuery += "WEBSITE = N'" + dtoNhaCungCap.WebSite + "' ";
+            strQuery += "GHICHU = N'" + dtoNhaCungCap.GhiChu + "' ";
             strQuery += "Where MANHACUNGCAP = N'" + dtoNhaCungCap.MaNCC + "'";
             return dp.ExecuteNonQuery(strQuery);
             
