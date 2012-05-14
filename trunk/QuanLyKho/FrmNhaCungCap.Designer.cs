@@ -32,17 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvNhaCungCap = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.colSoTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaNhaCungCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenNhaCungCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelItem16 = new DevComponents.DotNetBar.LabelItem();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
@@ -80,6 +69,16 @@
             this.labelItem14 = new DevComponents.DotNetBar.LabelItem();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.colSoTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaNhaCungCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenNhaCungCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhaCungCap)).BeginInit();
             this.groupPanel1.SuspendLayout();
             this.groupPanel3.SuspendLayout();
@@ -106,13 +105,12 @@
             this.colSoTT,
             this.colMaNhaCungCap,
             this.colTenNhaCungCap,
-            this.Column1,
-            this.Column3,
-            this.Column2,
             this.colDiaChi,
+            this.Column1,
             this.colDienThoai,
             this.Column4,
-            this.colFax,
+            this.Column3,
+            this.Column2,
             this.Column5});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -138,89 +136,6 @@
             this.dgvNhaCungCap.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvNhaCungCap.Size = new System.Drawing.Size(775, 429);
             this.dgvNhaCungCap.TabIndex = 13;
-            // 
-            // colSoTT
-            // 
-            this.colSoTT.DataPropertyName = "Số TT";
-            this.colSoTT.HeaderText = "Số TT";
-            this.colSoTT.Name = "colSoTT";
-            this.colSoTT.ReadOnly = true;
-            this.colSoTT.Width = 80;
-            // 
-            // colMaNhaCungCap
-            // 
-            this.colMaNhaCungCap.DataPropertyName = "MANHACUNGCAP";
-            this.colMaNhaCungCap.HeaderText = "Mã Nhà Cung Cấp";
-            this.colMaNhaCungCap.Name = "colMaNhaCungCap";
-            this.colMaNhaCungCap.ReadOnly = true;
-            this.colMaNhaCungCap.Width = 150;
-            // 
-            // colTenNhaCungCap
-            // 
-            this.colTenNhaCungCap.DataPropertyName = "TENNHACUNGCAP";
-            this.colTenNhaCungCap.HeaderText = "Tên Nhà Cung Cấp";
-            this.colTenNhaCungCap.Name = "colTenNhaCungCap";
-            this.colTenNhaCungCap.ReadOnly = true;
-            this.colTenNhaCungCap.Width = 150;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "MASOTHUE";
-            this.Column1.HeaderText = "Mã Số Thuế";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "SOTAIKHOAN";
-            this.Column3.HeaderText = "Số Tài Khoản";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 150;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "NGANHANG";
-            this.Column2.HeaderText = "Ngân Hàng";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // colDiaChi
-            // 
-            this.colDiaChi.DataPropertyName = "DIACHI";
-            this.colDiaChi.HeaderText = "Địa Chỉ";
-            this.colDiaChi.Name = "colDiaChi";
-            this.colDiaChi.ReadOnly = true;
-            this.colDiaChi.Width = 150;
-            // 
-            // colDienThoai
-            // 
-            this.colDienThoai.DataPropertyName = "SODIENTHOAI";
-            this.colDienThoai.HeaderText = "Điện Thoại";
-            this.colDienThoai.Name = "colDienThoai";
-            this.colDienThoai.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "EMAIL";
-            this.Column4.HeaderText = "Email";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 150;
-            // 
-            // colFax
-            // 
-            this.colFax.DataPropertyName = "FAX";
-            this.colFax.HeaderText = "Fax";
-            this.colFax.Name = "colFax";
-            this.colFax.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "WEBSITE";
-            this.Column5.HeaderText = "WebSite";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
             // 
             // labelItem16
             // 
@@ -715,6 +630,86 @@
             this.labelX1.Size = new System.Drawing.Size(775, 2);
             this.labelX1.TabIndex = 2;
             // 
+            // colSoTT
+            // 
+            this.colSoTT.DataPropertyName = "Số TT";
+            this.colSoTT.HeaderText = "Số TT";
+            this.colSoTT.Name = "colSoTT";
+            this.colSoTT.ReadOnly = true;
+            this.colSoTT.Width = 80;
+            // 
+            // colMaNhaCungCap
+            // 
+            this.colMaNhaCungCap.DataPropertyName = "MANHACUNGCAP";
+            this.colMaNhaCungCap.HeaderText = "Mã Nhà Cung Cấp";
+            this.colMaNhaCungCap.Name = "colMaNhaCungCap";
+            this.colMaNhaCungCap.ReadOnly = true;
+            this.colMaNhaCungCap.Width = 150;
+            // 
+            // colTenNhaCungCap
+            // 
+            this.colTenNhaCungCap.DataPropertyName = "TENNHACUNGCAP";
+            this.colTenNhaCungCap.HeaderText = "Tên Nhà Cung Cấp";
+            this.colTenNhaCungCap.Name = "colTenNhaCungCap";
+            this.colTenNhaCungCap.ReadOnly = true;
+            this.colTenNhaCungCap.Width = 200;
+            // 
+            // colDiaChi
+            // 
+            this.colDiaChi.DataPropertyName = "DIACHI";
+            this.colDiaChi.HeaderText = "Địa Chỉ";
+            this.colDiaChi.Name = "colDiaChi";
+            this.colDiaChi.ReadOnly = true;
+            this.colDiaChi.Width = 200;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MASOTHUE";
+            this.Column1.HeaderText = "Mã Số Thuế";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 120;
+            // 
+            // colDienThoai
+            // 
+            this.colDienThoai.DataPropertyName = "SODIENTHOAI";
+            this.colDienThoai.HeaderText = "Điện Thoại";
+            this.colDienThoai.Name = "colDienThoai";
+            this.colDienThoai.ReadOnly = true;
+            this.colDienThoai.Width = 120;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "EMAIL";
+            this.Column4.HeaderText = "Email";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 150;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "SOTAIKHOAN";
+            this.Column3.HeaderText = "Số Tài Khoản";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "NGANHANG";
+            this.Column2.HeaderText = "Ngân Hàng";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 200;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "GHICHU";
+            this.Column5.HeaderText = "Ghi Chú";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 200;
+            // 
             // FrmNhaCungCap
             // 
             this.ClientSize = new System.Drawing.Size(779, 551);
@@ -778,13 +773,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colSoTT;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaNhaCungCap;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenNhaCungCap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDiaChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDienThoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colFax;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

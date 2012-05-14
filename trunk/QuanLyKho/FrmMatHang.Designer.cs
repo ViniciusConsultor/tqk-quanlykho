@@ -124,6 +124,7 @@
             this.btnThem.Image = global::QuanLyKho.Properties.Resources._112_Plus_Green_16x16_72;
             this.btnThem.Name = "btnThem";
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnCapNhat
             // 

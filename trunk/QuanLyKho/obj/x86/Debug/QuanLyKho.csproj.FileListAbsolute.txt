@@ -26,3 +26,7 @@ D:\DongHien\TQK_BinhDuong\QuanLyKho\bin\Debug\DAL.pdb
 D:\DongHien\TQK_BinhDuong\QuanLyKho\bin\Debug\DTO.pdb
 D:\DongHien\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\QuanLyKho.FrmNhapKhachHang.resources
 D:\DongHien\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\QuanLyKho.FrmNhapMatHang.resources
+D:\DongHien\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\QuanLyKho.FrmNhapNhaCungCap.resources
+D:\DongHien\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\QuanLyKho.FrmNhapKhachHang.af-ZA.resources
+D:\DongHien\TQK_BinhDuong\QuanLyKho\bin\Debug\af-ZA\QuanLyKho.resources.dll
+D:\DongHien\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\af-ZA\QuanLyKho.resources.dll

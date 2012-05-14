@@ -70,20 +70,12 @@ namespace DTO
             set { _email = value; }
         }
 
-        private string _fax;
+        private string _ghiChu;
 
-        public string Fax
+        public string GhiChu
         {
-            get { return _fax; }
-            set { _fax = value; }
-        }
-
-        private string _webSite;
-
-        public string WebSite
-        {
-            get { return _webSite; }
-            set { _webSite = value; }
+            get { return _ghiChu; }
+            set { _ghiChu = value; }
         }
 
         private string _tinhTrang;

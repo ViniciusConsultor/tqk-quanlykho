@@ -62,12 +62,20 @@ namespace DTO
             set { _sDT = value; }
         }
 
-        private string _fax;
+        private string _email;
 
-        public string Fax
+        public string Email
         {
-            get { return _fax; }
-            set { _fax = value; }
+            get { return _email; }
+            set { _email = value; }
+        }
+
+        private string _ghiChu;
+
+        public string GhiChu
+        {
+            get { return _ghiChu; }
+            set { _ghiChu = value; }
         }
 
         private string _tinhTrang;

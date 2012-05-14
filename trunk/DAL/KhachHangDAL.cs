@@ -11,7 +11,7 @@ namespace DAL
 
         public DataTable GetAllKhachHang()
         {
-            string strQuery = "Select * From KHACHHANG";
+            string strQuery = "Select * From KHACHHANG Where TINHTRANG = 1";
             return dp.ExecuteQuery(strQuery);
         }
 
@@ -25,11 +25,12 @@ namespace DAL
             strQuery += "N'" + dtoKhachHang.MaSoThue + "',";
             strQuery += "N'" + dtoKhachHang.DiaChi + "',";
             strQuery += "N'" + dtoKhachHang.SDT + "',";
-            strQuery += "N'" + dtoKhachHang.Fax + "',True)";
+            strQuery += "N'" + dtoKhachHang.Email + "',";
+            strQuery += "N'" + dtoKhachHang.GhiChu + "', 1)";
             return dp.ExecuteNonQuery(strQuery);
         }
 
-        public bool UpdateKhachHang(KhachHangDTO dtoKhachHang)
+        public bool UpdateKH(KhachHangDTO dtoKhachHang)
         {
             string strQuery = "Update KHACHHANG Set ";
             strQuery += "TENKHACHHANG = N'" + dtoKhachHang.TenKH + "',";
@@ -38,15 +39,21 @@ namespace DAL
             strQuery += "MASOTHUE = N'" + dtoKhachHang.MaSoThue + "',";
             strQuery += "DIACHI = N'" + dtoKhachHang.DiaChi + "',";
             strQuery += "DIENTHOAI = N'" + dtoKhachHang.SDT + "',";
-            strQuery += "FAX = N'" + dtoKhachHang.Fax + "' ";
+            strQuery += "EMAIL = N'" + dtoKhachHang.Email + "',";
+            strQuery += "GHICHU = N'" + dtoKhachHang.GhiChu + "' ";
             strQuery += "Where MAKHACHHANG = N'" + dtoKhachHang.MaKH + "'";
             return dp.ExecuteNonQuery(strQuery);
         }
 
         public bool DelKhachHang(string strMaKH)
         {
-            string strQuery = "Update KHACHHANG Set TINHTRANG = False Where MAKHACHHANG = N'" + strMaKH + "'";
+            string strQuery = "Update KHACHHANG Set TINHTRANG = 0 Where MAKHACHHANG = N'" + strMaKH + "'";
             return dp.ExecuteNonQuery(strQuery);
         }
+
+        //public void UpdateKhachHang()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

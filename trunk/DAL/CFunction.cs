@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
+using System.Windows.Forms;
 namespace DAL
 {
     public class CFunction
@@ -76,6 +77,8 @@ namespace DAL
             strQuery += " Where " + pColum + " = '" + pID + "'";
             return dp.ExecuteQuery(strQuery);
         }
+
+        
 
     }
 }
