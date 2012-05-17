@@ -19,15 +19,15 @@ namespace DAL
         public bool InsertNhanVien(NhanVienDTO dtoNhanVien)
         {
             string strQuery = "Insert Into NHANVIEN Values(";
-            strQuery += "N" + dtoNhanVien.MaNV + "',";
-            strQuery += "N" + dtoNhanVien.MaBP + "',";
-            strQuery += "N" + dtoNhanVien.TenNV + "',";
-            strQuery += "N" + dtoNhanVien.MatKhau + "',";
-            strQuery += "N" + dtoNhanVien.ChucVu + "',";
-            strQuery += "N" + dtoNhanVien.DiaChi + "',";
-            strQuery += "N" + dtoNhanVien.NgaySinh + "',";
-            strQuery += "N" + dtoNhanVien.CMND + "',";
-            strQuery += "N" + dtoNhanVien.SoDT + "',True)";
+            strQuery += "N'" + dtoNhanVien.MaNV + "',";
+            strQuery += "N'" + dtoNhanVien.MaBP + "',";
+            strQuery += "N'" + dtoNhanVien.TenNV + "',";
+            strQuery += "N'" + dtoNhanVien.MatKhau + "',";
+            strQuery += "N'" + dtoNhanVien.ChucVu + "',";
+            strQuery += "N'" + dtoNhanVien.DiaChi + "',";
+            strQuery += "N'" + dtoNhanVien.NgaySinh + "',";
+            strQuery += "N'" + dtoNhanVien.CMND + "',";
+            strQuery += "N'" + dtoNhanVien.SoDT + "', 1)";
             return dp.ExecuteNonQuery(strQuery);
                  
         }
@@ -50,7 +50,7 @@ namespace DAL
 
         public bool DelNhanVien(string strMaNV)
         {
-            string strQuery = "Update NHANVIEN Set TINHTRANG = False where MANHANVIEN = N'" + strMaNV + "'";
+            string strQuery = "Update NHANVIEN Set TINHTRANG = 0 where MANHANVIEN = N'" + strMaNV + "'";
             return dp.ExecuteNonQuery(strQuery);
         }
 
