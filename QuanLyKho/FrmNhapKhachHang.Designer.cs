@@ -80,9 +80,9 @@
             this.groupPanel1.Controls.Add(this.btnThoat);
             this.groupPanel1.Controls.Add(this.btnThemKhachHang);
             this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupPanel1.Location = new System.Drawing.Point(0, 426);
+            this.groupPanel1.Location = new System.Drawing.Point(0, 429);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(385, 55);
+            this.groupPanel1.Size = new System.Drawing.Size(385, 49);
             // 
             // 
             // 
@@ -120,7 +120,7 @@
             this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnThoat.Image = global::QuanLyKho.Properties.Resources.DeleteAll;
-            this.btnThoat.Location = new System.Drawing.Point(224, 14);
+            this.btnThoat.Location = new System.Drawing.Point(224, 12);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(90, 25);
             this.btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -133,7 +133,7 @@
             this.btnThemKhachHang.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnThemKhachHang.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.btnThemKhachHang.Image = global::QuanLyKho.Properties.Resources.Connection;
-            this.btnThemKhachHang.Location = new System.Drawing.Point(74, 14);
+            this.btnThemKhachHang.Location = new System.Drawing.Point(74, 12);
             this.btnThemKhachHang.Name = "btnThemKhachHang";
             this.btnThemKhachHang.Size = new System.Drawing.Size(90, 25);
             this.btnThemKhachHang.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -166,7 +166,7 @@
             this.groupPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel2.Location = new System.Drawing.Point(0, 49);
             this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(385, 377);
+            this.groupPanel2.Size = new System.Drawing.Size(385, 380);
             // 
             // 
             // 
@@ -438,7 +438,7 @@
             // 
             this.AcceptButton = this.btnThemKhachHang;
             this.CancelButton = this.btnThoat;
-            this.ClientSize = new System.Drawing.Size(385, 481);
+            this.ClientSize = new System.Drawing.Size(385, 478);
             this.Controls.Add(this.groupPanel2);
             this.Controls.Add(this.groupPanel1);
             this.Controls.Add(this.lbFlag);

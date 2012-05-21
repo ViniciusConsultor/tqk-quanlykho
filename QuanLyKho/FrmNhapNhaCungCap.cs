@@ -37,6 +37,7 @@ namespace QuanLyKho
                 dtoNhaCC.GhiChu = txtGhiChu.Text;
                 dalNhaCC.InsertNhaCungCap(dtoNhaCC);
                 MessageBox.Show("Thêm Nhà Cung Cấp Thành Công!", "Thêm Nhà Cung Cấp", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                this.Close();
             }
             else
             {
@@ -51,6 +52,7 @@ namespace QuanLyKho
                 dtoNhaCC.GhiChu = txtGhiChu.Text;
                 dalNhaCC.UpdateNhaCungCap(dtoNhaCC);
                 MessageBox.Show("Cập Nhật Thành Công!", "Cập Nhật Nhà Cung Cấp", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             
             }
         }

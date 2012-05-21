@@ -80,7 +80,7 @@
             this.groupPanel1.Controls.Add(this.btnThoat);
             this.groupPanel1.Controls.Add(this.btnThem);
             this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupPanel1.Location = new System.Drawing.Point(0, 370);
+            this.groupPanel1.Location = new System.Drawing.Point(0, 391);
             this.groupPanel1.Name = "groupPanel1";
             this.groupPanel1.Size = new System.Drawing.Size(384, 45);
             // 
@@ -166,7 +166,7 @@
             this.groupPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel2.Location = new System.Drawing.Point(0, 54);
             this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(384, 316);
+            this.groupPanel2.Size = new System.Drawing.Size(384, 337);
             // 
             // 
             // 
@@ -429,7 +429,7 @@
             // 
             this.AcceptButton = this.btnThem;
             this.CancelButton = this.btnThoat;
-            this.ClientSize = new System.Drawing.Size(384, 415);
+            this.ClientSize = new System.Drawing.Size(384, 436);
             this.Controls.Add(this.groupPanel2);
             this.Controls.Add(this.groupPanel1);
             this.Controls.Add(this.labelX1);

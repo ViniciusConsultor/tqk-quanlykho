@@ -38,6 +38,7 @@ namespace QuanLyKho
                 dalKhachHang.InsertKhachHang(dtoKhachHang);
                 //Load Khách Hàng Sau Khi Nhập                
                 MessageBox.Show("Thêm Khách Hàng Thành Công!","Thêm Khách Hàng",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                this.Close();
             }
             else
             {
@@ -53,6 +54,7 @@ namespace QuanLyKho
                 dtoKhachHang.GhiChu = txtGhiChu.Text;
                 dalKhachHang.UpdateKH(dtoKhachHang);
                 MessageBox.Show("Cập nhật Khách Hàng Thành Công!","Cập Nhật Khách Hàng",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                this.Close();
             }
             
         }
