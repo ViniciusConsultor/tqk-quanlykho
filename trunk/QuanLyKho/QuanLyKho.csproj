@@ -52,6 +52,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar.Keyboard, Version=10.2.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=10.2.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=10.2.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar2, Version=10.2.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.Instrumentation, Version=10.2.0.1, Culture=neutral, PublicKeyToken=bc4a9d761ea44ef0, processorArchitecture=MSIL" />
@@ -120,6 +121,12 @@
     <Compile Include="FrmNhanVien.Designer.cs">
       <DependentUpon>FrmNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmNhapDonViTinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNhapDonViTinh.Designer.cs">
+      <DependentUpon>FrmNhapDonViTinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmNhapKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,12 +144,6 @@
     </Compile>
     <Compile Include="FrmNhapMatHang.Designer.cs">
       <DependentUpon>FrmNhapMatHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmNhapNhaCungCap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmNhapNhaCungCap.Designer.cs">
-      <DependentUpon>FrmNhapNhaCungCap.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmNhapNhanVien.cs">
       <SubType>Form</SubType>
@@ -167,6 +168,12 @@
     </Compile>
     <Compile Include="FrmTTDoanhNghiep.Designer.cs">
       <DependentUpon>FrmTTDoanhNghiep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNhapNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNhapNhaCungCap.Designer.cs">
+      <DependentUpon>FrmNhapNhaCungCap.cs</DependentUpon>
     </Compile>
     <Compile Include="Function.cs" />
     <Compile Include="Program.cs" />
@@ -199,6 +206,9 @@
     <EmbeddedResource Include="FrmNhanVien.resx">
       <DependentUpon>FrmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmNhapDonViTinh.resx">
+      <DependentUpon>FrmNhapDonViTinh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmNhapKhachHang.af-ZA.resx">
       <DependentUpon>FrmNhapKhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,9 +221,6 @@
     <EmbeddedResource Include="FrmNhapMatHang.resx">
       <DependentUpon>FrmNhapMatHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmNhapNhaCungCap.resx">
-      <DependentUpon>FrmNhapNhaCungCap.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmNhapNhanVien.resx">
       <DependentUpon>FrmNhapNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTTDoanhNghiep.resx">
       <DependentUpon>FrmTTDoanhNghiep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNhapNhaCungCap.resx">
+      <DependentUpon>FrmNhapNhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

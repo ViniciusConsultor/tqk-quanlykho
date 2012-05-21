@@ -67,8 +67,8 @@ namespace QuanLyKho
             frmNhapNhanVien.cmbBoPhan.DisplayMember = strBoPhan;
             string strChucVu = dgvNhanVien.Rows[index].Cells["colChucVu"].Value.ToString();
             frmNhapNhanVien.cmbChucVu.DisplayMember = strChucVu;
-            string strNgaySinh = dgvNhanVien.Rows[index].Cells["colNgaySinh"].Value.ToString();
-            frmNhapNhanVien.txtNgaySinh.Text = strNgaySinh;
+            DateTime dateNgaySinh = DateTime.Parse(dgvNhanVien.Rows[index].Cells["colNgaySinh"].Value.ToString());
+            frmNhapNhanVien.dtNgaySinh.Value = dateNgaySinh; 
             string strDienThoai = dgvNhanVien.Rows[index].Cells["colSoDienThoai"].Value.ToString();
             frmNhapNhanVien.txtDienThoai.Text = strDienThoai;
             string strCMND = dgvNhanVien.Rows[index].Cells["colCMND"].Value.ToString();

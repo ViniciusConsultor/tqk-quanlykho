@@ -88,5 +88,10 @@ namespace QuanLyKho
             dalKhachHang.DelKhachHang(strMaKH);
             MessageBox.Show("Bạn Chắc Muốn Xóa Khách Hàng Này!", "Xóa Khách Hàng", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadKhachHang();
+        }
     }
 }

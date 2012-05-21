@@ -26,7 +26,7 @@ namespace DAL
             strQuery += "N'" + dtoNhaCungCap.NganHang + "',";
             strQuery += "N'" + dtoNhaCungCap.SoDienThoai + "',";
             strQuery += "N'" + dtoNhaCungCap.Email + "',";
-            strQuery += "N'" + dtoNhaCungCap.GhiChu + "',True)";
+            strQuery += "N'" + dtoNhaCungCap.GhiChu + "', 1)";
             return dp.ExecuteNonQuery(strQuery);
         }
 
@@ -48,7 +48,7 @@ namespace DAL
 
         public bool DelNhaCungCap(string strMaNCC)
         {
-            string strQuery = "Update NHACUNGCAP Set TINHTRANG = False where MANHACUNGCAP = N'" + strMaNCC + "'";
+            string strQuery = "Update NHACUNGCAP Set TINHTRANG = 0 where MANHACUNGCAP = N'" + strMaNCC + "'";
             return dp.ExecuteNonQuery(strQuery);
         }
     }

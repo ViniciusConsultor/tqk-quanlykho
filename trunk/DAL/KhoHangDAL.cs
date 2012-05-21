@@ -11,7 +11,7 @@ namespace DAL
 
         public DataTable GetAllKhoHang()
         {
-            string strQuery = "Select * From KHO k, NHANVIEN nv Where k.NGUOILIENHE = nv.MANHANVIEN and k.TINHTRANG = 1";
+            string strQuery = "Select * From KHO Where TINHTRANG = 1";
             return dp.ExecuteQuery(strQuery);
 
         }

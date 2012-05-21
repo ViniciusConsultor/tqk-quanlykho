@@ -17,14 +17,13 @@ namespace DAL
         public bool InsertMatHang(MatHangDTO dtoMatHang)
         {
             string strQuery = "Insert Into MATHANG Values(";
-            strQuery += "N" + dtoMatHang.MaMH + "',";
-            strQuery += "N" + dtoMatHang.MaNH + "',";
-            strQuery += "N" + dtoMatHang.MaKho + "',";
-            strQuery += "N" + dtoMatHang.TenMH + "',";
-            strQuery += "N" + dtoMatHang.MaDonViTinh + "',";
-            strQuery += "N" + dtoMatHang.TonDau + "',";
-            strQuery += "N" + dtoMatHang.MoTa + "',";
-            strQuery += "N" + dtoMatHang.TinhTrang + "',True)";
+            strQuery += "N'" + dtoMatHang.MaMH + "',";
+            strQuery += "N'" + dtoMatHang.MaNH + "',";
+            strQuery += "N'" + dtoMatHang.MaKho + "',";
+            strQuery += "N'" + dtoMatHang.TenMH + "',";
+            strQuery += "N'" + dtoMatHang.MaDonViTinh + "',";
+            strQuery += dtoMatHang.TonDau + ",";
+            strQuery += "N'" + dtoMatHang.MoTa + "', 1)";
             return dp.ExecuteNonQuery(strQuery);
         }
 
@@ -44,7 +43,7 @@ namespace DAL
 
         public bool DelMatHang(string strMaMH)
         {
-            string strQuery = "Update MATHANG Set TINHTRANG = False Where MAMATHANG = N'" + strMaMH + "'";
+            string strQuery = "Update MATHANG Set TINHTRANG = 0 Where MAMATHANG = N'" + strMaMH + "'";
             return dp.ExecuteNonQuery(strQuery);
         }
     }

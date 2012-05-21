@@ -113,6 +113,7 @@
             this.btnRefresh.ImageFixedSize = new System.Drawing.Size(16, 16);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // labelItem3
             // 

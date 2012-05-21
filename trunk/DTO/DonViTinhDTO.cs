@@ -21,5 +21,13 @@ namespace DTO
             get { return _donViTinh; }
             set { _donViTinh = value; }
         }
+
+        private string _tinhTrang;
+
+        public string TinhTrang
+        {
+            get { return _tinhTrang; }
+            set { _tinhTrang = value; }
+        }
     }
 }

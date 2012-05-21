@@ -61,11 +61,11 @@
             this.colSoTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaMatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTenMatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNhomHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colKho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDonViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTonDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
@@ -92,6 +92,7 @@
             this.btnXoa.Image = global::QuanLyKho.Properties.Resources._112_Minus_Green_16x16_72;
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // labelItem1
             // 
@@ -110,6 +111,7 @@
             this.btnRefresh.ImageFixedSize = new System.Drawing.Size(16, 16);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // labelItem3
             // 
@@ -133,6 +135,7 @@
             this.btnCapNhat.ImageFixedSize = new System.Drawing.Size(16, 16);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Text = "Cập Nhật";
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // labelItem5
             // 
@@ -352,11 +355,11 @@
             this.colSoTT,
             this.colMaMatHang,
             this.colTenMatHang,
-            this.Column1,
+            this.colNhomHang,
             this.colKho,
             this.colDonViTinh,
             this.colMoTa,
-            this.Column2});
+            this.colTonDau});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -379,6 +382,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvMatHang.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvMatHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMatHang.Size = new System.Drawing.Size(883, 407);
             this.dgvMatHang.TabIndex = 13;
             // 
@@ -406,12 +410,12 @@
             this.colTenMatHang.ReadOnly = true;
             this.colTenMatHang.Width = 150;
             // 
-            // Column1
+            // colNhomHang
             // 
-            this.Column1.DataPropertyName = "TENNHOMHANG";
-            this.Column1.HeaderText = "Nhóm Hàng";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.colNhomHang.DataPropertyName = "TENNHOMHANG";
+            this.colNhomHang.HeaderText = "Nhóm Hàng";
+            this.colNhomHang.Name = "colNhomHang";
+            this.colNhomHang.ReadOnly = true;
             // 
             // colKho
             // 
@@ -437,12 +441,12 @@
             this.colMoTa.ReadOnly = true;
             this.colMoTa.Width = 120;
             // 
-            // Column2
+            // colTonDau
             // 
-            this.Column2.DataPropertyName = "TONDAU";
-            this.Column2.HeaderText = "Tồn Đầu";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.colTonDau.DataPropertyName = "TONDAU";
+            this.colTonDau.HeaderText = "Tồn Đầu";
+            this.colTonDau.Name = "colTonDau";
+            this.colTonDau.ReadOnly = true;
             // 
             // groupPanel4
             // 
@@ -752,10 +756,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colSoTT;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaMatHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenMatHang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNhomHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn colKho;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDonViTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMoTa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTonDau;
     }
 }
