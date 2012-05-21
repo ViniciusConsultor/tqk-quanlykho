@@ -74,9 +74,12 @@ namespace QuanLyKho
         {
             int index = dgvMatHang.SelectedRows[0].Index;
             string strMaMH = dgvMatHang.Rows[index].Cells["colMaMatHang"].Value.ToString();
-            MessageBox.Show("Bạn Có Chắc Muốn Xóa Mặt Hàng Này!", "Xóa Mặt Hàng", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            dalMatHang.DelMatHang(strMaMH);
-            MessageBox.Show("Xóa Mặt Hàng Thành Công!", "Xóa Mặt Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (MessageBox.Show("Bạn Có Chắc Muốn Xóa Mặt Hàng Này!", "Xóa Mặt Hàng", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            {
+                dalMatHang.DelMatHang(strMaMH);
+                MessageBox.Show("Xóa Mặt Hàng Thành Công!", "Xóa Mặt Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgvMatHang.Rows.RemoveAt(index);
+            }
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
