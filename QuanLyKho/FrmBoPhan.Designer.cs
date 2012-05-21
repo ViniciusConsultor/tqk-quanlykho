@@ -242,6 +242,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvBoPhan.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvBoPhan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBoPhan.Size = new System.Drawing.Size(797, 438);
             this.dgvBoPhan.TabIndex = 13;
             // 
@@ -580,6 +581,7 @@
             this.btnThem.Image = global::QuanLyKho.Properties.Resources._112_Plus_Green_16x16_72;
             this.btnThem.Name = "btnThem";
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnCapNhat
             // 
@@ -588,6 +590,7 @@
             this.btnCapNhat.ImageFixedSize = new System.Drawing.Size(16, 16);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Text = "Cập Nhật";
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // btnXoa
             // 
@@ -595,6 +598,7 @@
             this.btnXoa.Image = global::QuanLyKho.Properties.Resources._112_Minus_Green_16x16_72;
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnRefresh
             // 
@@ -603,6 +607,7 @@
             this.btnRefresh.ImageFixedSize = new System.Drawing.Size(16, 16);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnXuatExcel
             // 
@@ -688,7 +693,6 @@
         private DevComponents.DotNetBar.LabelItem labelItem17;
         private DevComponents.DotNetBar.LabelItem labelItem18;
         private DevComponents.DotNetBar.ButtonItem btnThem;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dgvBoPhan;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel4;
@@ -703,5 +707,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colSoTT;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaBoPhan;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenBoPhan;
+        public DevComponents.DotNetBar.Controls.DataGridViewX dgvBoPhan;
     }
 }

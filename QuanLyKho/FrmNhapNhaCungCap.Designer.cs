@@ -68,7 +68,7 @@
             this.labelX1.Name = "labelX1";
             this.labelX1.PaddingLeft = 60;
             this.labelX1.PaddingRight = 60;
-            this.labelX1.Size = new System.Drawing.Size(384, 47);
+            this.labelX1.Size = new System.Drawing.Size(384, 54);
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "THÔNG TIN NHÀ CUNG CẤP";
             this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -82,7 +82,7 @@
             this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupPanel1.Location = new System.Drawing.Point(0, 370);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(384, 57);
+            this.groupPanel1.Size = new System.Drawing.Size(384, 45);
             // 
             // 
             // 
@@ -99,7 +99,7 @@
             this.groupPanel1.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
             this.groupPanel1.Style.BorderTopWidth = 1;
             this.groupPanel1.Style.CornerDiameter = 4;
-            this.groupPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.groupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.groupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
@@ -120,9 +120,9 @@
             this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThoat.Image = global::QuanLyKho.Properties.Resources.DeleteAll;
-            this.btnThoat.Location = new System.Drawing.Point(219, 8);
+            this.btnThoat.Location = new System.Drawing.Point(221, 8);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(89, 37);
+            this.btnThoat.Size = new System.Drawing.Size(90, 25);
             this.btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnThoat.TabIndex = 1;
             this.btnThoat.Text = "Cancel";
@@ -133,9 +133,9 @@
             this.btnThem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnThem.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThem.Image = global::QuanLyKho.Properties.Resources.Connection;
-            this.btnThem.Location = new System.Drawing.Point(61, 8);
+            this.btnThem.Location = new System.Drawing.Point(65, 8);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(89, 37);
+            this.btnThem.Size = new System.Drawing.Size(90, 25);
             this.btnThem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "OK";
@@ -164,9 +164,9 @@
             this.groupPanel2.Controls.Add(this.labelX3);
             this.groupPanel2.Controls.Add(this.labelX2);
             this.groupPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupPanel2.Location = new System.Drawing.Point(0, 47);
+            this.groupPanel2.Location = new System.Drawing.Point(0, 54);
             this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(384, 323);
+            this.groupPanel2.Size = new System.Drawing.Size(384, 316);
             // 
             // 
             // 
@@ -183,7 +183,7 @@
             this.groupPanel2.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
             this.groupPanel2.Style.BorderTopWidth = 1;
             this.groupPanel2.Style.CornerDiameter = 4;
-            this.groupPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel2.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.groupPanel2.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.groupPanel2.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
@@ -429,7 +429,7 @@
             // 
             this.AcceptButton = this.btnThem;
             this.CancelButton = this.btnThoat;
-            this.ClientSize = new System.Drawing.Size(384, 427);
+            this.ClientSize = new System.Drawing.Size(384, 415);
             this.Controls.Add(this.groupPanel2);
             this.Controls.Add(this.groupPanel1);
             this.Controls.Add(this.labelX1);

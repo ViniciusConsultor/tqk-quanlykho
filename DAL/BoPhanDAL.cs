@@ -19,8 +19,7 @@ namespace DAL
         {
             string strQuery = "Insert Into BOPHAN Values(";
             strQuery += "N'" + dtoBoPhan.MaBP + "',";
-            strQuery += "N'" + dtoBoPhan.TenBoPhan + "',";
-            strQuery += "N'" + dtoBoPhan.TinhTrang + "',True)";
+            strQuery += "N'" + dtoBoPhan.TenBoPhan + "', 1)";
             return dp.ExecuteNonQuery(strQuery);
         }
 
@@ -34,7 +33,7 @@ namespace DAL
 
         public bool DelBoPhan(string strMaBP)
         {
-            string strQuery = "Update BOPHAN Set TINHTRANG = False Where MABOPHAN = N'" + strMaBP + "'";
+            string strQuery = "Update BOPHAN Set TINHTRANG = 0 Where MABOPHAN = N'" + strMaBP + "'";
             return dp.ExecuteNonQuery(strQuery);
         }
     }
