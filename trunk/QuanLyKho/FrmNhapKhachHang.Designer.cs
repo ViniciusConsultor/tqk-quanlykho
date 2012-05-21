@@ -99,7 +99,7 @@
             this.groupPanel1.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
             this.groupPanel1.Style.BorderTopWidth = 1;
             this.groupPanel1.Style.CornerDiameter = 4;
-            this.groupPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.groupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.groupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
@@ -120,9 +120,9 @@
             this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnThoat.Image = global::QuanLyKho.Properties.Resources.DeleteAll;
-            this.btnThoat.Location = new System.Drawing.Point(233, 3);
+            this.btnThoat.Location = new System.Drawing.Point(224, 14);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(92, 37);
+            this.btnThoat.Size = new System.Drawing.Size(90, 25);
             this.btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnThoat.TabIndex = 1;
             this.btnThoat.Text = "Cancel";
@@ -133,9 +133,9 @@
             this.btnThemKhachHang.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnThemKhachHang.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.btnThemKhachHang.Image = global::QuanLyKho.Properties.Resources.Connection;
-            this.btnThemKhachHang.Location = new System.Drawing.Point(85, 6);
+            this.btnThemKhachHang.Location = new System.Drawing.Point(74, 14);
             this.btnThemKhachHang.Name = "btnThemKhachHang";
-            this.btnThemKhachHang.Size = new System.Drawing.Size(85, 37);
+            this.btnThemKhachHang.Size = new System.Drawing.Size(90, 25);
             this.btnThemKhachHang.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnThemKhachHang.TabIndex = 0;
             this.btnThemKhachHang.Text = "OK";
@@ -183,7 +183,7 @@
             this.groupPanel2.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
             this.groupPanel2.Style.BorderTopWidth = 1;
             this.groupPanel2.Style.CornerDiameter = 4;
-            this.groupPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel2.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.groupPanel2.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.groupPanel2.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
