@@ -11,7 +11,7 @@ namespace DAL
 
         public DataTable GetAllKhoHang()
         {
-            string strQuery = "Select * From KHO Where TINHTRANG = 1";
+            string strQuery = "Select * From KHO k, NHANVIEN nv Where k.TINHTRANG = 1 and k.NGUOILIENHE = nv.MANHANVIEN ";
             return dp.ExecuteQuery(strQuery);
 
         }
@@ -26,7 +26,7 @@ namespace DAL
             strQuery += "N'" + dtoKhoHang.DTDD + "',";
             strQuery += "N'" + dtoKhoHang.NguoiLH + "',";
             strQuery += "N'" + dtoKhoHang.Fax + "',";
-            strQuery += "N'" + dtoKhoHang.GhiChu + "',True)";
+            strQuery += "N'" + dtoKhoHang.GhiChu + "', 1)";
             return dp.ExecuteNonQuery(strQuery);
         }
 
@@ -46,7 +46,7 @@ namespace DAL
 
         public bool DelKhoHang(string strMaKho)
         {
-            string strQuery = "Update KHO Set TINHTRANG = False Where MAKHO = N'" + strMaKho + "'";
+            string strQuery = "Update KHO Set TINHTRANG = 0 Where MAKHO = N'" + strMaKho + "'";
             return dp.ExecuteNonQuery(strQuery);
         }
     }
