@@ -10,7 +10,7 @@ namespace DAL
         DataProvider dp = new DataProvider();
         public DataTable GetDonViTinh()
         {
-            string strQuery = "Select * From DONVITINH ";
+            string strQuery = "Select * From DONVITINH Where TINHTRANG = 1";
             return dp.ExecuteQuery(strQuery);
         }
 
@@ -18,7 +18,7 @@ namespace DAL
         {
             string strQuery = "Insert Into DONVITINH values(";
             strQuery += "N'" + dtoDonViTinh.MaDVT + "',";
-            strQuery += "N'" + dtoDonViTinh.DonViTinh + "')";
+            strQuery += "N'" + dtoDonViTinh.DonViTinh + "', 1)";
             return dp.ExecuteNonQuery(strQuery);
         }
 
@@ -27,6 +27,12 @@ namespace DAL
             string strQuery = "Update DONVITINH Set ";
             strQuery += "DONVITINH = N'" + dtoDonViTinh.DonViTinh + "' ";
             strQuery += "Where MADONVITINH = N'" + dtoDonViTinh.MaDVT + "'";
+            return dp.ExecuteNonQuery(strQuery);
+        }
+
+        public bool DelDonViTinh(string strMaDVt)
+        {
+            string strQuery = "Update DONVITINH Set TINHTRANG = 0 Where MADONVITINH = N'" + strMaDVt + "'";
             return dp.ExecuteNonQuery(strQuery);
         }
     }

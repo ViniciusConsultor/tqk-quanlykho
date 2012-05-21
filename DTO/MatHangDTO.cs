@@ -46,9 +46,9 @@ namespace DTO
             set { _maDonViTinh = value; }
         }
 
-        private int _tonDau;
+        private float _tonDau;
 
-        public int TonDau
+        public float TonDau
         {
             get { return _tonDau; }
             set { _tonDau = value; }
