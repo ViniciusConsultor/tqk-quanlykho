@@ -32,5 +32,28 @@ namespace QuanLyKho
         {
             Function.CloseForm();
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            FrmNhapNhomHang frmNhapNhomHang = new FrmNhapNhomHang();
+            frmNhapNhomHang.btnOK.Tag = "add";
+            string strMaNhom = cf.CreateId("NHA", "NHOMHANG");
+            frmNhapNhomHang.txtMaNhom.Text = strMaNhom;
+            frmNhapNhomHang.ShowDialog();
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            FrmNhapNhomHang frmNhapNhomHang = new FrmNhapNhomHang();
+            frmNhapNhomHang.btnOK.Tag = "up";
+            int index = dgvNhomHang.SelectedRows[0].Index;
+            string strMaNhom = dgvNhomHang.Rows[index].Cells["colMaNhomHang"].Value.ToString();
+            frmNhapNhomHang.txtMaNhom.Text = strMaNhom;
+            string strTenNhom = dgvNhomHang.Rows[index].Cells["colTenNhomHang"].Value.ToString();
+            frmNhapNhomHang.txtTenNhom.Text = strTenNhom;
+            string strGhiChu = dgvNhomHang.Rows[index].Cells["colGhiChu"].Value.ToString();
+            frmNhapNhomHang.txtGhiChu.Text = strGhiChu;
+            frmNhapNhomHang.ShowDialog();
+        }
     }
 }
