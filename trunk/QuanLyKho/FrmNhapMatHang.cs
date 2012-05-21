@@ -54,6 +54,7 @@ namespace QuanLyKho
                 dtoMatHang.MoTa = txtMoTa.Text;
                 dalMatHang.InsertMatHang(dtoMatHang);
                 MessageBox.Show("Thêm Mặt Hàng Thành Công!","Thêm Mặt Hàng", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                this.Close();
 
             }
             else
@@ -67,6 +68,7 @@ namespace QuanLyKho
                 dtoMatHang.MoTa = txtMoTa.Text;
                 dalMatHang.UpdateMatHang(dtoMatHang);
                 MessageBox.Show("Cập Nhật Mặt Hàng Thành Công!", "Cập Nhật Mặt Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             
             }
         }

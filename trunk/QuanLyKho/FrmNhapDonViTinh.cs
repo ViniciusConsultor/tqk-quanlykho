@@ -30,6 +30,7 @@ namespace QuanLyKho
                 dtoDVT.DonViTinh = txtDonViTinh.Text;
                 dalDVT.InsertDonViTinh(dtoDVT);
                 MessageBox.Show("Thêm Thành Công!", "Thêm Đơn Vị Tính", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             else
             {
@@ -37,6 +38,7 @@ namespace QuanLyKho
                 dtoDVT.DonViTinh = txtDonViTinh.Text;
                 dalDVT.UpdateDonViTinh(dtoDVT);
                 MessageBox.Show("Cập Nhật Thành Công!", "Cập Nhật Đơn Vị Tính", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
                
 
