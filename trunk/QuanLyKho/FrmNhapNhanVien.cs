@@ -7,15 +7,14 @@ using System.Text;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using DTO;
-using DAL;
+using BLL;
 namespace QuanLyKho
 {
     public partial class FrmNhapNhanVien : DevComponents.DotNetBar.Office2007Form
     {
-        DataProvider dp = new DataProvider();
-        BoPhanDAL dalBoPhan = new BoPhanDAL();
+        BoPhanBLL dalBoPhan = new BoPhanBLL();
         NhanVienDTO dtoNhanVien = new NhanVienDTO();
-        NhanVienDAL dalNhanVien = new NhanVienDAL();
+        NhanVienBLL bllNhanVien = new NhanVienBLL();
         CFunction cf = new CFunction();
         public FrmNhapNhanVien()
         {
@@ -24,17 +23,23 @@ namespace QuanLyKho
 
         private void FrmNhapNhanVien_Load(object sender, EventArgs e)
         {
-            cmbBoPhan.DataSource = dalBoPhan.GetBoPhan();
-            cmbBoPhan.ValueMember = "MABOPHAN";
-            cmbBoPhan.DisplayMember = "TENBOPHAN";
-            cmbChucVu.DataSource = dalNhanVien.GetNhanVien();
-            cmbChucVu.DisplayMember = "CHUCVU";
+            try
+            {
+                cmbBoPhan.DataSource = dalBoPhan.GetBoPhan();
+                cmbBoPhan.ValueMember = "MABOPHAN";
+                cmbBoPhan.DisplayMember = "TENBOPHAN";
+                cmbChucVu.DataSource = bllNhanVien.GetNhanVien();
+                cmbChucVu.DisplayMember = "CHUCVU";
+                cmbBoPhan.Text = cmbBoPhan.Tag.ToString();
+                cmbChucVu.Text = cmbChucVu.Tag.ToString();
+            }
+            catch { }
         }
 
         private void btnThemNhanVien_Click(object sender, EventArgs e)
         {
             string strAction = btnThemNhanVien.Tag.ToString();
-            if (strAction == "Insert")
+            if (strAction == "add")
             {
                 string strMaNV = cf.CreateId("MANV", "NHANVIEN");
                 dtoNhanVien.MaNV = strMaNV;
@@ -42,12 +47,19 @@ namespace QuanLyKho
                 dtoNhanVien.MaBP = cmbBoPhan.SelectedValue.ToString();
                 dtoNhanVien.ChucVu = cmbChucVu.Text;
                 dtoNhanVien.MatKhau = "12345";
-                dtoNhanVien.NgaySinh = dtNgaySinh.Value;
+                dtoNhanVien.NgaySinh = dtNgaySinh.Value.ToShortDateString();
                 dtoNhanVien.SoDT = txtDienThoai.Text;
                 dtoNhanVien.CMND = txtCMND.Text;
                 dtoNhanVien.DiaChi = txtDiaChi.Text;
-                dalNhanVien.InsertNhanVien(dtoNhanVien);
-                MessageBox.Show("Thêm Nhân Viên Thành Công!", "Thêm Nhân Viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string strResult = bllNhanVien.InsertNhanVien(dtoNhanVien);
+                if (strResult == "ok")
+                {
+                    MessageBox.Show("Thêm Nhân Viên Thành Công!", "Thêm Nhân Viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show(strResult, "Thêm Nhân Viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             { 

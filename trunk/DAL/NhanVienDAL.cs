@@ -25,7 +25,7 @@ namespace DAL
             strQuery += "N'" + dtoNhanVien.MatKhau + "',";
             strQuery += "N'" + dtoNhanVien.ChucVu + "',";
             strQuery += "N'" + dtoNhanVien.DiaChi + "',";
-            strQuery +=  dtoNhanVien.NgaySinh ;
+            strQuery += "N'" + dtoNhanVien.NgaySinh + "',";
             strQuery += "N'" + dtoNhanVien.CMND + "',";
             strQuery += "N'" + dtoNhanVien.SoDT + "', 1)";
             return dp.ExecuteNonQuery(strQuery);

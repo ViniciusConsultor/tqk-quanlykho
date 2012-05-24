@@ -111,6 +111,7 @@
             this.btnXoa.Image = global::QuanLyKho.Properties.Resources._112_Minus_Green_16x16_72;
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // labelItem3
             // 
@@ -158,6 +159,7 @@
             this.btnRefresh.ImageFixedSize = new System.Drawing.Size(16, 16);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // labelItem5
             // 
@@ -300,6 +302,7 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvNhomHang.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvNhomHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNhomHang.Size = new System.Drawing.Size(804, 362);
             this.dgvNhomHang.TabIndex = 13;
             // 
