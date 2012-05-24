@@ -71,3 +71,6 @@ H:\KhachHang\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\af-ZA\QuanLyKho.resources.dll
 D:\DongHien\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\QuanLyKho.FrmNhapBoPhan.resources
 >>>>>>> .r25
 D:\DongHien\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\QuanLyKho.FrmNhapKhoHang.resources
+D:\DongHien\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\QuanLyKho.FrmNhapNhomHang.resources
+D:\DongHien\TQK_BinhDuong\QuanLyKho\bin\Debug\BLL.dll
+D:\DongHien\TQK_BinhDuong\QuanLyKho\bin\Debug\BLL.pdb

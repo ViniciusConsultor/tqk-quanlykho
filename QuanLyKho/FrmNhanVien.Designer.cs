@@ -195,7 +195,7 @@
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvNhanVien.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -629,7 +629,6 @@
             this.labelItem9,
             this.labelItem11});
             this.labelItem7.Text = "     ";
-            this.labelItem7.Click += new System.EventHandler(this.labelItem7_Click);
             // 
             // labelItem8
             // 
@@ -690,7 +689,6 @@
             this.labelX2.Size = new System.Drawing.Size(905, 51);
             this.labelX2.TabIndex = 3;
             this.labelX2.Text = "   Quản Lý Nhân Viên";
-            this.labelX2.Click += new System.EventHandler(this.labelX2_Click);
             // 
             // labelX1
             // 

@@ -30,15 +30,15 @@
         {
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.txtMaNhom = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtTenNhom = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.btnOK = new DevComponents.DotNetBar.ButtonX();
             this.btnThoat = new DevComponents.DotNetBar.ButtonX();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.btnOK = new DevComponents.DotNetBar.ButtonX();
+            this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.txtGhiChu = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.txtTenNhom = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtMaNhom = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -101,6 +101,34 @@
             this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel1.TabIndex = 1;
             // 
+            // btnThoat
+            // 
+            this.btnThoat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnThoat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnThoat.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnThoat.Image = global::QuanLyKho.Properties.Resources.DeleteAll;
+            this.btnThoat.Location = new System.Drawing.Point(193, 10);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(76, 21);
+            this.btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnThoat.TabIndex = 1;
+            this.btnThoat.Text = "Cancel";
+            // 
+            // btnOK
+            // 
+            this.btnOK.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnOK.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnOK.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnOK.Image = global::QuanLyKho.Properties.Resources.Connection;
+            this.btnOK.Location = new System.Drawing.Point(68, 10);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(67, 21);
+            this.btnOK.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnOK.TabIndex = 0;
+            this.btnOK.Text = "OK";
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
             // groupPanel2
             // 
             this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
@@ -145,31 +173,43 @@
             this.groupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel2.TabIndex = 2;
             // 
-            // labelX2
-            // 
-            this.labelX2.BackColor = System.Drawing.Color.Transparent;
+            // txtGhiChu
             // 
             // 
             // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(9, 13);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(87, 23);
-            this.labelX2.TabIndex = 0;
-            this.labelX2.Text = "Mã Nhóm Hàng :";
             // 
-            // labelX3
+            this.txtGhiChu.Border.Class = "TextBoxBorder";
+            this.txtGhiChu.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtGhiChu.Location = new System.Drawing.Point(112, 77);
+            this.txtGhiChu.Multiline = true;
+            this.txtGhiChu.Name = "txtGhiChu";
+            this.txtGhiChu.Size = new System.Drawing.Size(196, 44);
+            this.txtGhiChu.TabIndex = 5;
             // 
-            this.labelX3.BackColor = System.Drawing.Color.Transparent;
+            // labelX4
+            // 
+            this.labelX4.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(9, 45);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(87, 23);
-            this.labelX3.TabIndex = 1;
-            this.labelX3.Text = "Tên Nhóm Hàng :";
+            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX4.Location = new System.Drawing.Point(9, 74);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.Size = new System.Drawing.Size(87, 23);
+            this.labelX4.TabIndex = 4;
+            this.labelX4.Text = "Ghi Chú :";
+            // 
+            // txtTenNhom
+            // 
+            // 
+            // 
+            // 
+            this.txtTenNhom.Border.Class = "TextBoxBorder";
+            this.txtTenNhom.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTenNhom.Location = new System.Drawing.Point(112, 45);
+            this.txtTenNhom.Name = "txtTenNhom";
+            this.txtTenNhom.Size = new System.Drawing.Size(196, 20);
+            this.txtTenNhom.TabIndex = 3;
             // 
             // txtMaNhom
             // 
@@ -184,73 +224,31 @@
             this.txtMaNhom.Size = new System.Drawing.Size(196, 20);
             this.txtMaNhom.TabIndex = 2;
             // 
-            // txtTenNhom
+            // labelX3
+            // 
+            this.labelX3.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
+            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX3.Location = new System.Drawing.Point(9, 45);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.Size = new System.Drawing.Size(87, 23);
+            this.labelX3.TabIndex = 1;
+            this.labelX3.Text = "Tên Nhóm Hàng :";
             // 
-            this.txtTenNhom.Border.Class = "TextBoxBorder";
-            this.txtTenNhom.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTenNhom.Location = new System.Drawing.Point(112, 45);
-            this.txtTenNhom.Name = "txtTenNhom";
-            this.txtTenNhom.Size = new System.Drawing.Size(196, 20);
-            this.txtTenNhom.TabIndex = 3;
+            // labelX2
             // 
-            // btnOK
-            // 
-            this.btnOK.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnOK.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnOK.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnOK.Image = global::QuanLyKho.Properties.Resources.Connection;
-            this.btnOK.Location = new System.Drawing.Point(68, 8);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(67, 21);
-            this.btnOK.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnOK.TabIndex = 0;
-            this.btnOK.Text = "OK";
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnThoat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnThoat.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnThoat.Image = global::QuanLyKho.Properties.Resources.DeleteAll;
-            this.btnThoat.Location = new System.Drawing.Point(193, 8);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(76, 21);
-            this.btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnThoat.TabIndex = 1;
-            this.btnThoat.Text = "Cancel";
-            this.btnThoat.Click += new System.EventHandler(this.buttonX2_Click);
-            // 
-            // labelX4
-            // 
-            this.labelX4.BackColor = System.Drawing.Color.Transparent;
+            this.labelX2.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Location = new System.Drawing.Point(9, 74);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(87, 23);
-            this.labelX4.TabIndex = 4;
-            this.labelX4.Text = "Ghi Chú :";
-            this.labelX4.Click += new System.EventHandler(this.labelX4_Click);
-            // 
-            // txtGhiChu
-            // 
-            // 
-            // 
-            // 
-            this.txtGhiChu.Border.Class = "TextBoxBorder";
-            this.txtGhiChu.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtGhiChu.Location = new System.Drawing.Point(112, 77);
-            this.txtGhiChu.Multiline = true;
-            this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(196, 44);
-            this.txtGhiChu.TabIndex = 5;
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Location = new System.Drawing.Point(9, 13);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(87, 23);
+            this.labelX2.TabIndex = 0;
+            this.labelX2.Text = "Mã Nhóm Hàng :";
             // 
             // FrmNhapNhomHang
             // 
@@ -262,6 +260,7 @@
             this.Controls.Add(this.labelX1);
             this.DoubleBuffered = true;
             this.Name = "FrmNhapNhomHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhóm Hàng";
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);

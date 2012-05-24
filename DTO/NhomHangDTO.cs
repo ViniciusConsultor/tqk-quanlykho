@@ -29,5 +29,12 @@ namespace DTO
             get { return _ghiChu; }
             set { _ghiChu = value; }
         }
+        private string _tinhTrang;
+
+        public string TinhTrang
+        {
+            get { return _tinhTrang; }
+            set { _tinhTrang = value; }
+        }
     }
 }

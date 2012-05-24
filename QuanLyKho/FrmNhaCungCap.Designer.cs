@@ -28,19 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvNhaCungCap = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.colSoTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaNhaCungCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenNhaCungCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaSoThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNganHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelItem16 = new DevComponents.DotNetBar.LabelItem();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
-            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.btnNext = new DevComponents.DotNetBar.ButtonX();
+            this.btnLast = new DevComponents.DotNetBar.ButtonX();
+            this.txtIndex = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.btnFirst = new DevComponents.DotNetBar.ButtonX();
+            this.btnPreview = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.groupPanel5 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.bar1 = new DevComponents.DotNetBar.Bar();
@@ -69,16 +79,6 @@
             this.labelItem14 = new DevComponents.DotNetBar.LabelItem();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.colSoTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaNhaCungCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenNhaCungCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaSoThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSoTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNganHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhaCungCap)).BeginInit();
             this.groupPanel1.SuspendLayout();
             this.groupPanel3.SuspendLayout();
@@ -92,14 +92,14 @@
             // 
             this.dgvNhaCungCap.AllowUserToAddRows = false;
             this.dgvNhaCungCap.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNhaCungCap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNhaCungCap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvNhaCungCap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhaCungCap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSoTT,
@@ -112,31 +112,113 @@
             this.colSoTaiKhoan,
             this.colNganHang,
             this.colGhiChu});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvNhaCungCap.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvNhaCungCap.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvNhaCungCap.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvNhaCungCap.EnableHeadersVisualStyles = false;
             this.dgvNhaCungCap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvNhaCungCap.Location = new System.Drawing.Point(0, 0);
+            this.dgvNhaCungCap.MultiSelect = false;
             this.dgvNhaCungCap.Name = "dgvNhaCungCap";
             this.dgvNhaCungCap.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNhaCungCap.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNhaCungCap.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvNhaCungCap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNhaCungCap.Size = new System.Drawing.Size(775, 429);
             this.dgvNhaCungCap.TabIndex = 13;
+            this.dgvNhaCungCap.SelectionChanged += new System.EventHandler(this.dgvNhaCungCap_SelectionChanged);
+            // 
+            // colSoTT
+            // 
+            this.colSoTT.DataPropertyName = "Số TT";
+            this.colSoTT.HeaderText = "Số TT";
+            this.colSoTT.Name = "colSoTT";
+            this.colSoTT.ReadOnly = true;
+            this.colSoTT.Width = 80;
+            // 
+            // colMaNhaCungCap
+            // 
+            this.colMaNhaCungCap.DataPropertyName = "MANHACUNGCAP";
+            this.colMaNhaCungCap.HeaderText = "Mã Nhà Cung Cấp";
+            this.colMaNhaCungCap.Name = "colMaNhaCungCap";
+            this.colMaNhaCungCap.ReadOnly = true;
+            this.colMaNhaCungCap.Width = 150;
+            // 
+            // colTenNhaCungCap
+            // 
+            this.colTenNhaCungCap.DataPropertyName = "TENNHACUNGCAP";
+            this.colTenNhaCungCap.HeaderText = "Tên Nhà Cung Cấp";
+            this.colTenNhaCungCap.Name = "colTenNhaCungCap";
+            this.colTenNhaCungCap.ReadOnly = true;
+            this.colTenNhaCungCap.Width = 200;
+            // 
+            // colDiaChi
+            // 
+            this.colDiaChi.DataPropertyName = "DIACHI";
+            this.colDiaChi.HeaderText = "Địa Chỉ";
+            this.colDiaChi.Name = "colDiaChi";
+            this.colDiaChi.ReadOnly = true;
+            this.colDiaChi.Width = 200;
+            // 
+            // colMaSoThue
+            // 
+            this.colMaSoThue.DataPropertyName = "MASOTHUE";
+            this.colMaSoThue.HeaderText = "Mã Số Thuế";
+            this.colMaSoThue.Name = "colMaSoThue";
+            this.colMaSoThue.ReadOnly = true;
+            this.colMaSoThue.Width = 120;
+            // 
+            // colDienThoai
+            // 
+            this.colDienThoai.DataPropertyName = "SODIENTHOAI";
+            this.colDienThoai.HeaderText = "Điện Thoại";
+            this.colDienThoai.Name = "colDienThoai";
+            this.colDienThoai.ReadOnly = true;
+            this.colDienThoai.Width = 120;
+            // 
+            // colEmail
+            // 
+            this.colEmail.DataPropertyName = "EMAIL";
+            this.colEmail.HeaderText = "Email";
+            this.colEmail.Name = "colEmail";
+            this.colEmail.ReadOnly = true;
+            this.colEmail.Width = 150;
+            // 
+            // colSoTaiKhoan
+            // 
+            this.colSoTaiKhoan.DataPropertyName = "SOTAIKHOAN";
+            this.colSoTaiKhoan.HeaderText = "Số Tài Khoản";
+            this.colSoTaiKhoan.Name = "colSoTaiKhoan";
+            this.colSoTaiKhoan.ReadOnly = true;
+            this.colSoTaiKhoan.Width = 150;
+            // 
+            // colNganHang
+            // 
+            this.colNganHang.DataPropertyName = "NGANHANG";
+            this.colNganHang.HeaderText = "Ngân Hàng";
+            this.colNganHang.Name = "colNganHang";
+            this.colNganHang.ReadOnly = true;
+            this.colNganHang.Width = 200;
+            // 
+            // colGhiChu
+            // 
+            this.colGhiChu.DataPropertyName = "GHICHU";
+            this.colGhiChu.HeaderText = "Ghi Chú";
+            this.colGhiChu.Name = "colGhiChu";
+            this.colGhiChu.ReadOnly = true;
+            this.colGhiChu.Width = 200;
             // 
             // labelItem16
             // 
@@ -227,11 +309,11 @@
             // 
             this.groupPanel4.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel4.Controls.Add(this.buttonX3);
-            this.groupPanel4.Controls.Add(this.buttonX4);
-            this.groupPanel4.Controls.Add(this.textBoxX1);
-            this.groupPanel4.Controls.Add(this.buttonX2);
-            this.groupPanel4.Controls.Add(this.buttonX1);
+            this.groupPanel4.Controls.Add(this.btnNext);
+            this.groupPanel4.Controls.Add(this.btnLast);
+            this.groupPanel4.Controls.Add(this.txtIndex);
+            this.groupPanel4.Controls.Add(this.btnFirst);
+            this.groupPanel4.Controls.Add(this.btnPreview);
             this.groupPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupPanel4.Location = new System.Drawing.Point(0, 429);
             this.groupPanel4.Name = "groupPanel4";
@@ -266,71 +348,76 @@
             this.groupPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel4.TabIndex = 11;
             // 
-            // buttonX3
+            // btnNext
             // 
-            this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX3.BackColor = System.Drawing.Color.Transparent;
-            this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.buttonX3.Image = global::QuanLyKho.Properties.Resources._1downarrow;
-            this.buttonX3.ImageFixedSize = new System.Drawing.Size(16, 16);
-            this.buttonX3.Location = new System.Drawing.Point(610, 4);
-            this.buttonX3.Name = "buttonX3";
-            this.buttonX3.Size = new System.Drawing.Size(23, 21);
-            this.buttonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX3.TabIndex = 4;
+            this.btnNext.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnNext.BackColor = System.Drawing.Color.Transparent;
+            this.btnNext.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.btnNext.Image = global::QuanLyKho.Properties.Resources._1downarrow;
+            this.btnNext.ImageFixedSize = new System.Drawing.Size(16, 16);
+            this.btnNext.Location = new System.Drawing.Point(610, 4);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(23, 21);
+            this.btnNext.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnNext.TabIndex = 4;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // buttonX4
+            // btnLast
             // 
-            this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX4.BackColor = System.Drawing.Color.Transparent;
-            this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.buttonX4.Image = global::QuanLyKho.Properties.Resources._2uparrow;
-            this.buttonX4.ImageFixedSize = new System.Drawing.Size(16, 16);
-            this.buttonX4.Location = new System.Drawing.Point(639, 4);
-            this.buttonX4.Name = "buttonX4";
-            this.buttonX4.Size = new System.Drawing.Size(22, 21);
-            this.buttonX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX4.TabIndex = 3;
+            this.btnLast.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnLast.BackColor = System.Drawing.Color.Transparent;
+            this.btnLast.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.btnLast.Image = global::QuanLyKho.Properties.Resources._2uparrow;
+            this.btnLast.ImageFixedSize = new System.Drawing.Size(16, 16);
+            this.btnLast.Location = new System.Drawing.Point(639, 4);
+            this.btnLast.Name = "btnLast";
+            this.btnLast.Size = new System.Drawing.Size(22, 21);
+            this.btnLast.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnLast.TabIndex = 3;
+            this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
             // 
-            // textBoxX1
+            // txtIndex
             // 
             // 
             // 
             // 
-            this.textBoxX1.Border.Class = "TextBoxBorder";
-            this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX1.Location = new System.Drawing.Point(455, 4);
-            this.textBoxX1.Name = "textBoxX1";
-            this.textBoxX1.ReadOnly = true;
-            this.textBoxX1.Size = new System.Drawing.Size(155, 20);
-            this.textBoxX1.TabIndex = 2;
+            this.txtIndex.Border.Class = "TextBoxBorder";
+            this.txtIndex.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtIndex.Location = new System.Drawing.Point(455, 4);
+            this.txtIndex.Name = "txtIndex";
+            this.txtIndex.ReadOnly = true;
+            this.txtIndex.Size = new System.Drawing.Size(155, 20);
+            this.txtIndex.TabIndex = 2;
+            this.txtIndex.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // buttonX2
+            // btnFirst
             // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.BackColor = System.Drawing.Color.Transparent;
-            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.buttonX2.Image = global::QuanLyKho.Properties.Resources._2dowarrow;
-            this.buttonX2.ImageFixedSize = new System.Drawing.Size(16, 16);
-            this.buttonX2.Location = new System.Drawing.Point(406, 4);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(19, 21);
-            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX2.TabIndex = 1;
+            this.btnFirst.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnFirst.BackColor = System.Drawing.Color.Transparent;
+            this.btnFirst.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.btnFirst.Image = global::QuanLyKho.Properties.Resources._2dowarrow;
+            this.btnFirst.ImageFixedSize = new System.Drawing.Size(16, 16);
+            this.btnFirst.Location = new System.Drawing.Point(406, 4);
+            this.btnFirst.Name = "btnFirst";
+            this.btnFirst.Size = new System.Drawing.Size(19, 21);
+            this.btnFirst.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnFirst.TabIndex = 1;
+            this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
             // 
-            // buttonX1
+            // btnPreview
             // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.BackColor = System.Drawing.Color.Transparent;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.buttonX1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonX1.Image = global::QuanLyKho.Properties.Resources._1downarrow11;
-            this.buttonX1.ImageFixedSize = new System.Drawing.Size(16, 16);
-            this.buttonX1.Location = new System.Drawing.Point(431, 4);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(22, 21);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.TabIndex = 0;
+            this.btnPreview.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnPreview.BackColor = System.Drawing.Color.Transparent;
+            this.btnPreview.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.btnPreview.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnPreview.Image = global::QuanLyKho.Properties.Resources._1downarrow11;
+            this.btnPreview.ImageFixedSize = new System.Drawing.Size(16, 16);
+            this.btnPreview.Location = new System.Drawing.Point(431, 4);
+            this.btnPreview.Name = "btnPreview";
+            this.btnPreview.Size = new System.Drawing.Size(22, 21);
+            this.btnPreview.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnPreview.TabIndex = 0;
+            this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
             // 
             // groupPanel2
             // 
@@ -635,86 +722,6 @@
             this.labelX1.Size = new System.Drawing.Size(775, 2);
             this.labelX1.TabIndex = 2;
             // 
-            // colSoTT
-            // 
-            this.colSoTT.DataPropertyName = "Số TT";
-            this.colSoTT.HeaderText = "Số TT";
-            this.colSoTT.Name = "colSoTT";
-            this.colSoTT.ReadOnly = true;
-            this.colSoTT.Width = 80;
-            // 
-            // colMaNhaCungCap
-            // 
-            this.colMaNhaCungCap.DataPropertyName = "MANHACUNGCAP";
-            this.colMaNhaCungCap.HeaderText = "Mã Nhà Cung Cấp";
-            this.colMaNhaCungCap.Name = "colMaNhaCungCap";
-            this.colMaNhaCungCap.ReadOnly = true;
-            this.colMaNhaCungCap.Width = 150;
-            // 
-            // colTenNhaCungCap
-            // 
-            this.colTenNhaCungCap.DataPropertyName = "TENNHACUNGCAP";
-            this.colTenNhaCungCap.HeaderText = "Tên Nhà Cung Cấp";
-            this.colTenNhaCungCap.Name = "colTenNhaCungCap";
-            this.colTenNhaCungCap.ReadOnly = true;
-            this.colTenNhaCungCap.Width = 200;
-            // 
-            // colDiaChi
-            // 
-            this.colDiaChi.DataPropertyName = "DIACHI";
-            this.colDiaChi.HeaderText = "Địa Chỉ";
-            this.colDiaChi.Name = "colDiaChi";
-            this.colDiaChi.ReadOnly = true;
-            this.colDiaChi.Width = 200;
-            // 
-            // colMaSoThue
-            // 
-            this.colMaSoThue.DataPropertyName = "MASOTHUE";
-            this.colMaSoThue.HeaderText = "Mã Số Thuế";
-            this.colMaSoThue.Name = "colMaSoThue";
-            this.colMaSoThue.ReadOnly = true;
-            this.colMaSoThue.Width = 120;
-            // 
-            // colDienThoai
-            // 
-            this.colDienThoai.DataPropertyName = "SODIENTHOAI";
-            this.colDienThoai.HeaderText = "Điện Thoại";
-            this.colDienThoai.Name = "colDienThoai";
-            this.colDienThoai.ReadOnly = true;
-            this.colDienThoai.Width = 120;
-            // 
-            // colEmail
-            // 
-            this.colEmail.DataPropertyName = "EMAIL";
-            this.colEmail.HeaderText = "Email";
-            this.colEmail.Name = "colEmail";
-            this.colEmail.ReadOnly = true;
-            this.colEmail.Width = 150;
-            // 
-            // colSoTaiKhoan
-            // 
-            this.colSoTaiKhoan.DataPropertyName = "SOTAIKHOAN";
-            this.colSoTaiKhoan.HeaderText = "Số Tài Khoản";
-            this.colSoTaiKhoan.Name = "colSoTaiKhoan";
-            this.colSoTaiKhoan.ReadOnly = true;
-            this.colSoTaiKhoan.Width = 150;
-            // 
-            // colNganHang
-            // 
-            this.colNganHang.DataPropertyName = "NGANHANG";
-            this.colNganHang.HeaderText = "Ngân Hàng";
-            this.colNganHang.Name = "colNganHang";
-            this.colNganHang.ReadOnly = true;
-            this.colNganHang.Width = 200;
-            // 
-            // colGhiChu
-            // 
-            this.colGhiChu.DataPropertyName = "GHICHU";
-            this.colGhiChu.HeaderText = "Ghi Chú";
-            this.colGhiChu.Name = "colGhiChu";
-            this.colGhiChu.ReadOnly = true;
-            this.colGhiChu.Width = 200;
-            // 
             // FrmNhaCungCap
             // 
             this.ClientSize = new System.Drawing.Size(779, 551);
@@ -742,11 +749,11 @@
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel4;
-        private DevComponents.DotNetBar.ButtonX buttonX3;
-        private DevComponents.DotNetBar.ButtonX buttonX4;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
-        private DevComponents.DotNetBar.ButtonX buttonX2;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
+        private DevComponents.DotNetBar.ButtonX btnNext;
+        private DevComponents.DotNetBar.ButtonX btnLast;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtIndex;
+        private DevComponents.DotNetBar.ButtonX btnFirst;
+        private DevComponents.DotNetBar.ButtonX btnPreview;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel2;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel5;
         private DevComponents.DotNetBar.Bar bar1;

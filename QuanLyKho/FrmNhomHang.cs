@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +20,11 @@ namespace QuanLyKho
         NhomHangDAL dalNhomHang = new NhomHangDAL();
         CFunction cf = new CFunction();
         private void FrmNhomHang_Load(object sender, EventArgs e)
+        {
+            LoadNhomHang();
+        }
+
+        private void LoadNhomHang()
         {
             DataTable dtNhomHang = new DataTable();
             dtNhomHang = dalNhomHang.GetNhomHang();
@@ -54,6 +59,24 @@ namespace QuanLyKho
             string strGhiChu = dgvNhomHang.Rows[index].Cells["colGhiChu"].Value.ToString();
             frmNhapNhomHang.txtGhiChu.Text = strGhiChu;
             frmNhapNhomHang.ShowDialog();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            int index = dgvNhomHang.SelectedRows[0].Index;
+            string strMaNhomHang = dgvNhomHang.Rows[index].Cells["colMaNhomHang"].Value.ToString();
+            if (MessageBox.Show("Bạn Chắc Chắn Xóa Dòng Này ?", "Xóa Nhóm Hàng", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            {
+                dgvNhomHang.Rows.RemoveAt(index);
+                dalNhomHang.DelNhomHang(strMaNhomHang);
+                MessageBox.Show("Xóa Thành Công!", "Xóa Nhóm Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadNhomHang();
         }
     }
 }

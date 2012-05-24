@@ -54,9 +54,9 @@ namespace DTO
             set { _diaChi = value; }
         }
 
-        private DateTime _ngaySinh;
+        private string _ngaySinh;
 
-        public DateTime NgaySinh
+        public string NgaySinh
         {
             get { return _ngaySinh; }
             set { _ngaySinh = value; }

@@ -19,6 +19,8 @@ namespace QuanLyKho
 
         NhaCungCapDAL dalNhaCungCap = new NhaCungCapDAL();
         CFunction cf = new CFunction();
+        int intIndex = 0;
+        int intRowCount = 0;
         private void FrmNhaCungCap_Load(object sender, EventArgs e)
         {
             LoadNhaCungCap();
@@ -31,6 +33,7 @@ namespace QuanLyKho
             dtNhaCungCap = cf.AutoNumberedTable(dtNhaCungCap);
             dgvNhaCungCap.AutoGenerateColumns = false;
             dgvNhaCungCap.DataSource = dtNhaCungCap;
+            intRowCount = dgvNhaCungCap.Rows.Count;
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -51,24 +54,23 @@ namespace QuanLyKho
         {
             FrmNhapNCC frmNhapNCC = new FrmNhapNCC();
             frmNhapNCC.btnThem.Tag = "up";
-            int index = dgvNhaCungCap.SelectedRows[0].Index;
-            string strMaNCC = dgvNhaCungCap.Rows[index].Cells["colMaNhaCungCap"].Value.ToString();
+            string strMaNCC = dgvNhaCungCap.Rows[intIndex].Cells["colMaNhaCungCap"].Value.ToString();
             frmNhapNCC.txtMaNCC.Text = strMaNCC;
-            string strTenNCC = dgvNhaCungCap.Rows[index].Cells["colTenNhaCungCap"].Value.ToString();
+            string strTenNCC = dgvNhaCungCap.Rows[intIndex].Cells["colTenNhaCungCap"].Value.ToString();
             frmNhapNCC.txtTenNCC.Text = strTenNCC;
-            string strMaSoThue = dgvNhaCungCap.Rows[index].Cells["colMaSoThue"].Value.ToString();
+            string strMaSoThue = dgvNhaCungCap.Rows[intIndex].Cells["colMaSoThue"].Value.ToString();
             frmNhapNCC.txtMaSoThue.Text = strMaSoThue;
-            string strSotaiKhoan = dgvNhaCungCap.Rows[index].Cells["colSoTaiKhoan"].Value.ToString();
+            string strSotaiKhoan = dgvNhaCungCap.Rows[intIndex].Cells["colSoTaiKhoan"].Value.ToString();
             frmNhapNCC.txtSoTaiKhoan.Text = strSotaiKhoan;
-            string strNganHang = dgvNhaCungCap.Rows[index].Cells["colNganHang"].Value.ToString();
+            string strNganHang = dgvNhaCungCap.Rows[intIndex].Cells["colNganHang"].Value.ToString();
             frmNhapNCC.txtNganHang.Text = strNganHang;
-            string strDienThoai = dgvNhaCungCap.Rows[index].Cells["colDienThoai"].Value.ToString();
+            string strDienThoai = dgvNhaCungCap.Rows[intIndex].Cells["colDienThoai"].Value.ToString();
             frmNhapNCC.txtDienThoai.Text = strDienThoai;
-            string strDiaChi = dgvNhaCungCap.Rows[index].Cells["colDiaChi"].Value.ToString();
+            string strDiaChi = dgvNhaCungCap.Rows[intIndex].Cells["colDiaChi"].Value.ToString();
             frmNhapNCC.txtDiaChi.Text = strDiaChi;
-            string strEmail = dgvNhaCungCap.Rows[index].Cells["colEmail"].Value.ToString();
+            string strEmail = dgvNhaCungCap.Rows[intIndex].Cells["colEmail"].Value.ToString();
             frmNhapNCC.txtEmail.Text = strEmail;
-            string strGhiChu = dgvNhaCungCap.Rows[index].Cells["colGhiChu"].Value.ToString();
+            string strGhiChu = dgvNhaCungCap.Rows[intIndex].Cells["colGhiChu"].Value.ToString();
             frmNhapNCC.txtGhiChu.Text = strGhiChu;
             frmNhapNCC.ShowDialog();
         }
@@ -85,6 +87,46 @@ namespace QuanLyKho
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadNhaCungCap();
+        }
+
+        private void btnPreview_Click(object sender, EventArgs e)
+        {
+            if (intIndex > 0)
+            {
+                intIndex--;
+                dgvNhaCungCap.Rows[intIndex].Selected = true;
+            }
+        }
+
+        private void dgvNhaCungCap_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                intIndex = dgvNhaCungCap.SelectedRows[0].Index;
+                txtIndex.Text = (intIndex + 1).ToString() + "/" + intRowCount.ToString();
+            }
+            catch{}
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (intIndex < intRowCount - 1)
+            {
+                intIndex++;
+                dgvNhaCungCap.Rows[intIndex].Selected = true;
+            }
+        }
+
+        private void btnFirst_Click(object sender, EventArgs e)
+        {
+            intIndex = 0;
+            dgvNhaCungCap.Rows[intIndex].Selected = true;
+        }
+
+        private void btnLast_Click(object sender, EventArgs e)
+        {
+            intIndex = intRowCount - 1;
+            dgvNhaCungCap.Rows[intIndex].Selected = true;
         }
 
         
