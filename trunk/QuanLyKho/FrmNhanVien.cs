@@ -133,5 +133,6 @@ namespace QuanLyKho
             intIndex = intRowCount - 1;
             dgvNhanVien.Rows[intIndex].Selected = true;
         }
+
     }
 }

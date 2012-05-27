@@ -7,8 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using DTO;
-using DAL;
-
+using BLL;
 
 namespace QuanLyKho
 {
@@ -18,7 +17,7 @@ namespace QuanLyKho
         {
             InitializeComponent();
         }
-        NhomHangDAL dalNhomHang = new NhomHangDAL();
+        NhomHangBLL bllNhomHang = new NhomHangBLL();
         private void btnOK_Click(object sender, EventArgs e)
         {
             NhomHangDTO dtoNhomHang = new NhomHangDTO();
@@ -28,9 +27,16 @@ namespace QuanLyKho
                 dtoNhomHang.MaNH = txtMaNhom.Text;
                 dtoNhomHang.TenNhomHang = txtTenNhom.Text;
                 dtoNhomHang.GhiChu = txtGhiChu.Text;
-                dalNhomHang.InsertNhomHang(dtoNhomHang);
-                MessageBox.Show("Thêm Thành Công!", "Thêm Nhóm Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                string strResult = bllNhomHang.InsertNhomHang(dtoNhomHang);
+                if (strResult == "ok")
+                {
+                    MessageBox.Show("Thêm Thành Công!", "Thêm Nhóm Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(strResult, "Thêm Nhóm Hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
             }
             else
@@ -38,9 +44,16 @@ namespace QuanLyKho
                 dtoNhomHang.MaNH = txtMaNhom.Text;
                 dtoNhomHang.TenNhomHang = txtTenNhom.Text;
                 dtoNhomHang.GhiChu = txtGhiChu.Text;
-                dalNhomHang.UpdateNhomHang(dtoNhomHang);
-                MessageBox.Show("Cập Nhật Thành Công!", "Cập Nhật Nhóm Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                string strResult = bllNhomHang.UpdateNhomHang(dtoNhomHang);
+                if (strResult == "ok")
+                {
+                    MessageBox.Show("Cập Nhật Thành Công!", "Cập Nhật Nhóm Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(strResult, "Cập Nhật Nhóm Hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
