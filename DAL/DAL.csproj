@@ -52,6 +52,7 @@
     <Compile Include="KhoHangDAL.cs" />
     <Compile Include="KhuVucDAL.cs" />
     <Compile Include="LoaiTienDAL.cs" />
+    <Compile Include="LoginDAL.cs" />
     <Compile Include="MatHangDAL.cs" />
     <Compile Include="NhaCungCapDAL.cs" />
     <Compile Include="NhanVienDAL.cs" />
