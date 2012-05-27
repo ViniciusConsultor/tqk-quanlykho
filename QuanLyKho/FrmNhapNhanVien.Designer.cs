@@ -35,8 +35,6 @@
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.dtNgaySinh = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.txtDiaChi = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtCMND = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtDienThoai = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.cmbChucVu = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.cmbBoPhan = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.txtTenNhanVien = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -49,9 +47,13 @@
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.txtDienThoai = new DevComponents.Editors.IntegerInput();
+            this.txtCMND = new DevComponents.Editors.IntegerInput();
             this.groupPanel1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgaySinh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDienThoai)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCMND)).BeginInit();
             this.SuspendLayout();
             // 
             // labelX1
@@ -142,10 +144,10 @@
             // 
             this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel2.Controls.Add(this.dtNgaySinh);
-            this.groupPanel2.Controls.Add(this.txtDiaChi);
             this.groupPanel2.Controls.Add(this.txtCMND);
             this.groupPanel2.Controls.Add(this.txtDienThoai);
+            this.groupPanel2.Controls.Add(this.dtNgaySinh);
+            this.groupPanel2.Controls.Add(this.txtDiaChi);
             this.groupPanel2.Controls.Add(this.cmbChucVu);
             this.groupPanel2.Controls.Add(this.cmbBoPhan);
             this.groupPanel2.Controls.Add(this.txtTenNhanVien);
@@ -256,30 +258,6 @@
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(210, 53);
             this.txtDiaChi.TabIndex = 15;
-            // 
-            // txtCMND
-            // 
-            // 
-            // 
-            // 
-            this.txtCMND.Border.Class = "TextBoxBorder";
-            this.txtCMND.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtCMND.Location = new System.Drawing.Point(102, 188);
-            this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(210, 20);
-            this.txtCMND.TabIndex = 14;
-            // 
-            // txtDienThoai
-            // 
-            // 
-            // 
-            // 
-            this.txtDienThoai.Border.Class = "TextBoxBorder";
-            this.txtDienThoai.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtDienThoai.Location = new System.Drawing.Point(102, 159);
-            this.txtDienThoai.Name = "txtDienThoai";
-            this.txtDienThoai.Size = new System.Drawing.Size(210, 20);
-            this.txtDienThoai.TabIndex = 13;
             // 
             // cmbChucVu
             // 
@@ -435,6 +413,34 @@
             this.labelX2.TabIndex = 0;
             this.labelX2.Text = "Mã Nhân Viên :";
             // 
+            // txtDienThoai
+            // 
+            // 
+            // 
+            // 
+            this.txtDienThoai.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtDienThoai.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtDienThoai.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtDienThoai.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.txtDienThoai.Location = new System.Drawing.Point(102, 160);
+            this.txtDienThoai.Name = "txtDienThoai";
+            this.txtDienThoai.Size = new System.Drawing.Size(210, 20);
+            this.txtDienThoai.TabIndex = 17;
+            // 
+            // txtCMND
+            // 
+            // 
+            // 
+            // 
+            this.txtCMND.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtCMND.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtCMND.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtCMND.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.txtCMND.Location = new System.Drawing.Point(102, 188);
+            this.txtCMND.Name = "txtCMND";
+            this.txtCMND.Size = new System.Drawing.Size(210, 20);
+            this.txtCMND.TabIndex = 18;
+            // 
             // FrmNhapNhanVien
             // 
             this.AcceptButton = this.btnThemNhanVien;
@@ -451,6 +457,8 @@
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtNgaySinh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDienThoai)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCMND)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -463,8 +471,6 @@
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX2;
         public DevComponents.DotNetBar.Controls.TextBoxX txtDiaChi;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtCMND;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtDienThoai;
         public DevComponents.DotNetBar.Controls.ComboBoxEx cmbChucVu;
         public DevComponents.DotNetBar.Controls.ComboBoxEx cmbBoPhan;
         public DevComponents.DotNetBar.Controls.TextBoxX txtTenNhanVien;
@@ -478,5 +484,7 @@
         public DevComponents.DotNetBar.ButtonX btnThemNhanVien;
         public DevComponents.DotNetBar.Controls.TextBoxX txtMaNV;
         public DevComponents.Editors.DateTimeAdv.DateTimeInput dtNgaySinh;
+        public DevComponents.Editors.IntegerInput txtDienThoai;
+        public DevComponents.Editors.IntegerInput txtCMND;
     }
 }

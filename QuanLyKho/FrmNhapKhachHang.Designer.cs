@@ -33,16 +33,16 @@
             this.btnThoat = new DevComponents.DotNetBar.ButtonX();
             this.btnThemKhachHang = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.txtDienThoai = new DevComponents.Editors.IntegerInput();
+            this.txtMaSoThue = new DevComponents.Editors.IntegerInput();
+            this.txtSoTaiKhoan = new DevComponents.Editors.IntegerInput();
             this.txtMaKH = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.txtGhiChu = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX9 = new DevComponents.DotNetBar.LabelX();
             this.txtDiaChi = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtEmail = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtDienThoai = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtMaSoThue = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtNganHang = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtSoTaiKhoan = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtTenKhachHang = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
@@ -53,6 +53,9 @@
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDienThoai)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaSoThue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoTaiKhoan)).BeginInit();
             this.SuspendLayout();
             // 
             // lbFlag
@@ -145,16 +148,16 @@
             // 
             this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel2.Controls.Add(this.txtDienThoai);
+            this.groupPanel2.Controls.Add(this.txtMaSoThue);
+            this.groupPanel2.Controls.Add(this.txtSoTaiKhoan);
             this.groupPanel2.Controls.Add(this.txtMaKH);
             this.groupPanel2.Controls.Add(this.labelX1);
             this.groupPanel2.Controls.Add(this.txtGhiChu);
             this.groupPanel2.Controls.Add(this.labelX9);
             this.groupPanel2.Controls.Add(this.txtDiaChi);
             this.groupPanel2.Controls.Add(this.txtEmail);
-            this.groupPanel2.Controls.Add(this.txtDienThoai);
-            this.groupPanel2.Controls.Add(this.txtMaSoThue);
             this.groupPanel2.Controls.Add(this.txtNganHang);
-            this.groupPanel2.Controls.Add(this.txtSoTaiKhoan);
             this.groupPanel2.Controls.Add(this.txtTenKhachHang);
             this.groupPanel2.Controls.Add(this.labelX8);
             this.groupPanel2.Controls.Add(this.labelX7);
@@ -196,6 +199,48 @@
             // 
             this.groupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel2.TabIndex = 2;
+            // 
+            // txtDienThoai
+            // 
+            // 
+            // 
+            // 
+            this.txtDienThoai.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtDienThoai.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtDienThoai.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtDienThoai.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.txtDienThoai.Location = new System.Drawing.Point(110, 174);
+            this.txtDienThoai.Name = "txtDienThoai";
+            this.txtDienThoai.Size = new System.Drawing.Size(244, 20);
+            this.txtDienThoai.TabIndex = 20;
+            // 
+            // txtMaSoThue
+            // 
+            // 
+            // 
+            // 
+            this.txtMaSoThue.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtMaSoThue.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtMaSoThue.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtMaSoThue.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.txtMaSoThue.Location = new System.Drawing.Point(110, 143);
+            this.txtMaSoThue.Name = "txtMaSoThue";
+            this.txtMaSoThue.Size = new System.Drawing.Size(244, 20);
+            this.txtMaSoThue.TabIndex = 19;
+            // 
+            // txtSoTaiKhoan
+            // 
+            // 
+            // 
+            // 
+            this.txtSoTaiKhoan.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtSoTaiKhoan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtSoTaiKhoan.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtSoTaiKhoan.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.txtSoTaiKhoan.Location = new System.Drawing.Point(110, 82);
+            this.txtSoTaiKhoan.Name = "txtSoTaiKhoan";
+            this.txtSoTaiKhoan.Size = new System.Drawing.Size(244, 20);
+            this.txtSoTaiKhoan.TabIndex = 18;
             // 
             // txtMaKH
             // 
@@ -276,30 +321,6 @@
             this.txtEmail.Size = new System.Drawing.Size(244, 20);
             this.txtEmail.TabIndex = 12;
             // 
-            // txtDienThoai
-            // 
-            // 
-            // 
-            // 
-            this.txtDienThoai.Border.Class = "TextBoxBorder";
-            this.txtDienThoai.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtDienThoai.Location = new System.Drawing.Point(110, 177);
-            this.txtDienThoai.Name = "txtDienThoai";
-            this.txtDienThoai.Size = new System.Drawing.Size(244, 20);
-            this.txtDienThoai.TabIndex = 11;
-            // 
-            // txtMaSoThue
-            // 
-            // 
-            // 
-            // 
-            this.txtMaSoThue.Border.Class = "TextBoxBorder";
-            this.txtMaSoThue.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtMaSoThue.Location = new System.Drawing.Point(110, 146);
-            this.txtMaSoThue.Name = "txtMaSoThue";
-            this.txtMaSoThue.Size = new System.Drawing.Size(244, 20);
-            this.txtMaSoThue.TabIndex = 10;
-            // 
             // txtNganHang
             // 
             // 
@@ -311,18 +332,6 @@
             this.txtNganHang.Name = "txtNganHang";
             this.txtNganHang.Size = new System.Drawing.Size(244, 20);
             this.txtNganHang.TabIndex = 9;
-            // 
-            // txtSoTaiKhoan
-            // 
-            // 
-            // 
-            // 
-            this.txtSoTaiKhoan.Border.Class = "TextBoxBorder";
-            this.txtSoTaiKhoan.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtSoTaiKhoan.Location = new System.Drawing.Point(110, 84);
-            this.txtSoTaiKhoan.Name = "txtSoTaiKhoan";
-            this.txtSoTaiKhoan.Size = new System.Drawing.Size(244, 20);
-            this.txtSoTaiKhoan.TabIndex = 8;
             // 
             // txtTenKhachHang
             // 
@@ -413,7 +422,7 @@
             // 
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(9, 80);
+            this.labelX3.Location = new System.Drawing.Point(9, 82);
             this.labelX3.Name = "labelX3";
             this.labelX3.SingleLineColor = System.Drawing.Color.Transparent;
             this.labelX3.Size = new System.Drawing.Size(95, 23);
@@ -447,8 +456,12 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Khách Hàng";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmNhapKhachHang_FormClosed);
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtDienThoai)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaSoThue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoTaiKhoan)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -473,10 +486,10 @@
         private DevComponents.DotNetBar.LabelX labelX1;
         public DevComponents.DotNetBar.Controls.TextBoxX txtDiaChi;
         public DevComponents.DotNetBar.Controls.TextBoxX txtEmail;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtDienThoai;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtMaSoThue;
         public DevComponents.DotNetBar.Controls.TextBoxX txtNganHang;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtSoTaiKhoan;
         public DevComponents.DotNetBar.Controls.TextBoxX txtGhiChu;
+        public DevComponents.Editors.IntegerInput txtSoTaiKhoan;
+        public DevComponents.Editors.IntegerInput txtDienThoai;
+        public DevComponents.Editors.IntegerInput txtMaSoThue;
     }
 }

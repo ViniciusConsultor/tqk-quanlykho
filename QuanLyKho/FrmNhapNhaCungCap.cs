@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using DTO;
-using DAL;
+using BLL;
 
 
 namespace QuanLyKho
@@ -18,11 +18,12 @@ namespace QuanLyKho
         {
             InitializeComponent();
         }
-        NhaCungCapDTO dtoNhaCC = new NhaCungCapDTO();
-        NhaCungCapDAL dalNhaCC = new NhaCungCapDAL();
+        
+        NhaCungCapBLL bllNhaCC = new NhaCungCapBLL();
         CFunction cf = new CFunction();
         private void btnThem_Click(object sender, EventArgs e)
         {
+            NhaCungCapDTO dtoNhaCC = new NhaCungCapDTO();
             string strAction = btnThem.Tag.ToString();
             if (strAction == "add")
             {
@@ -35,9 +36,16 @@ namespace QuanLyKho
                 dtoNhaCC.SoDienThoai = txtDienThoai.Text;
                 dtoNhaCC.Email = txtEmail.Text;
                 dtoNhaCC.GhiChu = txtGhiChu.Text;
-                dalNhaCC.InsertNhaCungCap(dtoNhaCC);
-                MessageBox.Show("Thêm Nhà Cung Cấp Thành Công!", "Thêm Nhà Cung Cấp", MessageBoxButtons.OK,MessageBoxIcon.Information);
-                this.Close();
+                string strRusult = bllNhaCC.InsertNhaCungCap(dtoNhaCC);
+                if (strRusult == "ok")
+                {
+                    MessageBox.Show("Thêm Nhà Cung Cấp Thành Công!", "Thêm Nhà Cung Cấp", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else 
+                {
+                    MessageBox.Show(strRusult, "Thêm Nhà Cung Cấp", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
@@ -49,10 +57,16 @@ namespace QuanLyKho
                 dtoNhaCC.NganHang = txtNganHang.Text;
                 dtoNhaCC.SoDienThoai = txtDienThoai.Text;
                 dtoNhaCC.Email = txtEmail.Text;
-                dtoNhaCC.GhiChu = txtGhiChu.Text;
-                dalNhaCC.UpdateNhaCungCap(dtoNhaCC);
-                MessageBox.Show("Cập Nhật Thành Công!", "Cập Nhật Nhà Cung Cấp", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                string strRusult = bllNhaCC.UpdateNhaCungCap(dtoNhaCC);
+                if (strRusult == "ok")
+                {
+                    MessageBox.Show("Cập Nhật Nhà Cung Cấp Thành Công!", "Cập Nhật Nhà Cung Cấp", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(strRusult, "Cập Nhật Nhà Cung Cấp", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             
             }
         }

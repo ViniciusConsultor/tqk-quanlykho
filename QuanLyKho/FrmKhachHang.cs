@@ -7,8 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using DTO;
-using DAL;
-
+using BLL;
 namespace QuanLyKho
 {
     public partial class FrmKhachHang : DevComponents.DotNetBar.Office2007Form
@@ -17,23 +16,25 @@ namespace QuanLyKho
         {
             InitializeComponent();
         }
-
-        KhachHangDAL dalKhachHang = new KhachHangDAL();
+        KhachHangBLL bllKhachHang = new KhachHangBLL();
         CFunction cf = new CFunction();
-
+        int intIndex = 0;
+        int intRowCount = 0;
         private  void FrmKhachHang_Load(object sender, EventArgs e)
         {
             LoadKhachHang();
 
         }
 
-        private void LoadKhachHang()
+        public void LoadKhachHang()
         {
             DataTable dtKhachHang = new DataTable();
-            dtKhachHang = dalKhachHang.GetAllKhachHang();
+            dtKhachHang = bllKhachHang.GetAllKhachHang();
             dtKhachHang = cf.AutoNumberedTable(dtKhachHang);
             dgvKhachHang.AutoGenerateColumns = false;
             dgvKhachHang.DataSource = dtKhachHang;
+            intRowCount = dgvKhachHang.Rows.Count;
+
         }
         public void LayID()
         {
@@ -53,6 +54,7 @@ namespace QuanLyKho
             string strMaKH = cf.CreateId("KHA", "KHACHHANG");
             frmNhapKhachHang.txtMaKH.Text = strMaKH.ToString();
             frmNhapKhachHang.ShowDialog();
+            LoadKhachHang();
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
@@ -79,19 +81,64 @@ namespace QuanLyKho
             string strGhiChu = dgvKhachHang.Rows[index].Cells["colGhiChu"].Value.ToString();
             frmNhapKhachHang.txtGhiChu.Text = strGhiChu;
             frmNhapKhachHang.ShowDialog();
+            LoadKhachHang();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
             int index = dgvKhachHang.SelectedRows[0].Index;
             string strMaKH = dgvKhachHang.Rows[index].Cells["colMaKhachHang"].Value.ToString();
-            dalKhachHang.DelKhachHang(strMaKH);
-            MessageBox.Show("Bạn Chắc Muốn Xóa Khách Hàng Này!", "Xóa Khách Hàng", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (MessageBox.Show("Bạn Chắc Muốn Xóa Khách Hàng Này!", "Xóa Khách Hàng", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            {
+                dgvKhachHang.Rows.RemoveAt(index);
+                bllKhachHang.DelKhachHang(strMaKH);
+                MessageBox.Show("Xóa Thành Công!","Xóa Khách Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
+        public void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadKhachHang();
+        }
+
+        private void btnPreview_Click(object sender, EventArgs e)
+        {
+            if (intIndex > 0)
+            {
+                intIndex--;
+                dgvKhachHang.Rows[intIndex].Selected = true;
+            }
+        }
+
+        private void btnFirst_Click(object sender, EventArgs e)
+        {
+            intIndex = 0;
+            dgvKhachHang.Rows[intIndex].Selected = true;
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (intIndex < intRowCount - 1)
+            {
+                intIndex++;
+                dgvKhachHang.Rows[intIndex].Selected = true;
+            }
+        }
+
+        private void btnLast_Click(object sender, EventArgs e)
+        {
+            intIndex = intRowCount - 1;
+            dgvKhachHang.Rows[intIndex].Selected = true;
+        }
+
+        private void dgvKhachHang_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                intIndex = dgvKhachHang.SelectedRows[0].Index;
+                txtIndex.Text = (intIndex + 1).ToString() + "/" + intRowCount.ToString();
+            }
+            catch { }
         }
     }
 }

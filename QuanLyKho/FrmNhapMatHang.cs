@@ -7,18 +7,17 @@ using System.Text;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using DTO;
-using DAL;
+using BLL;
 
 namespace QuanLyKho
 {
     public partial class FrmNhapMatHang : DevComponents.DotNetBar.Office2007Form
     {
-        DataProvider dp = new DataProvider();
-        MatHangDTO dtoMatHang = new MatHangDTO();
-        MatHangDAL dalMatHang = new  MatHangDAL();
-        NhomHangDAL dalNhomHang = new NhomHangDAL();
-        KhoHangDAL dalkhoHang = new KhoHangDAL();
-        DonViTinhDAL dalDonViTinh = new DonViTinhDAL();
+        
+        MatHangBLL bllMatHang = new  MatHangBLL();
+        NhomHangBLL bllNhomHang = new NhomHangBLL();
+        KhoHangBLL bllkhoHang = new KhoHangBLL();
+        DonViTinhBLL bllDonViTinh = new DonViTinhBLL();
         CFunction cf = new CFunction();
         public FrmNhapMatHang()
         {
@@ -27,21 +26,22 @@ namespace QuanLyKho
 
         private void FrmNhapMatHang_Load(object sender, EventArgs e)
         {
-            cmbNhomHang.DataSource = dalNhomHang.GetNhomHang();
+            cmbNhomHang.DataSource = bllNhomHang.GetNhomHang();
             cmbNhomHang.ValueMember = "MANHOMHANG";
             cmbNhomHang.DisplayMember = "TENNHOMHANG";
 
-            cmbKhoHang.DataSource = dalkhoHang.GetAllKhoHang();
+            cmbKhoHang.DataSource = bllkhoHang.GetAllKhoHang();
             cmbKhoHang.ValueMember = "MAKHO";
             cmbKhoHang.DisplayMember = "TENKHO";
 
-            cmbDonViTinh.DataSource = dalDonViTinh.GetDonViTinh();
+            cmbDonViTinh.DataSource = bllDonViTinh.GetDonViTinh();
             cmbDonViTinh.ValueMember = "MADONVITINH";
             cmbDonViTinh.DisplayMember = "DONVITINH";
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            MatHangDTO dtoMatHang = new MatHangDTO();
             string strAction = btnThem.Tag.ToString();
             if (strAction == "add")
             {
@@ -50,12 +50,19 @@ namespace QuanLyKho
                 dtoMatHang.MaKho = cmbKhoHang.SelectedValue.ToString();
                 dtoMatHang.TenMH = txtTenMH.Text;
                 dtoMatHang.MaDonViTinh = cmbDonViTinh.SelectedValue.ToString();
-                dtoMatHang.TonDau = float.Parse(txtTonDau.Text);
+                dtoMatHang.TonDau = txtTonDau.Value;
                 dtoMatHang.MoTa = txtMoTa.Text;
-                dalMatHang.InsertMatHang(dtoMatHang);
-                MessageBox.Show("Thêm Mặt Hàng Thành Công!","Thêm Mặt Hàng", MessageBoxButtons.OK,MessageBoxIcon.Information);
-                this.Close();
-
+                string strResult = bllMatHang.InsertMatHang(dtoMatHang);
+                if (strResult == "ok")
+                {
+                    MessageBox.Show("Thêm Mặt Hàng Thành Công!", "Thêm Mặt Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(strResult, "Thêm Mặt Hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
             }
             else
             {
@@ -66,9 +73,16 @@ namespace QuanLyKho
                 dtoMatHang.MaDonViTinh = cmbDonViTinh.SelectedValue.ToString();
                 dtoMatHang.TonDau = float.Parse(txtTonDau.Text);
                 dtoMatHang.MoTa = txtMoTa.Text;
-                dalMatHang.UpdateMatHang(dtoMatHang);
-                MessageBox.Show("Cập Nhật Mặt Hàng Thành Công!", "Cập Nhật Mặt Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                string strResult = bllMatHang.UpdateMatHang(dtoMatHang);
+                if (strResult == "ok")
+                {
+                    MessageBox.Show("Cập Nhật Mặt Hàng Thành Công!", "Cập Nhật Mặt Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(strResult, "Cập Nhật Mặt Hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             
             }
         }

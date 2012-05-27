@@ -40,7 +40,13 @@
   <ItemGroup>
     <Compile Include="BoPhanBLL.cs" />
     <Compile Include="CFunction.cs" />
+    <Compile Include="DonViTinhBLL.cs" />
+    <Compile Include="KhachHangBLL.cs" />
+    <Compile Include="KhoHangBLL.cs" />
+    <Compile Include="MatHangBLL.cs" />
+    <Compile Include="NhaCungCapBLL.cs" />
     <Compile Include="NhanVienBLL.cs" />
+    <Compile Include="NhomHangBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

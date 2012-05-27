@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +13,6 @@ namespace QuanLyKho
     public partial class FrmNhapNhanVien : DevComponents.DotNetBar.Office2007Form
     {
         BoPhanBLL dalBoPhan = new BoPhanBLL();
-        NhanVienDTO dtoNhanVien = new NhanVienDTO();
         NhanVienBLL bllNhanVien = new NhanVienBLL();
         CFunction cf = new CFunction();
         public FrmNhapNhanVien()
@@ -30,6 +29,7 @@ namespace QuanLyKho
                 cmbBoPhan.DisplayMember = "TENBOPHAN";
                 cmbChucVu.DataSource = bllNhanVien.GetNhanVien();
                 cmbChucVu.DisplayMember = "CHUCVU";
+                dtNgaySinh.Text = DateTime.Today.ToShortDateString();
                 cmbBoPhan.Text = cmbBoPhan.Tag.ToString();
                 cmbChucVu.Text = cmbChucVu.Tag.ToString();
             }
@@ -41,6 +41,7 @@ namespace QuanLyKho
             string strAction = btnThemNhanVien.Tag.ToString();
             if (strAction == "add")
             {
+                NhanVienDTO dtoNhanVien = new NhanVienDTO();
                 string strMaNV = cf.CreateId("MANV", "NHANVIEN");
                 dtoNhanVien.MaNV = strMaNV;
                 dtoNhanVien.TenNV = txtTenNhanVien.Text;
@@ -54,15 +55,37 @@ namespace QuanLyKho
                 string strResult = bllNhanVien.InsertNhanVien(dtoNhanVien);
                 if (strResult == "ok")
                 {
-                    MessageBox.Show("Th�m Nh�n Vi�n Th�nh C�ng!", "Th�m Nh�n Vi�n", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Thêm Nhân Viên Thành Công!", "Thêm Nhân Viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show(strResult, "Th�m Nh�n Vi�n", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(strResult, "Thêm Nhân Viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                
             }
             else
             { 
+                NhanVienDTO dtoNhanVien = new NhanVienDTO();
+                dtoNhanVien.MaNV = txtMaNV.Text;
+                dtoNhanVien.TenNV = txtTenNhanVien.Text;
+                dtoNhanVien.MaBP = cmbBoPhan.SelectedValue.ToString();
+                dtoNhanVien.ChucVu = cmbChucVu.Text;
+                dtoNhanVien.NgaySinh = dtNgaySinh.Value.ToShortDateString();
+                dtoNhanVien.SoDT = txtDienThoai.Text;
+                dtoNhanVien.CMND = txtCMND.Text;
+                dtoNhanVien.DiaChi = txtDiaChi.Text;
+                string strResult = bllNhanVien.UpdateNhanVien(dtoNhanVien);
+                if (strResult == "ok")
+                {
+                    MessageBox.Show("Cập Nhật Nhân Viên Thành Công!", "Cập Nhật Nhân Viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(strResult, "Thêm Nhân Viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+               
                 
             }
         }

@@ -36,14 +36,13 @@ namespace DAL
         {
             string strQuery = "Update NHANVIEN Set ";
             strQuery += "MABOPHAN = N'" + dtoNhanVien.MaBP + "',";
-            strQuery += "TENNHANIEN = N'" + dtoNhanVien.TenNV + "',";
-            strQuery += "MATKHAU = N'" + dtoNhanVien.MatKhau + "',";
+            strQuery += "TENNHANVIEN = N'" + dtoNhanVien.TenNV + "',";
             strQuery += "CHUCVU = N'" + dtoNhanVien.ChucVu + "',";
             strQuery += "DIACHI = N'" + dtoNhanVien.DiaChi + "',";
             strQuery += "NGAYSINH = N'" + dtoNhanVien.NgaySinh + "',";
             strQuery += "CMND = N'" + dtoNhanVien.CMND + "',";
             strQuery += "SODIENTHOAI = N'" + dtoNhanVien.SoDT + "' ";
-            strQuery += "Where MANHANIEN = N'" + dtoNhanVien.MaNV + "'";
+            strQuery += "Where MANHANVIEN = N'" + dtoNhanVien.MaNV + "'";
             return dp.ExecuteNonQuery(strQuery);
 
         }
