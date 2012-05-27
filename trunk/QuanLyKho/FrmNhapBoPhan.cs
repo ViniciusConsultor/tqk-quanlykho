@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
-using DAL;
+using BLL;
 using DTO;
 using DevComponents.DotNetBar.Controls;
 namespace QuanLyKho
@@ -20,13 +20,13 @@ namespace QuanLyKho
         private void LoadBoPhan(DataGridViewX dgv)
         {
             DataTable dtBoPhan = new DataTable();
-            dtBoPhan = dalBoPhan.GetBoPhan();
+            dtBoPhan = bllBoPhan.GetBoPhan();
             dtBoPhan = cf.AutoNumberedTable(dtBoPhan);
             dgv.AutoGenerateColumns = false;
             dgv.DataSource = dtBoPhan;
         }
         BoPhanDTO dtoBoPhan = new BoPhanDTO();
-        BoPhanDAL dalBoPhan = new BoPhanDAL();
+        BoPhanBLL bllBoPhan = new BoPhanBLL();
         CFunction cf = new CFunction();
         private void btnOK_Click(object sender, EventArgs e)
         {
@@ -35,18 +35,34 @@ namespace QuanLyKho
             {
                 dtoBoPhan.MaBP = txtMaBP.Text;
                 dtoBoPhan.TenBoPhan = txtTenBP.Text;
-                dalBoPhan.InsertBoPhan(dtoBoPhan);
-                MessageBox.Show("Thêm Thành Công!", "Thêm Bộ Phận", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                string strResult = bllBoPhan.InsertBoPhan(dtoBoPhan);
+                if (strResult == "ok")
+                {
+                    MessageBox.Show("Thêm Thành Công!", "Thêm Bộ Phận", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                
+                else
+                {
+                    MessageBox.Show(strResult, "Thêm Bộ Phận", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
                 
             }
             else
             {
                 dtoBoPhan.MaBP = txtMaBP.Text;
                 dtoBoPhan.TenBoPhan = txtTenBP.Text;
-                dalBoPhan.UpdateBoPhan(dtoBoPhan);
-                MessageBox.Show("Cập Nhật Thành Công!", "Cập Nhật Bộ Phận", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                string strResult = bllBoPhan.UpdateBoPhan(dtoBoPhan);
+                if (strResult == "ok")
+                {
+                    MessageBox.Show("Cập Nhật Thành Công!", "Cập Nhật Bộ Phận", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(strResult, "Cập Nhật Bộ Phận", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

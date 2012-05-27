@@ -14,14 +14,40 @@ namespace BLL
             return dalBoPhan.GetBoPhan();
         }
 
-        public bool InsertBoPhan(BoPhanDTO dtoBoPhan)
+        public string  InsertBoPhan(BoPhanDTO dtoBoPhan)
         {
-            return dalBoPhan.InsertBoPhan(dtoBoPhan);
+            string strError = "";
+            if (dtoBoPhan.TenBoPhan.Trim().Equals("") == true)
+            {
+                strError = "Tên bộ phận không được rỗng.";
+            }
+            if (strError == "")
+            {
+                bool boolResult = dalBoPhan.InsertBoPhan(dtoBoPhan);
+                return "ok";
+            }
+            else
+            {
+                return strError;
+            }
         }
 
-        public bool UpdateBoPhan(BoPhanDTO dtoBoPhan)
+        public string  UpdateBoPhan(BoPhanDTO dtoBoPhan)
         {
-            return dalBoPhan.UpdateBoPhan(dtoBoPhan);
+            string strError = "";
+            if (dtoBoPhan.TenBoPhan.Trim().Equals("") == true)
+            {
+                strError = "Tên bộ phận không được rỗng.";
+            }
+            if (strError == "")
+            {
+                bool boolResult = dalBoPhan.UpdateBoPhan(dtoBoPhan);
+                return "ok";
+            }
+            else
+            {
+                return strError;
+            }
         }
 
         public bool DelBoPhan(string strMaBP)

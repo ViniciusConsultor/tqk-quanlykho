@@ -37,7 +37,6 @@
             this.cmbDonViTinh = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.cmbKhoHang = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.cmbNhomHang = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.txtTonDau = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtTenMH = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtMaMH = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
@@ -47,8 +46,10 @@
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.txtTonDau = new DevComponents.Editors.IntegerInput();
             this.groupPanel1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTonDau)).BeginInit();
             this.SuspendLayout();
             // 
             // labelX1
@@ -141,11 +142,11 @@
             // 
             this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel2.Controls.Add(this.txtTonDau);
             this.groupPanel2.Controls.Add(this.txtMoTa);
             this.groupPanel2.Controls.Add(this.cmbDonViTinh);
             this.groupPanel2.Controls.Add(this.cmbKhoHang);
             this.groupPanel2.Controls.Add(this.cmbNhomHang);
-            this.groupPanel2.Controls.Add(this.txtTonDau);
             this.groupPanel2.Controls.Add(this.txtTenMH);
             this.groupPanel2.Controls.Add(this.txtMaMH);
             this.groupPanel2.Controls.Add(this.labelX8);
@@ -237,18 +238,6 @@
             this.cmbNhomHang.Size = new System.Drawing.Size(223, 20);
             this.cmbNhomHang.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cmbNhomHang.TabIndex = 10;
-            // 
-            // txtTonDau
-            // 
-            // 
-            // 
-            // 
-            this.txtTonDau.Border.Class = "TextBoxBorder";
-            this.txtTonDau.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTonDau.Location = new System.Drawing.Point(90, 161);
-            this.txtTonDau.Name = "txtTonDau";
-            this.txtTonDau.Size = new System.Drawing.Size(223, 20);
-            this.txtTonDau.TabIndex = 9;
             // 
             // txtTenMH
             // 
@@ -366,6 +355,20 @@
             this.labelX2.TabIndex = 0;
             this.labelX2.Text = "Mã Mặt Hàng :";
             // 
+            // txtTonDau
+            // 
+            // 
+            // 
+            // 
+            this.txtTonDau.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtTonDau.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTonDau.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtTonDau.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.txtTonDau.Location = new System.Drawing.Point(90, 161);
+            this.txtTonDau.Name = "txtTonDau";
+            this.txtTonDau.Size = new System.Drawing.Size(223, 20);
+            this.txtTonDau.TabIndex = 14;
+            // 
             // FrmNhapMatHang
             // 
             this.AcceptButton = this.btnThem;
@@ -381,6 +384,7 @@
             this.Load += new System.EventHandler(this.FrmNhapMatHang_Load);
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtTonDau)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -396,7 +400,6 @@
         public DevComponents.DotNetBar.Controls.ComboBoxEx cmbDonViTinh;
         public DevComponents.DotNetBar.Controls.ComboBoxEx cmbKhoHang;
         public DevComponents.DotNetBar.Controls.ComboBoxEx cmbNhomHang;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtTonDau;
         public DevComponents.DotNetBar.Controls.TextBoxX txtTenMH;
         public DevComponents.DotNetBar.Controls.TextBoxX txtMaMH;
         private DevComponents.DotNetBar.LabelX labelX8;
@@ -406,5 +409,6 @@
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX2;
+        public DevComponents.Editors.IntegerInput txtTonDau;
     }
 }

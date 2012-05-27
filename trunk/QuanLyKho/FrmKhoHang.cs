@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using DTO;
-using DAL;
+using BLL;
 
 namespace QuanLyKho
 {
@@ -18,9 +18,11 @@ namespace QuanLyKho
             InitializeComponent();
         }
 
-        KhoHangDAL dalKhoHang = new KhoHangDAL();
-        NhanVienDAL dalNhanVien = new NhanVienDAL();
+        KhoHangBLL bllKhoHang = new KhoHangBLL();
+        NhanVienBLL bllNhanVien = new NhanVienBLL();
         CFunction cf = new CFunction();
+        int intIndex = 0;
+        int intRowCount = 0;
         private void FrmKhoHang_Load(object sender, EventArgs e)
         {
             LoadKhoHang();
@@ -30,10 +32,11 @@ namespace QuanLyKho
         private void LoadKhoHang()
         {
             DataTable dtKhoHang = new DataTable();
-            dtKhoHang = dalKhoHang.GetAllKhoHang();
+            dtKhoHang = bllKhoHang.GetAllKhoHang();
             dtKhoHang = cf.AutoNumberedTable(dtKhoHang);
             dgvKhoHang.AutoGenerateColumns = false;
             dgvKhoHang.DataSource = dtKhoHang;
+            intRowCount = dgvKhoHang.Rows.Count;
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -48,6 +51,7 @@ namespace QuanLyKho
             string strMaKho = cf.CreateId("MKO", "KHO");
             frmNhapKhoHang.txtMaKho.Text = strMaKho;
             frmNhapKhoHang.ShowDialog();
+            LoadKhoHang();
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
@@ -64,7 +68,7 @@ namespace QuanLyKho
             string strDienThoaiDD = dgvKhoHang.Rows[index].Cells["colDiDong"].Value.ToString();
             frmNhapKhoHang.txtDienThoaiDD.Text = strDienThoaiDD;
             string strNguoiLienHe = dgvKhoHang.Rows[index].Cells["colNguoiLienHe"].Value.ToString();
-            frmNhapKhoHang.cmbNhanVien.Text = strNguoiLienHe;
+            frmNhapKhoHang.cmbNhanVien.Tag = strNguoiLienHe;
             string strFax = dgvKhoHang.Rows[index].Cells["colFax"].Value.ToString();
             frmNhapKhoHang.txtFax.Text = strFax;
             string strDiaChi = dgvKhoHang.Rows[index].Cells["colDiaChi"].Value.ToString();
@@ -72,6 +76,7 @@ namespace QuanLyKho
             string strGhiChu = dgvKhoHang.Rows[index].Cells["colGhiChu"].Value.ToString();
             frmNhapKhoHang.txtGhiChu.Text = strGhiChu;
             frmNhapKhoHang.ShowDialog();
+            LoadKhoHang();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -81,7 +86,7 @@ namespace QuanLyKho
             if (MessageBox.Show("Bạn Chắc Chắn Xóa Dòng Này ?", "Xóa Kho Hàng", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
             {
                 dgvKhoHang.Rows.RemoveAt(index);
-                dalKhoHang.DelKhoHang(strMaKho);
+                bllKhoHang.DelKhoHang(strMaKho);
                 MessageBox.Show("Xóa Thành Công!", "Xóa Kho Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -89,6 +94,46 @@ namespace QuanLyKho
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadKhoHang();
+        }
+
+        private void btnFirst_Click(object sender, EventArgs e)
+        {
+            intIndex = 0;
+            dgvKhoHang.Rows[intIndex].Selected = true;
+        }
+
+        private void btnPreview_Click(object sender, EventArgs e)
+        {
+            if (intIndex > 0)
+            {
+                intIndex--;
+                dgvKhoHang.Rows[intIndex].Selected = true;
+            }
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (intIndex < intRowCount - 1)
+            {
+                intIndex++;
+                dgvKhoHang.Rows[intIndex].Selected = true;
+            }
+        }
+
+        private void btnLast_Click(object sender, EventArgs e)
+        {
+            intIndex = intRowCount - 1;
+            dgvKhoHang.Rows[intIndex].Selected = true;
+        }
+
+        private void dgvKhoHang_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                intIndex = dgvKhoHang.SelectedRows[0].Index;
+                txtIndex.Text = (intIndex + 1).ToString() + "/" + intRowCount.ToString();
+            }
+            catch { }
         }
     }
 }

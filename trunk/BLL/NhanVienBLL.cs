@@ -52,11 +52,35 @@ namespace BLL
         public string UpdateNhanVien(NhanVienDTO dtoNhanVien)
         {
             string strError = "";
-            if (dtoNhanVien.TenNV.Trim().Equals(' ') == true)
+            if (dtoNhanVien.TenNV.Trim().Equals("") == true)
             {
                 strError += "Tên nhân viên không được rỗng.";
             }
-            return strError;
+            if (dtoNhanVien.NgaySinh.Trim().Equals("") == true)
+            {
+                strError += " Ngày sinh không được rỗng.";
+            }
+            if (dtoNhanVien.CMND.Trim().Equals("") == true)
+            {
+                strError += " CMND không được rỗng.";
+            }
+            if (dtoNhanVien.DiaChi.Trim().Equals("") == true)
+            {
+                strError += " Địa chỉ không được rỗng.";
+            }
+            if (dtoNhanVien.SoDT.Trim().Equals("") == true)
+            {
+                strError += " Số điện thoại không được rỗng.";
+            }
+            if (strError == "")
+            {
+                bool boolResult = dalNhanVien.UpdateNhanVien(dtoNhanVien);
+                return "ok";
+            }
+            else
+            {
+                return strError;
+            }
         }
 
         public bool DelNhanVien(string strMaNV)

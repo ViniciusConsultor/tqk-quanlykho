@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using DTO;
-using DAL;
+using BLL;
 namespace QuanLyKho
 {
     public partial class FrmNhaCungCap : DevComponents.DotNetBar.Office2007Form
@@ -17,7 +17,7 @@ namespace QuanLyKho
             InitializeComponent();
         }
 
-        NhaCungCapDAL dalNhaCungCap = new NhaCungCapDAL();
+        NhaCungCapBLL bllNhaCungCap = new NhaCungCapBLL();
         CFunction cf = new CFunction();
         int intIndex = 0;
         int intRowCount = 0;
@@ -29,7 +29,7 @@ namespace QuanLyKho
         private void LoadNhaCungCap()
         {
             DataTable dtNhaCungCap = new DataTable();
-            dtNhaCungCap = dalNhaCungCap.GetAllNhaCungCap();
+            dtNhaCungCap = bllNhaCungCap.GetAllNhaCungCap();
             dtNhaCungCap = cf.AutoNumberedTable(dtNhaCungCap);
             dgvNhaCungCap.AutoGenerateColumns = false;
             dgvNhaCungCap.DataSource = dtNhaCungCap;
@@ -48,6 +48,7 @@ namespace QuanLyKho
             string strMaNCC = cf.CreateId("CCA", "NHACUNGCAP");
             frmNhapNCC.txtMaNCC.Text = strMaNCC;
             frmNhapNCC.ShowDialog();
+            LoadNhaCungCap();
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
@@ -73,15 +74,19 @@ namespace QuanLyKho
             string strGhiChu = dgvNhaCungCap.Rows[intIndex].Cells["colGhiChu"].Value.ToString();
             frmNhapNCC.txtGhiChu.Text = strGhiChu;
             frmNhapNCC.ShowDialog();
+            LoadNhaCungCap();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
             int index = dgvNhaCungCap.SelectedRows[0].Index;
             string strMaNCC = dgvNhaCungCap.Rows[index].Cells["colMaNhaCungCap"].Value.ToString();
-            //MessageBox.Show("Bạn Chắc Chắn Xóa Dòng Này!", "Xóa Nhà Cung Cấp", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            dalNhaCungCap.DelNhaCungCap(strMaNCC);
-            MessageBox.Show("Xóa Thành Công!", "Xóa Nhà Cung Cấp", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (MessageBox.Show("Bạn Chắc Chắn Xóa Dòng Này!", "Xóa Nhà Cung Cấp", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK) 
+            {
+                bllNhaCungCap.DelNhaCungCap(strMaNCC);
+                MessageBox.Show("Xóa Thành Công!", "Xóa Nhà Cung Cấp", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
