@@ -92,8 +92,16 @@ namespace QuanLyKho
         private void FrmMain_Load(object sender, EventArgs e)
         {
             lbNgayThang.Text = "Hôm nay là ngày : " + DateTime.Today.ToShortDateString();
-            FrmLogin frmLogin = new FrmLogin();
-            frmLogin.ShowDialog();
+            if (Variable.strMaNhanVien == "" || Variable.strTenNhanVien == "")
+            {
+                lbUser.Text = "Chưa đăng nhập";
+            }
+            else
+            {
+                lbUser.Text = Variable.strTenNhanVien;
+            }
+            //FrmLogin frmLogin = new FrmLogin();
+            //frmLogin.ShowDialog();
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
@@ -164,6 +172,18 @@ namespace QuanLyKho
         {
             FrmXuatKho frm = new FrmXuatKho();
             CreateTab(stcMenu, "Xuất Kho", "stiXuatKho", "stcpXuatKho", frm);
+        }
+
+        private void ribbonTabItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            Variable.strMaNhanVien = "";
+            Variable.strTenNhanVien = "";
+            lbUser.Text = "Chưa đăng nhập";
         }
     }
 }

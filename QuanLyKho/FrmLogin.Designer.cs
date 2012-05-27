@@ -35,8 +35,8 @@
             this.btnOK = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.checkBoxX1 = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtPassword = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtMaNV = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel1.SuspendLayout();
@@ -152,6 +152,7 @@
             this.btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnThoat.TabIndex = 1;
             this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnOK
             // 
@@ -164,14 +165,15 @@
             this.btnOK.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnOK.TabIndex = 0;
             this.btnOK.Text = "OK";
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // groupPanel3
             // 
             this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.groupPanel3.Controls.Add(this.checkBoxX1);
-            this.groupPanel3.Controls.Add(this.textBoxX2);
-            this.groupPanel3.Controls.Add(this.textBoxX1);
+            this.groupPanel3.Controls.Add(this.txtPassword);
+            this.groupPanel3.Controls.Add(this.txtMaNV);
             this.groupPanel3.Controls.Add(this.labelX3);
             this.groupPanel3.Controls.Add(this.labelX2);
             this.groupPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -222,30 +224,30 @@
             this.checkBoxX1.TabIndex = 4;
             this.checkBoxX1.Text = "Ghi Nhớ Mã Nhân Viên Và Mật Khẩu";
             // 
-            // textBoxX2
+            // txtPassword
             // 
             // 
             // 
             // 
-            this.textBoxX2.Border.Class = "TextBoxBorder";
-            this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX2.Location = new System.Drawing.Point(104, 46);
-            this.textBoxX2.Name = "textBoxX2";
-            this.textBoxX2.PasswordChar = 'x';
-            this.textBoxX2.Size = new System.Drawing.Size(202, 21);
-            this.textBoxX2.TabIndex = 3;
+            this.txtPassword.Border.Class = "TextBoxBorder";
+            this.txtPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPassword.Location = new System.Drawing.Point(104, 46);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = 'x';
+            this.txtPassword.Size = new System.Drawing.Size(202, 21);
+            this.txtPassword.TabIndex = 3;
             // 
-            // textBoxX1
-            // 
-            // 
+            // txtMaNV
             // 
             // 
-            this.textBoxX1.Border.Class = "TextBoxBorder";
-            this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX1.Location = new System.Drawing.Point(104, 15);
-            this.textBoxX1.Name = "textBoxX1";
-            this.textBoxX1.Size = new System.Drawing.Size(202, 21);
-            this.textBoxX1.TabIndex = 2;
+            // 
+            // 
+            this.txtMaNV.Border.Class = "TextBoxBorder";
+            this.txtMaNV.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtMaNV.Location = new System.Drawing.Point(104, 15);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(202, 21);
+            this.txtMaNV.TabIndex = 2;
             // 
             // labelX3
             // 
@@ -287,7 +289,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmLogin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
@@ -305,8 +307,8 @@
         private DevComponents.DotNetBar.ButtonX btnThoat;
         private DevComponents.DotNetBar.ButtonX btnOK;
         private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX1;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtPassword;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtMaNV;
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX2;
     }

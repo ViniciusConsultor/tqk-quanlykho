@@ -33,6 +33,7 @@
             this.btnThoat = new DevComponents.DotNetBar.ButtonX();
             this.btnThem = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.txtTonDau = new DevComponents.Editors.IntegerInput();
             this.txtMoTa = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.cmbDonViTinh = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.cmbKhoHang = new DevComponents.DotNetBar.Controls.ComboBoxEx();
@@ -46,7 +47,6 @@
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.txtTonDau = new DevComponents.Editors.IntegerInput();
             this.groupPanel1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTonDau)).BeginInit();
@@ -189,6 +189,20 @@
             // 
             this.groupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel2.TabIndex = 2;
+            // 
+            // txtTonDau
+            // 
+            // 
+            // 
+            // 
+            this.txtTonDau.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtTonDau.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTonDau.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtTonDau.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.txtTonDau.Location = new System.Drawing.Point(90, 161);
+            this.txtTonDau.Name = "txtTonDau";
+            this.txtTonDau.Size = new System.Drawing.Size(223, 20);
+            this.txtTonDau.TabIndex = 14;
             // 
             // txtMoTa
             // 
@@ -354,20 +368,6 @@
             this.labelX2.Size = new System.Drawing.Size(75, 23);
             this.labelX2.TabIndex = 0;
             this.labelX2.Text = "Mã Mặt Hàng :";
-            // 
-            // txtTonDau
-            // 
-            // 
-            // 
-            // 
-            this.txtTonDau.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtTonDau.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTonDau.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtTonDau.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            this.txtTonDau.Location = new System.Drawing.Point(90, 161);
-            this.txtTonDau.Name = "txtTonDau";
-            this.txtTonDau.Size = new System.Drawing.Size(223, 20);
-            this.txtTonDau.TabIndex = 14;
             // 
             // FrmNhapMatHang
             // 
