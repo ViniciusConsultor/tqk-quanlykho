@@ -159,5 +159,11 @@ namespace QuanLyKho
             FrmNhaCungCap frm = new FrmNhaCungCap();
             CreateTab(stcMenu, "Nhà Cung Cấp", "stiNhaCungCap", "stcpNhaCungCap", frm);
         }
+
+        private void buttonItem12_Click(object sender, EventArgs e)
+        {
+            FrmXuatKho frm = new FrmXuatKho();
+            CreateTab(stcMenu, "Xuất Kho", "stiXuatKho", "stcpXuatKho", frm);
+        }
     }
 }
