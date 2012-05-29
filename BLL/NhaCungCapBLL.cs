@@ -15,6 +15,11 @@ namespace BLL
             return dalNhaCungCap.GetAllNhaCungCap();
         }
 
+        public NhaCungCapDTO GetNhaCungCapByID(string strID)
+        {
+            return dalNhaCungCap.GetNhaCungCapByID(strID);
+        }
+
         public string InsertNhaCungCap(NhaCungCapDTO dtoNhaCungCap)
         {
             string strError = "";

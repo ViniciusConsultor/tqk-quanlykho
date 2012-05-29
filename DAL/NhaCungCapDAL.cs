@@ -15,6 +15,25 @@ namespace DAL
             return dp.ExecuteQuery(strQuery);
         }
 
+        public NhaCungCapDTO GetNhaCungCapByID(string strID)
+        {
+            string strQuery = "Select * From NHACUNGCAP Where TINHTRANG = 1 and MANHACUNGCAP = N'" + strID + "'";
+            DataTable dt = dp.ExecuteQuery(strQuery);
+            NhaCungCapDTO dtoNhaCungCap = new NhaCungCapDTO();
+            if (dt != null)
+            {
+                dtoNhaCungCap.MaNCC = dt.Rows[0]["MANHACUNGCAP"].ToString();
+                dtoNhaCungCap.TenNCC = dt.Rows[0]["TENNHACUNGCAP"].ToString();
+                dtoNhaCungCap.DiaChi = dt.Rows[0]["DIACHI"].ToString();
+                dtoNhaCungCap.MaSoThue = dt.Rows[0]["MASOTHUE"].ToString();
+                dtoNhaCungCap.SoTaiKhoan = dt.Rows[0]["SOTAIKHOAN"].ToString();
+                dtoNhaCungCap.NganHang = dt.Rows[0]["NGANHANG"].ToString();
+                dtoNhaCungCap.SoDienThoai = dt.Rows[0]["SODIENTHOAI"].ToString();
+                dtoNhaCungCap.Email = dt.Rows[0]["EMAIL"].ToString();
+            }
+            return dtoNhaCungCap;
+        }
+
         public bool InsertNhaCungCap(NhaCungCapDTO dtoNhaCungCap)
         {
             string strQuery = "Insert Into NHACUNGCAP Values(";
