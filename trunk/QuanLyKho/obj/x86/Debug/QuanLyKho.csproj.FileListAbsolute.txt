@@ -25,8 +25,6 @@ H:\KhachHang\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\QuanLyKho.Properties.Resource
 H:\KhachHang\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\QuanLyKho.FrmNhapKhachHang.af-ZA.resources
 H:\KhachHang\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
 H:\KhachHang\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
-H:\KhachHang\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\RdlCompile.cache
-H:\KhachHang\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\RdlCompile.compiled
 H:\KhachHang\TQK_BinhDuong\QuanLyKho\bin\Debug\QuanLyKho.exe
 H:\KhachHang\TQK_BinhDuong\QuanLyKho\bin\Debug\QuanLyKho.pdb
 H:\KhachHang\TQK_BinhDuong\QuanLyKho\bin\Debug\af-ZA\QuanLyKho.resources.dll
@@ -82,3 +80,4 @@ D:\DongHien\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\GenerateResource-ResGen.write.
 D:\DongHien\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\RdlCompile.cache
 D:\DongHien\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\RdlCompile.compiled
 D:\DongHien\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\af-ZA\QuanLyKho.resources.dll
+H:\KhachHang\TQK_BinhDuong\QuanLyKho\obj\x86\Debug\QuanLyKho.FrmReportNhapKho.resources
