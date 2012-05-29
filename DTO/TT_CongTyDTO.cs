@@ -87,5 +87,21 @@ namespace DTO
             get { return _webSite; }
             set { _webSite = value; }
         }
+
+        private string _soTaiKhoan;
+
+        public string SoTaiKhoan
+        {
+            get { return _soTaiKhoan; }
+            set { _soTaiKhoan = value; }
+        }
+
+        private string _nganHang;
+
+        public string NganHang
+        {
+            get { return _nganHang; }
+            set { _nganHang = value; }
+        }
     }
 }

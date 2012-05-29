@@ -22,7 +22,9 @@ namespace DAL
             strQuery += "N'" + dtoTT_CT.Fax + "',";
             strQuery += "N'" + dtoTT_CT.LoGo + "',";
             strQuery += "N'" + dtoTT_CT.MaThue + "',";
-            strQuery += "N'" + dtoTT_CT.WebSite + "'";
+            strQuery += "N'" + dtoTT_CT.WebSite + "',";
+            strQuery += "N'" + dtoTT_CT.SoTaiKhoan + "',";
+            strQuery += "N'" + dtoTT_CT.NganHang + "')";
             return dp.ExecuteNonQuery(strQuery);
         }
 
@@ -38,6 +40,8 @@ namespace DAL
             strQuery += "LOGO = N'" + dtoTT_CT.LoGo + "',";
             strQuery += "MASOTHUE = N'" + dtoTT_CT.MaThue + "',";
             strQuery += "WEBSITE = N'" + dtoTT_CT.WebSite + "' ";
+            strQuery += "SOTAIKHOAN = N'" + dtoTT_CT.SoTaiKhoan + "',";
+            strQuery += "NGANHANG = N'" + dtoTT_CT.NganHang + "',";
             strQuery += "Where MACT = N'" + dtoTT_CT.MaCT + "'";
             return dp.ExecuteNonQuery(strQuery);
 
