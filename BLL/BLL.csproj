@@ -45,6 +45,7 @@
     <Compile Include="KhoHangBLL.cs" />
     <Compile Include="LoginBLL.cs" />
     <Compile Include="MatHangBLL.cs" />
+    <Compile Include="MucThueBLL.cs" />
     <Compile Include="NhaCungCapBLL.cs" />
     <Compile Include="NhanVienBLL.cs" />
     <Compile Include="NhomHangBLL.cs" />

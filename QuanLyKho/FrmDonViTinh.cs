@@ -28,12 +28,16 @@ namespace QuanLyKho
 
         private void LoadDonViTinh()
         {
-            DataTable dtDVT = new DataTable();
-            dtDVT = bllDonViTinh.GetDonViTinh();
-            dtDVT = cf.AutoNumberedTable(dtDVT);
-            dgvDonViTinh.AutoGenerateColumns = false;
-            dgvDonViTinh.DataSource = dtDVT;
-            intRowCount = dgvDonViTinh.Rows.Count;
+            try
+            {
+                DataTable dtDVT = new DataTable();
+                dtDVT = bllDonViTinh.GetDonViTinh();
+                dtDVT = cf.AutoNumberedTable(dtDVT);
+                dgvDonViTinh.AutoGenerateColumns = false;
+                dgvDonViTinh.DataSource = dtDVT;
+                intRowCount = dgvDonViTinh.Rows.Count;
+            }
+            catch { }
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -43,25 +47,33 @@ namespace QuanLyKho
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            FrmNhapDonViTinh frmNhapDVT = new FrmNhapDonViTinh();
-            frmNhapDVT.btnOK.Tag = "add";
-            string strDVT = cf.CreateId("DVT", "DONVITINH");
-            frmNhapDVT.txtMaDVT.Text = strDVT;
-            frmNhapDVT.ShowDialog();
-            LoadDonViTinh();
+            try
+            {
+                FrmNhapDonViTinh frmNhapDVT = new FrmNhapDonViTinh();
+                frmNhapDVT.btnOK.Tag = "add";
+                string strDVT = cf.CreateId("DVT", "DONVITINH");
+                frmNhapDVT.txtMaDVT.Text = strDVT;
+                frmNhapDVT.ShowDialog();
+                LoadDonViTinh();
+            }
+            catch { }
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            FrmNhapDonViTinh frmNhapDVT = new FrmNhapDonViTinh();
-            frmNhapDVT.btnOK.Tag = "up";
-            int index = dgvDonViTinh.SelectedRows[0].Index;
-            string strMaDVT = dgvDonViTinh.Rows[index].Cells["colMaDonViTinh"].Value.ToString();
-            frmNhapDVT.txtMaDVT.Text = strMaDVT;
-            string strDVT = dgvDonViTinh.Rows[index].Cells["colDonViTinh"].Value.ToString();
-            frmNhapDVT.txtDonViTinh.Text = strDVT;
-            frmNhapDVT.ShowDialog();
-            LoadDonViTinh();
+            try
+            {
+                FrmNhapDonViTinh frmNhapDVT = new FrmNhapDonViTinh();
+                frmNhapDVT.btnOK.Tag = "up";
+                int index = dgvDonViTinh.SelectedRows[0].Index;
+                string strMaDVT = dgvDonViTinh.Rows[index].Cells["colMaDonViTinh"].Value.ToString();
+                frmNhapDVT.txtMaDVT.Text = strMaDVT;
+                string strDVT = dgvDonViTinh.Rows[index].Cells["colDonViTinh"].Value.ToString();
+                frmNhapDVT.txtDonViTinh.Text = strDVT;
+                frmNhapDVT.ShowDialog();
+                LoadDonViTinh();
+            }
+            catch { }
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -71,14 +83,18 @@ namespace QuanLyKho
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            int index = dgvDonViTinh.SelectedRows[0].Index;
-            string strMaDVT = dgvDonViTinh.Rows[index].Cells["colMaDonViTinh"].Value.ToString();
-            if(MessageBox.Show("Bạn Chắc Chắn Xóa Dòng Này ?"," Xóa Đơn Vị Tính ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) ==  System.Windows.Forms.DialogResult.OK)
+            try
             {
-                dgvDonViTinh.Rows.RemoveAt(index);
-                bllDonViTinh.DelDonViTinh(strMaDVT);
-                MessageBox.Show("Xóa Thành Công!", "Xóa Đơn Vị Tính", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                int index = dgvDonViTinh.SelectedRows[0].Index;
+                string strMaDVT = dgvDonViTinh.Rows[index].Cells["colMaDonViTinh"].Value.ToString();
+                if (MessageBox.Show("Bạn Chắc Chắn Xóa Dòng Này ?", " Xóa Đơn Vị Tính ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+                {
+                    dgvDonViTinh.Rows.RemoveAt(index);
+                    bllDonViTinh.DelDonViTinh(strMaDVT);
+                    MessageBox.Show("Xóa Thành Công!", "Xóa Đơn Vị Tính", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
+            catch { }
         }
 
         private void dgvDonViTinh_SelectionChanged(object sender, EventArgs e)
@@ -93,32 +109,48 @@ namespace QuanLyKho
 
         private void btnPreview_Click(object sender, EventArgs e)
         {
-            if (intIndex > 0)
+            try
             {
-                intIndex--;
-                dgvDonViTinh.Rows[intIndex].Selected = true;
+                if (intIndex > 0)
+                {
+                    intIndex--;
+                    dgvDonViTinh.Rows[intIndex].Selected = true;
+                }
             }
+            catch { }
         }
 
         private void btnFirst_Click(object sender, EventArgs e)
         {
-            intIndex = 0;
-            dgvDonViTinh.Rows[intIndex].Selected = true;
+            try
+            {
+                intIndex = 0;
+                dgvDonViTinh.Rows[intIndex].Selected = true;
+            }
+            catch { }
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (intIndex < intRowCount - 1) 
+            try
             {
-                intIndex++;
-                dgvDonViTinh.Rows[intIndex].Selected = true;
+                if (intIndex < intRowCount - 1)
+                {
+                    intIndex++;
+                    dgvDonViTinh.Rows[intIndex].Selected = true;
+                }
             }
+            catch { }
         }
 
         private void btnLast_Click(object sender, EventArgs e)
         {
-            intIndex = intRowCount - 1;
-            dgvDonViTinh.Rows[intIndex].Selected = true;
+            try
+            {
+                intIndex = intRowCount - 1;
+                dgvDonViTinh.Rows[intIndex].Selected = true;
+            }
+            catch { }
         }
 
     }

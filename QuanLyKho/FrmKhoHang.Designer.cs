@@ -72,12 +72,12 @@
             this.btnNext = new DevComponents.DotNetBar.ButtonX();
             this.btnLast = new DevComponents.DotNetBar.ButtonX();
             this.txtIndex = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.btnFirst = new DevComponents.DotNetBar.ButtonX();
             this.btnPreview = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.groupPanel5 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.bar1 = new DevComponents.DotNetBar.Bar();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.btnFirst = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhoHang)).BeginInit();
             this.groupPanel1.SuspendLayout();
             this.groupPanel3.SuspendLayout();
@@ -552,6 +552,20 @@
             this.txtIndex.TabIndex = 2;
             this.txtIndex.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // btnFirst
+            // 
+            this.btnFirst.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnFirst.BackColor = System.Drawing.Color.Transparent;
+            this.btnFirst.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.btnFirst.Image = global::QuanLyKho.Properties.Resources._2dowarrow;
+            this.btnFirst.ImageFixedSize = new System.Drawing.Size(16, 16);
+            this.btnFirst.Location = new System.Drawing.Point(406, 4);
+            this.btnFirst.Name = "btnFirst";
+            this.btnFirst.Size = new System.Drawing.Size(19, 21);
+            this.btnFirst.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnFirst.TabIndex = 1;
+            this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
+            // 
             // btnPreview
             // 
             this.btnPreview.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -694,20 +708,6 @@
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(786, 2);
             this.labelX1.TabIndex = 2;
-            // 
-            // btnFirst
-            // 
-            this.btnFirst.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnFirst.BackColor = System.Drawing.Color.Transparent;
-            this.btnFirst.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.btnFirst.Image = global::QuanLyKho.Properties.Resources._2dowarrow;
-            this.btnFirst.ImageFixedSize = new System.Drawing.Size(16, 16);
-            this.btnFirst.Location = new System.Drawing.Point(406, 4);
-            this.btnFirst.Name = "btnFirst";
-            this.btnFirst.Size = new System.Drawing.Size(19, 21);
-            this.btnFirst.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnFirst.TabIndex = 1;
-            this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
             // 
             // FrmKhoHang
             // 

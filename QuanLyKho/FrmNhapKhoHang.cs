@@ -34,52 +34,55 @@ namespace QuanLyKho
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            KhoHangDTO dtoKhoHang = new KhoHangDTO();
-            string strAction = btnOK.Tag.ToString();
-            if (strAction == "add")
+            try
             {
-                dtoKhoHang.MaKho = txtMaKho.Text;
-                dtoKhoHang.TenKho = txtTenKho.Text;
-                dtoKhoHang.SDTB = txtDienThoaiBan.Text;
-                dtoKhoHang.DTDD = txtDienThoaiDD.Text;
-                dtoKhoHang.NguoiLH = cmbNhanVien.SelectedValue.ToString();
-                dtoKhoHang.Fax = txtFax.Text;
-                dtoKhoHang.DiaChi = txtDiaChi.Text;
-                dtoKhoHang.GhiChu = txtGhiChu.Text;
-                string strResult = bllKhoHang.InsertKhoHang(dtoKhoHang);
-                if (strResult == "ok")
+                KhoHangDTO dtoKhoHang = new KhoHangDTO();
+                string strAction = btnOK.Tag.ToString();
+                if (strAction == "add")
                 {
-                    MessageBox.Show("Thêm Thành Công!", "Thêm Kho Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show(strResult, "Thêm Kho Hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                dtoKhoHang.MaKho = txtMaKho.Text;
-                dtoKhoHang.TenKho = txtTenKho.Text;
-                dtoKhoHang.SDTB = txtDienThoaiBan.Text;
-                dtoKhoHang.DTDD = txtDienThoaiDD.Text;
-                dtoKhoHang.NguoiLH = cmbNhanVien.SelectedValue.ToString();
-                dtoKhoHang.Fax = txtFax.Text;
-                dtoKhoHang.DiaChi = txtDiaChi.Text;
-                dtoKhoHang.GhiChu = txtGhiChu.Text;
-                string strResult = bllKhoHang.UpdateKhoHang(dtoKhoHang);
-                if (strResult == "ok")
-                {
-                    MessageBox.Show("Cập Nhật Thành Công!", "Cập Nhật Kho Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show(strResult, "Cập Nhật Kho Hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
 
-       
+                    dtoKhoHang.MaKho = txtMaKho.Text;
+                    dtoKhoHang.TenKho = txtTenKho.Text;
+                    dtoKhoHang.SDTB = txtDienThoaiBan.Text;
+                    dtoKhoHang.DTDD = txtDienThoaiDD.Text;
+                    dtoKhoHang.NguoiLH = cmbNhanVien.SelectedValue.ToString();
+                    dtoKhoHang.Fax = txtFax.Text;
+                    dtoKhoHang.DiaChi = txtDiaChi.Text;
+                    dtoKhoHang.GhiChu = txtGhiChu.Text;
+                    string strResult = bllKhoHang.InsertKhoHang(dtoKhoHang);
+                    if (strResult == "ok")
+                    {
+                        MessageBox.Show("Thêm Thành Công!", "Thêm Kho Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(strResult, "Thêm Kho Hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    dtoKhoHang.MaKho = txtMaKho.Text;
+                    dtoKhoHang.TenKho = txtTenKho.Text;
+                    dtoKhoHang.SDTB = txtDienThoaiBan.Text;
+                    dtoKhoHang.DTDD = txtDienThoaiDD.Text;
+                    dtoKhoHang.NguoiLH = cmbNhanVien.SelectedValue.ToString();
+                    dtoKhoHang.Fax = txtFax.Text;
+                    dtoKhoHang.DiaChi = txtDiaChi.Text;
+                    dtoKhoHang.GhiChu = txtGhiChu.Text;
+                    string strResult = bllKhoHang.UpdateKhoHang(dtoKhoHang);
+                    if (strResult == "ok")
+                    {
+                        MessageBox.Show("Cập Nhật Thành Công!", "Cập Nhật Kho Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(strResult, "Cập Nhật Kho Hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch { }
+        }
     }
 }

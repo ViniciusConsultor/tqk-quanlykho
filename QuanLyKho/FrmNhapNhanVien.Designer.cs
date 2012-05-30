@@ -33,6 +33,8 @@
             this.btnThoat = new DevComponents.DotNetBar.ButtonX();
             this.btnThemNhanVien = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.txtCMND = new DevComponents.Editors.IntegerInput();
+            this.txtDienThoai = new DevComponents.Editors.IntegerInput();
             this.dtNgaySinh = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.txtDiaChi = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.cmbChucVu = new DevComponents.DotNetBar.Controls.ComboBoxEx();
@@ -47,13 +49,11 @@
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.txtDienThoai = new DevComponents.Editors.IntegerInput();
-            this.txtCMND = new DevComponents.Editors.IntegerInput();
             this.groupPanel1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtNgaySinh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDienThoai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCMND)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDienThoai)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtNgaySinh)).BeginInit();
             this.SuspendLayout();
             // 
             // labelX1
@@ -123,7 +123,7 @@
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(90, 25);
             this.btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnThoat.TabIndex = 1;
+            this.btnThoat.TabIndex = 10;
             this.btnThoat.Text = "Cancel";
             // 
             // btnThemNhanVien
@@ -136,7 +136,7 @@
             this.btnThemNhanVien.Name = "btnThemNhanVien";
             this.btnThemNhanVien.Size = new System.Drawing.Size(90, 25);
             this.btnThemNhanVien.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnThemNhanVien.TabIndex = 0;
+            this.btnThemNhanVien.TabIndex = 9;
             this.btnThemNhanVien.Text = "OK";
             this.btnThemNhanVien.Click += new System.EventHandler(this.btnThemNhanVien_Click);
             // 
@@ -194,6 +194,34 @@
             this.groupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel2.TabIndex = 2;
             // 
+            // txtCMND
+            // 
+            // 
+            // 
+            // 
+            this.txtCMND.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtCMND.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtCMND.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtCMND.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.txtCMND.Location = new System.Drawing.Point(102, 188);
+            this.txtCMND.Name = "txtCMND";
+            this.txtCMND.Size = new System.Drawing.Size(210, 20);
+            this.txtCMND.TabIndex = 7;
+            // 
+            // txtDienThoai
+            // 
+            // 
+            // 
+            // 
+            this.txtDienThoai.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtDienThoai.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtDienThoai.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtDienThoai.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.txtDienThoai.Location = new System.Drawing.Point(102, 160);
+            this.txtDienThoai.Name = "txtDienThoai";
+            this.txtDienThoai.Size = new System.Drawing.Size(210, 20);
+            this.txtDienThoai.TabIndex = 6;
+            // 
             // dtNgaySinh
             // 
             // 
@@ -244,7 +272,7 @@
             this.dtNgaySinh.Name = "dtNgaySinh";
             this.dtNgaySinh.Size = new System.Drawing.Size(210, 20);
             this.dtNgaySinh.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dtNgaySinh.TabIndex = 16;
+            this.dtNgaySinh.TabIndex = 5;
             // 
             // txtDiaChi
             // 
@@ -257,7 +285,7 @@
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(210, 53);
-            this.txtDiaChi.TabIndex = 15;
+            this.txtDiaChi.TabIndex = 8;
             // 
             // cmbChucVu
             // 
@@ -269,7 +297,7 @@
             this.cmbChucVu.Name = "cmbChucVu";
             this.cmbChucVu.Size = new System.Drawing.Size(210, 20);
             this.cmbChucVu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmbChucVu.TabIndex = 11;
+            this.cmbChucVu.TabIndex = 4;
             // 
             // cmbBoPhan
             // 
@@ -281,7 +309,7 @@
             this.cmbBoPhan.Name = "cmbBoPhan";
             this.cmbBoPhan.Size = new System.Drawing.Size(210, 20);
             this.cmbBoPhan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmbBoPhan.TabIndex = 10;
+            this.cmbBoPhan.TabIndex = 3;
             // 
             // txtTenNhanVien
             // 
@@ -293,7 +321,7 @@
             this.txtTenNhanVien.Location = new System.Drawing.Point(102, 43);
             this.txtTenNhanVien.Name = "txtTenNhanVien";
             this.txtTenNhanVien.Size = new System.Drawing.Size(210, 20);
-            this.txtTenNhanVien.TabIndex = 9;
+            this.txtTenNhanVien.TabIndex = 2;
             // 
             // txtMaNV
             // 
@@ -307,7 +335,7 @@
             this.txtMaNV.PreventEnterBeep = true;
             this.txtMaNV.ReadOnly = true;
             this.txtMaNV.Size = new System.Drawing.Size(210, 20);
-            this.txtMaNV.TabIndex = 8;
+            this.txtMaNV.TabIndex = 1;
             // 
             // labelX9
             // 
@@ -413,34 +441,6 @@
             this.labelX2.TabIndex = 0;
             this.labelX2.Text = "Mã Nhân Viên :";
             // 
-            // txtDienThoai
-            // 
-            // 
-            // 
-            // 
-            this.txtDienThoai.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtDienThoai.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtDienThoai.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtDienThoai.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            this.txtDienThoai.Location = new System.Drawing.Point(102, 160);
-            this.txtDienThoai.Name = "txtDienThoai";
-            this.txtDienThoai.Size = new System.Drawing.Size(210, 20);
-            this.txtDienThoai.TabIndex = 17;
-            // 
-            // txtCMND
-            // 
-            // 
-            // 
-            // 
-            this.txtCMND.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtCMND.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtCMND.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtCMND.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            this.txtCMND.Location = new System.Drawing.Point(102, 188);
-            this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(210, 20);
-            this.txtCMND.TabIndex = 18;
-            // 
             // FrmNhapNhanVien
             // 
             this.AcceptButton = this.btnThemNhanVien;
@@ -456,9 +456,9 @@
             this.Load += new System.EventHandler(this.FrmNhapNhanVien_Load);
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtNgaySinh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDienThoai)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCMND)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDienThoai)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtNgaySinh)).EndInit();
             this.ResumeLayout(false);
 
         }

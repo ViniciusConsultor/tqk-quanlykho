@@ -20,41 +20,45 @@ namespace QuanLyKho
         NhomHangBLL bllNhomHang = new NhomHangBLL();
         private void btnOK_Click(object sender, EventArgs e)
         {
-            NhomHangDTO dtoNhomHang = new NhomHangDTO();
-            string strAction = btnOK.Tag.ToString();
-            if (strAction == "add")
+            try
             {
-                dtoNhomHang.MaNH = txtMaNhom.Text;
-                dtoNhomHang.TenNhomHang = txtTenNhom.Text;
-                dtoNhomHang.GhiChu = txtGhiChu.Text;
-                string strResult = bllNhomHang.InsertNhomHang(dtoNhomHang);
-                if (strResult == "ok")
+                NhomHangDTO dtoNhomHang = new NhomHangDTO();
+                string strAction = btnOK.Tag.ToString();
+                if (strAction == "add")
                 {
-                    MessageBox.Show("Thêm Thành Công!", "Thêm Nhóm Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show(strResult, "Thêm Nhóm Hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                    dtoNhomHang.MaNH = txtMaNhom.Text;
+                    dtoNhomHang.TenNhomHang = txtTenNhom.Text;
+                    dtoNhomHang.GhiChu = txtGhiChu.Text;
+                    string strResult = bllNhomHang.InsertNhomHang(dtoNhomHang);
+                    if (strResult == "ok")
+                    {
+                        MessageBox.Show("Thêm Thành Công!", "Thêm Nhóm Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(strResult, "Thêm Nhóm Hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
 
-            }
-            else
-            {
-                dtoNhomHang.MaNH = txtMaNhom.Text;
-                dtoNhomHang.TenNhomHang = txtTenNhom.Text;
-                dtoNhomHang.GhiChu = txtGhiChu.Text;
-                string strResult = bllNhomHang.UpdateNhomHang(dtoNhomHang);
-                if (strResult == "ok")
-                {
-                    MessageBox.Show("Cập Nhật Thành Công!", "Cập Nhật Nhóm Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show(strResult, "Cập Nhật Nhóm Hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    dtoNhomHang.MaNH = txtMaNhom.Text;
+                    dtoNhomHang.TenNhomHang = txtTenNhom.Text;
+                    dtoNhomHang.GhiChu = txtGhiChu.Text;
+                    string strResult = bllNhomHang.UpdateNhomHang(dtoNhomHang);
+                    if (strResult == "ok")
+                    {
+                        MessageBox.Show("Cập Nhật Thành Công!", "Cập Nhật Nhóm Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(strResult, "Cập Nhật Nhóm Hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
+            catch { }
         }
     }
 }

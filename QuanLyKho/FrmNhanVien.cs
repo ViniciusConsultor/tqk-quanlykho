@@ -34,59 +34,75 @@ namespace QuanLyKho
 
         private void LoadNhanVien()
         {
-            DataTable dtNhanVien = new DataTable();
-            dtNhanVien = bllNhanVien.GetNhanVien();
-            dtNhanVien = cf.AutoNumberedTable(dtNhanVien);
-            dgvNhanVien.AutoGenerateColumns = false;
-            dgvNhanVien.DataSource = dtNhanVien;
-            intRowCount = dgvNhanVien.Rows.Count;
+            try
+            {
+                DataTable dtNhanVien = new DataTable();
+                dtNhanVien = bllNhanVien.GetNhanVien();
+                dtNhanVien = cf.AutoNumberedTable(dtNhanVien);
+                dgvNhanVien.AutoGenerateColumns = false;
+                dgvNhanVien.DataSource = dtNhanVien;
+                intRowCount = dgvNhanVien.Rows.Count;
+            }
+            catch { }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            FrmNhapNhanVien frmNhapNhanVien = new FrmNhapNhanVien();
-            frmNhapNhanVien.btnThemNhanVien.Tag = "add";
-            string strMaNV = cf.CreateId("MANV", "NHANVIEN");
-            frmNhapNhanVien.txtMaNV.Text = strMaNV;
-            frmNhapNhanVien.ShowDialog();
-            LoadNhanVien();
+            try
+            {
+                FrmNhapNhanVien frmNhapNhanVien = new FrmNhapNhanVien();
+                frmNhapNhanVien.btnThemNhanVien.Tag = "add";
+                string strMaNV = cf.CreateId("MANV", "NHANVIEN");
+                frmNhapNhanVien.txtMaNV.Text = strMaNV;
+                frmNhapNhanVien.ShowDialog();
+                LoadNhanVien();
+            }
+            catch { }
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            FrmNhapNhanVien frmNhapNhanVien = new FrmNhapNhanVien();
-            frmNhapNhanVien.btnThemNhanVien.Tag = "up";
-            int index = dgvNhanVien.SelectedRows[0].Index;
-            string strMaNV = dgvNhanVien.Rows[index].Cells["colMaNhanVien"].Value.ToString();
-            frmNhapNhanVien.txtMaNV.Text = strMaNV;
-            string strTenNV = dgvNhanVien.Rows[index].Cells["colTenNhanVien"].Value.ToString();
-            frmNhapNhanVien.txtTenNhanVien.Text = strTenNV;
-            string strBoPhan = dgvNhanVien.Rows[index].Cells["colBoPhan"].Value.ToString();
-            frmNhapNhanVien.cmbBoPhan.Tag = strBoPhan;
-            string strChucVu = dgvNhanVien.Rows[index].Cells["colChucVu"].Value.ToString();
-            frmNhapNhanVien.cmbChucVu.Tag = strChucVu;
-            DateTime dateNgaySinh = DateTime.Parse(dgvNhanVien.Rows[index].Cells["colNgaySinh"].Value.ToString());
-            frmNhapNhanVien.dtNgaySinh.Value = dateNgaySinh; 
-            string strDienThoai = dgvNhanVien.Rows[index].Cells["colSoDienThoai"].Value.ToString();
-            frmNhapNhanVien.txtDienThoai.Text = strDienThoai;
-            string strCMND = dgvNhanVien.Rows[index].Cells["colCMND"].Value.ToString();
-            frmNhapNhanVien.txtCMND.Text = strCMND;
-            string strDiaChi = dgvNhanVien.Rows[index].Cells["colDiaChi"].Value.ToString();
-            frmNhapNhanVien.txtDiaChi.Text = strDiaChi;
-            frmNhapNhanVien.ShowDialog();
-            LoadNhanVien();
+            try
+            {
+                FrmNhapNhanVien frmNhapNhanVien = new FrmNhapNhanVien();
+                frmNhapNhanVien.btnThemNhanVien.Tag = "up";
+                int index = dgvNhanVien.SelectedRows[0].Index;
+                string strMaNV = dgvNhanVien.Rows[index].Cells["colMaNhanVien"].Value.ToString();
+                frmNhapNhanVien.txtMaNV.Text = strMaNV;
+                string strTenNV = dgvNhanVien.Rows[index].Cells["colTenNhanVien"].Value.ToString();
+                frmNhapNhanVien.txtTenNhanVien.Text = strTenNV;
+                string strBoPhan = dgvNhanVien.Rows[index].Cells["colBoPhan"].Value.ToString();
+                frmNhapNhanVien.cmbBoPhan.Tag = strBoPhan;
+                string strChucVu = dgvNhanVien.Rows[index].Cells["colChucVu"].Value.ToString();
+                frmNhapNhanVien.cmbChucVu.Tag = strChucVu;
+                DateTime dateNgaySinh = DateTime.Parse(dgvNhanVien.Rows[index].Cells["colNgaySinh"].Value.ToString());
+                frmNhapNhanVien.dtNgaySinh.Value = dateNgaySinh;
+                string strDienThoai = dgvNhanVien.Rows[index].Cells["colSoDienThoai"].Value.ToString();
+                frmNhapNhanVien.txtDienThoai.Text = strDienThoai;
+                string strCMND = dgvNhanVien.Rows[index].Cells["colCMND"].Value.ToString();
+                frmNhapNhanVien.txtCMND.Text = strCMND;
+                string strDiaChi = dgvNhanVien.Rows[index].Cells["colDiaChi"].Value.ToString();
+                frmNhapNhanVien.txtDiaChi.Text = strDiaChi;
+                frmNhapNhanVien.ShowDialog();
+                LoadNhanVien();
+            }
+            catch { }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            int index = dgvNhanVien.SelectedRows[0].Index;
-            string strMaNV = dgvNhanVien.Rows[index].Cells["colMaNhanVien"].Value.ToString();
-            if (MessageBox.Show("Bạn Chắc Xóa Nhân Viên Này", "Xóa Nhân Viên", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            try
             {
-                dgvNhanVien.Rows.RemoveAt(index);
-                bllNhanVien.DelNhanVien(strMaNV);
-                MessageBox.Show("Xóa Thành Công!", "Xóa Nhân Viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                int index = dgvNhanVien.SelectedRows[0].Index;
+                string strMaNV = dgvNhanVien.Rows[index].Cells["colMaNhanVien"].Value.ToString();
+                if (MessageBox.Show("Bạn Chắc Xóa Nhân Viên Này", "Xóa Nhân Viên", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+                {
+                    dgvNhanVien.Rows.RemoveAt(index);
+                    bllNhanVien.DelNhanVien(strMaNV);
+                    MessageBox.Show("Xóa Thành Công!", "Xóa Nhân Viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
+            catch { }
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -96,26 +112,38 @@ namespace QuanLyKho
 
         private void btnPreView_Click(object sender, EventArgs e)
         {
-            if (intIndex > 0)
+            try
             {
-                intIndex--;
-                dgvNhanVien.Rows[intIndex].Selected = true;
+                if (intIndex > 0)
+                {
+                    intIndex--;
+                    dgvNhanVien.Rows[intIndex].Selected = true;
+                }
             }
+            catch { }
         }
 
         private void btnFirst_Click(object sender, EventArgs e)
         {
-            intIndex = 0;
-            dgvNhanVien.Rows[intIndex].Selected = true;
+            try
+            {
+                intIndex = 0;
+                dgvNhanVien.Rows[intIndex].Selected = true;
+            }
+            catch { }
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (intIndex < intRowCount - 1)
+            try
             {
-                intIndex++;
-                dgvNhanVien.Rows[intIndex].Selected = true;
+                if (intIndex < intRowCount - 1)
+                {
+                    intIndex++;
+                    dgvNhanVien.Rows[intIndex].Selected = true;
+                }
             }
+            catch { }
         }
 
         private void dgvNhanVien_SelectionChanged(object sender, EventArgs e)
@@ -130,8 +158,12 @@ namespace QuanLyKho
 
         private void btnLast_Click(object sender, EventArgs e)
         {
-            intIndex = intRowCount - 1;
-            dgvNhanVien.Rows[intIndex].Selected = true;
+            try
+            {
+                intIndex = intRowCount - 1;
+                dgvNhanVien.Rows[intIndex].Selected = true;
+            }
+            catch { }
         }
 
     }

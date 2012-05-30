@@ -21,62 +21,60 @@ namespace QuanLyKho
         }
         private void btnThemKhachHang_Click(object sender, EventArgs e)
         {
-            string strAction = btnThemKhachHang.Tag.ToString();
-            if (strAction == "add")
+            try
             {
-                KhachHangDTO dtoKhachHang = new KhachHangDTO();
-                dtoKhachHang.MaKH = cf.CreateId("KHA", "KHACHHANG");
-                dtoKhachHang.TenKH = txtTenKhachHang.Text;
-                dtoKhachHang.SoTaiKhoan = txtSoTaiKhoan.Text;
-                dtoKhachHang.NganHang = txtNganHang.Text;
-                dtoKhachHang.MaSoThue = txtMaSoThue.Text;
-                dtoKhachHang.DiaChi = txtDiaChi.Text;
-                dtoKhachHang.SDT = txtDienThoai.Text;
-                dtoKhachHang.Email = txtEmail.Text;
-                dtoKhachHang.GhiChu = txtGhiChu.Text;
-                string strResult = bllKhachHang.InsertKhachHang(dtoKhachHang);
-                if (strResult == "ok")
+                string strAction = btnThemKhachHang.Tag.ToString();
+                if (strAction == "add")
                 {
-                    MessageBox.Show("Thêm Khách Hàng Thành Công!", "Thêm Khách Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    KhachHangDTO dtoKhachHang = new KhachHangDTO();
+                    dtoKhachHang.MaKH = cf.CreateId("KHA", "KHACHHANG");
+                    dtoKhachHang.TenKH = txtTenKhachHang.Text;
+                    dtoKhachHang.SoTaiKhoan = txtSoTaiKhoan.Text;
+                    dtoKhachHang.NganHang = txtNganHang.Text;
+                    dtoKhachHang.MaSoThue = txtMaSoThue.Text;
+                    dtoKhachHang.DiaChi = txtDiaChi.Text;
+                    dtoKhachHang.SDT = txtDienThoai.Text;
+                    dtoKhachHang.Email = txtEmail.Text;
+                    dtoKhachHang.GhiChu = txtGhiChu.Text;
+                    string strResult = bllKhachHang.InsertKhachHang(dtoKhachHang);
+                    if (strResult == "ok")
+                    {
+                        MessageBox.Show("Thêm Khách Hàng Thành Công!", "Thêm Khách Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(strResult, "Thêm Khách Hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show(strResult, "Thêm Khách Hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    KhachHangDTO dtoKhachHang = new KhachHangDTO();
+                    string strMaKH = txtMaKH.Text;
+                    dtoKhachHang.MaKH = strMaKH;
+                    dtoKhachHang.TenKH = txtTenKhachHang.Text;
+                    dtoKhachHang.SoTaiKhoan = txtSoTaiKhoan.Text;
+                    dtoKhachHang.NganHang = txtNganHang.Text;
+                    dtoKhachHang.MaSoThue = txtMaSoThue.Text;
+                    dtoKhachHang.DiaChi = txtDiaChi.Text;
+                    dtoKhachHang.SDT = txtDienThoai.Text;
+                    dtoKhachHang.Email = txtEmail.Text;
+                    dtoKhachHang.GhiChu = txtGhiChu.Text;
+                    string strResult = bllKhachHang.UpdateKH(dtoKhachHang);
+                    if (strResult == "ok")
+                    {
+                        MessageBox.Show("Cập nhật Khách Hàng Thành Công!", "Cập Nhật Khách Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(strResult, "Cập Nhật Khách Hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
-            else
-            {
-                KhachHangDTO dtoKhachHang = new KhachHangDTO();
-                string strMaKH = txtMaKH.Text;
-                dtoKhachHang.MaKH = strMaKH;
-                dtoKhachHang.TenKH = txtTenKhachHang.Text;
-                dtoKhachHang.SoTaiKhoan = txtSoTaiKhoan.Text;
-                dtoKhachHang.NganHang = txtNganHang.Text;
-                dtoKhachHang.MaSoThue = txtMaSoThue.Text;
-                dtoKhachHang.DiaChi = txtDiaChi.Text;
-                dtoKhachHang.SDT = txtDienThoai.Text;
-                dtoKhachHang.Email = txtEmail.Text;
-                dtoKhachHang.GhiChu = txtGhiChu.Text;
-                string strResult = bllKhachHang.UpdateKH(dtoKhachHang);
-                if(strResult == "ok")
-                {
-                    MessageBox.Show("Cập nhật Khách Hàng Thành Công!","Cập Nhật Khách Hàng",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    this.Close();
-                }
-                else
-                {
-                   MessageBox.Show(strResult, "Cập Nhật Khách Hàng", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            catch { }
             
         }
 
-        private void FrmNhapKhachHang_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            //FrmKhachHang frmKhachHang = new FrmKhachHang();
-            //frmKhachHang.btnRefresh_Click(sender, e);
-            //frmKhachHang.Refresh();
-        }
     }
 }

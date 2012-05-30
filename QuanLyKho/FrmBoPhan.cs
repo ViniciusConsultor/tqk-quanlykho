@@ -29,12 +29,16 @@ namespace QuanLyKho
 
         public void LoadBoPhan(DataGridViewX dgv)
         {
-            DataTable dtBoPhan = new DataTable();
-            dtBoPhan = dalBoPhan.GetBoPhan();
-            dtBoPhan = cf.AutoNumberedTable(dtBoPhan);
-            dgv.AutoGenerateColumns = false;
-            dgv.DataSource = dtBoPhan;
-            intRowCount = dgvBoPhan.Rows.Count;
+            try
+            {
+                DataTable dtBoPhan = new DataTable();
+                dtBoPhan = dalBoPhan.GetBoPhan();
+                dtBoPhan = cf.AutoNumberedTable(dtBoPhan);
+                dgv.AutoGenerateColumns = false;
+                dgv.DataSource = dtBoPhan;
+                intRowCount = dgvBoPhan.Rows.Count;
+            }
+            catch { }
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -44,38 +48,50 @@ namespace QuanLyKho
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            FrmNhapBoPhan frmNhapBoPhan = new FrmNhapBoPhan();
-            frmNhapBoPhan.btnOK.Tag = "add";
-            string strMaBP = cf.CreateId("MABP","BOPHAN");
-            frmNhapBoPhan.txtMaBP.Text = strMaBP;
-            frmNhapBoPhan.ShowDialog();
-            LoadBoPhan(dgvBoPhan);
+            try
+            {
+                FrmNhapBoPhan frmNhapBoPhan = new FrmNhapBoPhan();
+                frmNhapBoPhan.btnOK.Tag = "add";
+                string strMaBP = cf.CreateId("MABP", "BOPHAN");
+                frmNhapBoPhan.txtMaBP.Text = strMaBP;
+                frmNhapBoPhan.ShowDialog();
+                LoadBoPhan(dgvBoPhan);
+            }
+            catch { }
        
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            FrmNhapBoPhan frmNhapBoPhan = new FrmNhapBoPhan();
-            frmNhapBoPhan.btnOK.Tag = "up";
-            int index = dgvBoPhan.SelectedRows[0].Index;
-            string strMaBP = dgvBoPhan.Rows[index].Cells["colMaBoPhan"].Value.ToString();
-            frmNhapBoPhan.txtMaBP.Text = strMaBP;
-            string strTenBP = dgvBoPhan.Rows[index].Cells["colTenBoPhan"].Value.ToString();
-            frmNhapBoPhan.txtTenBP.Text = strTenBP;
-            frmNhapBoPhan.ShowDialog();
-            LoadBoPhan(dgvBoPhan);
+            try
+            {
+                FrmNhapBoPhan frmNhapBoPhan = new FrmNhapBoPhan();
+                frmNhapBoPhan.btnOK.Tag = "up";
+                int index = dgvBoPhan.SelectedRows[0].Index;
+                string strMaBP = dgvBoPhan.Rows[index].Cells["colMaBoPhan"].Value.ToString();
+                frmNhapBoPhan.txtMaBP.Text = strMaBP;
+                string strTenBP = dgvBoPhan.Rows[index].Cells["colTenBoPhan"].Value.ToString();
+                frmNhapBoPhan.txtTenBP.Text = strTenBP;
+                frmNhapBoPhan.ShowDialog();
+                LoadBoPhan(dgvBoPhan);
+            }
+            catch { }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            int index = dgvBoPhan.SelectedRows[0].Index;
-            string strMaBP = dgvBoPhan.Rows[index].Cells["colMaBoPhan"].Value.ToString();
-            if (MessageBox.Show("Bạn Có Chắc Chắn Xóa Dòng Này ?", "Xóa Bộ Phận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            try
             {
-                dgvBoPhan.Rows.RemoveAt(index);
-                dalBoPhan.DelBoPhan(strMaBP);
-                MessageBox.Show("Xóa Thành Công!", "Xóa Bộ Phận", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                int index = dgvBoPhan.SelectedRows[0].Index;
+                string strMaBP = dgvBoPhan.Rows[index].Cells["colMaBoPhan"].Value.ToString();
+                if (MessageBox.Show("Bạn Có Chắc Chắn Xóa Dòng Này ?", "Xóa Bộ Phận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+                {
+                    dgvBoPhan.Rows.RemoveAt(index);
+                    dalBoPhan.DelBoPhan(strMaBP);
+                    MessageBox.Show("Xóa Thành Công!", "Xóa Bộ Phận", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
+            catch { }
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -85,32 +101,48 @@ namespace QuanLyKho
 
         private void btnFirst_Click(object sender, EventArgs e)
         {
-            intIndex = 0;
-            dgvBoPhan.Rows[intIndex].Selected = true;
+            try
+            {
+                intIndex = 0;
+                dgvBoPhan.Rows[intIndex].Selected = true;
+            }
+            catch { }
         }
 
         private void btnPreview_Click(object sender, EventArgs e)
         {
-            if (intIndex > 0)
+            try
             {
-                intIndex--;
-                dgvBoPhan.Rows[intIndex].Selected = true;
+                if (intIndex > 0)
+                {
+                    intIndex--;
+                    dgvBoPhan.Rows[intIndex].Selected = true;
+                }
             }
+            catch { }
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (intIndex < intRowCount - 1)
+            try
             {
-                intIndex++;
-                dgvBoPhan.Rows[intIndex].Selected = true;
+                if (intIndex < intRowCount - 1)
+                {
+                    intIndex++;
+                    dgvBoPhan.Rows[intIndex].Selected = true;
+                }
             }
+            catch { }
         }
 
         private void btnLast_Click(object sender, EventArgs e)
         {
-            intIndex = intRowCount - 1;
-            dgvBoPhan.Rows[intIndex].Selected = true;
+            try
+            {
+                intIndex = intRowCount - 1;
+                dgvBoPhan.Rows[intIndex].Selected = true;
+            }
+            catch { }
         }
 
         private void dgvBoPhan_SelectionChanged(object sender, EventArgs e)

@@ -33,6 +33,9 @@
             this.btnThoat = new DevComponents.DotNetBar.ButtonX();
             this.btnThem = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.txtMaSoThue = new DevComponents.Editors.IntegerInput();
+            this.txtSoTaiKhoan = new DevComponents.Editors.IntegerInput();
+            this.txtDienThoai = new DevComponents.Editors.IntegerInput();
             this.txtGhiChu = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtDiaChi = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtEmail = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -48,14 +51,11 @@
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.txtDienThoai = new DevComponents.Editors.IntegerInput();
-            this.txtSoTaiKhoan = new DevComponents.Editors.IntegerInput();
-            this.txtMaSoThue = new DevComponents.Editors.IntegerInput();
             this.groupPanel1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDienThoai)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSoTaiKhoan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaSoThue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoTaiKhoan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDienThoai)).BeginInit();
             this.SuspendLayout();
             // 
             // labelX1
@@ -127,7 +127,7 @@
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(90, 25);
             this.btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnThoat.TabIndex = 1;
+            this.btnThoat.TabIndex = 11;
             this.btnThoat.Text = "Cancel";
             // 
             // btnThem
@@ -140,7 +140,7 @@
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(90, 25);
             this.btnThem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnThem.TabIndex = 0;
+            this.btnThem.TabIndex = 10;
             this.btnThem.Text = "OK";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -200,6 +200,48 @@
             this.groupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel2.TabIndex = 2;
             // 
+            // txtMaSoThue
+            // 
+            // 
+            // 
+            // 
+            this.txtMaSoThue.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtMaSoThue.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtMaSoThue.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtMaSoThue.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.txtMaSoThue.Location = new System.Drawing.Point(105, 70);
+            this.txtMaSoThue.Name = "txtMaSoThue";
+            this.txtMaSoThue.Size = new System.Drawing.Size(237, 20);
+            this.txtMaSoThue.TabIndex = 3;
+            // 
+            // txtSoTaiKhoan
+            // 
+            // 
+            // 
+            // 
+            this.txtSoTaiKhoan.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtSoTaiKhoan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtSoTaiKhoan.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtSoTaiKhoan.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.txtSoTaiKhoan.Location = new System.Drawing.Point(105, 99);
+            this.txtSoTaiKhoan.Name = "txtSoTaiKhoan";
+            this.txtSoTaiKhoan.Size = new System.Drawing.Size(237, 20);
+            this.txtSoTaiKhoan.TabIndex = 4;
+            // 
+            // txtDienThoai
+            // 
+            // 
+            // 
+            // 
+            this.txtDienThoai.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtDienThoai.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtDienThoai.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtDienThoai.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.txtDienThoai.Location = new System.Drawing.Point(105, 157);
+            this.txtDienThoai.Name = "txtDienThoai";
+            this.txtDienThoai.Size = new System.Drawing.Size(237, 20);
+            this.txtDienThoai.TabIndex = 6;
+            // 
             // txtGhiChu
             // 
             // 
@@ -211,7 +253,7 @@
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(237, 43);
-            this.txtGhiChu.TabIndex = 17;
+            this.txtGhiChu.TabIndex = 9;
             // 
             // txtDiaChi
             // 
@@ -224,7 +266,7 @@
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(237, 43);
-            this.txtDiaChi.TabIndex = 16;
+            this.txtDiaChi.TabIndex = 8;
             // 
             // txtEmail
             // 
@@ -236,7 +278,7 @@
             this.txtEmail.Location = new System.Drawing.Point(105, 186);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(237, 20);
-            this.txtEmail.TabIndex = 15;
+            this.txtEmail.TabIndex = 7;
             // 
             // txtNganHang
             // 
@@ -248,7 +290,7 @@
             this.txtNganHang.Location = new System.Drawing.Point(105, 128);
             this.txtNganHang.Name = "txtNganHang";
             this.txtNganHang.Size = new System.Drawing.Size(237, 20);
-            this.txtNganHang.TabIndex = 13;
+            this.txtNganHang.TabIndex = 5;
             // 
             // txtTenNCC
             // 
@@ -260,7 +302,7 @@
             this.txtTenNCC.Location = new System.Drawing.Point(105, 41);
             this.txtTenNCC.Name = "txtTenNCC";
             this.txtTenNCC.Size = new System.Drawing.Size(237, 20);
-            this.txtTenNCC.TabIndex = 10;
+            this.txtTenNCC.TabIndex = 2;
             // 
             // txtMaNCC
             // 
@@ -273,7 +315,7 @@
             this.txtMaNCC.Name = "txtMaNCC";
             this.txtMaNCC.ReadOnly = true;
             this.txtMaNCC.Size = new System.Drawing.Size(237, 20);
-            this.txtMaNCC.TabIndex = 9;
+            this.txtMaNCC.TabIndex = 1;
             // 
             // labelX10
             // 
@@ -392,48 +434,6 @@
             this.labelX2.TabIndex = 0;
             this.labelX2.Text = "Mã Nhà CC :";
             // 
-            // txtDienThoai
-            // 
-            // 
-            // 
-            // 
-            this.txtDienThoai.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtDienThoai.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtDienThoai.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtDienThoai.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            this.txtDienThoai.Location = new System.Drawing.Point(105, 157);
-            this.txtDienThoai.Name = "txtDienThoai";
-            this.txtDienThoai.Size = new System.Drawing.Size(237, 20);
-            this.txtDienThoai.TabIndex = 18;
-            // 
-            // txtSoTaiKhoan
-            // 
-            // 
-            // 
-            // 
-            this.txtSoTaiKhoan.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtSoTaiKhoan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtSoTaiKhoan.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtSoTaiKhoan.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            this.txtSoTaiKhoan.Location = new System.Drawing.Point(105, 99);
-            this.txtSoTaiKhoan.Name = "txtSoTaiKhoan";
-            this.txtSoTaiKhoan.Size = new System.Drawing.Size(237, 20);
-            this.txtSoTaiKhoan.TabIndex = 19;
-            // 
-            // txtMaSoThue
-            // 
-            // 
-            // 
-            // 
-            this.txtMaSoThue.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtMaSoThue.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtMaSoThue.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtMaSoThue.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            this.txtMaSoThue.Location = new System.Drawing.Point(105, 70);
-            this.txtMaSoThue.Name = "txtMaSoThue";
-            this.txtMaSoThue.Size = new System.Drawing.Size(237, 20);
-            this.txtMaSoThue.TabIndex = 20;
-            // 
             // FrmNhapNCC
             // 
             this.AcceptButton = this.btnThem;
@@ -448,9 +448,9 @@
             this.Text = "Nhà Cung Cấp";
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtDienThoai)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSoTaiKhoan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaSoThue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoTaiKhoan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDienThoai)).EndInit();
             this.ResumeLayout(false);
 
         }

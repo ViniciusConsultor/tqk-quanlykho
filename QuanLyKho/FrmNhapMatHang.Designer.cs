@@ -121,7 +121,7 @@
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(90, 25);
             this.btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnThoat.TabIndex = 1;
+            this.btnThoat.TabIndex = 9;
             this.btnThoat.Text = "Cancel";
             // 
             // btnThem
@@ -134,7 +134,7 @@
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(90, 25);
             this.btnThem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnThem.TabIndex = 0;
+            this.btnThem.TabIndex = 8;
             this.btnThem.Text = "OK";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -202,7 +202,7 @@
             this.txtTonDau.Location = new System.Drawing.Point(90, 161);
             this.txtTonDau.Name = "txtTonDau";
             this.txtTonDau.Size = new System.Drawing.Size(223, 20);
-            this.txtTonDau.TabIndex = 14;
+            this.txtTonDau.TabIndex = 6;
             // 
             // txtMoTa
             // 
@@ -215,7 +215,7 @@
             this.txtMoTa.Multiline = true;
             this.txtMoTa.Name = "txtMoTa";
             this.txtMoTa.Size = new System.Drawing.Size(223, 51);
-            this.txtMoTa.TabIndex = 13;
+            this.txtMoTa.TabIndex = 7;
             // 
             // cmbDonViTinh
             // 
@@ -227,7 +227,7 @@
             this.cmbDonViTinh.Name = "cmbDonViTinh";
             this.cmbDonViTinh.Size = new System.Drawing.Size(223, 20);
             this.cmbDonViTinh.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmbDonViTinh.TabIndex = 12;
+            this.cmbDonViTinh.TabIndex = 5;
             // 
             // cmbKhoHang
             // 
@@ -239,7 +239,7 @@
             this.cmbKhoHang.Name = "cmbKhoHang";
             this.cmbKhoHang.Size = new System.Drawing.Size(223, 20);
             this.cmbKhoHang.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmbKhoHang.TabIndex = 11;
+            this.cmbKhoHang.TabIndex = 4;
             // 
             // cmbNhomHang
             // 
@@ -251,7 +251,7 @@
             this.cmbNhomHang.Name = "cmbNhomHang";
             this.cmbNhomHang.Size = new System.Drawing.Size(223, 20);
             this.cmbNhomHang.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmbNhomHang.TabIndex = 10;
+            this.cmbNhomHang.TabIndex = 3;
             // 
             // txtTenMH
             // 
@@ -263,7 +263,7 @@
             this.txtTenMH.Location = new System.Drawing.Point(90, 45);
             this.txtTenMH.Name = "txtTenMH";
             this.txtTenMH.Size = new System.Drawing.Size(223, 20);
-            this.txtTenMH.TabIndex = 8;
+            this.txtTenMH.TabIndex = 2;
             // 
             // txtMaMH
             // 
@@ -276,7 +276,7 @@
             this.txtMaMH.Name = "txtMaMH";
             this.txtMaMH.ReadOnly = true;
             this.txtMaMH.Size = new System.Drawing.Size(223, 20);
-            this.txtMaMH.TabIndex = 7;
+            this.txtMaMH.TabIndex = 1;
             // 
             // labelX8
             // 

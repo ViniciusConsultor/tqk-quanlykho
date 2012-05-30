@@ -127,7 +127,7 @@
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(90, 25);
             this.btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnThoat.TabIndex = 1;
+            this.btnThoat.TabIndex = 10;
             this.btnThoat.Text = "Cancel";
             // 
             // btnThemKhachHang
@@ -140,7 +140,7 @@
             this.btnThemKhachHang.Name = "btnThemKhachHang";
             this.btnThemKhachHang.Size = new System.Drawing.Size(90, 25);
             this.btnThemKhachHang.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnThemKhachHang.TabIndex = 0;
+            this.btnThemKhachHang.TabIndex = 9;
             this.btnThemKhachHang.Text = "OK";
             this.btnThemKhachHang.Click += new System.EventHandler(this.btnThemKhachHang_Click);
             // 
@@ -212,7 +212,7 @@
             this.txtDienThoai.Location = new System.Drawing.Point(110, 174);
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Size = new System.Drawing.Size(244, 20);
-            this.txtDienThoai.TabIndex = 20;
+            this.txtDienThoai.TabIndex = 5;
             // 
             // txtMaSoThue
             // 
@@ -226,7 +226,7 @@
             this.txtMaSoThue.Location = new System.Drawing.Point(110, 143);
             this.txtMaSoThue.Name = "txtMaSoThue";
             this.txtMaSoThue.Size = new System.Drawing.Size(244, 20);
-            this.txtMaSoThue.TabIndex = 19;
+            this.txtMaSoThue.TabIndex = 4;
             // 
             // txtSoTaiKhoan
             // 
@@ -240,7 +240,7 @@
             this.txtSoTaiKhoan.Location = new System.Drawing.Point(110, 82);
             this.txtSoTaiKhoan.Name = "txtSoTaiKhoan";
             this.txtSoTaiKhoan.Size = new System.Drawing.Size(244, 20);
-            this.txtSoTaiKhoan.TabIndex = 18;
+            this.txtSoTaiKhoan.TabIndex = 2;
             // 
             // txtMaKH
             // 
@@ -249,7 +249,7 @@
             // 
             this.txtMaKH.Border.Class = "TextBoxBorder";
             this.txtMaKH.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtMaKH.Location = new System.Drawing.Point(110, 22);
+            this.txtMaKH.Location = new System.Drawing.Point(110, 19);
             this.txtMaKH.Name = "txtMaKH";
             this.txtMaKH.ReadOnly = true;
             this.txtMaKH.Size = new System.Drawing.Size(244, 20);
@@ -280,7 +280,7 @@
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(244, 55);
-            this.txtGhiChu.TabIndex = 15;
+            this.txtGhiChu.TabIndex = 8;
             // 
             // labelX9
             // 
@@ -307,7 +307,7 @@
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(244, 55);
-            this.txtDiaChi.TabIndex = 13;
+            this.txtDiaChi.TabIndex = 7;
             // 
             // txtEmail
             // 
@@ -319,7 +319,7 @@
             this.txtEmail.Location = new System.Drawing.Point(110, 206);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(244, 20);
-            this.txtEmail.TabIndex = 12;
+            this.txtEmail.TabIndex = 6;
             // 
             // txtNganHang
             // 
@@ -331,7 +331,7 @@
             this.txtNganHang.Location = new System.Drawing.Point(110, 114);
             this.txtNganHang.Name = "txtNganHang";
             this.txtNganHang.Size = new System.Drawing.Size(244, 20);
-            this.txtNganHang.TabIndex = 9;
+            this.txtNganHang.TabIndex = 3;
             // 
             // txtTenKhachHang
             // 
@@ -343,7 +343,7 @@
             this.txtTenKhachHang.Location = new System.Drawing.Point(110, 54);
             this.txtTenKhachHang.Name = "txtTenKhachHang";
             this.txtTenKhachHang.Size = new System.Drawing.Size(244, 20);
-            this.txtTenKhachHang.TabIndex = 7;
+            this.txtTenKhachHang.TabIndex = 1;
             // 
             // labelX8
             // 
@@ -456,7 +456,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Khách Hàng";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmNhapKhachHang_FormClosed);
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtDienThoai)).EndInit();

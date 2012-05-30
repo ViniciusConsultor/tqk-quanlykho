@@ -124,7 +124,7 @@
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(90, 25);
             this.btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnThoat.TabIndex = 1;
+            this.btnThoat.TabIndex = 10;
             this.btnThoat.Text = "Cancel";
             // 
             // btnOK
@@ -137,7 +137,7 @@
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(90, 25);
             this.btnOK.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnOK.TabIndex = 0;
+            this.btnOK.TabIndex = 9;
             this.btnOK.Text = "OK";
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
@@ -207,7 +207,7 @@
             this.txtDienThoaiBan.Location = new System.Drawing.Point(100, 72);
             this.txtDienThoaiBan.Name = "txtDienThoaiBan";
             this.txtDienThoaiBan.Size = new System.Drawing.Size(221, 20);
-            this.txtDienThoaiBan.TabIndex = 10;
+            this.txtDienThoaiBan.TabIndex = 3;
             // 
             // txtDienThoaiDD
             // 
@@ -221,7 +221,7 @@
             this.txtDienThoaiDD.Location = new System.Drawing.Point(100, 101);
             this.txtDienThoaiDD.Name = "txtDienThoaiDD";
             this.txtDienThoaiDD.Size = new System.Drawing.Size(221, 20);
-            this.txtDienThoaiDD.TabIndex = 11;
+            this.txtDienThoaiDD.TabIndex = 4;
             // 
             // cmbNhanVien
             // 
@@ -234,7 +234,7 @@
             this.cmbNhanVien.Name = "cmbNhanVien";
             this.cmbNhanVien.Size = new System.Drawing.Size(221, 20);
             this.cmbNhanVien.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmbNhanVien.TabIndex = 12;
+            this.cmbNhanVien.TabIndex = 5;
             // 
             // txtGhiChu
             // 
@@ -247,7 +247,7 @@
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(221, 48);
-            this.txtGhiChu.TabIndex = 15;
+            this.txtGhiChu.TabIndex = 8;
             // 
             // txtDiaChi
             // 
@@ -260,7 +260,7 @@
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(221, 51);
-            this.txtDiaChi.TabIndex = 14;
+            this.txtDiaChi.TabIndex = 7;
             // 
             // txtFax
             // 
@@ -272,7 +272,7 @@
             this.txtFax.Location = new System.Drawing.Point(100, 159);
             this.txtFax.Name = "txtFax";
             this.txtFax.Size = new System.Drawing.Size(221, 20);
-            this.txtFax.TabIndex = 13;
+            this.txtFax.TabIndex = 6;
             // 
             // txtTenKho
             // 
@@ -284,7 +284,7 @@
             this.txtTenKho.Location = new System.Drawing.Point(100, 43);
             this.txtTenKho.Name = "txtTenKho";
             this.txtTenKho.Size = new System.Drawing.Size(221, 20);
-            this.txtTenKho.TabIndex = 9;
+            this.txtTenKho.TabIndex = 2;
             // 
             // txtMaKho
             // 
@@ -297,7 +297,7 @@
             this.txtMaKho.Name = "txtMaKho";
             this.txtMaKho.ReadOnly = true;
             this.txtMaKho.Size = new System.Drawing.Size(221, 20);
-            this.txtMaKho.TabIndex = 8;
+            this.txtMaKho.TabIndex = 1;
             // 
             // labelX9
             // 

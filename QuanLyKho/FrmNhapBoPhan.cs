@@ -19,51 +19,59 @@ namespace QuanLyKho
         }
         private void LoadBoPhan(DataGridViewX dgv)
         {
-            DataTable dtBoPhan = new DataTable();
-            dtBoPhan = bllBoPhan.GetBoPhan();
-            dtBoPhan = cf.AutoNumberedTable(dtBoPhan);
-            dgv.AutoGenerateColumns = false;
-            dgv.DataSource = dtBoPhan;
+            try
+            {
+                DataTable dtBoPhan = new DataTable();
+                dtBoPhan = bllBoPhan.GetBoPhan();
+                dtBoPhan = cf.AutoNumberedTable(dtBoPhan);
+                dgv.AutoGenerateColumns = false;
+                dgv.DataSource = dtBoPhan;
+            }
+            catch { }
         }
         BoPhanDTO dtoBoPhan = new BoPhanDTO();
         BoPhanBLL bllBoPhan = new BoPhanBLL();
         CFunction cf = new CFunction();
         private void btnOK_Click(object sender, EventArgs e)
         {
-            string strAction = btnOK.Tag.ToString();
-            if (strAction == "add")
+            try
             {
-                dtoBoPhan.MaBP = txtMaBP.Text;
-                dtoBoPhan.TenBoPhan = txtTenBP.Text;
-                string strResult = bllBoPhan.InsertBoPhan(dtoBoPhan);
-                if (strResult == "ok")
+                string strAction = btnOK.Tag.ToString();
+                if (strAction == "add")
                 {
-                    MessageBox.Show("Thêm Thành Công!", "Thêm Bộ Phận", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                }
-                
-                else
-                {
-                    MessageBox.Show(strResult, "Thêm Bộ Phận", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                
-                
-            }
-            else
-            {
-                dtoBoPhan.MaBP = txtMaBP.Text;
-                dtoBoPhan.TenBoPhan = txtTenBP.Text;
-                string strResult = bllBoPhan.UpdateBoPhan(dtoBoPhan);
-                if (strResult == "ok")
-                {
-                    MessageBox.Show("Cập Nhật Thành Công!", "Cập Nhật Bộ Phận", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    dtoBoPhan.MaBP = txtMaBP.Text;
+                    dtoBoPhan.TenBoPhan = txtTenBP.Text;
+                    string strResult = bllBoPhan.InsertBoPhan(dtoBoPhan);
+                    if (strResult == "ok")
+                    {
+                        MessageBox.Show("Thêm Thành Công!", "Thêm Bộ Phận", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+
+                    else
+                    {
+                        MessageBox.Show(strResult, "Thêm Bộ Phận", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+
                 }
                 else
                 {
-                    MessageBox.Show(strResult, "Cập Nhật Bộ Phận", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    dtoBoPhan.MaBP = txtMaBP.Text;
+                    dtoBoPhan.TenBoPhan = txtTenBP.Text;
+                    string strResult = bllBoPhan.UpdateBoPhan(dtoBoPhan);
+                    if (strResult == "ok")
+                    {
+                        MessageBox.Show("Cập Nhật Thành Công!", "Cập Nhật Bộ Phận", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(strResult, "Cập Nhật Bộ Phận", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
+            catch { }
         }
     }
 }

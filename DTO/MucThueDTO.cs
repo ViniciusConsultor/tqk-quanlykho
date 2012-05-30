@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DTO
 {
-    public class ThueDTO
+    public class MucThueDTO
     {
         private string _maTH;
 
@@ -20,6 +20,21 @@ namespace DTO
         {
             get { return _soThue; }
             set { _soThue = value; }
+        }
+
+        private string _ghiChu;
+
+        public string GhiChu
+        {
+            get { return _ghiChu; }
+            set { _ghiChu = value; }
+        }
+        private string _tinhTrang;
+
+        public string TinhTrang
+        {
+            get { return _tinhTrang; }
+            set { _tinhTrang = value; }
         }
     }
 }

@@ -47,5 +47,9 @@ namespace BLL
             }
         }
 
+         public TT_CongTyDTO GetThongTinDoanhNghiep()
+         {
+             return dalTT_CT.GetThongTinDoanhNghiep();
+         }
     }
 }

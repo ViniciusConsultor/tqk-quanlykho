@@ -112,7 +112,7 @@
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(76, 21);
             this.btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnThoat.TabIndex = 1;
+            this.btnThoat.TabIndex = 5;
             this.btnThoat.Text = "Cancel";
             // 
             // btnOK
@@ -125,7 +125,7 @@
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(67, 21);
             this.btnOK.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnOK.TabIndex = 0;
+            this.btnOK.TabIndex = 5;
             this.btnOK.Text = "OK";
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
@@ -184,7 +184,7 @@
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(196, 44);
-            this.txtGhiChu.TabIndex = 5;
+            this.txtGhiChu.TabIndex = 3;
             // 
             // labelX4
             // 
@@ -209,7 +209,7 @@
             this.txtTenNhom.Location = new System.Drawing.Point(112, 45);
             this.txtTenNhom.Name = "txtTenNhom";
             this.txtTenNhom.Size = new System.Drawing.Size(196, 20);
-            this.txtTenNhom.TabIndex = 3;
+            this.txtTenNhom.TabIndex = 2;
             // 
             // txtMaNhom
             // 
@@ -222,7 +222,7 @@
             this.txtMaNhom.Name = "txtMaNhom";
             this.txtMaNhom.ReadOnly = true;
             this.txtMaNhom.Size = new System.Drawing.Size(196, 20);
-            this.txtMaNhom.TabIndex = 2;
+            this.txtMaNhom.TabIndex = 1;
             // 
             // labelX3
             // 
