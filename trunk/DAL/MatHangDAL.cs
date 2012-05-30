@@ -14,6 +14,27 @@ namespace DAL
             string strQuery = "Select * From MATHANG mh, NHOMHANG nh, KHO k, DONVITINH dvt Where mh.MANHOMHANG = nh.MANHOMHANG and mh.MAKHO = k.MAKHO and mh.MADONVITINH = dvt.MADONVITINH and mh.TINHTRANG = 1";
             return dp.ExecuteQuery(strQuery);
         }
+
+        public MatHangDTO GetMatHangByID(string strMaMatHang)
+        {
+            string strQuery = "Select * From MATHANG mh, NHOMHANG nh, KHO k, DONVITINH dvt Where mh.MANHOMHANG = nh.MANHOMHANG";
+            strQuery += " and mh.MAKHO = k.MAKHO and mh.MADONVITINH = dvt.MADONVITINH and mh.TINHTRANG = 1 and mh.MAMATHANG = '" + strMaMatHang + "'";
+            MatHangDTO dtoMatHang = new MatHangDTO();
+            DataTable dtMatHang = dp.ExecuteQuery(strQuery);
+            if (dtMatHang != null)
+            {
+                dtoMatHang.MaMH = dtMatHang.Rows[0]["MAMATHANG"].ToString();
+                dtoMatHang.MaNH = dtMatHang.Rows[0]["MANHOMHANG"].ToString();
+                dtoMatHang.MaKho = dtMatHang.Rows[0]["MAKHO"].ToString();
+                dtoMatHang.TenMH = dtMatHang.Rows[0]["TENMATHANG"].ToString();
+                dtoMatHang.MaDonViTinh = dtMatHang.Rows[0]["MADONVITINH"].ToString();
+                //dtoMatHang.TonDau = int.Parse(dtMatHang.Rows[0]["TONDAU"].ToString());
+                dtoMatHang.MoTa = dtMatHang.Rows[0]["MOTA"].ToString();
+                dtoMatHang.TinhTrang = dtMatHang.Rows[0]["TINHTRANG"].ToString();
+            }
+            return dtoMatHang;
+        }
+
         public bool InsertMatHang(MatHangDTO dtoMatHang)
         {
             string strQuery = "Insert Into MATHANG Values(";

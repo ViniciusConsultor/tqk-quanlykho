@@ -30,25 +30,25 @@ namespace DTO
             set { _maNV = value; }
         }
 
-        private DateTime _ngayNhap;
+        private string _ngayNhap;
 
-        public DateTime NgayNhap
+        public string NgayNhap
         {
             get { return _ngayNhap; }
             set { _ngayNhap = value; }
         }
 
-        private int _soHoaDon;
+        private string _soHoaDon;
 
-        public int SoHoaDon
+        public string SoHoaDon
         {
             get { return _soHoaDon; }
             set { _soHoaDon = value; }
         }
 
-        private DateTime _ngayLapHD;
+        private string _ngayLapHD;
 
-        public DateTime NgayLapHD
+        public string NgayLapHD
         {
             get { return _ngayLapHD; }
             set { _ngayLapHD = value; }
@@ -68,6 +68,22 @@ namespace DTO
         {
             get { return _tinhTrang; }
             set { _tinhTrang = value; }
+        }
+
+        private string _nguoiNhan;
+
+        public string NguoiNhan
+        {
+            get { return _nguoiNhan; }
+            set { _nguoiNhan = value; }
+        }
+
+        private string _lyDoNhap;
+
+        public string LyDoNhap
+        {
+            get { return _lyDoNhap; }
+            set { _lyDoNhap = value; }
         }
     }
 }
