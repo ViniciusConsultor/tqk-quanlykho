@@ -38,56 +38,58 @@ namespace QuanLyKho
 
         private void btnThemNhanVien_Click(object sender, EventArgs e)
         {
-            string strAction = btnThemNhanVien.Tag.ToString();
-            if (strAction == "add")
+            try
             {
-                NhanVienDTO dtoNhanVien = new NhanVienDTO();
-                string strMaNV = cf.CreateId("MANV", "NHANVIEN");
-                dtoNhanVien.MaNV = strMaNV;
-                dtoNhanVien.TenNV = txtTenNhanVien.Text;
-                dtoNhanVien.MaBP = cmbBoPhan.SelectedValue.ToString();
-                dtoNhanVien.ChucVu = cmbChucVu.Text;
-                dtoNhanVien.MatKhau = "12345";
-                dtoNhanVien.NgaySinh = dtNgaySinh.Value.ToShortDateString();
-                dtoNhanVien.SoDT = txtDienThoai.Text;
-                dtoNhanVien.CMND = txtCMND.Text;
-                dtoNhanVien.DiaChi = txtDiaChi.Text;
-                string strResult = bllNhanVien.InsertNhanVien(dtoNhanVien);
-                if (strResult == "ok")
+                string strAction = btnThemNhanVien.Tag.ToString();
+                if (strAction == "add")
                 {
-                    MessageBox.Show("Thêm Nhân Viên Thành Công!", "Thêm Nhân Viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    NhanVienDTO dtoNhanVien = new NhanVienDTO();
+                    string strMaNV = cf.CreateId("MANV", "NHANVIEN");
+                    dtoNhanVien.MaNV = strMaNV;
+                    dtoNhanVien.TenNV = txtTenNhanVien.Text;
+                    dtoNhanVien.MaBP = cmbBoPhan.SelectedValue.ToString();
+                    dtoNhanVien.ChucVu = cmbChucVu.Text;
+                    dtoNhanVien.MatKhau = "12345";
+                    dtoNhanVien.NgaySinh = dtNgaySinh.Value.ToShortDateString();
+                    dtoNhanVien.SoDT = txtDienThoai.Text;
+                    dtoNhanVien.CMND = txtCMND.Text;
+                    dtoNhanVien.DiaChi = txtDiaChi.Text;
+                    string strResult = bllNhanVien.InsertNhanVien(dtoNhanVien);
+                    if (strResult == "ok")
+                    {
+                        MessageBox.Show("Thêm Nhân Viên Thành Công!", "Thêm Nhân Viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(strResult, "Thêm Nhân Viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
                 }
                 else
                 {
-                    MessageBox.Show(strResult, "Thêm Nhân Viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    NhanVienDTO dtoNhanVien = new NhanVienDTO();
+                    dtoNhanVien.MaNV = txtMaNV.Text;
+                    dtoNhanVien.TenNV = txtTenNhanVien.Text;
+                    dtoNhanVien.MaBP = cmbBoPhan.SelectedValue.ToString();
+                    dtoNhanVien.ChucVu = cmbChucVu.Text;
+                    dtoNhanVien.NgaySinh = dtNgaySinh.Value.ToShortDateString();
+                    dtoNhanVien.SoDT = txtDienThoai.Text;
+                    dtoNhanVien.CMND = txtCMND.Text;
+                    dtoNhanVien.DiaChi = txtDiaChi.Text;
+                    string strResult = bllNhanVien.UpdateNhanVien(dtoNhanVien);
+                    if (strResult == "ok")
+                    {
+                        MessageBox.Show("Cập Nhật Nhân Viên Thành Công!", "Cập Nhật Nhân Viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(strResult, "Thêm Nhân Viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                
             }
-            else
-            { 
-                NhanVienDTO dtoNhanVien = new NhanVienDTO();
-                dtoNhanVien.MaNV = txtMaNV.Text;
-                dtoNhanVien.TenNV = txtTenNhanVien.Text;
-                dtoNhanVien.MaBP = cmbBoPhan.SelectedValue.ToString();
-                dtoNhanVien.ChucVu = cmbChucVu.Text;
-                dtoNhanVien.NgaySinh = dtNgaySinh.Value.ToShortDateString();
-                dtoNhanVien.SoDT = txtDienThoai.Text;
-                dtoNhanVien.CMND = txtCMND.Text;
-                dtoNhanVien.DiaChi = txtDiaChi.Text;
-                string strResult = bllNhanVien.UpdateNhanVien(dtoNhanVien);
-                if (strResult == "ok")
-                {
-                    MessageBox.Show("Cập Nhật Nhân Viên Thành Công!", "Cập Nhật Nhân Viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show(strResult, "Thêm Nhân Viên", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-               
-                
-            }
+            catch { }
         }
     }
 }

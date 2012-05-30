@@ -29,12 +29,16 @@ namespace QuanLyKho
 
         private void LoadMatHang()
         {
-            DataTable dtMatHang = new DataTable();
-            dtMatHang = bllMatHang.GetAllMatHang();
-            dtMatHang = cf.AutoNumberedTable(dtMatHang);
-            dgvMatHang.AutoGenerateColumns = false;
-            dgvMatHang.DataSource = dtMatHang;
-            intRowCount = dgvMatHang.Rows.Count;
+            try
+            {
+                DataTable dtMatHang = new DataTable();
+                dtMatHang = bllMatHang.GetAllMatHang();
+                dtMatHang = cf.AutoNumberedTable(dtMatHang);
+                dgvMatHang.AutoGenerateColumns = false;
+                dgvMatHang.DataSource = dtMatHang;
+                intRowCount = dgvMatHang.Rows.Count;
+            }
+            catch { }
 
         }
 
@@ -45,48 +49,60 @@ namespace QuanLyKho
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            FrmNhapMatHang frmNhapMatHang = new FrmNhapMatHang();
-            frmNhapMatHang.btnThem.Tag = "add";
-            string strMaMH = cf.CreateId("HHA", "MATHANG");
-            frmNhapMatHang.txtMaMH.Text = strMaMH;
-            frmNhapMatHang.ShowDialog();
-            LoadMatHang();
+            try
+            {
+                FrmNhapMatHang frmNhapMatHang = new FrmNhapMatHang();
+                frmNhapMatHang.btnThem.Tag = "add";
+                string strMaMH = cf.CreateId("HHA", "MATHANG");
+                frmNhapMatHang.txtMaMH.Text = strMaMH;
+                frmNhapMatHang.ShowDialog();
+                LoadMatHang();
+            }
+            catch { }
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            FrmNhapMatHang frmNhapMatHang = new FrmNhapMatHang();
-            frmNhapMatHang.btnThem.Tag = "up";
-            int index = dgvMatHang.SelectedRows[0].Index;
-            string strMaMH = dgvMatHang.Rows[index].Cells["colMaMatHang"].Value.ToString();
-            frmNhapMatHang.txtMaMH.Text = strMaMH;
-            string strTenMH = dgvMatHang.Rows[index].Cells["colTenMatHang"].Value.ToString();
-            frmNhapMatHang.txtTenMH.Text = strTenMH;
-            string strNhomHang = dgvMatHang.Rows[index].Cells["colNhomHang"].Value.ToString();
-            frmNhapMatHang.cmbNhomHang.DisplayMember = strNhomHang;
-            string strKhoHang = dgvMatHang.Rows[index].Cells["colKho"].Value.ToString();
-            frmNhapMatHang.cmbKhoHang.Text = strKhoHang;
-            string strDVT = dgvMatHang.Rows[index].Cells["colDonViTinh"].Value.ToString();
-            frmNhapMatHang.cmbDonViTinh.Text = strDVT;
-            float  TonDau = float.Parse(dgvMatHang.Rows[index].Cells["colTonDau"].Value.ToString());
-            frmNhapMatHang.txtTonDau.Text = TonDau.ToString();
-            string strMoTa = dgvMatHang.Rows[index].Cells["colMoTa"].Value.ToString();
-            frmNhapMatHang.txtMoTa.Text =  strMoTa;
-            frmNhapMatHang.ShowDialog();
-            LoadMatHang();
+            try
+            {
+                FrmNhapMatHang frmNhapMatHang = new FrmNhapMatHang();
+                frmNhapMatHang.btnThem.Tag = "up";
+                int index = dgvMatHang.SelectedRows[0].Index;
+                string strMaMH = dgvMatHang.Rows[index].Cells["colMaMatHang"].Value.ToString();
+                frmNhapMatHang.txtMaMH.Text = strMaMH;
+                string strTenMH = dgvMatHang.Rows[index].Cells["colTenMatHang"].Value.ToString();
+                frmNhapMatHang.txtTenMH.Text = strTenMH;
+                string strNhomHang = dgvMatHang.Rows[index].Cells["colNhomHang"].Value.ToString();
+                frmNhapMatHang.cmbNhomHang.DisplayMember = strNhomHang;
+                string strKhoHang = dgvMatHang.Rows[index].Cells["colKho"].Value.ToString();
+                frmNhapMatHang.cmbKhoHang.Text = strKhoHang;
+                string strDVT = dgvMatHang.Rows[index].Cells["colDonViTinh"].Value.ToString();
+                frmNhapMatHang.cmbDonViTinh.Text = strDVT;
+                float TonDau = float.Parse(dgvMatHang.Rows[index].Cells["colTonDau"].Value.ToString());
+                frmNhapMatHang.txtTonDau.Text = TonDau.ToString();
+                string strMoTa = dgvMatHang.Rows[index].Cells["colMoTa"].Value.ToString();
+                frmNhapMatHang.txtMoTa.Text = strMoTa;
+                frmNhapMatHang.ShowDialog();
+                LoadMatHang();
+            }
+            catch { }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            int index = dgvMatHang.SelectedRows[0].Index;
-            string strMaMH = dgvMatHang.Rows[index].Cells["colMaMatHang"].Value.ToString();
-            if (MessageBox.Show("Bạn Có Chắc Muốn Xóa Mặt Hàng Này!", "Xóa Mặt Hàng", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            try
             {
-                dgvMatHang.Rows.RemoveAt(index);
-                bllMatHang.DelMatHang(strMaMH);
-                MessageBox.Show("Xóa Mặt Hàng Thành Công!", "Xóa Mặt Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+                int index = dgvMatHang.SelectedRows[0].Index;
+                string strMaMH = dgvMatHang.Rows[index].Cells["colMaMatHang"].Value.ToString();
+                if (MessageBox.Show("Bạn Chắc Chắn Muốn Xóa Mặt Hàng Này!", "Xóa Mặt Hàng", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+                {
+                    dgvMatHang.Rows.RemoveAt(index);
+                    bllMatHang.DelMatHang(strMaMH);
+                    MessageBox.Show("Xóa Mặt Hàng Thành Công!", "Xóa Mặt Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
             }
+            catch { }
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -96,32 +112,48 @@ namespace QuanLyKho
 
         private void btnPreview_Click(object sender, EventArgs e)
         {
-            if (intIndex > 0)
+            try
             {
-                intIndex--;
-                dgvMatHang.Rows[intIndex].Selected = true;
+                if (intIndex > 0)
+                {
+                    intIndex--;
+                    dgvMatHang.Rows[intIndex].Selected = true;
+                }
             }
+            catch { }
         }
 
         private void btnFirst_Click(object sender, EventArgs e)
         {
-            intIndex = 0;
-            dgvMatHang.Rows[intIndex].Selected = true;
+            try
+            {
+                intIndex = 0;
+                dgvMatHang.Rows[intIndex].Selected = true;
+            }
+            catch { }
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (intIndex < intRowCount - 1)
+            try
             {
-                intIndex++;
-                dgvMatHang.Rows[intIndex].Selected = true;
+                if (intIndex < intRowCount - 1)
+                {
+                    intIndex++;
+                    dgvMatHang.Rows[intIndex].Selected = true;
+                }
             }
+            catch { }
         }
 
         private void btnLast_Click(object sender, EventArgs e)
         {
-            intIndex = intRowCount - 1;
-            dgvMatHang.Rows[intIndex].Selected = true;
+            try
+            {
+                intIndex = intRowCount - 1;
+                dgvMatHang.Rows[intIndex].Selected = true;
+            }
+            catch { }
         }
 
         private void dgvMatHang_SelectionChanged(object sender, EventArgs e)

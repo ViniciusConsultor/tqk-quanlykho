@@ -185,5 +185,12 @@ namespace QuanLyKho
             Variable.strTenNhanVien = "";
             lbUser.Text = "Chưa đăng nhập";
         }
+
+        private void btnMucThue_Click(object sender, EventArgs e)
+        {
+            FrmMucThue frm = new FrmMucThue();
+            CreateTab(stcMenu, "Mức Thuế", "stiMucThue", "stcpMucThue", frm);
+
+        }
     }
 }

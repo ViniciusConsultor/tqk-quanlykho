@@ -39,12 +39,34 @@ namespace DAL
             strQuery += "FAX = N'" + dtoTT_CT.Fax + "',";
             strQuery += "LOGO = N'" + dtoTT_CT.LoGo + "',";
             strQuery += "MASOTHUE = N'" + dtoTT_CT.MaThue + "',";
-            strQuery += "WEBSITE = N'" + dtoTT_CT.WebSite + "' ";
+            strQuery += "WEBSITE = N'" + dtoTT_CT.WebSite + "',";
             strQuery += "SOTAIKHOAN = N'" + dtoTT_CT.SoTaiKhoan + "',";
-            strQuery += "NGANHANG = N'" + dtoTT_CT.NganHang + "',";
-            strQuery += "Where MACT = N'" + dtoTT_CT.MaCT + "'";
+            strQuery += "NGANHANG = N'" + dtoTT_CT.NganHang + "' ";
+            strQuery += "Where MACT = MACT ";
             return dp.ExecuteNonQuery(strQuery);
 
+        }
+
+        public TT_CongTyDTO GetThongTinDoanhNghiep()
+        {
+            TT_CongTyDTO dtoCongTy = new TT_CongTyDTO();
+            string strSQL = "Select * From TT_CONGTY";
+            DataTable dtCongTy = dp.ExecuteQuery(strSQL);
+            if (dtCongTy != null)
+            { 
+                dtoCongTy.DiaChi = dtCongTy.Rows[0]["DIACHI"].ToString();
+                dtoCongTy.TenCT = dtCongTy.Rows[0]["TENCT"].ToString();
+                dtoCongTy.SoTaiKhoan = dtCongTy.Rows[0]["SOTAIKHOAN"].ToString();
+                dtoCongTy.NganHang = dtCongTy.Rows[0]["NGANHANG"].ToString();
+                dtoCongTy.MaThue = dtCongTy.Rows[0]["MASOTHUE"].ToString();
+                dtoCongTy.SoDT = dtCongTy.Rows[0]["SDT"].ToString();
+                dtoCongTy.Mobile = dtCongTy.Rows[0]["MOBILE"].ToString();
+                dtoCongTy.Email = dtCongTy.Rows[0]["EMAIL"].ToString();
+                dtoCongTy.Fax = dtCongTy.Rows[0]["FAX"].ToString();
+                dtoCongTy.WebSite = dtCongTy.Rows[0]["WEBSITE"].ToString();
+                dtoCongTy.LoGo = dtCongTy.Rows[0]["LOGO"].ToString();
+            }
+            return dtoCongTy;
         }
     }
 }

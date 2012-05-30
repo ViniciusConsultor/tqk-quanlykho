@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using DTO;
-using DAL;
+using BLL;
 
 namespace QuanLyKho
 {
@@ -18,30 +18,48 @@ namespace QuanLyKho
             InitializeComponent();
         }
 
-        DonViTinhDTO dtoDVT = new DonViTinhDTO();
-        DonViTinhDAL dalDVT = new DonViTinhDAL();
+        DonViTinhBLL bllDVT = new DonViTinhBLL();
         CFunction cf = new CFunction();
         private void btnOK_Click(object sender, EventArgs e)
         {
-            string strAction = btnOK.Tag.ToString();
-            if (strAction == "add")
+            try
             {
-                dtoDVT.MaDVT = txtMaDVT.Text;
-                dtoDVT.DonViTinh = txtDonViTinh.Text;
-                dalDVT.InsertDonViTinh(dtoDVT);
-                MessageBox.Show("Thêm Thành Công!", "Thêm Đơn Vị Tính", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                DonViTinhDTO dtoDVT = new DonViTinhDTO();
+                string strAction = btnOK.Tag.ToString();
+                if (strAction == "add")
+                {
+                    dtoDVT.MaDVT = txtMaDVT.Text;
+                    dtoDVT.DonViTinh = txtDonViTinh.Text;
+                    string strResult = bllDVT.InsertDonViTinh(dtoDVT);
+                    if (strResult == "ok")
+                    {
+                        MessageBox.Show("Thêm Thành Công!", "Thêm Đơn Vị Tính", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(strResult, "Thêm Đơn Vị Tính", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    dtoDVT.MaDVT = txtMaDVT.Text;
+                    dtoDVT.DonViTinh = txtDonViTinh.Text;
+                    string strResult = bllDVT.UpdateDonViTinh(dtoDVT);
+                    if (strResult == "ok")
+                    {
+                        MessageBox.Show("Cập Nhật Thành Công!", "Cập Nhật Đơn Vị Tính", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(strResult, "Cập Nhật Đơn Vị Tính", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
-            else
-            {
-                dtoDVT.MaDVT = txtMaDVT.Text;
-                dtoDVT.DonViTinh = txtDonViTinh.Text;
-                dalDVT.UpdateDonViTinh(dtoDVT);
-                MessageBox.Show("Cập Nhật Thành Công!", "Cập Nhật Đơn Vị Tính", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }
+            catch { }
                
-
         }
+
     }
 }

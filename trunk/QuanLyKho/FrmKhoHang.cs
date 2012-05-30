@@ -31,12 +31,16 @@ namespace QuanLyKho
 
         private void LoadKhoHang()
         {
-            DataTable dtKhoHang = new DataTable();
-            dtKhoHang = bllKhoHang.GetAllKhoHang();
-            dtKhoHang = cf.AutoNumberedTable(dtKhoHang);
-            dgvKhoHang.AutoGenerateColumns = false;
-            dgvKhoHang.DataSource = dtKhoHang;
-            intRowCount = dgvKhoHang.Rows.Count;
+            try
+            {
+                DataTable dtKhoHang = new DataTable();
+                dtKhoHang = bllKhoHang.GetAllKhoHang();
+                dtKhoHang = cf.AutoNumberedTable(dtKhoHang);
+                dgvKhoHang.AutoGenerateColumns = false;
+                dgvKhoHang.DataSource = dtKhoHang;
+                intRowCount = dgvKhoHang.Rows.Count;
+            }
+            catch { }
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -46,49 +50,61 @@ namespace QuanLyKho
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            FrmNhapKhoHang frmNhapKhoHang = new FrmNhapKhoHang();
-            frmNhapKhoHang.btnOK.Tag = "add";
-            string strMaKho = cf.CreateId("MKO", "KHO");
-            frmNhapKhoHang.txtMaKho.Text = strMaKho;
-            frmNhapKhoHang.ShowDialog();
-            LoadKhoHang();
+            try
+            {
+                FrmNhapKhoHang frmNhapKhoHang = new FrmNhapKhoHang();
+                frmNhapKhoHang.btnOK.Tag = "add";
+                string strMaKho = cf.CreateId("MKO", "KHO");
+                frmNhapKhoHang.txtMaKho.Text = strMaKho;
+                frmNhapKhoHang.ShowDialog();
+                LoadKhoHang();
+            }
+            catch { }
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            FrmNhapKhoHang frmNhapKhoHang = new FrmNhapKhoHang();
-            frmNhapKhoHang.btnOK.Tag = "up";
-            int index = dgvKhoHang.SelectedRows[0].Index;
-            string strMaKho = dgvKhoHang.Rows[index].Cells["colMaKho"].Value.ToString();
-            frmNhapKhoHang.txtMaKho.Text = strMaKho;
-            string strTenKho = dgvKhoHang.Rows[index].Cells["colTenKho"].Value.ToString();
-            frmNhapKhoHang.txtTenKho.Text = strTenKho;
-            string strDienThoaiBan = dgvKhoHang.Rows[index].Cells["colDienThoai"].Value.ToString();
-            frmNhapKhoHang.txtDienThoaiBan.Text = strDienThoaiBan;
-            string strDienThoaiDD = dgvKhoHang.Rows[index].Cells["colDiDong"].Value.ToString();
-            frmNhapKhoHang.txtDienThoaiDD.Text = strDienThoaiDD;
-            string strNguoiLienHe = dgvKhoHang.Rows[index].Cells["colNguoiLienHe"].Value.ToString();
-            frmNhapKhoHang.cmbNhanVien.Tag = strNguoiLienHe;
-            string strFax = dgvKhoHang.Rows[index].Cells["colFax"].Value.ToString();
-            frmNhapKhoHang.txtFax.Text = strFax;
-            string strDiaChi = dgvKhoHang.Rows[index].Cells["colDiaChi"].Value.ToString();
-            frmNhapKhoHang.txtDiaChi.Text = strDiaChi;
-            string strGhiChu = dgvKhoHang.Rows[index].Cells["colGhiChu"].Value.ToString();
-            frmNhapKhoHang.txtGhiChu.Text = strGhiChu;
-            frmNhapKhoHang.ShowDialog();
-            LoadKhoHang();
+            try
+            {
+                FrmNhapKhoHang frmNhapKhoHang = new FrmNhapKhoHang();
+                frmNhapKhoHang.btnOK.Tag = "up";
+                int index = dgvKhoHang.SelectedRows[0].Index;
+                string strMaKho = dgvKhoHang.Rows[index].Cells["colMaKho"].Value.ToString();
+                frmNhapKhoHang.txtMaKho.Text = strMaKho;
+                string strTenKho = dgvKhoHang.Rows[index].Cells["colTenKho"].Value.ToString();
+                frmNhapKhoHang.txtTenKho.Text = strTenKho;
+                string strDienThoaiBan = dgvKhoHang.Rows[index].Cells["colDienThoai"].Value.ToString();
+                frmNhapKhoHang.txtDienThoaiBan.Text = strDienThoaiBan;
+                string strDienThoaiDD = dgvKhoHang.Rows[index].Cells["colDiDong"].Value.ToString();
+                frmNhapKhoHang.txtDienThoaiDD.Text = strDienThoaiDD;
+                string strNguoiLienHe = dgvKhoHang.Rows[index].Cells["colNguoiLienHe"].Value.ToString();
+                frmNhapKhoHang.cmbNhanVien.Tag = strNguoiLienHe;
+                string strFax = dgvKhoHang.Rows[index].Cells["colFax"].Value.ToString();
+                frmNhapKhoHang.txtFax.Text = strFax;
+                string strDiaChi = dgvKhoHang.Rows[index].Cells["colDiaChi"].Value.ToString();
+                frmNhapKhoHang.txtDiaChi.Text = strDiaChi;
+                string strGhiChu = dgvKhoHang.Rows[index].Cells["colGhiChu"].Value.ToString();
+                frmNhapKhoHang.txtGhiChu.Text = strGhiChu;
+                frmNhapKhoHang.ShowDialog();
+                LoadKhoHang();
+            }
+            catch { }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            int index = dgvKhoHang.SelectedRows[0].Index;
-            string strMaKho = dgvKhoHang.Rows[index].Cells["colMaKho"].Value.ToString();
-            if (MessageBox.Show("Bạn Chắc Chắn Xóa Dòng Này ?", "Xóa Kho Hàng", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            try
             {
-                dgvKhoHang.Rows.RemoveAt(index);
-                bllKhoHang.DelKhoHang(strMaKho);
-                MessageBox.Show("Xóa Thành Công!", "Xóa Kho Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                int index = dgvKhoHang.SelectedRows[0].Index;
+                string strMaKho = dgvKhoHang.Rows[index].Cells["colMaKho"].Value.ToString();
+                if (MessageBox.Show("Bạn Chắc Chắn Xóa Dòng Này ?", "Xóa Kho Hàng", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+                {
+                    dgvKhoHang.Rows.RemoveAt(index);
+                    bllKhoHang.DelKhoHang(strMaKho);
+                    MessageBox.Show("Xóa Thành Công!", "Xóa Kho Hàng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
+            catch { }
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -98,32 +114,48 @@ namespace QuanLyKho
 
         private void btnFirst_Click(object sender, EventArgs e)
         {
-            intIndex = 0;
-            dgvKhoHang.Rows[intIndex].Selected = true;
+            try
+            {
+                intIndex = 0;
+                dgvKhoHang.Rows[intIndex].Selected = true;
+            }
+            catch { }
         }
 
         private void btnPreview_Click(object sender, EventArgs e)
         {
-            if (intIndex > 0)
+            try
             {
-                intIndex--;
-                dgvKhoHang.Rows[intIndex].Selected = true;
+                if (intIndex > 0)
+                {
+                    intIndex--;
+                    dgvKhoHang.Rows[intIndex].Selected = true;
+                }
             }
+            catch { }
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (intIndex < intRowCount - 1)
+            try
             {
-                intIndex++;
-                dgvKhoHang.Rows[intIndex].Selected = true;
+                if (intIndex < intRowCount - 1)
+                {
+                    intIndex++;
+                    dgvKhoHang.Rows[intIndex].Selected = true;
+                }
             }
+            catch { }
         }
 
         private void btnLast_Click(object sender, EventArgs e)
         {
-            intIndex = intRowCount - 1;
-            dgvKhoHang.Rows[intIndex].Selected = true;
+            try
+            {
+                intIndex = intRowCount - 1;
+                dgvKhoHang.Rows[intIndex].Selected = true;
+            }
+            catch { }
         }
 
         private void dgvKhoHang_SelectionChanged(object sender, EventArgs e)

@@ -30,13 +30,13 @@
         {
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.btnOK = new DevComponents.DotNetBar.ButtonX();
             this.btnThoat = new DevComponents.DotNetBar.ButtonX();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.txtMaBP = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.btnOK = new DevComponents.DotNetBar.ButtonX();
+            this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.txtTenBP = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtMaBP = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -99,6 +99,34 @@
             this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel1.TabIndex = 1;
             // 
+            // btnThoat
+            // 
+            this.btnThoat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnThoat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnThoat.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnThoat.Image = global::QuanLyKho.Properties.Resources.DeleteAll;
+            this.btnThoat.Location = new System.Drawing.Point(157, 12);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(75, 22);
+            this.btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnThoat.TabIndex = 4;
+            this.btnThoat.Text = "Cancel";
+            // 
+            // btnOK
+            // 
+            this.btnOK.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnOK.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnOK.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnOK.Image = global::QuanLyKho.Properties.Resources.Connection;
+            this.btnOK.Location = new System.Drawing.Point(46, 12);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(72, 22);
+            this.btnOK.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnOK.TabIndex = 3;
+            this.btnOK.Text = "OK";
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
             // groupPanel2
             // 
             this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
@@ -141,45 +169,29 @@
             this.groupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel2.TabIndex = 2;
             // 
-            // btnOK
-            // 
-            this.btnOK.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnOK.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnOK.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnOK.Image = global::QuanLyKho.Properties.Resources.Connection;
-            this.btnOK.Location = new System.Drawing.Point(51, 12);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(72, 22);
-            this.btnOK.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnOK.TabIndex = 0;
-            this.btnOK.Text = "OK";
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnThoat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnThoat.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnThoat.Image = global::QuanLyKho.Properties.Resources.DeleteAll;
-            this.btnThoat.Location = new System.Drawing.Point(151, 12);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 22);
-            this.btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnThoat.TabIndex = 1;
-            this.btnThoat.Text = "Cancel";
-            // 
-            // labelX2
-            // 
-            this.labelX2.BackColor = System.Drawing.Color.Transparent;
+            // txtTenBP
             // 
             // 
             // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(9, 16);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(75, 23);
-            this.labelX2.TabIndex = 0;
-            this.labelX2.Text = "Mã Bộ Phận :";
+            // 
+            this.txtTenBP.Border.Class = "TextBoxBorder";
+            this.txtTenBP.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTenBP.Location = new System.Drawing.Point(90, 57);
+            this.txtTenBP.Name = "txtTenBP";
+            this.txtTenBP.Size = new System.Drawing.Size(179, 20);
+            this.txtTenBP.TabIndex = 2;
+            // 
+            // txtMaBP
+            // 
+            // 
+            // 
+            // 
+            this.txtMaBP.Border.Class = "TextBoxBorder";
+            this.txtMaBP.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtMaBP.Location = new System.Drawing.Point(90, 16);
+            this.txtMaBP.Name = "txtMaBP";
+            this.txtMaBP.Size = new System.Drawing.Size(179, 20);
+            this.txtMaBP.TabIndex = 1;
             // 
             // labelX3
             // 
@@ -194,29 +206,18 @@
             this.labelX3.TabIndex = 1;
             this.labelX3.Text = "Tên Bộ Phận :";
             // 
-            // txtMaBP
+            // labelX2
+            // 
+            this.labelX2.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            // 
-            this.txtMaBP.Border.Class = "TextBoxBorder";
-            this.txtMaBP.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtMaBP.Location = new System.Drawing.Point(90, 16);
-            this.txtMaBP.Name = "txtMaBP";
-            this.txtMaBP.Size = new System.Drawing.Size(179, 20);
-            this.txtMaBP.TabIndex = 2;
-            // 
-            // txtTenBP
-            // 
-            // 
-            // 
-            // 
-            this.txtTenBP.Border.Class = "TextBoxBorder";
-            this.txtTenBP.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTenBP.Location = new System.Drawing.Point(90, 57);
-            this.txtTenBP.Name = "txtTenBP";
-            this.txtTenBP.Size = new System.Drawing.Size(179, 20);
-            this.txtTenBP.TabIndex = 3;
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Location = new System.Drawing.Point(9, 16);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(75, 23);
+            this.labelX2.TabIndex = 0;
+            this.labelX2.Text = "Mã Bộ Phận :";
             // 
             // FrmNhapBoPhan
             // 
