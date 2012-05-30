@@ -13,6 +13,12 @@ namespace BLL
         {
             return dalMatHang.GetAllMatHang();
         }
+
+        public MatHangDTO GetMatHangByID(string strMaMatHang)
+        {
+            return dalMatHang.GetMatHangByID(strMaMatHang);
+        }
+
         public string InsertMatHang(MatHangDTO dtoMatHang)
         {
             string strError = "";
@@ -50,7 +56,6 @@ namespace BLL
         }
 
         public bool DelMatHang(string strMaMH)
-
         {
             return dalMatHang.DelMatHang(strMaMH);
         }

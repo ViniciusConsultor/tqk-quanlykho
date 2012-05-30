@@ -16,6 +16,8 @@ namespace DAL
             strQuery += "N'" + dtoNhapKho.MaNCC + "',";
             strQuery += "N'" + dtoNhapKho.MaNV + "',";
             strQuery += "N'" + dtoNhapKho.NgayNhap + "',";
+            strQuery += "N'" + dtoNhapKho.NguoiNhan + "',";
+            strQuery += "N'" + dtoNhapKho.LyDoNhap + "',";
             strQuery += dtoNhapKho.SoHoaDon + ",";
             strQuery += "N'" + dtoNhapKho.NgayLapHD + "',";
             strQuery += "N'" + dtoNhapKho.GhiChu + "',True)";
