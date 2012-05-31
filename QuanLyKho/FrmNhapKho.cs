@@ -20,6 +20,8 @@ namespace QuanLyKho
         MatHangBLL bllMatHang = new MatHangBLL();
         DonViTinhBLL bllDonVITinh = new DonViTinhBLL();
         NhapKhoBLL bllNhapKho = new NhapKhoBLL();
+        MucThueBLL bllMucThue = new MucThueBLL();
+
 
         public FrmNhapKho()
         {
@@ -36,7 +38,7 @@ namespace QuanLyKho
 
             try
             {
-                string strMaNhapKho = cf.CreateId("MANK", "NHAPKHO");
+                string strMaNhapKho = cf.CreateId("MAHDN", "NHAPKHO");
                 txtMaPhieuNhap.Text = strMaNhapKho;
                 string strMaNhanVien = Variable.strMaNhanVien;
                 if (strMaNhanVien == "")
@@ -65,6 +67,11 @@ namespace QuanLyKho
                 colDonViTinh.DataSource = bllDonVITinh.GetDonViTinh();
                 colDonViTinh.DisplayMember = "DONVITINH";
                 colDonViTinh.ValueMember = "MADONVITINH";
+
+                colMucThue.DataSource = bllMucThue.GetMucThue();
+                colMucThue.DisplayMember = "SOTHUE";
+                colMucThue.ValueMember = "MATHUE";
+
             }
             catch { }
         }

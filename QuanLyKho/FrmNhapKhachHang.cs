@@ -23,10 +23,10 @@ namespace QuanLyKho
         {
             try
             {
+                KhachHangDTO dtoKhachHang = new KhachHangDTO();
                 string strAction = btnThemKhachHang.Tag.ToString();
                 if (strAction == "add")
                 {
-                    KhachHangDTO dtoKhachHang = new KhachHangDTO();
                     dtoKhachHang.MaKH = cf.CreateId("KHA", "KHACHHANG");
                     dtoKhachHang.TenKH = txtTenKhachHang.Text;
                     dtoKhachHang.SoTaiKhoan = txtSoTaiKhoan.Text;
@@ -49,7 +49,6 @@ namespace QuanLyKho
                 }
                 else
                 {
-                    KhachHangDTO dtoKhachHang = new KhachHangDTO();
                     string strMaKH = txtMaKH.Text;
                     dtoKhachHang.MaKH = strMaKH;
                     dtoKhachHang.TenKH = txtTenKhachHang.Text;

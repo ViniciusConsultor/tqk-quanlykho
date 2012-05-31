@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DTO
+namespace BLL
 {
-    public class Class1
+    class CT_XuatKhoBLL
     {
     }
 }

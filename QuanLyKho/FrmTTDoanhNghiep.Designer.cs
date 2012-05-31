@@ -41,7 +41,6 @@
             this.txtWebsite = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX9 = new DevComponents.DotNetBar.LabelX();
             this.txtDiaChi = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.lbLogo = new DevComponents.DotNetBar.LabelX();
             this.txtNganHang = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtTenCongTy = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
@@ -54,18 +53,21 @@
             this.btnThoat = new DevComponents.DotNetBar.ButtonX();
             this.btnOK = new DevComponents.DotNetBar.ButtonX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.groupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiDong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDienThoai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoTaiKhoan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaSoThue)).BeginInit();
             this.groupPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // groupPanel1
             // 
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel1.Controls.Add(this.pbLogo);
             this.groupPanel1.Controls.Add(this.txtDiDong);
             this.groupPanel1.Controls.Add(this.txtDienThoai);
             this.groupPanel1.Controls.Add(this.txtSoTaiKhoan);
@@ -78,7 +80,6 @@
             this.groupPanel1.Controls.Add(this.txtWebsite);
             this.groupPanel1.Controls.Add(this.labelX9);
             this.groupPanel1.Controls.Add(this.txtDiaChi);
-            this.groupPanel1.Controls.Add(this.lbLogo);
             this.groupPanel1.Controls.Add(this.txtNganHang);
             this.groupPanel1.Controls.Add(this.txtTenCongTy);
             this.groupPanel1.Controls.Add(this.labelX7);
@@ -286,6 +287,8 @@
             this.txtDiaChi.TabIndex = 10;
             this.txtDiaChi.Tag = "10";
             // 
+<<<<<<< .mine
+=======
             // lbLogo
             // 
             this.lbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -301,6 +304,7 @@
             this.lbLogo.Text = "labelX8";
             this.lbLogo.Click += new System.EventHandler(this.lbLogo_Click);
             // 
+>>>>>>> .r38
             // txtNganHang
             // 
             // 
@@ -487,6 +491,18 @@
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "  Thông Tin Công Ty";
             // 
+            // pbLogo
+            // 
+            this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbLogo.Location = new System.Drawing.Point(278, 65);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(115, 136);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogo.TabIndex = 26;
+            this.pbLogo.TabStop = false;
+            this.pbLogo.Click += new System.EventHandler(this.pbLogo_Click);
+            // 
             // FrmTTDoanhNghiep
             // 
             this.AcceptButton = this.btnOK;
@@ -509,6 +525,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSoTaiKhoan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaSoThue)).EndInit();
             this.groupPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -517,7 +534,6 @@
 
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
-        private DevComponents.DotNetBar.LabelX lbLogo;
         private DevComponents.DotNetBar.Controls.TextBoxX txtNganHang;
         private DevComponents.DotNetBar.Controls.TextBoxX txtTenCongTy;
         private DevComponents.DotNetBar.LabelX labelX7;
@@ -541,5 +557,6 @@
         private DevComponents.Editors.IntegerInput txtDienThoai;
         private DevComponents.Editors.IntegerInput txtSoTaiKhoan;
         private DevComponents.Editors.IntegerInput txtMaSoThue;
+        private System.Windows.Forms.PictureBox pbLogo;
     }
 }
