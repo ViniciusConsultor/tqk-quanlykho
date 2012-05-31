@@ -288,7 +288,7 @@
             // 
             // lbLogo
             // 
-            this.lbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.lbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             // 
             // 
             // 

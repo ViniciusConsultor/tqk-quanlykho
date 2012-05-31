@@ -71,17 +71,46 @@ namespace QuanLyKho
                 frmNhapNCC.txtTenNCC.Text = strTenNCC;
                 string strMaSoThue = dgvNhaCungCap.Rows[intIndex].Cells["colMaSoThue"].Value.ToString();
                 frmNhapNCC.txtMaSoThue.Text = strMaSoThue;
-                string strSotaiKhoan = dgvNhaCungCap.Rows[intIndex].Cells["colSoTaiKhoan"].Value.ToString();
-                frmNhapNCC.txtSoTaiKhoan.Text = strSotaiKhoan;
+                string strSoTaiKhoan = dgvNhaCungCap.Rows[intIndex].Cells["colSoTaiKhoan"].Value.ToString();
+                if ( strSoTaiKhoan == "")
+                {
+                    strSoTaiKhoan = " Không có thông tin.";
+                    frmNhapNCC.txtSoTaiKhoan.Text = strSoTaiKhoan;
+                }
+                else
+                {
+                    frmNhapNCC.txtSoTaiKhoan.Text = strSoTaiKhoan;    
+                }
                 string strNganHang = dgvNhaCungCap.Rows[intIndex].Cells["colNganHang"].Value.ToString();
-                frmNhapNCC.txtNganHang.Text = strNganHang;
+                if (strNganHang == "")
+                {
+                    strNganHang = " Không có thông tin.";
+                    frmNhapNCC.txtNganHang.Text = strNganHang;
+                }
+                else
+                {
+                    frmNhapNCC.txtNganHang.Text = strNganHang;
+                }
                 string strDienThoai = dgvNhaCungCap.Rows[intIndex].Cells["colDienThoai"].Value.ToString();
                 frmNhapNCC.txtDienThoai.Text = strDienThoai;
                 string strDiaChi = dgvNhaCungCap.Rows[intIndex].Cells["colDiaChi"].Value.ToString();
                 frmNhapNCC.txtDiaChi.Text = strDiaChi;
                 string strEmail = dgvNhaCungCap.Rows[intIndex].Cells["colEmail"].Value.ToString();
-                frmNhapNCC.txtEmail.Text = strEmail;
+                if (strEmail == "")
+                {
+                    strEmail = " Không có thông tin.";
+                    frmNhapNCC.txtEmail.Text = strEmail;
+                }
+                else
+                {
+                    frmNhapNCC.txtEmail.Text = strEmail;
+                }
                 string strGhiChu = dgvNhaCungCap.Rows[intIndex].Cells["colGhiChu"].Value.ToString();
+                if (strGhiChu == "")
+                {
+                    strGhiChu = " Không có thông tin.";
+                    frmNhapNCC.txtGhiChu.Text = strGhiChu;
+                }
                 frmNhapNCC.txtGhiChu.Text = strGhiChu;
                 frmNhapNCC.ShowDialog();
                 LoadNhaCungCap();

@@ -78,8 +78,16 @@ namespace QuanLyKho
                 frmNhapMatHang.cmbKhoHang.Text = strKhoHang;
                 string strDVT = dgvMatHang.Rows[index].Cells["colDonViTinh"].Value.ToString();
                 frmNhapMatHang.cmbDonViTinh.Text = strDVT;
-                float TonDau = float.Parse(dgvMatHang.Rows[index].Cells["colTonDau"].Value.ToString());
-                frmNhapMatHang.txtTonDau.Text = TonDau.ToString();
+                float TonDau = 0;
+                if (dgvMatHang.Rows[index].Cells["colTonDau"].Value.ToString() == "")
+                {
+                    TonDau = 0;
+                    frmNhapMatHang.txtTonDau.Text = TonDau.ToString();
+                }
+                else
+                {
+                    frmNhapMatHang.txtTonDau.Text = TonDau.ToString();
+                }
                 string strMoTa = dgvMatHang.Rows[index].Cells["colMoTa"].Value.ToString();
                 frmNhapMatHang.txtMoTa.Text = strMoTa;
                 frmNhapMatHang.ShowDialog();

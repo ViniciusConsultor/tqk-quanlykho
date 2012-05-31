@@ -76,5 +76,24 @@ namespace QuanLyKho
             
         }
 
+        private void txtSoTaiKhoan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+            if (Char.IsDigit(c) == false && Char.IsControl(c) == false)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtMaSoThue_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+            if (Char.IsDigit(c) == false && Char.IsControl(c) == false)
+            {
+                e.Handled = true;
+            }
+        }
+
+
     }
 }
