@@ -193,6 +193,18 @@ namespace QuanLyKho
 
         }
 
+        private void btnPhieuThu_Click(object sender, EventArgs e)
+        {
+            FrmPhieuThu frm = new FrmPhieuThu();
+            CreateTab(stcMenu, "Phiếu Thu", "stiPhieuThu", "stcpPhieuThu", frm);
+        }
+
+        private void btnPhieuChi_Click(object sender, EventArgs e)
+        {
+            FrmPhieuChi frm = new FrmPhieuChi();
+            CreateTab(stcMenu, "Phiếu Chi", "stiPhieuChi", "stcpPhieuChi", frm);
+        }
+
         private void btnLogout_Click(object sender, EventArgs e)
         {
             Variable.strMaNhanVien = "";
