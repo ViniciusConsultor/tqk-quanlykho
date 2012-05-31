@@ -9,6 +9,7 @@ namespace QuanLyKho
     {
         public static string strMaNhanVien = "";
         public static string strTenNhanVien = "";
+        public static string strMatKhau = "";
         public static SuperTabItem stiSelected = new SuperTabItem(); 
     }
 }

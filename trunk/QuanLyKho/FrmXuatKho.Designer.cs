@@ -35,6 +35,13 @@
             this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.expandablePanel3 = new DevComponents.DotNetBar.ExpandablePanel();
             this.dgvXuatKho = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.colMaMatHang = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
+            this.colTenMatHang = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
+            this.colGia = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
+            this.colSoLuong = new DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn();
+            this.colDonViTinh = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
+            this.colMucThue = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
+            this.colThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.labelX23 = new DevComponents.DotNetBar.LabelX();
             this.labelX22 = new DevComponents.DotNetBar.LabelX();
@@ -62,6 +69,8 @@
             this.labelX13 = new DevComponents.DotNetBar.LabelX();
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel7 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.cmbTenNhaCungCap = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.cmbMaNhaCungCap = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.btnThemNhaCungCap = new DevComponents.DotNetBar.ButtonX();
             this.txtDiaChi = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
@@ -83,15 +92,6 @@
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel5 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.cmbMaNhaCungCap = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.cmbTenNhaCungCap = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.colMaMatHang = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
-            this.colTenMatHang = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
-            this.colGia = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
-            this.colSoLuong = new DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn();
-            this.colDonViTinh = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
-            this.colMucThue = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
-            this.colThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupPanel1.SuspendLayout();
             this.expandablePanel1.SuspendLayout();
             this.groupPanel4.SuspendLayout();
@@ -283,6 +283,113 @@
             this.dgvXuatKho.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvXuatKho.Size = new System.Drawing.Size(1080, 270);
             this.dgvXuatKho.TabIndex = 1;
+            // 
+            // colMaMatHang
+            // 
+            this.colMaMatHang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.colMaMatHang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.colMaMatHang.DisplayMember = "Text";
+            this.colMaMatHang.DropDownHeight = 106;
+            this.colMaMatHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.colMaMatHang.DropDownWidth = 121;
+            this.colMaMatHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.colMaMatHang.HeaderText = "Mã Mặt Hàng";
+            this.colMaMatHang.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.colMaMatHang.IntegralHeight = false;
+            this.colMaMatHang.ItemHeight = 15;
+            this.colMaMatHang.Name = "colMaMatHang";
+            this.colMaMatHang.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colMaMatHang.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.colMaMatHang.Width = 150;
+            // 
+            // colTenMatHang
+            // 
+            this.colTenMatHang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.colTenMatHang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.colTenMatHang.DisplayMember = "Text";
+            this.colTenMatHang.DropDownHeight = 106;
+            this.colTenMatHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.colTenMatHang.DropDownWidth = 121;
+            this.colTenMatHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.colTenMatHang.HeaderText = "Tên Mặt Hàng";
+            this.colTenMatHang.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.colTenMatHang.IntegralHeight = false;
+            this.colTenMatHang.ItemHeight = 15;
+            this.colTenMatHang.Name = "colTenMatHang";
+            this.colTenMatHang.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colTenMatHang.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.colTenMatHang.Width = 250;
+            // 
+            // colGia
+            // 
+            // 
+            // 
+            // 
+            this.colGia.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.colGia.BackgroundStyle.Class = "DataGridViewNumericBorder";
+            this.colGia.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.colGia.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
+            this.colGia.HeaderText = "Giá";
+            this.colGia.Increment = 1D;
+            this.colGia.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.colGia.Name = "colGia";
+            this.colGia.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colGia.Width = 125;
+            // 
+            // colSoLuong
+            // 
+            // 
+            // 
+            // 
+            this.colSoLuong.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.colSoLuong.BackgroundStyle.Class = "DataGridViewNumericBorder";
+            this.colSoLuong.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.colSoLuong.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
+            this.colSoLuong.HeaderText = "Số Lượng";
+            this.colSoLuong.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.colSoLuong.Name = "colSoLuong";
+            this.colSoLuong.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colSoLuong.Width = 125;
+            // 
+            // colDonViTinh
+            // 
+            this.colDonViTinh.DisplayMember = "Text";
+            this.colDonViTinh.DropDownHeight = 106;
+            this.colDonViTinh.DropDownWidth = 121;
+            this.colDonViTinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.colDonViTinh.HeaderText = "Đơn Vị Tính";
+            this.colDonViTinh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.colDonViTinh.IntegralHeight = false;
+            this.colDonViTinh.ItemHeight = 15;
+            this.colDonViTinh.Name = "colDonViTinh";
+            this.colDonViTinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colDonViTinh.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.colDonViTinh.Width = 125;
+            // 
+            // colMucThue
+            // 
+            this.colMucThue.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.colMucThue.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.colMucThue.DisplayMember = "Text";
+            this.colMucThue.DropDownHeight = 106;
+            this.colMucThue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.colMucThue.DropDownWidth = 121;
+            this.colMucThue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.colMucThue.HeaderText = "Mức Thuế";
+            this.colMucThue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.colMucThue.IntegralHeight = false;
+            this.colMucThue.ItemHeight = 15;
+            this.colMucThue.Name = "colMucThue";
+            this.colMucThue.ReadOnly = true;
+            this.colMucThue.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colMucThue.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            // 
+            // colThanhTien
+            // 
+            this.colThanhTien.HeaderText = "Thành Tiền";
+            this.colThanhTien.Name = "colThanhTien";
+            this.colThanhTien.ReadOnly = true;
+            this.colThanhTien.Width = 125;
             // 
             // groupPanel3
             // 
@@ -859,6 +966,35 @@
             this.groupPanel7.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel7.TabIndex = 4;
             // 
+            // cmbTenNhaCungCap
+            // 
+            this.cmbTenNhaCungCap.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbTenNhaCungCap.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbTenNhaCungCap.DisplayMember = "Text";
+            this.cmbTenNhaCungCap.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbTenNhaCungCap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTenNhaCungCap.FormattingEnabled = true;
+            this.cmbTenNhaCungCap.ItemHeight = 14;
+            this.cmbTenNhaCungCap.Location = new System.Drawing.Point(320, 33);
+            this.cmbTenNhaCungCap.Name = "cmbTenNhaCungCap";
+            this.cmbTenNhaCungCap.Size = new System.Drawing.Size(203, 20);
+            this.cmbTenNhaCungCap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmbTenNhaCungCap.TabIndex = 22;
+            // 
+            // cmbMaNhaCungCap
+            // 
+            this.cmbMaNhaCungCap.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbMaNhaCungCap.DisplayMember = "Text";
+            this.cmbMaNhaCungCap.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbMaNhaCungCap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMaNhaCungCap.FormattingEnabled = true;
+            this.cmbMaNhaCungCap.ItemHeight = 14;
+            this.cmbMaNhaCungCap.Location = new System.Drawing.Point(84, 33);
+            this.cmbMaNhaCungCap.Name = "cmbMaNhaCungCap";
+            this.cmbMaNhaCungCap.Size = new System.Drawing.Size(146, 20);
+            this.cmbMaNhaCungCap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmbMaNhaCungCap.TabIndex = 21;
+            // 
             // btnThemNhaCungCap
             // 
             this.btnThemNhaCungCap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -1198,142 +1334,6 @@
             this.labelX1.TabIndex = 1;
             this.labelX1.Text = "    THÔNG TIN PHIẾU XUẤT";
             // 
-            // cmbMaNhaCungCap
-            // 
-            this.cmbMaNhaCungCap.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbMaNhaCungCap.DisplayMember = "Text";
-            this.cmbMaNhaCungCap.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbMaNhaCungCap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMaNhaCungCap.FormattingEnabled = true;
-            this.cmbMaNhaCungCap.ItemHeight = 14;
-            this.cmbMaNhaCungCap.Location = new System.Drawing.Point(84, 33);
-            this.cmbMaNhaCungCap.Name = "cmbMaNhaCungCap";
-            this.cmbMaNhaCungCap.Size = new System.Drawing.Size(146, 20);
-            this.cmbMaNhaCungCap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmbMaNhaCungCap.TabIndex = 21;
-            // 
-            // cmbTenNhaCungCap
-            // 
-            this.cmbTenNhaCungCap.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbTenNhaCungCap.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbTenNhaCungCap.DisplayMember = "Text";
-            this.cmbTenNhaCungCap.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbTenNhaCungCap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTenNhaCungCap.FormattingEnabled = true;
-            this.cmbTenNhaCungCap.ItemHeight = 14;
-            this.cmbTenNhaCungCap.Location = new System.Drawing.Point(320, 33);
-            this.cmbTenNhaCungCap.Name = "cmbTenNhaCungCap";
-            this.cmbTenNhaCungCap.Size = new System.Drawing.Size(203, 20);
-            this.cmbTenNhaCungCap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmbTenNhaCungCap.TabIndex = 22;
-            // 
-            // colMaMatHang
-            // 
-            this.colMaMatHang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.colMaMatHang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.colMaMatHang.DisplayMember = "Text";
-            this.colMaMatHang.DropDownHeight = 106;
-            this.colMaMatHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.colMaMatHang.DropDownWidth = 121;
-            this.colMaMatHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.colMaMatHang.HeaderText = "Mã Mặt Hàng";
-            this.colMaMatHang.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.colMaMatHang.IntegralHeight = false;
-            this.colMaMatHang.ItemHeight = 15;
-            this.colMaMatHang.Name = "colMaMatHang";
-            this.colMaMatHang.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colMaMatHang.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.colMaMatHang.Width = 150;
-            // 
-            // colTenMatHang
-            // 
-            this.colTenMatHang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.colTenMatHang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.colTenMatHang.DisplayMember = "Text";
-            this.colTenMatHang.DropDownHeight = 106;
-            this.colTenMatHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.colTenMatHang.DropDownWidth = 121;
-            this.colTenMatHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.colTenMatHang.HeaderText = "Tên Mặt Hàng";
-            this.colTenMatHang.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.colTenMatHang.IntegralHeight = false;
-            this.colTenMatHang.ItemHeight = 15;
-            this.colTenMatHang.Name = "colTenMatHang";
-            this.colTenMatHang.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colTenMatHang.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.colTenMatHang.Width = 250;
-            // 
-            // colGia
-            // 
-            // 
-            // 
-            // 
-            this.colGia.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.colGia.BackgroundStyle.Class = "DataGridViewNumericBorder";
-            this.colGia.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.colGia.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
-            this.colGia.HeaderText = "Giá";
-            this.colGia.Increment = 1D;
-            this.colGia.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            this.colGia.Name = "colGia";
-            this.colGia.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colGia.Width = 125;
-            // 
-            // colSoLuong
-            // 
-            // 
-            // 
-            // 
-            this.colSoLuong.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.colSoLuong.BackgroundStyle.Class = "DataGridViewNumericBorder";
-            this.colSoLuong.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.colSoLuong.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
-            this.colSoLuong.HeaderText = "Số Lượng";
-            this.colSoLuong.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            this.colSoLuong.Name = "colSoLuong";
-            this.colSoLuong.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colSoLuong.Width = 125;
-            // 
-            // colDonViTinh
-            // 
-            this.colDonViTinh.DisplayMember = "Text";
-            this.colDonViTinh.DropDownHeight = 106;
-            this.colDonViTinh.DropDownWidth = 121;
-            this.colDonViTinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.colDonViTinh.HeaderText = "Đơn Vị Tính";
-            this.colDonViTinh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.colDonViTinh.IntegralHeight = false;
-            this.colDonViTinh.ItemHeight = 15;
-            this.colDonViTinh.Name = "colDonViTinh";
-            this.colDonViTinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colDonViTinh.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.colDonViTinh.Width = 125;
-            // 
-            // colMucThue
-            // 
-            this.colMucThue.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.colMucThue.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.colMucThue.DisplayMember = "Text";
-            this.colMucThue.DropDownHeight = 106;
-            this.colMucThue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.colMucThue.DropDownWidth = 121;
-            this.colMucThue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.colMucThue.HeaderText = "Mức Thuế";
-            this.colMucThue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.colMucThue.IntegralHeight = false;
-            this.colMucThue.ItemHeight = 15;
-            this.colMucThue.Name = "colMucThue";
-            this.colMucThue.ReadOnly = true;
-            this.colMucThue.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colMucThue.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            // 
-            // colThanhTien
-            // 
-            this.colThanhTien.HeaderText = "Thành Tiền";
-            this.colThanhTien.Name = "colThanhTien";
-            this.colThanhTien.ReadOnly = true;
-            this.colThanhTien.Width = 125;
-            // 
             // FrmXuatKho
             // 
             this.ClientSize = new System.Drawing.Size(1094, 496);
@@ -1341,6 +1341,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmXuatKho";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmXuatKho";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmXuatKho_Load);

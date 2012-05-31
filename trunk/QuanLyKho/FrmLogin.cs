@@ -46,9 +46,9 @@ namespace QuanLyKho
                     {
                         Variable.strMaNhanVien = txtMaNV.Text;
                         Variable.strTenNhanVien = strResult;
+                        Variable.strMatKhau = txtPassword.Text;
                         FrmMain frmMain = new FrmMain();
                         frmMain.ShowDialog();
-
                     }
                 }
             }
@@ -59,6 +59,11 @@ namespace QuanLyKho
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -87,5 +87,15 @@ namespace BLL
         {
             return dalNhanVien.DelNhanVien(strMaNV);
         }
+
+        public bool UpdateMatkhau(string strMaNhanVien, string strMatKhauMoi)
+        {
+            return dalNhanVien.UpdateMatKhau(strMaNhanVien, strMatKhauMoi);
+        }
+
+        public DataTable GetNhanVienByID(string strMaNhanVien, string strMatKhau)
+        {
+            return dalNhanVien.GetNhanVienByID(strMaNhanVien, strMatKhau);
+        }
     }
 }

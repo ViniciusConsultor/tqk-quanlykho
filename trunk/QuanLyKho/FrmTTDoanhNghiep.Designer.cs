@@ -287,24 +287,6 @@
             this.txtDiaChi.TabIndex = 10;
             this.txtDiaChi.Tag = "10";
             // 
-<<<<<<< .mine
-=======
-            // lbLogo
-            // 
-            this.lbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            // 
-            // 
-            // 
-            this.lbLogo.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lbLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbLogo.Location = new System.Drawing.Point(279, 65);
-            this.lbLogo.Name = "lbLogo";
-            this.lbLogo.Size = new System.Drawing.Size(115, 139);
-            this.lbLogo.TabIndex = 17;
-            this.lbLogo.Text = "labelX8";
-            this.lbLogo.Click += new System.EventHandler(this.lbLogo_Click);
-            // 
->>>>>>> .r38
             // txtNganHang
             // 
             // 
