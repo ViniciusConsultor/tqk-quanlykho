@@ -32,11 +32,11 @@
             this.btnThoat = new DevComponents.DotNetBar.ButtonX();
             this.btnOK = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX4 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtNhapLaiMK = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtMatKhauMoi = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtMatKhauCu = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtTenNhanVien = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtMaNhanVien = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
@@ -56,7 +56,7 @@
             this.groupPanel2.Controls.Add(this.btnThoat);
             this.groupPanel2.Controls.Add(this.btnOK);
             this.groupPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupPanel2.Location = new System.Drawing.Point(0, 203);
+            this.groupPanel2.Location = new System.Drawing.Point(0, 220);
             this.groupPanel2.Name = "groupPanel2";
             this.groupPanel2.Size = new System.Drawing.Size(379, 36);
             // 
@@ -99,7 +99,7 @@
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 23);
             this.btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnThoat.TabIndex = 1;
+            this.btnThoat.TabIndex = 6;
             this.btnThoat.Text = "Thoát";
             // 
             // btnOK
@@ -111,18 +111,19 @@
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnOK.TabIndex = 0;
+            this.btnOK.TabIndex = 5;
             this.btnOK.Text = "OK";
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // groupPanel3
             // 
             this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel3.Controls.Add(this.textBoxX5);
-            this.groupPanel3.Controls.Add(this.textBoxX4);
-            this.groupPanel3.Controls.Add(this.textBoxX3);
-            this.groupPanel3.Controls.Add(this.textBoxX2);
-            this.groupPanel3.Controls.Add(this.textBoxX1);
+            this.groupPanel3.Controls.Add(this.txtNhapLaiMK);
+            this.groupPanel3.Controls.Add(this.txtMatKhauMoi);
+            this.groupPanel3.Controls.Add(this.txtMatKhauCu);
+            this.groupPanel3.Controls.Add(this.txtTenNhanVien);
+            this.groupPanel3.Controls.Add(this.txtMaNhanVien);
             this.groupPanel3.Controls.Add(this.labelX6);
             this.groupPanel3.Controls.Add(this.labelX5);
             this.groupPanel3.Controls.Add(this.labelX4);
@@ -131,7 +132,7 @@
             this.groupPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel3.Location = new System.Drawing.Point(0, 55);
             this.groupPanel3.Name = "groupPanel3";
-            this.groupPanel3.Size = new System.Drawing.Size(379, 148);
+            this.groupPanel3.Size = new System.Drawing.Size(379, 165);
             // 
             // 
             // 
@@ -162,70 +163,70 @@
             this.groupPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel3.TabIndex = 2;
             // 
-            // textBoxX5
+            // txtNhapLaiMK
             // 
             // 
             // 
             // 
-            this.textBoxX5.Border.Class = "TextBoxBorder";
-            this.textBoxX5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX5.Location = new System.Drawing.Point(119, 121);
-            this.textBoxX5.Name = "textBoxX5";
-            this.textBoxX5.PasswordChar = 'x';
-            this.textBoxX5.Size = new System.Drawing.Size(247, 20);
-            this.textBoxX5.TabIndex = 9;
+            this.txtNhapLaiMK.Border.Class = "TextBoxBorder";
+            this.txtNhapLaiMK.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtNhapLaiMK.Location = new System.Drawing.Point(119, 121);
+            this.txtNhapLaiMK.Name = "txtNhapLaiMK";
+            this.txtNhapLaiMK.PasswordChar = 'x';
+            this.txtNhapLaiMK.Size = new System.Drawing.Size(247, 20);
+            this.txtNhapLaiMK.TabIndex = 4;
             // 
-            // textBoxX4
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX4.Border.Class = "TextBoxBorder";
-            this.textBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX4.Location = new System.Drawing.Point(119, 92);
-            this.textBoxX4.Name = "textBoxX4";
-            this.textBoxX4.PasswordChar = 'x';
-            this.textBoxX4.Size = new System.Drawing.Size(247, 20);
-            this.textBoxX4.TabIndex = 8;
-            // 
-            // textBoxX3
+            // txtMatKhauMoi
             // 
             // 
             // 
             // 
-            this.textBoxX3.Border.Class = "TextBoxBorder";
-            this.textBoxX3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX3.Location = new System.Drawing.Point(119, 63);
-            this.textBoxX3.Name = "textBoxX3";
-            this.textBoxX3.PasswordChar = 'x';
-            this.textBoxX3.Size = new System.Drawing.Size(247, 20);
-            this.textBoxX3.TabIndex = 7;
+            this.txtMatKhauMoi.Border.Class = "TextBoxBorder";
+            this.txtMatKhauMoi.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtMatKhauMoi.Location = new System.Drawing.Point(119, 92);
+            this.txtMatKhauMoi.Name = "txtMatKhauMoi";
+            this.txtMatKhauMoi.PasswordChar = 'x';
+            this.txtMatKhauMoi.Size = new System.Drawing.Size(247, 20);
+            this.txtMatKhauMoi.TabIndex = 3;
             // 
-            // textBoxX2
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX2.Border.Class = "TextBoxBorder";
-            this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX2.Location = new System.Drawing.Point(119, 37);
-            this.textBoxX2.Name = "textBoxX2";
-            this.textBoxX2.ReadOnly = true;
-            this.textBoxX2.Size = new System.Drawing.Size(247, 20);
-            this.textBoxX2.TabIndex = 6;
-            // 
-            // textBoxX1
+            // txtMatKhauCu
             // 
             // 
             // 
             // 
-            this.textBoxX1.Border.Class = "TextBoxBorder";
-            this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX1.Location = new System.Drawing.Point(119, 8);
-            this.textBoxX1.Name = "textBoxX1";
-            this.textBoxX1.ReadOnly = true;
-            this.textBoxX1.Size = new System.Drawing.Size(143, 20);
-            this.textBoxX1.TabIndex = 5;
+            this.txtMatKhauCu.Border.Class = "TextBoxBorder";
+            this.txtMatKhauCu.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtMatKhauCu.Location = new System.Drawing.Point(119, 63);
+            this.txtMatKhauCu.Name = "txtMatKhauCu";
+            this.txtMatKhauCu.PasswordChar = 'x';
+            this.txtMatKhauCu.Size = new System.Drawing.Size(247, 20);
+            this.txtMatKhauCu.TabIndex = 2;
+            // 
+            // txtTenNhanVien
+            // 
+            // 
+            // 
+            // 
+            this.txtTenNhanVien.Border.Class = "TextBoxBorder";
+            this.txtTenNhanVien.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTenNhanVien.Location = new System.Drawing.Point(119, 37);
+            this.txtTenNhanVien.Name = "txtTenNhanVien";
+            this.txtTenNhanVien.ReadOnly = true;
+            this.txtTenNhanVien.Size = new System.Drawing.Size(247, 20);
+            this.txtTenNhanVien.TabIndex = 1;
+            // 
+            // txtMaNhanVien
+            // 
+            // 
+            // 
+            // 
+            this.txtMaNhanVien.Border.Class = "TextBoxBorder";
+            this.txtMaNhanVien.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtMaNhanVien.Location = new System.Drawing.Point(119, 8);
+            this.txtMaNhanVien.Name = "txtMaNhanVien";
+            this.txtMaNhanVien.ReadOnly = true;
+            this.txtMaNhanVien.Size = new System.Drawing.Size(143, 20);
+            this.txtMaNhanVien.TabIndex = 0;
             // 
             // labelX6
             // 
@@ -351,7 +352,7 @@
             // 
             this.AcceptButton = this.btnOK;
             this.CancelButton = this.btnThoat;
-            this.ClientSize = new System.Drawing.Size(379, 239);
+            this.ClientSize = new System.Drawing.Size(379, 256);
             this.Controls.Add(this.groupPanel3);
             this.Controls.Add(this.groupPanel2);
             this.Controls.Add(this.groupPanel1);
@@ -362,6 +363,7 @@
             this.Name = "FrmThayDoiMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thay Đổi Mật Khẩu";
+            this.Load += new System.EventHandler(this.FrmThayDoiMatKhau_Load);
             this.groupPanel2.ResumeLayout(false);
             this.groupPanel3.ResumeLayout(false);
             this.groupPanel1.ResumeLayout(false);
@@ -378,11 +380,11 @@
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.ButtonX btnThoat;
         private DevComponents.DotNetBar.ButtonX btnOK;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX5;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX4;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX3;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtNhapLaiMK;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtMatKhauMoi;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtMatKhauCu;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtTenNhanVien;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtMaNhanVien;
         private DevComponents.DotNetBar.LabelX labelX6;
         private DevComponents.DotNetBar.LabelX labelX5;
         private DevComponents.DotNetBar.LabelX labelX4;

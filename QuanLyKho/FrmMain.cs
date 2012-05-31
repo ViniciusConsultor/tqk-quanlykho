@@ -182,7 +182,7 @@ namespace QuanLyKho
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
             Variable.strMaNhanVien = "";
-            Variable.strTenNhanVien = "";
+            Variable.strTenNhanVien= "";
             lbUser.Text = "Chưa đăng nhập";
         }
 
@@ -191,6 +191,13 @@ namespace QuanLyKho
             FrmMucThue frm = new FrmMucThue();
             CreateTab(stcMenu, "Mức Thuế", "stiMucThue", "stcpMucThue", frm);
 
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Variable.strMaNhanVien = "";
+            Variable.strTenNhanVien = "";
+            lbUser.Text = "Chưa đăng nhập";
         }
     }
 }

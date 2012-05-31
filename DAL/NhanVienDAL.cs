@@ -53,5 +53,19 @@ namespace DAL
             return dp.ExecuteNonQuery(strQuery);
         }
 
+        public DataTable GetNhanVienByID(string strMaNhanVien, string strMatKhau)
+        {
+            string strQuery = "Select * From NHANVIEN Where TINHTRANG = 1 and MANHANVIEN = N'" + strMaNhanVien + "'";
+            strQuery += " and MATKHAU = N'" + strMatKhau + "'";
+            return dp.ExecuteQuery(strQuery);
+        }
+
+        public bool UpdateMatKhau(string strMaNhanVien, string strMatKhauMoi)
+        {
+            string strQuery = "Update NHANVIEN Set MATKHAU = N'" + strMatKhauMoi + "'";
+            strQuery += " Where MANHANVIEN = N'" + strMaNhanVien + "'";
+            return dp.ExecuteNonQuery(strQuery);
+        }
+
     }
 }

@@ -86,7 +86,7 @@ namespace QuanLyKho
                     string strFileName = open.FileName;
                     string strPath = System.IO.Directory.GetCurrentDirectory().ToString();
                     strLogo = open.SafeFileName;
-                    File.Move(strFileName, strPath + "/" + strLogo);
+                    File.Copy(strFileName, strPath + "/" + strLogo, true);
                     pbLogo.Image = Image.FromFile(strLogo);
                 }
             }

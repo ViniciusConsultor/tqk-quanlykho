@@ -291,6 +291,7 @@
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
             this.groupPanel3.ResumeLayout(false);
@@ -307,9 +308,9 @@
         private DevComponents.DotNetBar.ButtonX btnThoat;
         private DevComponents.DotNetBar.ButtonX btnOK;
         private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX1;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtPassword;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtMaNV;
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX2;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtPassword;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtMaNV;
     }
 }
