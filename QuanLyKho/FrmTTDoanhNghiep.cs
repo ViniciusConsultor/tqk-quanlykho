@@ -85,7 +85,8 @@ namespace QuanLyKho
                 txtEmail.Text = dtoCongTy.Email;
                 txtFax.Text = dtoCongTy.Fax;
                 txtWebsite.Text = dtoCongTy.WebSite;
-                lbLogo.Text = dtoCongTy.LoGo;
+                strLogo = dtoCongTy.LoGo;
+                lbLogo.Image = Image.FromFile(strLogo);
                 txtDiaChi.Text = dtoCongTy.DiaChi;
             }
             catch { }

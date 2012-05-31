@@ -80,20 +80,77 @@ namespace QuanLyKho
                 frmNhapKhachHang.txtMaKH.Text = strMaKH;
                 string strTen = dgvKhachHang.Rows[index].Cells["colTenKhachHang"].Value.ToString();
                 frmNhapKhachHang.txtTenKhachHang.Text = strTen;
+
                 string strSoTaiKhoan = dgvKhachHang.Rows[index].Cells["colSoTaiKhoan"].Value.ToString();
-                frmNhapKhachHang.txtSoTaiKhoan.Text = strSoTaiKhoan;
+                if (strSoTaiKhoan == "")
+                {
+                    strSoTaiKhoan = " Không có thông tin.";
+                    frmNhapKhachHang.txtSoTaiKhoan.Text = strSoTaiKhoan;
+                }
+                else
+                {
+                    frmNhapKhachHang.txtSoTaiKhoan.Text = strSoTaiKhoan;
+                }
                 string strNganHang = dgvKhachHang.Rows[index].Cells["colNganHang"].Value.ToString();
-                frmNhapKhachHang.txtNganHang.Text = strNganHang;
+                if (strNganHang == "")
+                {
+                    strNganHang = " Không có thông tin.";
+                    frmNhapKhachHang.txtNganHang.Text = strNganHang;
+                }
+                else
+                {
+                    frmNhapKhachHang.txtNganHang.Text = strNganHang;
+                }
                 string strMaSoThue = dgvKhachHang.Rows[index].Cells["colMaSoThue"].Value.ToString();
-                frmNhapKhachHang.txtMaSoThue.Text = strMaSoThue;
-                string strDienThoai = dgvKhachHang.Rows[index].Cells["colSoDienThoai"].Value.ToString();
-                frmNhapKhachHang.txtDienThoai.Text = strDienThoai;
+                if (strMaSoThue == "")
+                {
+                    strMaSoThue = " Không có thông tin.";
+                    frmNhapKhachHang.txtMaSoThue.Text = strMaSoThue;
+                }
+                else
+                {
+                    frmNhapKhachHang.txtMaSoThue.Text = strMaSoThue;
+                }
+                int intSoDienThoai = 0;
+                if (dgvKhachHang.Rows[index].Cells["colSoDienThoai"].Value.ToString() == "")
+                {
+                    intSoDienThoai = 0000000;
+                }
+                else 
+                {
+                    intSoDienThoai = int.Parse(dgvKhachHang.Rows[index].Cells["colSoDienThoai"].Value.ToString());
+                    frmNhapKhachHang.txtDienThoai.Value = intSoDienThoai;
+                }
                 string strEmail = dgvKhachHang.Rows[index].Cells["colEmail"].Value.ToString();
-                frmNhapKhachHang.txtEmail.Text = strEmail;
+                if (strEmail == "")
+                {
+                    strEmail = " Không có thông tin.";
+                    frmNhapKhachHang.txtEmail.Text = strEmail;
+                }
+                else
+                {
+                    frmNhapKhachHang.txtEmail.Text = strEmail;
+                }
                 string strDiaChi = dgvKhachHang.Rows[index].Cells["colDiaChi"].Value.ToString();
-                frmNhapKhachHang.txtDiaChi.Text = strDiaChi;
+                if (strDiaChi == "")
+                {
+                    strDiaChi = " Không có thông tin.";
+                    frmNhapKhachHang.txtDiaChi.Text = strDiaChi;
+                }
+                else
+                {
+                    frmNhapKhachHang.txtDiaChi.Text = strDiaChi;
+                }
                 string strGhiChu = dgvKhachHang.Rows[index].Cells["colGhiChu"].Value.ToString();
-                frmNhapKhachHang.txtGhiChu.Text = strGhiChu;
+                if (strGhiChu == "")
+                {
+                    strGhiChu = " Không có thông tin.";
+                    frmNhapKhachHang.txtGhiChu.Text = strGhiChu;
+                }
+                else
+                {
+                    frmNhapKhachHang.txtGhiChu.Text = strGhiChu;
+                }
                 frmNhapKhachHang.ShowDialog();
                 LoadKhachHang();
             }

@@ -33,9 +33,9 @@
             this.btnThoat = new DevComponents.DotNetBar.ButtonX();
             this.btnThemKhachHang = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.txtMaSoThue = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtSoTaiKhoan = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtDienThoai = new DevComponents.Editors.IntegerInput();
-            this.txtMaSoThue = new DevComponents.Editors.IntegerInput();
-            this.txtSoTaiKhoan = new DevComponents.Editors.IntegerInput();
             this.txtMaKH = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.txtGhiChu = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -54,8 +54,6 @@
             this.groupPanel1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDienThoai)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaSoThue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSoTaiKhoan)).BeginInit();
             this.SuspendLayout();
             // 
             // lbFlag
@@ -148,9 +146,9 @@
             // 
             this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel2.Controls.Add(this.txtDienThoai);
             this.groupPanel2.Controls.Add(this.txtMaSoThue);
             this.groupPanel2.Controls.Add(this.txtSoTaiKhoan);
+            this.groupPanel2.Controls.Add(this.txtDienThoai);
             this.groupPanel2.Controls.Add(this.txtMaKH);
             this.groupPanel2.Controls.Add(this.labelX1);
             this.groupPanel2.Controls.Add(this.txtGhiChu);
@@ -200,6 +198,32 @@
             this.groupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel2.TabIndex = 2;
             // 
+            // txtMaSoThue
+            // 
+            // 
+            // 
+            // 
+            this.txtMaSoThue.Border.Class = "TextBoxBorder";
+            this.txtMaSoThue.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtMaSoThue.Location = new System.Drawing.Point(110, 143);
+            this.txtMaSoThue.Name = "txtMaSoThue";
+            this.txtMaSoThue.Size = new System.Drawing.Size(244, 20);
+            this.txtMaSoThue.TabIndex = 19;
+            this.txtMaSoThue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaSoThue_KeyPress);
+            // 
+            // txtSoTaiKhoan
+            // 
+            // 
+            // 
+            // 
+            this.txtSoTaiKhoan.Border.Class = "TextBoxBorder";
+            this.txtSoTaiKhoan.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtSoTaiKhoan.Location = new System.Drawing.Point(110, 82);
+            this.txtSoTaiKhoan.Name = "txtSoTaiKhoan";
+            this.txtSoTaiKhoan.Size = new System.Drawing.Size(244, 20);
+            this.txtSoTaiKhoan.TabIndex = 18;
+            this.txtSoTaiKhoan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoTaiKhoan_KeyPress);
+            // 
             // txtDienThoai
             // 
             // 
@@ -213,34 +237,6 @@
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Size = new System.Drawing.Size(244, 20);
             this.txtDienThoai.TabIndex = 5;
-            // 
-            // txtMaSoThue
-            // 
-            // 
-            // 
-            // 
-            this.txtMaSoThue.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtMaSoThue.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtMaSoThue.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtMaSoThue.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            this.txtMaSoThue.Location = new System.Drawing.Point(110, 143);
-            this.txtMaSoThue.Name = "txtMaSoThue";
-            this.txtMaSoThue.Size = new System.Drawing.Size(244, 20);
-            this.txtMaSoThue.TabIndex = 4;
-            // 
-            // txtSoTaiKhoan
-            // 
-            // 
-            // 
-            // 
-            this.txtSoTaiKhoan.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtSoTaiKhoan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtSoTaiKhoan.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtSoTaiKhoan.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            this.txtSoTaiKhoan.Location = new System.Drawing.Point(110, 82);
-            this.txtSoTaiKhoan.Name = "txtSoTaiKhoan";
-            this.txtSoTaiKhoan.Size = new System.Drawing.Size(244, 20);
-            this.txtSoTaiKhoan.TabIndex = 2;
             // 
             // txtMaKH
             // 
@@ -459,8 +455,6 @@
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtDienThoai)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaSoThue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSoTaiKhoan)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -487,8 +481,8 @@
         public DevComponents.DotNetBar.Controls.TextBoxX txtEmail;
         public DevComponents.DotNetBar.Controls.TextBoxX txtNganHang;
         public DevComponents.DotNetBar.Controls.TextBoxX txtGhiChu;
-        public DevComponents.Editors.IntegerInput txtSoTaiKhoan;
         public DevComponents.Editors.IntegerInput txtDienThoai;
-        public DevComponents.Editors.IntegerInput txtMaSoThue;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtMaSoThue;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtSoTaiKhoan;
     }
 }
