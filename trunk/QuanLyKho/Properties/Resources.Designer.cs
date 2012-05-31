@@ -193,6 +193,13 @@ namespace QuanLyKho.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap CongNo {
+            get {
+                object obj = ResourceManager.GetObject("CongNo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap CongNoGroup {
             get {
                 object obj = ResourceManager.GetObject("CongNoGroup", resourceCulture);
@@ -298,9 +305,23 @@ namespace QuanLyKho.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap IssueTracking_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("IssueTracking_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap kedit {
             get {
                 object obj = ResourceManager.GetObject("kedit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap kedit1 {
+            get {
+                object obj = ResourceManager.GetObject("kedit1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -375,9 +396,30 @@ namespace QuanLyKho.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ProofingTools_32 {
+            get {
+                object obj = ResourceManager.GetObject("ProofingTools_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Rename {
             get {
                 object obj = ResourceManager.GetObject("Rename", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Save {
+            get {
+                object obj = ResourceManager.GetObject("Save", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap search {
+            get {
+                object obj = ResourceManager.GetObject("search", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -417,6 +459,13 @@ namespace QuanLyKho.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ThongTinCapNhat {
+            get {
+                object obj = ResourceManager.GetObject("ThongTinCapNhat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ThuChiGroup {
             get {
                 object obj = ResourceManager.GetObject("ThuChiGroup", resourceCulture);
@@ -427,6 +476,13 @@ namespace QuanLyKho.Properties {
         internal static System.Drawing.Bitmap Thue {
             get {
                 object obj = ResourceManager.GetObject("Thue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Vay {
+            get {
+                object obj = ResourceManager.GetObject("Vay", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
