@@ -18,7 +18,7 @@ namespace DAL
             strQuery += "N'" + dtoXuatKho.NgayXuat + "',";
             strQuery += dtoXuatKho.SoHoaDon;
             strQuery += "N'" + dtoXuatKho.NgayLapHD + "',";
-            strQuery += "N'" + dtoXuatKho.GhiChu + "',True)";
+            strQuery += "N'" + dtoXuatKho.GhiChu + "',1)";
             return dp.ExecuteNonQuery(strQuery);
         }
 
@@ -37,7 +37,7 @@ namespace DAL
 
         public bool DelXuatKho( string strMaXK)
         {
-            string strQuery = "Update XUATKHO Set TINHTRANG = False Where MAXUATKHO = N'" + strMaXK + "'";
+            string strQuery = "Update XUATKHO Set TINHTRANG = 0 Where MAXUATKHO = N'" + strMaXK + "'";
             return dp.ExecuteNonQuery(strQuery);
         }
     }

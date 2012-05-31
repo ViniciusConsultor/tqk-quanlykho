@@ -18,7 +18,7 @@ namespace DAL
             strQuery += dtoCT_NhapKho.SoLuongNhap + ",";
             strQuery += dtoCT_NhapKho.GiaNhap + ",";
             strQuery += "N'" + dtoCT_NhapKho.MaThue + "',";
-            strQuery += dtoCT_NhapKho.ThanhTien + ",True)";
+            strQuery += dtoCT_NhapKho.ThanhTien + ",1)";
             return dp.ExecuteNonQuery(strQuery);
         }
 

@@ -52,24 +52,6 @@ namespace QuanLyKho
             catch { }
         }
 
-        private void lbLogo_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                OpenFileDialog open = new OpenFileDialog();
-                open.Filter = "All File *.*|*.*|Image File *.png|*.png|Image File Jpeg *.jpg|*.jpg|Image File BitMap *.bmp|*.bmp";
-                if (open.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    string strFileName = open.FileName;
-                    string strPath = System.IO.Directory.GetCurrentDirectory().ToString();
-                    strLogo = open.SafeFileName;
-                    File.Move(strFileName, strPath + "/" + strLogo);
-                    lbLogo.Image = Image.FromFile(strLogo);
-                }
-            }
-            catch { }
-        }
-
         private void FrmTTDoanhNghiep_Load(object sender, EventArgs e)
         {
             try
@@ -85,9 +67,28 @@ namespace QuanLyKho
                 txtEmail.Text = dtoCongTy.Email;
                 txtFax.Text = dtoCongTy.Fax;
                 txtWebsite.Text = dtoCongTy.WebSite;
+                //pbLogo.Text = dtoCongTy.LoGo;
                 strLogo = dtoCongTy.LoGo;
-                lbLogo.Image = Image.FromFile(strLogo);
+                pbLogo.Image = Image.FromFile(strLogo);
                 txtDiaChi.Text = dtoCongTy.DiaChi;
+            }
+            catch { }
+        }
+
+        private void pbLogo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog open = new OpenFileDialog();
+                open.Filter = "All File *.*|*.*|Image File *.png|*.png|Image File Jpeg *.jpg|*.jpg|Image File BitMap *.bmp|*.bmp";
+                if (open.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    string strFileName = open.FileName;
+                    string strPath = System.IO.Directory.GetCurrentDirectory().ToString();
+                    strLogo = open.SafeFileName;
+                    File.Move(strFileName, strPath + "/" + strLogo);
+                    pbLogo.Image = Image.FromFile(strLogo);
+                }
             }
             catch { }
         }

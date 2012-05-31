@@ -57,7 +57,7 @@ namespace BLL
             string strError = "";
             if (dtoKhachHang.TenKH.Trim().Equals("") == true)
             {
-                strError += "Tên khách hàng không được rỗng.";
+                strError += " Tên khách hàng không được rỗng.";
             }
             if (dtoKhachHang.SoTaiKhoan.Trim().Equals("") == true)
             {
