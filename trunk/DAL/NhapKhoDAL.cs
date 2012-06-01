@@ -18,9 +18,9 @@ namespace DAL
             strQuery += "N'" + dtoNhapKho.NgayNhap + "',";
             strQuery += "N'" + dtoNhapKho.NguoiNhan + "',";
             strQuery += "N'" + dtoNhapKho.LyDoNhap + "',";
-            strQuery += dtoNhapKho.SoHoaDon + ",";
+            strQuery += "N'" + dtoNhapKho.SoHoaDon + "',";
             strQuery += "N'" + dtoNhapKho.NgayLapHD + "',";
-            strQuery += "N'" + dtoNhapKho.GhiChu + "',True)";
+            strQuery += "N'" + dtoNhapKho.GhiChu + "', 1)";
             return dp.ExecuteNonQuery(strQuery);
         }
 
@@ -30,7 +30,9 @@ namespace DAL
             strQuery += "MANHACUNGCAP = N'" + dtoNhapKho.MaNCC + "',";
             strQuery += "MANHANVIEN = N'" + dtoNhapKho.MaNV + "',";
             strQuery += "NGAYNHAP = N'" + dtoNhapKho.NgayNhap + "',";
-            strQuery += "SOHOADON = " +dtoNhapKho.SoHoaDon + ",";
+            strQuery += "NGUOINHAN = N'" + dtoNhapKho.NguoiNhan + "',";
+            strQuery += "LYDONHAP = N'" + dtoNhapKho.LyDoNhap + "',";
+            strQuery += "SOHOADON = N'" +dtoNhapKho.SoHoaDon + ",";
             strQuery += "NGAYLAPHOADON = N'" + dtoNhapKho.NgayLapHD + "',";
             strQuery += "GHICHU = N'" + dtoNhapKho.GhiChu + "' ";
             strQuery += "Where MANHAPKHO = N'" + dtoNhapKho.MaNhapKho + "'";
@@ -39,7 +41,7 @@ namespace DAL
 
         public bool DelNhapKho(string strMaNK)
         {
-            string strQuery = "Update NHAPKHO Set TINHTRANG = False Where MANHAPKHO = N'" + strMaNK + "'";
+            string strQuery = "Update NHAPKHO Set TINHTRANG = 0 Where MANHAPKHO = N'" + strMaNK + "'";
             return dp.ExecuteNonQuery(strQuery);
         }
     }

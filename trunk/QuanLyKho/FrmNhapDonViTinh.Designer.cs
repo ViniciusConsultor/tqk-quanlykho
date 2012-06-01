@@ -191,6 +191,7 @@
             this.txtMaDVT.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtMaDVT.Location = new System.Drawing.Point(78, 14);
             this.txtMaDVT.Name = "txtMaDVT";
+            this.txtMaDVT.ReadOnly = true;
             this.txtMaDVT.Size = new System.Drawing.Size(173, 20);
             this.txtMaDVT.TabIndex = 2;
             // 

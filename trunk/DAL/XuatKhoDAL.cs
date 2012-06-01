@@ -16,9 +16,11 @@ namespace DAL
             strQuery += "N'" + dtoXuatKho.MaKhachHang + "',";
             strQuery += "N'" + dtoXuatKho.MaNV + "',";
             strQuery += "N'" + dtoXuatKho.NgayXuat + "',";
-            strQuery += dtoXuatKho.SoHoaDon;
+            strQuery += "N'" + dtoXuatKho.GiaoHang + "',";
+            strQuery += "N'" + dtoXuatKho.LyDoXuat + "',";
+            strQuery += "N'" + dtoXuatKho.SoHoaDon + "',";
             strQuery += "N'" + dtoXuatKho.NgayLapHD + "',";
-            strQuery += "N'" + dtoXuatKho.GhiChu + "',1)";
+            strQuery += "N'" + dtoXuatKho.GhiChu + "', 1)";
             return dp.ExecuteNonQuery(strQuery);
         }
 
@@ -28,7 +30,9 @@ namespace DAL
             strQuery += "MAKHACHHANG = N'" + dtoXuatKho.MaKhachHang + "',";
             strQuery += "MANHANVIEN = N'" + dtoXuatKho.MaNV + "',";
             strQuery += "NGAYXUAT = N'" + dtoXuatKho.NgayXuat + "',";
-            strQuery += "SOHOADON = " + dtoXuatKho.SoHoaDon;
+            strQuery += "GIAOHANG = N'" + dtoXuatKho.GiaoHang + "',";
+            strQuery += "LYDOXUAT = N'" + dtoXuatKho.LyDoXuat + "',";
+            strQuery += "SOHOADON = N'" + dtoXuatKho.SoHoaDon + "',";
             strQuery += "NGAYLAPHOADON = N'" + dtoXuatKho.NgayLapHD + "',";
             strQuery += "GHICHU = N'" + dtoXuatKho.GhiChu + "' ";
             strQuery += "Where MAXUATKHO = N'" + dtoXuatKho.MaXuatKho + "'";

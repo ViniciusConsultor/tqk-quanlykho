@@ -30,25 +30,41 @@ namespace DTO
             set { _maNV = value; }
         }
 
-        private DateTime _ngayXuat;
+        private string _ngayXuat;
 
-        public DateTime NgayXuat
+        public string NgayXuat
         {
             get { return _ngayXuat; }
             set { _ngayXuat = value; }
         }
 
-        private int _soHoaDon;
+        private string _giaoHang;
 
-        public int SoHoaDon
+        public string GiaoHang
+        {
+            get { return _giaoHang; }
+            set { _giaoHang = value; }
+        }
+
+        private string _lyDoXuat;
+
+        public string LyDoXuat
+        {
+            get { return _lyDoXuat; }
+            set { _lyDoXuat = value; }
+        }
+
+        private string _soHoaDon;
+
+        public string SoHoaDon
         {
             get { return _soHoaDon; }
             set { _soHoaDon = value; }
         }
 
-        private DateTime _ngayLapHD;
+        private string _ngayLapHD;
 
-        public DateTime NgayLapHD
+        public string NgayLapHD
         {
             get { return _ngayLapHD; }
             set { _ngayLapHD = value; }
