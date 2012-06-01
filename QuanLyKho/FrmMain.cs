@@ -211,5 +211,12 @@ namespace QuanLyKho
             Variable.strTenNhanVien = "";
             lbUser.Text = "Chưa đăng nhập";
         }
+
+        private void buttonItem2_Click(object sender, EventArgs e)
+        {
+            FrmTaiKhoanNganHang frmTaiKhoanNganHang = new FrmTaiKhoanNganHang();
+            //frmTaiKhoanNganHang.MdiParent = this;
+            frmTaiKhoanNganHang.ShowDialog();
+        }
     }
 }

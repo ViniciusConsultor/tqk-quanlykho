@@ -38,6 +38,22 @@ namespace DTO
             set { _ngayNhap = value; }
         }
 
+        private string _nguoiNhan;
+
+        public string NguoiNhan
+        {
+            get { return _nguoiNhan; }
+            set { _nguoiNhan = value; }
+        }
+
+        private string _lyDoNhap;
+
+        public string LyDoNhap
+        {
+            get { return _lyDoNhap; }
+            set { _lyDoNhap = value; }
+        }
+
         private string _soHoaDon;
 
         public string SoHoaDon
@@ -70,20 +86,8 @@ namespace DTO
             set { _tinhTrang = value; }
         }
 
-        private string _nguoiNhan;
+        
 
-        public string NguoiNhan
-        {
-            get { return _nguoiNhan; }
-            set { _nguoiNhan = value; }
-        }
-
-        private string _lyDoNhap;
-
-        public string LyDoNhap
-        {
-            get { return _lyDoNhap; }
-            set { _lyDoNhap = value; }
-        }
+        
     }
 }
