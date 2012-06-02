@@ -224,7 +224,6 @@
     <Compile Include="FrmReportNhapKho.Designer.cs">
       <DependentUpon>FrmReportNhapKho.cs</DependentUpon>
     </Compile>
-<<<<<<< .mine
     <Compile Include="FrmTCNhapHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,14 +236,12 @@
     <Compile Include="FrmTCXuatHang.Designer.cs">
       <DependentUpon>FrmTCXuatHang.cs</DependentUpon>
     </Compile>
-=======
     <Compile Include="FrmTaiKhoanNganHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmTaiKhoanNganHang.Designer.cs">
       <DependentUpon>FrmTaiKhoanNganHang.cs</DependentUpon>
     </Compile>
->>>>>>> .r42
     <Compile Include="FrmThayDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -387,18 +384,15 @@
     <EmbeddedResource Include="FrmReportNhapKho.resx">
       <DependentUpon>FrmReportNhapKho.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< .mine
     <EmbeddedResource Include="FrmTCNhapHang.resx">
       <DependentUpon>FrmTCNhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTCXuatHang.resx">
       <DependentUpon>FrmTCXuatHang.cs</DependentUpon>
     </EmbeddedResource>
-=======
     <EmbeddedResource Include="FrmTaiKhoanNganHang.resx">
       <DependentUpon>FrmTaiKhoanNganHang.cs</DependentUpon>
     </EmbeddedResource>
->>>>>>> .r42
     <EmbeddedResource Include="FrmThayDoiMatKhau.resx">
       <DependentUpon>FrmThayDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
