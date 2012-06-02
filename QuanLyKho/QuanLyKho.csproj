@@ -74,6 +74,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmBCNhapXuatTon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBCNhapXuatTon.Designer.cs">
+      <DependentUpon>FrmBCNhapXuatTon.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBoPhan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,12 +224,27 @@
     <Compile Include="FrmReportNhapKho.Designer.cs">
       <DependentUpon>FrmReportNhapKho.cs</DependentUpon>
     </Compile>
+<<<<<<< .mine
+    <Compile Include="FrmTCNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTCNhapHang.Designer.cs">
+      <DependentUpon>FrmTCNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTCXuatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTCXuatHang.Designer.cs">
+      <DependentUpon>FrmTCXuatHang.cs</DependentUpon>
+    </Compile>
+=======
     <Compile Include="FrmTaiKhoanNganHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmTaiKhoanNganHang.Designer.cs">
       <DependentUpon>FrmTaiKhoanNganHang.cs</DependentUpon>
     </Compile>
+>>>>>>> .r42
     <Compile Include="FrmThayDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +278,30 @@
     <Compile Include="Function.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\crpNhapKho.cs">
+      <DependentUpon>crpNhapKho.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\crpXuatKho.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpXuatKho.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PhieuChi.cs">
+      <DependentUpon>PhieuChi.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\crpPhieuThu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpPhieuThu.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Report\crpXuatNhapTon.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -264,6 +309,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Variable.cs" />
+    <EmbeddedResource Include="FrmBCNhapXuatTon.resx">
+      <DependentUpon>FrmBCNhapXuatTon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBoPhan.resx">
       <DependentUpon>FrmBoPhan.cs</DependentUpon>
     </EmbeddedResource>
@@ -339,9 +387,18 @@
     <EmbeddedResource Include="FrmReportNhapKho.resx">
       <DependentUpon>FrmReportNhapKho.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< .mine
+    <EmbeddedResource Include="FrmTCNhapHang.resx">
+      <DependentUpon>FrmTCNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTCXuatHang.resx">
+      <DependentUpon>FrmTCXuatHang.cs</DependentUpon>
+    </EmbeddedResource>
+=======
     <EmbeddedResource Include="FrmTaiKhoanNganHang.resx">
       <DependentUpon>FrmTaiKhoanNganHang.cs</DependentUpon>
     </EmbeddedResource>
+>>>>>>> .r42
     <EmbeddedResource Include="FrmThayDoiMatKhau.resx">
       <DependentUpon>FrmThayDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
@@ -367,6 +424,22 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\crpNhapKho.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpNhapKho.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\crpXuatKho.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpXuatKho.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PhieuChi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PhieuChi.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\crpPhieuThu.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpPhieuThu.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\crpXuatNhapTon.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpXuatNhapTon.cs</LastGenOutput>
@@ -384,6 +457,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LM.ico" />
+    <None Include="Resources\Edit.png" />
+    <None Include="Resources\searchS.png" />
     <None Include="Resources\Save.png" />
     <None Include="Resources\CongNo.png" />
     <None Include="Resources\Vay.png" />
@@ -468,10 +543,6 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{95AFB701-A3AC-4845-9BAB-A2821CB78F50}</Project>
       <Name>BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{BC89BA9A-6CC0-4A97-A894-9DA60F918097}</Project>
-      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{60DAB8E2-F17C-4862-A1FD-CF0B5131F639}</Project>

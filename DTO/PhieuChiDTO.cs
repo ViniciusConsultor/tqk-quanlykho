@@ -13,7 +13,6 @@ namespace DTO
             get { return _maPhieuChi; }
             set { _maPhieuChi = value; }
         }
-
         private string _maNV;
 
         public string MaNV
@@ -21,7 +20,6 @@ namespace DTO
             get { return _maNV; }
             set { _maNV = value; }
         }
-
         private string _khachHang;
 
         public string KhachHang
@@ -29,15 +27,6 @@ namespace DTO
             get { return _khachHang; }
             set { _khachHang = value; }
         }
-
-        private string _ngayLap;
-
-        public string NgayLap
-        {
-            get { return _ngayLap; }
-            set { _ngayLap = value; }
-        }
-
         private string _diaChi;
 
         public string DiaChi
@@ -45,7 +34,13 @@ namespace DTO
             get { return _diaChi; }
             set { _diaChi = value; }
         }
+        private string _ngayLap;
 
+        public string NgayLap
+        {
+            get { return _ngayLap; }
+            set { _ngayLap = value; }
+        }
         private string _soPhieu;
 
         public string SoPhieu
@@ -53,7 +48,6 @@ namespace DTO
             get { return _soPhieu; }
             set { _soPhieu = value; }
         }
-
         private int _no;
 
         public int No
@@ -61,7 +55,6 @@ namespace DTO
             get { return _no; }
             set { _no = value; }
         }
-
         private int _co;
 
         public int Co
@@ -69,7 +62,6 @@ namespace DTO
             get { return _co; }
             set { _co = value; }
         }
-
         private string _lyDoChi;
 
         public string LyDoChi
@@ -77,15 +69,13 @@ namespace DTO
             get { return _lyDoChi; }
             set { _lyDoChi = value; }
         }
+        private double _soTien;
 
-        private float _soTien;
-
-        public float SoTien
+        public double SoTien
         {
             get { return _soTien; }
             set { _soTien = value; }
         }
-
         private string _vietBangChu;
 
         public string VietBangChu
@@ -93,7 +83,6 @@ namespace DTO
             get { return _vietBangChu; }
             set { _vietBangChu = value; }
         }
-
         private string _kemTheo;
 
         public string KemTheo

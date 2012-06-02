@@ -256,6 +256,13 @@ namespace QuanLyKho.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Edit {
+            get {
+                object obj = ResourceManager.GetObject("Edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Encrypt {
             get {
                 object obj = ResourceManager.GetObject("Encrypt", resourceCulture);
@@ -420,6 +427,13 @@ namespace QuanLyKho.Properties {
         internal static System.Drawing.Bitmap search {
             get {
                 object obj = ResourceManager.GetObject("search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap searchS {
+            get {
+                object obj = ResourceManager.GetObject("searchS", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

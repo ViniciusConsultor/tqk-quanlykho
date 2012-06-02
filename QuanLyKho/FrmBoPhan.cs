@@ -7,8 +7,8 @@ using System.Text;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using DTO;
-using DAL;
 using DevComponents.DotNetBar.Controls;
+using BLL;
 
 namespace QuanLyKho
 {
@@ -18,7 +18,7 @@ namespace QuanLyKho
         {
             InitializeComponent();
         }
-        BoPhanDAL dalBoPhan = new BoPhanDAL();
+        BoPhanBLL bllBoPhan = new BoPhanBLL();
         CFunction cf = new CFunction();
         int intIndex = 0;
         int intRowCount = 0;
@@ -32,7 +32,7 @@ namespace QuanLyKho
             try
             {
                 DataTable dtBoPhan = new DataTable();
-                dtBoPhan = dalBoPhan.GetBoPhan();
+                dtBoPhan = bllBoPhan.GetBoPhan();
                 dtBoPhan = cf.AutoNumberedTable(dtBoPhan);
                 dgv.AutoGenerateColumns = false;
                 dgv.DataSource = dtBoPhan;
@@ -87,7 +87,7 @@ namespace QuanLyKho
                 if (MessageBox.Show("Bạn Có Chắc Chắn Xóa Dòng Này ?", "Xóa Bộ Phận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
                 {
                     dgvBoPhan.Rows.RemoveAt(index);
-                    dalBoPhan.DelBoPhan(strMaBP);
+                    bllBoPhan.DelBoPhan(strMaBP);
                     MessageBox.Show("Xóa Thành Công!", "Xóa Bộ Phận", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }

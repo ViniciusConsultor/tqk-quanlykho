@@ -63,7 +63,7 @@ namespace QuanLyKho
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-
+            txtMaNV.Focus();
         }
     }
 }
