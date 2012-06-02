@@ -9,10 +9,20 @@ namespace DAL
     {
         DataProvider dp = new DataProvider();
 
+        public TienMatDTO GetTienMat()
+        {
+            TienMatDTO dtoTienMat = new TienMatDTO();
+            string strQuery = "Select * From TIENMAT";
+            DataTable dtTienMat = dp.ExecuteQuery(strQuery);
+            if (dtTienMat != null)
+            {
+                dtoTienMat.SoTien = float.Parse(dtTienMat.Rows[0]["SOTIEN"].ToString());
+            }
+            return dtoTienMat;
+        }
         public bool InsertTienMat(TienMatDTO dtoTienMat)
         {
             string strQuery = "Insert Into TIENMAT Values(";
-            strQuery += "N'" + dtoTienMat.MaTienMat + "',";
             strQuery += dtoTienMat.SoTien ;
             return dp.ExecuteNonQuery(strQuery);
         }
@@ -20,8 +30,7 @@ namespace DAL
         public bool UpdateTienMat(TienMatDTO dtoTienMat)
         {
             string strQuery = "Update TIENMAT Set ";
-            strQuery += "SOTIEN = " + dtoTienMat.SoTien;
-            strQuery += "Where MATIENMAT = N'" + dtoTienMat.MaTienMat + "'";
+            strQuery += "SOTIEN = " + dtoTienMat.SoTien ;
             return dp.ExecuteNonQuery(strQuery);
         }
     }
