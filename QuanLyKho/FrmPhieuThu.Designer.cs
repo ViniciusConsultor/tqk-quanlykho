@@ -66,13 +66,13 @@
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.lbTenCongTy = new DevComponents.DotNetBar.LabelX();
             this.labelX30 = new DevComponents.DotNetBar.LabelX();
             this.labelX31 = new DevComponents.DotNetBar.LabelX();
             this.labelX32 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.btnHuy = new DevComponents.DotNetBar.ButtonX();
             this.btnIn = new DevComponents.DotNetBar.ButtonX();
             this.btnTaoMoi = new DevComponents.DotNetBar.ButtonX();
@@ -437,7 +437,7 @@
             this.labelX9.Name = "labelX9";
             this.labelX9.Size = new System.Drawing.Size(140, 23);
             this.labelX9.TabIndex = 12;
-            this.labelX9.Text = "Họ và tên người nhận tiền : ";
+            this.labelX9.Text = "Họ và tên người nộp tiền : ";
             // 
             // textBoxX3
             // 
@@ -650,6 +650,18 @@
             this.groupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel2.TabIndex = 5;
             // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Image = global::QuanLyKho.Properties.Resources._112_Plus_Green_16x16_72;
+            this.buttonX1.Location = new System.Drawing.Point(457, 167);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(46, 20);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 26;
+            this.buttonX1.Tooltip = "Nếu chưa có hãy click vào đây để thêm người nhận tiền";
+            // 
             // labelX1
             // 
             this.labelX1.BackColor = System.Drawing.Color.Transparent;
@@ -763,18 +775,6 @@
             // 
             this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel1.TabIndex = 4;
-            // 
-            // buttonX1
-            // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Image = global::QuanLyKho.Properties.Resources._112_Plus_Green_16x16_72;
-            this.buttonX1.Location = new System.Drawing.Point(457, 167);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(46, 20);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.TabIndex = 26;
-            this.buttonX1.Tooltip = "Nếu chưa có hãy click vào đây để thêm người nhận tiền";
             // 
             // btnHuy
             // 

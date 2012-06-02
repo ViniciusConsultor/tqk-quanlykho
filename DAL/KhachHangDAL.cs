@@ -15,6 +15,25 @@ namespace DAL
             return dp.ExecuteQuery(strQuery);
         }
 
+        public KhachHangDTO GetKhachHangByID(string strIDKhachHang)
+        {
+            KhachHangDTO dtoKhachHang = new KhachHangDTO();
+            string strQuery = "Select * From KHACHHANG Where TINHTRANG = 1 and MAKHACHHANG = '" + strIDKhachHang +"'";
+            DataTable dtKhachHang = dp.ExecuteQuery(strQuery);
+            if (dtKhachHang.Rows.Count > 0)
+            {
+                dtoKhachHang.MaKH = dtKhachHang.Rows[0]["MAKHACHHANG"].ToString();
+                dtoKhachHang.TenKH = dtKhachHang.Rows[0]["TENKHACHHANG"].ToString();
+                dtoKhachHang.SoTaiKhoan = dtKhachHang.Rows[0]["SOTAIKHOAN"].ToString();
+                dtoKhachHang.NganHang = dtKhachHang.Rows[0]["NGANHANG"].ToString();
+                dtoKhachHang.MaSoThue = dtKhachHang.Rows[0]["MASOTHUE"].ToString();
+                dtoKhachHang.DiaChi = dtKhachHang.Rows[0]["DIACHI"].ToString();
+                dtoKhachHang.SDT = dtKhachHang.Rows[0]["DIENTHOAI"].ToString();
+                dtoKhachHang.Email = dtKhachHang.Rows[0]["EMAIL"].ToString();
+            }
+            return dtoKhachHang;
+        }
+
         public bool InsertKhachHang(KhachHangDTO dtoKhachHang)
         {
             string strQuery = "Insert Into KHACHHANG Values(";
