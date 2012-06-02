@@ -14,8 +14,8 @@ namespace DAL
             strQuery += "N'" + dtoPhieuChi.MaPhieuChi + "',";
             strQuery += "N'" + dtoPhieuChi.MaNV + "',";
             strQuery += "N'" + dtoPhieuChi.KhachHang + "',";
-            strQuery += "N'" + dtoPhieuChi.DiaChi + "',";
             strQuery += "N'" + dtoPhieuChi.NgayLap + "',";
+            strQuery += "N'" + dtoPhieuChi.DiaChi + "',";
             strQuery += "N'" + dtoPhieuChi.SoPhieu + "',";
             strQuery +=  dtoPhieuChi.No + ",";
             strQuery +=  dtoPhieuChi.Co + ",";
