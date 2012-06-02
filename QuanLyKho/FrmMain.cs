@@ -211,7 +211,6 @@ namespace QuanLyKho
             Variable.strTenNhanVien = "";
             lbUser.Text = "Chưa đăng nhập";
         }
-<<<<<<< .mine
 
         private void btnNhapXuatTon_Click(object sender, EventArgs e)
         {
@@ -233,7 +232,6 @@ namespace QuanLyKho
             //frm.ShowDialog();
             CreateTab(stcMenu, "Tra cứu xuất hàng", "stiTCXuatHang", "stcpTCXuatHang", frm);
         }
-=======
 
         private void buttonItem2_Click(object sender, EventArgs e)
         {
@@ -241,6 +239,5 @@ namespace QuanLyKho
             //frmTaiKhoanNganHang.MdiParent = this;
             frmTaiKhoanNganHang.ShowDialog();
         }
->>>>>>> .r42
     }
 }
