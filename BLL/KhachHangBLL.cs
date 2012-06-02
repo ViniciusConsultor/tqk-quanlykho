@@ -90,5 +90,10 @@ namespace BLL
         {
             return dalKhachHang.DelKhachHang(strMaKH);
         }
+
+        public KhachHangDTO GetKhachHangByID(string strID)
+        {
+            return dalKhachHang.GetKhachHangByID(strID);
+        }
     }
 }

@@ -93,6 +93,10 @@ namespace QuanLyKho
             }
         }
 
+        private void txtSoTaiKhoan_TextChanged(object sender, EventArgs e)
+        {
+
+        }
 
     }
 }

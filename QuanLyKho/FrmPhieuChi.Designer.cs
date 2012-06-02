@@ -530,6 +530,7 @@
             this.txtSoTien.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtSoTien.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.txtSoTien.Increment = 1D;
+            this.txtSoTien.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
             this.txtSoTien.Location = new System.Drawing.Point(193, 244);
             this.txtSoTien.Name = "txtSoTien";
             this.txtSoTien.Size = new System.Drawing.Size(310, 20);

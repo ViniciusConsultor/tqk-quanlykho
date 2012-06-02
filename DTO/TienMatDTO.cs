@@ -6,17 +6,9 @@ namespace DTO
 {
     public class TienMatDTO
     {
-        private string _maTienMat;
+        private double _soTien;
 
-        public string MaTienMat
-        {
-            get { return _maTienMat; }
-            set { _maTienMat = value; }
-        }
-
-        private float _soTien;
-
-        public float SoTien
+        public double SoTien
         {
             get { return _soTien; }
             set { _soTien = value; }

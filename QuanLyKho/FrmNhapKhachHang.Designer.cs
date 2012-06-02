@@ -222,6 +222,7 @@
             this.txtSoTaiKhoan.Name = "txtSoTaiKhoan";
             this.txtSoTaiKhoan.Size = new System.Drawing.Size(244, 20);
             this.txtSoTaiKhoan.TabIndex = 18;
+            this.txtSoTaiKhoan.TextChanged += new System.EventHandler(this.txtSoTaiKhoan_TextChanged);
             this.txtSoTaiKhoan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoTaiKhoan_KeyPress);
             // 
             // txtDienThoai

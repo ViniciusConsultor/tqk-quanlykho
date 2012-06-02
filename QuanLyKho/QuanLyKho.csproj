@@ -248,6 +248,12 @@
     <Compile Include="FrmThayDoiMatKhau.Designer.cs">
       <DependentUpon>FrmThayDoiMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTienMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTienMat.Designer.cs">
+      <DependentUpon>FrmTienMat.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTienNganHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -395,6 +401,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmThayDoiMatKhau.resx">
       <DependentUpon>FrmThayDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTienMat.resx">
+      <DependentUpon>FrmTienMat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTienNganHang.resx">
       <DependentUpon>FrmTienNganHang.cs</DependentUpon>

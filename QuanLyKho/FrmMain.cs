@@ -235,9 +235,14 @@ namespace QuanLyKho
 
         private void buttonItem2_Click(object sender, EventArgs e)
         {
-            FrmTaiKhoanNganHang frmTaiKhoanNganHang = new FrmTaiKhoanNganHang();
-            //frmTaiKhoanNganHang.MdiParent = this;
-            frmTaiKhoanNganHang.ShowDialog();
+            FrmTaiKhoanNganHang frm = new FrmTaiKhoanNganHang();
+            CreateTab(stcMenu, "Tiền ngân hàng", "stiTCTienNganHang", "stcpTCTienNganHang", frm);
+        }
+
+        private void buttonItem1_Click(object sender, EventArgs e)
+        {
+            FrmTienMat frmTienMat = new FrmTienMat();
+            frmTienMat.Show();
         }
     }
 }
