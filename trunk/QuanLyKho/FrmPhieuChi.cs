@@ -54,6 +54,7 @@ namespace QuanLyKho
                 dtoPhieuChi.No = int.Parse(txtNo.Text);
                 dtoPhieuChi.Co = int.Parse(txtCo.Text);
                 string strResult = bllPhieuChi.InsertPhieuChi(dtoPhieuChi);
+                LuuPhieuChi();
                 if (strResult == "ok")
                 {
                     MessageBox.Show("Lưu Phiếu Chi Thành Công!", "Lưu Phiếu Chi", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -92,6 +93,59 @@ namespace QuanLyKho
                 frmNhapNCC.ShowDialog();
             }
             catch { }
+        }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            FrmInPhieuChi frm = new FrmInPhieuChi();
+            try
+            {
+                LuuPhieuChi();
+            }
+            catch {
+                frm.ShowDialog();
+            }
+            frm.ShowDialog();
+        }
+
+        private void LuuPhieuChi()
+        {
+            PhieuChiDTO dtoPhieuChi = new PhieuChiDTO();
+            if (txtCo.Text != "")
+                dtoPhieuChi.Co = int.Parse(txtCo.Text);
+            else
+                dtoPhieuChi.Co = 0;
+            if (txtNo.Text != "")
+                dtoPhieuChi.No = int.Parse(txtNo.Text);
+            else
+                dtoPhieuChi.No = 0;
+            dtoPhieuChi.No = int.Parse(txtNo.Text);
+            dtoPhieuChi.DiaChi = txtDiaChi.Text;
+            dtoPhieuChi.KemTheo = txtKemTheo.Text;
+            dtoPhieuChi.KhachHang = cmbNhaCC.Text;
+            dtoPhieuChi.LyDoChi = txtLyDoChi.Text;
+            dtoPhieuChi.SoPhieu = txtSoPhieu.Text;
+            dtoPhieuChi.SoTien = double.Parse(txtSoTien.Text);
+            dtoPhieuChi.VietBangChu = txtVietBangChu.Text;
+            Variable.dtoPhieuChi = dtoPhieuChi;
+        }
+
+        private void txtNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+            if (Char.IsDigit(c) == false && Char.IsControl(c) == false)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+            if (Char.IsDigit(c) == false && Char.IsControl(c) == false)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

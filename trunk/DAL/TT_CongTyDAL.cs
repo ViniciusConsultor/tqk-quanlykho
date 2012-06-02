@@ -52,7 +52,7 @@ namespace DAL
             TT_CongTyDTO dtoCongTy = new TT_CongTyDTO();
             string strSQL = "Select * From TT_CONGTY";
             DataTable dtCongTy = dp.ExecuteQuery(strSQL);
-            if (dtCongTy != null)
+            if (dtCongTy.Rows.Count > 0)
             { 
                 dtoCongTy.DiaChi = dtCongTy.Rows[0]["DIACHI"].ToString();
                 dtoCongTy.TenCT = dtCongTy.Rows[0]["TENCT"].ToString();

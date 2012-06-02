@@ -136,7 +136,7 @@
             // 
             // 
             this.labelX30.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX30.Location = new System.Drawing.Point(89, 5);
+            this.labelX30.Location = new System.Drawing.Point(80, 5);
             this.labelX30.Name = "labelX30";
             this.labelX30.Size = new System.Drawing.Size(10, 20);
             this.labelX30.TabIndex = 19;
@@ -149,7 +149,7 @@
             // 
             // 
             this.labelX31.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX31.Location = new System.Drawing.Point(173, 4);
+            this.labelX31.Location = new System.Drawing.Point(170, 4);
             this.labelX31.Name = "labelX31";
             this.labelX31.Size = new System.Drawing.Size(10, 20);
             this.labelX31.TabIndex = 22;
@@ -162,7 +162,7 @@
             // 
             // 
             this.labelX32.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX32.Location = new System.Drawing.Point(234, 3);
+            this.labelX32.Location = new System.Drawing.Point(243, 3);
             this.labelX32.Name = "labelX32";
             this.labelX32.Size = new System.Drawing.Size(10, 20);
             this.labelX32.TabIndex = 21;
@@ -175,7 +175,7 @@
             this.btnHuy.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
             this.btnHuy.Image = global::QuanLyKho.Properties.Resources.thoat;
             this.btnHuy.ImageFixedSize = new System.Drawing.Size(16, 16);
-            this.btnHuy.Location = new System.Drawing.Point(243, 5);
+            this.btnHuy.Location = new System.Drawing.Point(252, 5);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(63, 18);
             this.btnHuy.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -190,13 +190,14 @@
             this.btnIn.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
             this.btnIn.Image = global::QuanLyKho.Properties.Resources.Print;
             this.btnIn.ImageFixedSize = new System.Drawing.Size(16, 16);
-            this.btnIn.Location = new System.Drawing.Point(173, 5);
+            this.btnIn.Location = new System.Drawing.Point(180, 5);
             this.btnIn.Name = "btnIn";
             this.btnIn.Size = new System.Drawing.Size(55, 18);
             this.btnIn.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnIn.TabIndex = 18;
             this.btnIn.Text = "In";
             this.btnIn.Tooltip = "In";
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // btnTaoMoi
             // 
@@ -205,7 +206,7 @@
             this.btnTaoMoi.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
             this.btnTaoMoi.Image = global::QuanLyKho.Properties.Resources.muon;
             this.btnTaoMoi.ImageFixedSize = new System.Drawing.Size(16, 16);
-            this.btnTaoMoi.Location = new System.Drawing.Point(94, 5);
+            this.btnTaoMoi.Location = new System.Drawing.Point(91, 5);
             this.btnTaoMoi.Name = "btnTaoMoi";
             this.btnTaoMoi.Size = new System.Drawing.Size(73, 18);
             this.btnTaoMoi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -220,7 +221,7 @@
             this.btnLuuKho.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
             this.btnLuuKho.Image = global::QuanLyKho.Properties.Resources.Save;
             this.btnLuuKho.ImageFixedSize = new System.Drawing.Size(16, 16);
-            this.btnLuuKho.Location = new System.Drawing.Point(11, 5);
+            this.btnLuuKho.Location = new System.Drawing.Point(5, 5);
             this.btnLuuKho.Name = "btnLuuKho";
             this.btnLuuKho.Size = new System.Drawing.Size(71, 18);
             this.btnLuuKho.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -690,6 +691,7 @@
             this.txtCo.Name = "txtCo";
             this.txtCo.Size = new System.Drawing.Size(100, 20);
             this.txtCo.TabIndex = 11;
+            this.txtCo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCo_KeyPress);
             // 
             // labelX8
             // 
@@ -715,6 +717,7 @@
             this.txtNo.Name = "txtNo";
             this.txtNo.Size = new System.Drawing.Size(100, 20);
             this.txtNo.TabIndex = 9;
+            this.txtNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNo_KeyPress);
             // 
             // labelX7
             // 
