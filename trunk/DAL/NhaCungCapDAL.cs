@@ -20,7 +20,7 @@ namespace DAL
             string strQuery = "Select * From NHACUNGCAP Where TINHTRANG = 1 and MANHACUNGCAP = N'" + strID + "'";
             DataTable dt = dp.ExecuteQuery(strQuery);
             NhaCungCapDTO dtoNhaCungCap = new NhaCungCapDTO();
-            if (dt != null)
+            if (dt.Rows.Count > 0)
             {
                 dtoNhaCungCap.MaNCC = dt.Rows[0]["MANHACUNGCAP"].ToString();
                 dtoNhaCungCap.TenNCC = dt.Rows[0]["TENNHACUNGCAP"].ToString();

@@ -50,15 +50,15 @@
             this.labelX18 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.labelX17 = new DevComponents.DotNetBar.LabelX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.btnThemNhaCC = new DevComponents.DotNetBar.ButtonX();
             this.txtKemTheo = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtVietBangChu = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtSoTien = new DevComponents.Editors.DoubleInput();
             this.txtLyDoChi = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtDiaChi = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.cmbKhachHang = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.cmbNhaCC = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX16 = new DevComponents.DotNetBar.LabelX();
-            this.labelX15 = new DevComponents.DotNetBar.LabelX();
+            this.lbNgay = new DevComponents.DotNetBar.LabelX();
             this.labelX14 = new DevComponents.DotNetBar.LabelX();
             this.labelX13 = new DevComponents.DotNetBar.LabelX();
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
@@ -71,7 +71,7 @@
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
             this.txtSoPhieu = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
-            this.labelX5 = new DevComponents.DotNetBar.LabelX();
+            this.lbNgayThang = new DevComponents.DotNetBar.LabelX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
@@ -409,15 +409,15 @@
             this.groupPanel2.Controls.Add(this.labelX19);
             this.groupPanel2.Controls.Add(this.labelX18);
             this.groupPanel2.Controls.Add(this.labelX17);
-            this.groupPanel2.Controls.Add(this.buttonX1);
+            this.groupPanel2.Controls.Add(this.btnThemNhaCC);
             this.groupPanel2.Controls.Add(this.txtKemTheo);
             this.groupPanel2.Controls.Add(this.txtVietBangChu);
             this.groupPanel2.Controls.Add(this.txtSoTien);
             this.groupPanel2.Controls.Add(this.txtLyDoChi);
             this.groupPanel2.Controls.Add(this.txtDiaChi);
-            this.groupPanel2.Controls.Add(this.cmbKhachHang);
+            this.groupPanel2.Controls.Add(this.cmbNhaCC);
             this.groupPanel2.Controls.Add(this.labelX16);
-            this.groupPanel2.Controls.Add(this.labelX15);
+            this.groupPanel2.Controls.Add(this.lbNgay);
             this.groupPanel2.Controls.Add(this.labelX14);
             this.groupPanel2.Controls.Add(this.labelX13);
             this.groupPanel2.Controls.Add(this.labelX12);
@@ -430,7 +430,7 @@
             this.groupPanel2.Controls.Add(this.labelX7);
             this.groupPanel2.Controls.Add(this.txtSoPhieu);
             this.groupPanel2.Controls.Add(this.labelX6);
-            this.groupPanel2.Controls.Add(this.labelX5);
+            this.groupPanel2.Controls.Add(this.lbNgayThang);
             this.groupPanel2.Controls.Add(this.labelX4);
             this.groupPanel2.Controls.Add(this.labelX3);
             this.groupPanel2.Controls.Add(this.labelX2);
@@ -484,17 +484,18 @@
             this.labelX17.TabIndex = 27;
             this.labelX17.Text = "KẾ TOÁN TRƯỞNG";
             // 
-            // buttonX1
+            // btnThemNhaCC
             // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Image = global::QuanLyKho.Properties.Resources._112_Plus_Green_16x16_72;
-            this.buttonX1.Location = new System.Drawing.Point(457, 167);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(46, 20);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.TabIndex = 26;
-            this.buttonX1.Tooltip = "Nếu chưa có hãy click vào đây để thêm người nhận tiền";
+            this.btnThemNhaCC.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnThemNhaCC.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnThemNhaCC.Image = global::QuanLyKho.Properties.Resources._112_Plus_Green_16x16_72;
+            this.btnThemNhaCC.Location = new System.Drawing.Point(457, 167);
+            this.btnThemNhaCC.Name = "btnThemNhaCC";
+            this.btnThemNhaCC.Size = new System.Drawing.Size(46, 20);
+            this.btnThemNhaCC.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnThemNhaCC.TabIndex = 26;
+            this.btnThemNhaCC.Tooltip = "Nếu chưa có hãy click vào đây để thêm người nhận tiền";
+            this.btnThemNhaCC.Click += new System.EventHandler(this.btnThemNhaCC_Click);
             // 
             // txtKemTheo
             // 
@@ -541,7 +542,7 @@
             // 
             this.txtLyDoChi.Border.Class = "TextBoxBorder";
             this.txtLyDoChi.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtLyDoChi.Location = new System.Drawing.Point(193, 217);
+            this.txtLyDoChi.Location = new System.Drawing.Point(193, 218);
             this.txtLyDoChi.Name = "txtLyDoChi";
             this.txtLyDoChi.Size = new System.Drawing.Size(310, 20);
             this.txtLyDoChi.TabIndex = 22;
@@ -553,22 +554,23 @@
             // 
             this.txtDiaChi.Border.Class = "TextBoxBorder";
             this.txtDiaChi.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtDiaChi.Location = new System.Drawing.Point(193, 191);
+            this.txtDiaChi.Location = new System.Drawing.Point(193, 192);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(310, 20);
             this.txtDiaChi.TabIndex = 21;
             // 
-            // cmbKhachHang
+            // cmbNhaCC
             // 
-            this.cmbKhachHang.DisplayMember = "Text";
-            this.cmbKhachHang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbKhachHang.FormattingEnabled = true;
-            this.cmbKhachHang.ItemHeight = 14;
-            this.cmbKhachHang.Location = new System.Drawing.Point(193, 168);
-            this.cmbKhachHang.Name = "cmbKhachHang";
-            this.cmbKhachHang.Size = new System.Drawing.Size(257, 20);
-            this.cmbKhachHang.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmbKhachHang.TabIndex = 20;
+            this.cmbNhaCC.DisplayMember = "Text";
+            this.cmbNhaCC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbNhaCC.FormattingEnabled = true;
+            this.cmbNhaCC.ItemHeight = 14;
+            this.cmbNhaCC.Location = new System.Drawing.Point(193, 168);
+            this.cmbNhaCC.Name = "cmbNhaCC";
+            this.cmbNhaCC.Size = new System.Drawing.Size(257, 20);
+            this.cmbNhaCC.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmbNhaCC.TabIndex = 20;
+            this.cmbNhaCC.SelectedIndexChanged += new System.EventHandler(this.cmbNhaCC_SelectedIndexChanged);
             // 
             // labelX16
             // 
@@ -584,19 +586,19 @@
             this.labelX16.TabIndex = 19;
             this.labelX16.Text = "GIÁM ĐỐC";
             // 
-            // labelX15
+            // lbNgay
             // 
-            this.labelX15.BackColor = System.Drawing.Color.Transparent;
+            this.lbNgay.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelX15.Location = new System.Drawing.Point(601, 309);
-            this.labelX15.Name = "labelX15";
-            this.labelX15.Size = new System.Drawing.Size(154, 23);
-            this.labelX15.TabIndex = 18;
-            this.labelX15.Text = "Ngày 31 tháng 05 năm 2012";
+            this.lbNgay.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lbNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbNgay.Location = new System.Drawing.Point(601, 309);
+            this.lbNgay.Name = "lbNgay";
+            this.lbNgay.Size = new System.Drawing.Size(154, 23);
+            this.lbNgay.TabIndex = 18;
+            this.lbNgay.Text = "Ngày 31 tháng 05 năm 2012";
             // 
             // labelX14
             // 
@@ -751,19 +753,19 @@
             this.labelX6.TabIndex = 6;
             this.labelX6.Text = "Số phiếu : ";
             // 
-            // labelX5
+            // lbNgayThang
             // 
-            this.labelX5.BackColor = System.Drawing.Color.Transparent;
+            this.lbNgayThang.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelX5.Location = new System.Drawing.Point(298, 92);
-            this.labelX5.Name = "labelX5";
-            this.labelX5.Size = new System.Drawing.Size(154, 23);
-            this.labelX5.TabIndex = 5;
-            this.labelX5.Text = "Ngày 31 tháng 05 năm 2012";
+            this.lbNgayThang.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lbNgayThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbNgayThang.Location = new System.Drawing.Point(298, 92);
+            this.lbNgayThang.Name = "lbNgayThang";
+            this.lbNgayThang.Size = new System.Drawing.Size(154, 23);
+            this.lbNgayThang.TabIndex = 5;
+            this.lbNgayThang.Text = "Ngày 31 tháng 05 năm 2012";
             // 
             // labelX4
             // 
@@ -871,15 +873,15 @@
         private DevComponents.DotNetBar.LabelX labelX18;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel2;
         private DevComponents.DotNetBar.LabelX labelX17;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
+        private DevComponents.DotNetBar.ButtonX btnThemNhaCC;
         private DevComponents.DotNetBar.Controls.TextBoxX txtKemTheo;
         private DevComponents.DotNetBar.Controls.TextBoxX txtVietBangChu;
         private DevComponents.Editors.DoubleInput txtSoTien;
         private DevComponents.DotNetBar.Controls.TextBoxX txtLyDoChi;
         private DevComponents.DotNetBar.Controls.TextBoxX txtDiaChi;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbKhachHang;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbNhaCC;
         private DevComponents.DotNetBar.LabelX labelX16;
-        private DevComponents.DotNetBar.LabelX labelX15;
+        private DevComponents.DotNetBar.LabelX lbNgay;
         private DevComponents.DotNetBar.LabelX labelX14;
         private DevComponents.DotNetBar.LabelX labelX13;
         private DevComponents.DotNetBar.LabelX labelX12;
@@ -892,7 +894,7 @@
         private DevComponents.DotNetBar.LabelX labelX7;
         private DevComponents.DotNetBar.Controls.TextBoxX txtSoPhieu;
         private DevComponents.DotNetBar.LabelX labelX6;
-        private DevComponents.DotNetBar.LabelX labelX5;
+        private DevComponents.DotNetBar.LabelX lbNgayThang;
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX2;
