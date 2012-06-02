@@ -127,9 +127,6 @@
   <data name="filecabinet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\filecabinet.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="112_Minus_Green_16x16_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\112_Minus_Green_16x16_72.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Rename" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rename.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,17 +148,23 @@
   <data name="NhapLieu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NhapLieu.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ThongTinCapNhat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ThongTinCapNhat.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BaoCao" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BaoCao.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="searchS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\searchS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="docgia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\docgia.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="nhanvien" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nhanvien.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="112_Plus_Green_16x16_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\112_Plus_Green_16x16_72.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1415_Paintbrush_256x256" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1415_Paintbrush_256x256.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="networkexplorer_dll_21_101" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\networkexplorer_dll_21_101.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,8 +226,8 @@
   <data name="1downarrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1downarrow.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PhanQuyenSuDungNhapLieu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PhanQuyenSuDungNhapLieu.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1415_Paintbrush_256x256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1415_Paintbrush_256x256.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TaiSanGroup" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TaiSanGroup.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,6 +247,9 @@
   <data name="kedit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kedit1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="2dowarrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2dowarrow.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="HangHoaGroup" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HangHoaGroup.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -256,11 +262,11 @@
   <data name="IssueTracking_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IssueTracking_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nhanvien" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nhanvien.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Save.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ThongTinCapNhat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ThongTinCapNhat.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="112_Minus_Green_16x16_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\112_Minus_Green_16x16_72.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -286,8 +292,8 @@
   <data name="1downarrow1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1downarrow1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2dowarrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2dowarrow.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PhanQuyenSuDungNhapLieu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PhanQuyenSuDungNhapLieu.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HuongDanSuDung" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HuongDanSuDung.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -302,7 +308,7 @@
     <value>..\Resources\tacgia.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Save.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Edit.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

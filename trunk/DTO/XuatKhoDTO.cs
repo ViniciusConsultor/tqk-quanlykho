@@ -85,5 +85,21 @@ namespace DTO
             get { return _tinhTrang; }
             set { _tinhTrang = value; }
         }
+
+        private string _giaoHang;
+
+        public string GiaoHang
+        {
+            get { return _giaoHang; }
+            set { _giaoHang = value; }
+        }
+
+        private string _lyDoXuat;
+
+        public string LyDoXuat
+        {
+            get { return _lyDoXuat; }
+            set { _lyDoXuat = value; }
+        }
     }
 }

@@ -211,6 +211,29 @@ namespace QuanLyKho
             Variable.strTenNhanVien = "";
             lbUser.Text = "Chưa đăng nhập";
         }
+<<<<<<< .mine
+
+        private void btnNhapXuatTon_Click(object sender, EventArgs e)
+        {
+            FrmBCNhapXuatTon frm = new FrmBCNhapXuatTon();
+            frm.ShowDialog();
+            //CreateTab(stcMenu, "Báo cáo nhập xuất tồn", "stiNhapXuatTon", "stcpNhapXuatTon", frm);
+        }
+
+        private void btnNhapHang_Click(object sender, EventArgs e)
+        {
+            FrmTCNhapHang frm = new FrmTCNhapHang();
+            //frm.ShowDialog();
+            CreateTab(stcMenu, "Tra cứu nhập hàng", "stiTCNhapHang", "stcpTCNhapHang", frm);
+        }
+
+        private void btnXuatHang_Click(object sender, EventArgs e)
+        {
+            FrmTCXuatHang frm = new FrmTCXuatHang();
+            //frm.ShowDialog();
+            CreateTab(stcMenu, "Tra cứu xuất hàng", "stiTCXuatHang", "stcpTCXuatHang", frm);
+        }
+=======
 
         private void buttonItem2_Click(object sender, EventArgs e)
         {
@@ -218,5 +241,6 @@ namespace QuanLyKho
             //frmTaiKhoanNganHang.MdiParent = this;
             frmTaiKhoanNganHang.ShowDialog();
         }
+>>>>>>> .r42
     }
 }
