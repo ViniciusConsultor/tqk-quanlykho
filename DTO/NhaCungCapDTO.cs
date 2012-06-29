@@ -38,6 +38,14 @@ namespace DTO
             set { _maSoThue = value; }
         }
 
+        private double _duNo;
+
+        public double DuNo
+        {
+            get { return _duNo; }
+            set { _duNo = value; }
+        }
+
         private string _soTaiKhoan;
 
         public string SoTaiKhoan

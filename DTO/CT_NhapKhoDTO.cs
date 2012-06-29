@@ -6,6 +6,14 @@ namespace DTO
 {
     public class CT_NhapKhoDTO
     {
+        private string _maCTNhapKho;
+
+        public string MaCTNhapKho
+        {
+            get { return _maCTNhapKho; }
+            set { _maCTNhapKho = value; }
+        }
+
         private string _maNhapKho;
 
         public string MaNhapKho
@@ -30,25 +38,17 @@ namespace DTO
             set { _soLuongNhap = value; }
         }
 
-        private float _giaNhap;
+        private double _giaNhap;
 
-        public float GiaNhap
+        public double GiaNhap
         {
             get { return _giaNhap; }
             set { _giaNhap = value; }
         }
 
-        private string _maThue;
+        private double _thanhTien;
 
-        public string MaThue
-        {
-            get { return _maThue; }
-            set { _maThue = value; }
-        }
-
-        private float _thanhTien;
-
-        public float ThanhTien
+        public double ThanhTien
         {
             get { return _thanhTien; }
             set { _thanhTien = value; }

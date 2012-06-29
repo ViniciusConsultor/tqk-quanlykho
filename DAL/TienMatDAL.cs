@@ -14,7 +14,7 @@ namespace DAL
             TienMatDTO dtoTienMat = new TienMatDTO();
             string strQuery = "Select * From TIENMAT";
             DataTable dtTienMat = dp.ExecuteQuery(strQuery);
-            if (dtTienMat != null)
+            if (dtTienMat.Rows.Count > 0)
             {
                 dtoTienMat.SoTien = float.Parse(dtTienMat.Rows[0]["SOTIEN"].ToString());
             }

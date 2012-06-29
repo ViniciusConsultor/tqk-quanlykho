@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using DTO;
 using DAL;
+using System.Data;
 
 namespace BLL
 {
@@ -31,5 +32,19 @@ namespace BLL
             return dalNhapKho.UpdateNhapKho(dtoNhapKho);
         }
 
+        public DataTable TimKiemDuNo(DateTime dtNgayBD, DateTime dtNgayKT, string strNhaCungCap)
+        {
+            return dalNhapKho.TimKiemDuNo(dtNgayBD, dtNgayKT, strNhaCungCap);
+        }
+
+        public DataTable TimKiemTongNhap(DateTime dtNgayBD, DateTime dtNgayKT, string strMaMatHang)
+        {
+            return dalNhapKho.TimKiemTongNhap(dtNgayBD, dtNgayKT, strMaMatHang);
+        }
+
+        public DataTable TimKiemCTDuNo(DateTime dtNgayBD, DateTime dtNgayKT, string strNhaCungCap)
+        {
+            return dalNhapKho.TimKiemCTDuNo(dtNgayBD, dtNgayKT, strNhaCungCap);
+        }
     }
 }

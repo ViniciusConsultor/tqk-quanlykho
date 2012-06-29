@@ -13,5 +13,10 @@ namespace DTO
             get { return _soTien; }
             set { _soTien = value; }
         }
+
+        public TienMatDTO()
+        {
+            SoTien = 0;
+        }
     }
 }

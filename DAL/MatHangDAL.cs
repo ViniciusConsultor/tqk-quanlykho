@@ -11,7 +11,9 @@ namespace DAL
 
         public DataTable GetAllMatHang()
         {
-            string strQuery = "Select * From MATHANG mh, NHOMHANG nh, KHO k, DONVITINH dvt Where mh.MANHOMHANG = nh.MANHOMHANG and mh.MAKHO = k.MAKHO and mh.MADONVITINH = dvt.MADONVITINH and mh.TINHTRANG = 1";
+            string strQuery = "Select * From MATHANG mh, NHOMHANG nh, KHO k, DONVITINH dvt ";
+            strQuery += "Where mh.MANHOMHANG = nh.MANHOMHANG and mh.MAKHO = k.MAKHO and mh.MADONVITINH = dvt.MADONVITINH and mh.TINHTRANG = 1 ";
+            strQuery += "ORDER BY mh.MAMATHANG";
             return dp.ExecuteQuery(strQuery);
         }
 
@@ -28,7 +30,8 @@ namespace DAL
                 dtoMatHang.MaKho = dtMatHang.Rows[0]["MAKHO"].ToString();
                 dtoMatHang.TenMH = dtMatHang.Rows[0]["TENMATHANG"].ToString();
                 dtoMatHang.MaDonViTinh = dtMatHang.Rows[0]["MADONVITINH"].ToString();
-                //dtoMatHang.TonDau = int.Parse(dtMatHang.Rows[0]["TONDAU"].ToString());
+                dtoMatHang.TonDau = int.Parse(dtMatHang.Rows[0]["TONDAU"].ToString());
+                dtoMatHang.SoLuongTon = int.Parse(dtMatHang.Rows[0]["SOLUONGTON"].ToString());
                 dtoMatHang.MoTa = dtMatHang.Rows[0]["MOTA"].ToString();
                 dtoMatHang.TinhTrang = dtMatHang.Rows[0]["TINHTRANG"].ToString();
             }
@@ -43,7 +46,7 @@ namespace DAL
             strQuery += "N'" + dtoMatHang.MaKho + "',";
             strQuery += "N'" + dtoMatHang.TenMH + "',";
             strQuery += "N'" + dtoMatHang.MaDonViTinh + "',";
-            strQuery += dtoMatHang.TonDau + ",";
+            strQuery += dtoMatHang.TonDau + ", 0,";
             strQuery += "N'" + dtoMatHang.MoTa + "', 1)";
             return dp.ExecuteNonQuery(strQuery);
         }
@@ -59,7 +62,40 @@ namespace DAL
             strQuery += "MOTA = N'" + dtoMatHang.MoTa + "' ";
             strQuery += "Where MAMATHANG = N'" + dtoMatHang.MaMH + "'";
             return dp.ExecuteNonQuery(strQuery);
+        }
 
+        public bool UpdateHangTon(string strMaMatHang, int intTonDau, int intSoLuongTon)
+        {
+            string strQuery = "Update MATHANG Set ";
+            strQuery += "TONDAU = " + intTonDau + ",";
+            strQuery += "SOLUONGTON = " + intSoLuongTon + " ";
+            strQuery += "Where MAMATHANG = N'" + strMaMatHang + "'";
+            return dp.ExecuteNonQuery(strQuery);
+        }
+
+
+        public bool UpdateTonDauKy(string strMaMatHang, int intSoLuong)
+        {
+            string strQuery = "Update MATHANG Set ";
+            strQuery += "TONDAU = " + intSoLuong + " ";
+            strQuery += "Where MAMATHANG = N'" + strMaMatHang + "'";
+            return dp.ExecuteNonQuery(strQuery);
+        }
+
+        public bool UpdateTonNhap(string strMaMatHang, int intSoLuong)
+        {
+            string strQuery = "Update MATHANG Set ";
+            strQuery += "SOLUONGTON = SOLUONGTON + " + intSoLuong + " ";
+            strQuery += "Where MAMATHANG = N'" + strMaMatHang + "'";
+            return dp.ExecuteNonQuery(strQuery);
+        }
+
+        public bool UpdateTonXuat(string strMaMatHang, int intSoLuong)
+        {
+            string strQuery = "Update MATHANG Set ";
+            strQuery += "SOLUONGTON = SOLUONGTON - " + intSoLuong + " ";
+            strQuery += "Where MAMATHANG = N'" + strMaMatHang + "'";
+            return dp.ExecuteNonQuery(strQuery);
         }
 
         public bool DelMatHang(string strMaMH)

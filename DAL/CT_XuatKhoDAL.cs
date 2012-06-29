@@ -13,12 +13,12 @@ namespace DAL
         public bool InsertCT_XuatKho(CT_XuatKhoDTO dtoCT_XuatKho)
         {
             string strQuery = "Insert Into CT_XUATKHO Values(";
-            strQuery += "N'" + dtoCT_XuatKho.MaHoaDonXuat + "',";
+            strQuery += "N'" + dtoCT_XuatKho.MaCTXuatKho + "',";
+            strQuery += "N'" + dtoCT_XuatKho.MaXuatKho + "',";
             strQuery += "N'" + dtoCT_XuatKho.MaMatHang + "',";
             strQuery += dtoCT_XuatKho.SoLuongXuat + ",";
             strQuery += dtoCT_XuatKho.GiaTien + ",";
-            strQuery += "N'" + dtoCT_XuatKho.MaThue + "',";
-            strQuery += dtoCT_XuatKho.ThanhTien + ",1)";
+            strQuery += dtoCT_XuatKho.ThanhTien + "," + dtoCT_XuatKho.TinhTrang + ")";
             return dp.ExecuteNonQuery(strQuery);
         }
 
@@ -28,7 +28,6 @@ namespace DAL
             strQuery += "MAMATHANG = N'" + dtoCT_XuatKho.MaMatHang + "',";
             strQuery += "SOLUONGXUAT = " + dtoCT_XuatKho.SoLuongXuat + ",";
             strQuery += "GIATIEN = " + dtoCT_XuatKho.GiaTien + ",";
-            strQuery += "MATHUE = N'" + dtoCT_XuatKho.MaThue + "',";
             strQuery += "THANHTIEN = " + dtoCT_XuatKho.ThanhTien ;
             strQuery += "Where MAHOADONXUAT = N'" + dtoCT_XuatKho.MaHoaDonXuat + "'";
             return dp.ExecuteNonQuery(strQuery);

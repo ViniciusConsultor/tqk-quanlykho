@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using DTO;
 using DAL;
+using System.Data;
 namespace BLL
 {
     public class PhieuThuBLL
@@ -15,14 +16,6 @@ namespace BLL
             {
                 strError += " Tên người nhận không được rỗng.";
             }
-            if (dtoPhieuThu.DiaChi.Trim().Equals("") == true)
-            {
-                strError += " Địa chỉ người nhận không được rỗng.";
-            }
-            if (dtoPhieuThu.LyDoThu.Trim().Equals("") == true)
-            {
-                strError += " Lý do thu không được rỗng.";
-            }
             if (dtoPhieuThu.SoTien.Equals("") == true)
             {
                 strError += " Số tiền không được rỗng.";
@@ -30,18 +23,6 @@ namespace BLL
             if (dtoPhieuThu.VietBangChu.Trim().Equals("") == true)
             {
                 strError += "Số tiền viết bằng chữ không được rỗng.";
-            }
-            if (dtoPhieuThu.SoPhieu.Trim().Equals("") == true)
-            {
-                strError += " Số phiếu không được rỗng.";
-            }
-            if (dtoPhieuThu.No.Equals("") == true)
-            {
-                strError += " No không được rỗng.";
-            }
-            if (dtoPhieuThu.Co.Equals("") == true)
-            {
-                strError += " Co không được rỗng.";
             }
             if (strError == "")
             {
@@ -52,6 +33,16 @@ namespace BLL
             {
                 return strError;
             }
+        }
+
+        public DataTable TimKiem(string strIDKhachHang, DateTime dtNgayBD, DateTime dtNgayKT)
+        {
+            return dalPhieuThu.TimKiem(strIDKhachHang, dtNgayBD, dtNgayKT);
+        }
+
+        public DataTable TimKiemChiTiet(string strIDKhachHang, DateTime dtNgayBD, DateTime dtNgayKT)
+        {
+            return dalPhieuThu.TimKiemChiTiet(strIDKhachHang, dtNgayBD, dtNgayKT);
         }
     }
 }

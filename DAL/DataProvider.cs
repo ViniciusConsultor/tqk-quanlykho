@@ -24,10 +24,10 @@ namespace DAL
 
         public DataProvider()
         {
+            //Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\KHO_TQK.mdf;Integrated Security=True;User Instance=True
             _strConnect = "server=.\\SQLEXPRESS;";
             _strConnect += "database=KHO_TQK;";
             _strConnect += "Trusted_Connection=True;";
-
         }
         /// <summary>
         /// Kết nối cơ sở dữ liệu

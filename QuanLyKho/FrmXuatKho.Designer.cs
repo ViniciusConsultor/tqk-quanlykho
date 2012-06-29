@@ -28,58 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.txtGhiChu = new DevComponents.DotNetBar.Controls.TextBoxX();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.expandablePanel1 = new DevComponents.DotNetBar.ExpandablePanel();
             this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.expandablePanel3 = new DevComponents.DotNetBar.ExpandablePanel();
-            this.dgvXuatKho = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.dgvMatHang = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.colMaMatHang = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
             this.colTenMatHang = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
             this.colGia = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
+            this.colTon = new DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn();
             this.colSoLuong = new DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn();
             this.colDonViTinh = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
-            this.colMucThue = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
-            this.colThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colThanhTien = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.txtTienSauThue = new DevComponents.Editors.DoubleInput();
+            this.labelX19 = new DevComponents.DotNetBar.LabelX();
+            this.cmbMucThue = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.txtTongTien = new DevComponents.Editors.DoubleInput();
             this.labelX23 = new DevComponents.DotNetBar.LabelX();
             this.labelX22 = new DevComponents.DotNetBar.LabelX();
             this.labelX21 = new DevComponents.DotNetBar.LabelX();
             this.btnHuy = new DevComponents.DotNetBar.ButtonX();
-            this.labelX20 = new DevComponents.DotNetBar.LabelX();
-            this.labelX19 = new DevComponents.DotNetBar.LabelX();
-            this.rdbTienMat = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.rdbChuyenKhoan = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.labelX18 = new DevComponents.DotNetBar.LabelX();
             this.btnIn = new DevComponents.DotNetBar.ButtonX();
             this.btnTaoMoi = new DevComponents.DotNetBar.ButtonX();
             this.labelX17 = new DevComponents.DotNetBar.LabelX();
-            this.textBoxX11 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX10 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX16 = new DevComponents.DotNetBar.LabelX();
             this.labelX15 = new DevComponents.DotNetBar.LabelX();
-            this.btnLuuKho = new DevComponents.DotNetBar.ButtonX();
+            this.btnXuatKho = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.groupPanel6 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.groupPanel8 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.txtGhiChu = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX14 = new DevComponents.DotNetBar.LabelX();
             this.txtSoHoaDon = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.dtNgayLap = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.labelX13 = new DevComponents.DotNetBar.LabelX();
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel7 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.cmbTenNhaCungCap = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.cmbMaNhaCungCap = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.btnThemNhaCungCap = new DevComponents.DotNetBar.ButtonX();
+            this.cmbTenKhachHang = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.cmbMaKhachHang = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.btnThemKhachHang = new DevComponents.DotNetBar.ButtonX();
             this.txtDiaChi = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
-            this.txtSoTaiKhoan = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtLyDoNhap = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX10 = new DevComponents.DotNetBar.LabelX();
-            this.txtNganHang = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtNguoiNhan = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX9 = new DevComponents.DotNetBar.LabelX();
-            this.txtMaSoThue = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.txtDienThoai = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
@@ -96,8 +92,10 @@
             this.expandablePanel1.SuspendLayout();
             this.groupPanel4.SuspendLayout();
             this.expandablePanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvXuatKho)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMatHang)).BeginInit();
             this.groupPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTienSauThue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTongTien)).BeginInit();
             this.groupPanel2.SuspendLayout();
             this.groupPanel6.SuspendLayout();
             this.groupPanel8.SuspendLayout();
@@ -107,19 +105,6 @@
             this.groupPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtGhiChu
-            // 
-            // 
-            // 
-            // 
-            this.txtGhiChu.Border.Class = "TextBoxBorder";
-            this.txtGhiChu.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtGhiChu.Location = new System.Drawing.Point(77, 71);
-            this.txtGhiChu.Multiline = true;
-            this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(175, 46);
-            this.txtGhiChu.TabIndex = 22;
-            // 
             // groupPanel1
             // 
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
@@ -128,7 +113,7 @@
             this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel1.Location = new System.Drawing.Point(0, 0);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(1094, 496);
+            this.groupPanel1.Size = new System.Drawing.Size(1101, 533);
             // 
             // 
             // 
@@ -170,7 +155,7 @@
             this.expandablePanel1.ExpandButtonVisible = false;
             this.expandablePanel1.Location = new System.Drawing.Point(0, 0);
             this.expandablePanel1.Name = "expandablePanel1";
-            this.expandablePanel1.Size = new System.Drawing.Size(1092, 494);
+            this.expandablePanel1.Size = new System.Drawing.Size(1099, 531);
             this.expandablePanel1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.expandablePanel1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.expandablePanel1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -196,7 +181,7 @@
             this.groupPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel4.Location = new System.Drawing.Point(0, 185);
             this.groupPanel4.Name = "groupPanel4";
-            this.groupPanel4.Size = new System.Drawing.Size(1092, 282);
+            this.groupPanel4.Size = new System.Drawing.Size(1099, 319);
             // 
             // 
             // 
@@ -231,13 +216,13 @@
             // 
             this.expandablePanel3.CanvasColor = System.Drawing.SystemColors.Control;
             this.expandablePanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.expandablePanel3.Controls.Add(this.dgvXuatKho);
+            this.expandablePanel3.Controls.Add(this.dgvMatHang);
             this.expandablePanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.expandablePanel3.ExpandButtonVisible = false;
             this.expandablePanel3.Location = new System.Drawing.Point(0, 0);
             this.expandablePanel3.Name = "expandablePanel3";
             this.expandablePanel3.Padding = new System.Windows.Forms.Padding(5);
-            this.expandablePanel3.Size = new System.Drawing.Size(1090, 280);
+            this.expandablePanel3.Size = new System.Drawing.Size(1097, 317);
             this.expandablePanel3.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.expandablePanel3.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.expandablePanel3.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -256,33 +241,34 @@
             this.expandablePanel3.TitleStyle.GradientAngle = 90;
             this.expandablePanel3.TitleText = "Title Bar";
             // 
-            // dgvXuatKho
+            // dgvMatHang
             // 
-            this.dgvXuatKho.BackgroundColor = System.Drawing.Color.White;
-            this.dgvXuatKho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvXuatKho.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvMatHang.BackgroundColor = System.Drawing.Color.White;
+            this.dgvMatHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMatHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaMatHang,
             this.colTenMatHang,
             this.colGia,
+            this.colTon,
             this.colSoLuong,
             this.colDonViTinh,
-            this.colMucThue,
             this.colThanhTien});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvXuatKho.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvXuatKho.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvXuatKho.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvXuatKho.Location = new System.Drawing.Point(5, 5);
-            this.dgvXuatKho.Name = "dgvXuatKho";
-            this.dgvXuatKho.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvXuatKho.Size = new System.Drawing.Size(1080, 270);
-            this.dgvXuatKho.TabIndex = 1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMatHang.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvMatHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvMatHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dgvMatHang.Location = new System.Drawing.Point(5, 5);
+            this.dgvMatHang.Name = "dgvMatHang";
+            this.dgvMatHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvMatHang.Size = new System.Drawing.Size(1087, 307);
+            this.dgvMatHang.TabIndex = 1;
+            this.dgvMatHang.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMatHang_CellEndEdit);
             // 
             // colMaMatHang
             // 
@@ -290,7 +276,6 @@
             this.colMaMatHang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.colMaMatHang.DisplayMember = "Text";
             this.colMaMatHang.DropDownHeight = 106;
-            this.colMaMatHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.colMaMatHang.DropDownWidth = 121;
             this.colMaMatHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.colMaMatHang.HeaderText = "Mã Mặt Hàng";
@@ -300,7 +285,7 @@
             this.colMaMatHang.Name = "colMaMatHang";
             this.colMaMatHang.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.colMaMatHang.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.colMaMatHang.Width = 150;
+            this.colMaMatHang.ToolTipText = "Mã mặt hàng";
             // 
             // colTenMatHang
             // 
@@ -308,7 +293,6 @@
             this.colTenMatHang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.colTenMatHang.DisplayMember = "Text";
             this.colTenMatHang.DropDownHeight = 106;
-            this.colTenMatHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.colTenMatHang.DropDownWidth = 121;
             this.colTenMatHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.colTenMatHang.HeaderText = "Tên Mặt Hàng";
@@ -318,7 +302,8 @@
             this.colTenMatHang.Name = "colTenMatHang";
             this.colTenMatHang.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.colTenMatHang.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.colTenMatHang.Width = 250;
+            this.colTenMatHang.ToolTipText = "Tên mặt hàng";
+            this.colTenMatHang.Width = 300;
             // 
             // colGia
             // 
@@ -334,7 +319,24 @@
             this.colGia.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
             this.colGia.Name = "colGia";
             this.colGia.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colGia.Width = 125;
+            this.colGia.ToolTipText = "Giá của mặt hàng";
+            this.colGia.Width = 150;
+            // 
+            // colTon
+            // 
+            // 
+            // 
+            // 
+            this.colTon.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.colTon.BackgroundStyle.Class = "DataGridViewNumericBorder";
+            this.colTon.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.colTon.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
+            this.colTon.HeaderText = "Số Lượng Tồn";
+            this.colTon.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.colTon.Name = "colTon";
+            this.colTon.ReadOnly = true;
+            this.colTon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colTon.ToolTipText = "Số lượng tồn bao gồm tồn đầu";
             // 
             // colSoLuong
             // 
@@ -345,16 +347,18 @@
             this.colSoLuong.BackgroundStyle.Class = "DataGridViewNumericBorder";
             this.colSoLuong.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.colSoLuong.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
-            this.colSoLuong.HeaderText = "Số Lượng";
+            this.colSoLuong.HeaderText = "Số Lượng Xuất";
             this.colSoLuong.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
             this.colSoLuong.Name = "colSoLuong";
             this.colSoLuong.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colSoLuong.ToolTipText = "Số lượng xuất";
             this.colSoLuong.Width = 125;
             // 
             // colDonViTinh
             // 
             this.colDonViTinh.DisplayMember = "Text";
             this.colDonViTinh.DropDownHeight = 106;
+            this.colDonViTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.colDonViTinh.DropDownWidth = 121;
             this.colDonViTinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.colDonViTinh.HeaderText = "Đơn Vị Tính";
@@ -362,60 +366,52 @@
             this.colDonViTinh.IntegralHeight = false;
             this.colDonViTinh.ItemHeight = 15;
             this.colDonViTinh.Name = "colDonViTinh";
+            this.colDonViTinh.ReadOnly = true;
             this.colDonViTinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.colDonViTinh.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.colDonViTinh.Width = 125;
-            // 
-            // colMucThue
-            // 
-            this.colMucThue.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.colMucThue.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.colMucThue.DisplayMember = "Text";
-            this.colMucThue.DropDownHeight = 106;
-            this.colMucThue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.colMucThue.DropDownWidth = 121;
-            this.colMucThue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.colMucThue.HeaderText = "Mức Thuế";
-            this.colMucThue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.colMucThue.IntegralHeight = false;
-            this.colMucThue.ItemHeight = 15;
-            this.colMucThue.Name = "colMucThue";
-            this.colMucThue.ReadOnly = true;
-            this.colMucThue.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colMucThue.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.colDonViTinh.ToolTipText = "Đơn vị tính cho mặt hàng";
             // 
             // colThanhTien
             // 
+            // 
+            // 
+            // 
+            this.colThanhTien.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.colThanhTien.BackgroundStyle.Class = "DataGridViewNumericBorder";
+            this.colThanhTien.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.colThanhTien.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
             this.colThanhTien.HeaderText = "Thành Tiền";
+            this.colThanhTien.Increment = 1D;
+            this.colThanhTien.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
             this.colThanhTien.Name = "colThanhTien";
             this.colThanhTien.ReadOnly = true;
-            this.colThanhTien.Width = 125;
+            this.colThanhTien.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colThanhTien.ToolTipText = "Tiền của mặt hàng";
+            this.colThanhTien.Width = 150;
             // 
             // groupPanel3
             // 
             this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel3.Controls.Add(this.txtTienSauThue);
+            this.groupPanel3.Controls.Add(this.labelX19);
+            this.groupPanel3.Controls.Add(this.cmbMucThue);
+            this.groupPanel3.Controls.Add(this.txtTongTien);
             this.groupPanel3.Controls.Add(this.labelX23);
             this.groupPanel3.Controls.Add(this.labelX22);
             this.groupPanel3.Controls.Add(this.labelX21);
             this.groupPanel3.Controls.Add(this.btnHuy);
-            this.groupPanel3.Controls.Add(this.labelX20);
-            this.groupPanel3.Controls.Add(this.labelX19);
-            this.groupPanel3.Controls.Add(this.rdbTienMat);
-            this.groupPanel3.Controls.Add(this.rdbChuyenKhoan);
             this.groupPanel3.Controls.Add(this.labelX18);
             this.groupPanel3.Controls.Add(this.btnIn);
             this.groupPanel3.Controls.Add(this.btnTaoMoi);
             this.groupPanel3.Controls.Add(this.labelX17);
-            this.groupPanel3.Controls.Add(this.textBoxX11);
-            this.groupPanel3.Controls.Add(this.textBoxX10);
             this.groupPanel3.Controls.Add(this.labelX16);
             this.groupPanel3.Controls.Add(this.labelX15);
-            this.groupPanel3.Controls.Add(this.btnLuuKho);
+            this.groupPanel3.Controls.Add(this.btnXuatKho);
             this.groupPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupPanel3.Location = new System.Drawing.Point(0, 467);
+            this.groupPanel3.Location = new System.Drawing.Point(0, 504);
             this.groupPanel3.Name = "groupPanel3";
-            this.groupPanel3.Size = new System.Drawing.Size(1092, 27);
+            this.groupPanel3.Size = new System.Drawing.Size(1099, 27);
             // 
             // 
             // 
@@ -446,6 +442,62 @@
             this.groupPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel3.TabIndex = 2;
             // 
+            // txtTienSauThue
+            // 
+            this.txtTienSauThue.AllowEmptyState = false;
+            // 
+            // 
+            // 
+            this.txtTienSauThue.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtTienSauThue.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTienSauThue.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtTienSauThue.Increment = 1D;
+            this.txtTienSauThue.Location = new System.Drawing.Point(957, 3);
+            this.txtTienSauThue.Name = "txtTienSauThue";
+            this.txtTienSauThue.Size = new System.Drawing.Size(126, 20);
+            this.txtTienSauThue.TabIndex = 19;
+            // 
+            // labelX19
+            // 
+            this.labelX19.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX19.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX19.Location = new System.Drawing.Point(874, 2);
+            this.labelX19.Name = "labelX19";
+            this.labelX19.Size = new System.Drawing.Size(80, 21);
+            this.labelX19.TabIndex = 18;
+            this.labelX19.Text = "Tiền sau thuế : ";
+            // 
+            // cmbMucThue
+            // 
+            this.cmbMucThue.DisplayMember = "Text";
+            this.cmbMucThue.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbMucThue.FormattingEnabled = true;
+            this.cmbMucThue.ItemHeight = 14;
+            this.cmbMucThue.Location = new System.Drawing.Point(568, 3);
+            this.cmbMucThue.Name = "cmbMucThue";
+            this.cmbMucThue.Size = new System.Drawing.Size(77, 20);
+            this.cmbMucThue.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmbMucThue.TabIndex = 17;
+            this.cmbMucThue.SelectedIndexChanged += new System.EventHandler(this.cmbMucThue_SelectedIndexChanged);
+            // 
+            // txtTongTien
+            // 
+            this.txtTongTien.AllowEmptyState = false;
+            // 
+            // 
+            // 
+            this.txtTongTien.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtTongTien.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTongTien.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtTongTien.Increment = 1D;
+            this.txtTongTien.Location = new System.Drawing.Point(741, 3);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(130, 20);
+            this.txtTongTien.TabIndex = 16;
+            // 
             // labelX23
             // 
             this.labelX23.BackColor = System.Drawing.Color.Transparent;
@@ -455,7 +507,7 @@
             this.labelX23.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX23.Location = new System.Drawing.Point(85, 4);
             this.labelX23.Name = "labelX23";
-            this.labelX23.Size = new System.Drawing.Size(10, 20);
+            this.labelX23.Size = new System.Drawing.Size(3, 20);
             this.labelX23.TabIndex = 13;
             this.labelX23.Text = "|";
             // 
@@ -466,9 +518,9 @@
             // 
             // 
             this.labelX22.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX22.Location = new System.Drawing.Point(169, 3);
+            this.labelX22.Location = new System.Drawing.Point(173, 3);
             this.labelX22.Name = "labelX22";
-            this.labelX22.Size = new System.Drawing.Size(10, 20);
+            this.labelX22.Size = new System.Drawing.Size(3, 20);
             this.labelX22.TabIndex = 15;
             this.labelX22.Text = "|";
             // 
@@ -479,9 +531,9 @@
             // 
             // 
             this.labelX21.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX21.Location = new System.Drawing.Point(230, 2);
+            this.labelX21.Location = new System.Drawing.Point(243, 2);
             this.labelX21.Name = "labelX21";
-            this.labelX21.Size = new System.Drawing.Size(10, 20);
+            this.labelX21.Size = new System.Drawing.Size(3, 20);
             this.labelX21.TabIndex = 14;
             this.labelX21.Text = "|";
             // 
@@ -492,72 +544,14 @@
             this.btnHuy.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
             this.btnHuy.Image = global::QuanLyKho.Properties.Resources.thoat;
             this.btnHuy.ImageFixedSize = new System.Drawing.Size(16, 16);
-            this.btnHuy.Location = new System.Drawing.Point(239, 4);
+            this.btnHuy.Location = new System.Drawing.Point(254, 4);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(63, 18);
-            this.btnHuy.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnHuy.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
             this.btnHuy.TabIndex = 13;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.Tooltip = "Thoát khỏi màn hình";
-            // 
-            // labelX20
-            // 
-            this.labelX20.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX20.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX20.Location = new System.Drawing.Point(615, 2);
-            this.labelX20.Name = "labelX20";
-            this.labelX20.Size = new System.Drawing.Size(10, 20);
-            this.labelX20.TabIndex = 12;
-            this.labelX20.Text = "|";
-            // 
-            // labelX19
-            // 
-            this.labelX19.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX19.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX19.Location = new System.Drawing.Point(322, 3);
-            this.labelX19.Name = "labelX19";
-            this.labelX19.Size = new System.Drawing.Size(109, 20);
-            this.labelX19.TabIndex = 11;
-            this.labelX19.Text = "Hình thức thanh toán : ";
-            // 
-            // rdbTienMat
-            // 
-            this.rdbTienMat.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.rdbTienMat.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.rdbTienMat.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.rdbTienMat.Checked = true;
-            this.rdbTienMat.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.rdbTienMat.CheckValue = "Y";
-            this.rdbTienMat.Location = new System.Drawing.Point(538, 1);
-            this.rdbTienMat.Name = "rdbTienMat";
-            this.rdbTienMat.Size = new System.Drawing.Size(69, 21);
-            this.rdbTienMat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.rdbTienMat.TabIndex = 10;
-            this.rdbTienMat.Text = "Tiền Mặt";
-            // 
-            // rdbChuyenKhoan
-            // 
-            this.rdbChuyenKhoan.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.rdbChuyenKhoan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.rdbChuyenKhoan.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.rdbChuyenKhoan.Location = new System.Drawing.Point(432, 2);
-            this.rdbChuyenKhoan.Name = "rdbChuyenKhoan";
-            this.rdbChuyenKhoan.Size = new System.Drawing.Size(100, 21);
-            this.rdbChuyenKhoan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.rdbChuyenKhoan.TabIndex = 9;
-            this.rdbChuyenKhoan.Text = "Chuyển Khoản";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // labelX18
             // 
@@ -566,9 +560,9 @@
             // 
             // 
             this.labelX18.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX18.Location = new System.Drawing.Point(314, 3);
+            this.labelX18.Location = new System.Drawing.Point(323, 3);
             this.labelX18.Name = "labelX18";
-            this.labelX18.Size = new System.Drawing.Size(10, 20);
+            this.labelX18.Size = new System.Drawing.Size(3, 20);
             this.labelX18.TabIndex = 8;
             this.labelX18.Text = "|";
             // 
@@ -577,15 +571,17 @@
             this.btnIn.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnIn.BackColor = System.Drawing.Color.Transparent;
             this.btnIn.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.btnIn.Enabled = false;
             this.btnIn.Image = global::QuanLyKho.Properties.Resources.Print;
             this.btnIn.ImageFixedSize = new System.Drawing.Size(16, 16);
-            this.btnIn.Location = new System.Drawing.Point(169, 4);
+            this.btnIn.Location = new System.Drawing.Point(180, 3);
             this.btnIn.Name = "btnIn";
             this.btnIn.Size = new System.Drawing.Size(55, 18);
-            this.btnIn.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnIn.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
             this.btnIn.TabIndex = 7;
             this.btnIn.Text = "In";
             this.btnIn.Tooltip = "In";
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // btnTaoMoi
             // 
@@ -594,13 +590,14 @@
             this.btnTaoMoi.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
             this.btnTaoMoi.Image = global::QuanLyKho.Properties.Resources.muon;
             this.btnTaoMoi.ImageFixedSize = new System.Drawing.Size(16, 16);
-            this.btnTaoMoi.Location = new System.Drawing.Point(90, 4);
+            this.btnTaoMoi.Location = new System.Drawing.Point(92, 4);
             this.btnTaoMoi.Name = "btnTaoMoi";
             this.btnTaoMoi.Size = new System.Drawing.Size(73, 18);
-            this.btnTaoMoi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnTaoMoi.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
             this.btnTaoMoi.TabIndex = 6;
             this.btnTaoMoi.Text = "Tạo mới";
             this.btnTaoMoi.Tooltip = "Xóa tất cả các trường dữ liệu";
+            this.btnTaoMoi.Click += new System.EventHandler(this.btnTaoMoi_Click);
             // 
             // labelX17
             // 
@@ -609,37 +606,11 @@
             // 
             // 
             this.labelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX17.Location = new System.Drawing.Point(672, 2);
+            this.labelX17.Location = new System.Drawing.Point(500, 3);
             this.labelX17.Name = "labelX17";
-            this.labelX17.Size = new System.Drawing.Size(10, 20);
+            this.labelX17.Size = new System.Drawing.Size(3, 20);
             this.labelX17.TabIndex = 5;
             this.labelX17.Text = "|";
-            // 
-            // textBoxX11
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX11.Border.Class = "TextBoxBorder";
-            this.textBoxX11.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX11.Location = new System.Drawing.Point(786, 3);
-            this.textBoxX11.Name = "textBoxX11";
-            this.textBoxX11.ReadOnly = true;
-            this.textBoxX11.Size = new System.Drawing.Size(74, 20);
-            this.textBoxX11.TabIndex = 4;
-            // 
-            // textBoxX10
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX10.Border.Class = "TextBoxBorder";
-            this.textBoxX10.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX10.Location = new System.Drawing.Point(934, 3);
-            this.textBoxX10.Name = "textBoxX10";
-            this.textBoxX10.ReadOnly = true;
-            this.textBoxX10.Size = new System.Drawing.Size(149, 20);
-            this.textBoxX10.TabIndex = 3;
             // 
             // labelX16
             // 
@@ -648,11 +619,11 @@
             // 
             // 
             this.labelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX16.Location = new System.Drawing.Point(864, 2);
+            this.labelX16.Location = new System.Drawing.Point(646, 2);
             this.labelX16.Name = "labelX16";
-            this.labelX16.Size = new System.Drawing.Size(68, 21);
+            this.labelX16.Size = new System.Drawing.Size(91, 21);
             this.labelX16.TabIndex = 2;
-            this.labelX16.Text = "Tổng số tiền : ";
+            this.labelX16.Text = "Tiền trước thuế : ";
             // 
             // labelX15
             // 
@@ -661,26 +632,27 @@
             // 
             // 
             this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX15.Location = new System.Drawing.Point(682, 2);
+            this.labelX15.Location = new System.Drawing.Point(511, 2);
             this.labelX15.Name = "labelX15";
-            this.labelX15.Size = new System.Drawing.Size(97, 20);
+            this.labelX15.Size = new System.Drawing.Size(58, 20);
             this.labelX15.TabIndex = 1;
-            this.labelX15.Text = "Tổng số mặt hàng : ";
+            this.labelX15.Text = "Mức thuế : ";
             // 
-            // btnLuuKho
+            // btnXuatKho
             // 
-            this.btnLuuKho.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnLuuKho.BackColor = System.Drawing.Color.Transparent;
-            this.btnLuuKho.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.btnLuuKho.Image = global::QuanLyKho.Properties.Resources._112_UpArrowShort_Blue_32x32_72;
-            this.btnLuuKho.ImageFixedSize = new System.Drawing.Size(16, 16);
-            this.btnLuuKho.Location = new System.Drawing.Point(7, 4);
-            this.btnLuuKho.Name = "btnLuuKho";
-            this.btnLuuKho.Size = new System.Drawing.Size(71, 18);
-            this.btnLuuKho.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnLuuKho.TabIndex = 0;
-            this.btnLuuKho.Text = "Xuất kho";
-            this.btnLuuKho.Tooltip = "Lưu kho";
+            this.btnXuatKho.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnXuatKho.BackColor = System.Drawing.Color.Transparent;
+            this.btnXuatKho.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.btnXuatKho.Image = global::QuanLyKho.Properties.Resources._112_UpArrowShort_Blue_32x32_72;
+            this.btnXuatKho.ImageFixedSize = new System.Drawing.Size(16, 16);
+            this.btnXuatKho.Location = new System.Drawing.Point(7, 4);
+            this.btnXuatKho.Name = "btnXuatKho";
+            this.btnXuatKho.Size = new System.Drawing.Size(71, 18);
+            this.btnXuatKho.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
+            this.btnXuatKho.TabIndex = 0;
+            this.btnXuatKho.Text = "Xuất kho";
+            this.btnXuatKho.Tooltip = "Xuất kho";
+            this.btnXuatKho.Click += new System.EventHandler(this.btnXuatKho_Click);
             // 
             // groupPanel2
             // 
@@ -692,7 +664,7 @@
             this.groupPanel2.Location = new System.Drawing.Point(0, 0);
             this.groupPanel2.Name = "groupPanel2";
             this.groupPanel2.Padding = new System.Windows.Forms.Padding(3);
-            this.groupPanel2.Size = new System.Drawing.Size(1092, 185);
+            this.groupPanel2.Size = new System.Drawing.Size(1099, 185);
             // 
             // 
             // 
@@ -732,7 +704,7 @@
             this.groupPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel6.Location = new System.Drawing.Point(3, 48);
             this.groupPanel6.Name = "groupPanel6";
-            this.groupPanel6.Size = new System.Drawing.Size(1084, 132);
+            this.groupPanel6.Size = new System.Drawing.Size(1091, 132);
             // 
             // 
             // 
@@ -806,6 +778,19 @@
             this.groupPanel8.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel8.TabIndex = 5;
             // 
+            // txtGhiChu
+            // 
+            // 
+            // 
+            // 
+            this.txtGhiChu.Border.Class = "TextBoxBorder";
+            this.txtGhiChu.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtGhiChu.Location = new System.Drawing.Point(77, 71);
+            this.txtGhiChu.Multiline = true;
+            this.txtGhiChu.Name = "txtGhiChu";
+            this.txtGhiChu.Size = new System.Drawing.Size(175, 46);
+            this.txtGhiChu.TabIndex = 22;
+            // 
             // labelX14
             // 
             this.labelX14.BackColor = System.Drawing.Color.Transparent;
@@ -833,6 +818,7 @@
             // 
             // dtNgayLap
             // 
+            this.dtNgayLap.AllowEmptyState = false;
             // 
             // 
             // 
@@ -912,17 +898,15 @@
             // 
             this.groupPanel7.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel7.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel7.Controls.Add(this.cmbTenNhaCungCap);
-            this.groupPanel7.Controls.Add(this.cmbMaNhaCungCap);
-            this.groupPanel7.Controls.Add(this.btnThemNhaCungCap);
+            this.groupPanel7.Controls.Add(this.cmbTenKhachHang);
+            this.groupPanel7.Controls.Add(this.cmbMaKhachHang);
+            this.groupPanel7.Controls.Add(this.btnThemKhachHang);
             this.groupPanel7.Controls.Add(this.txtDiaChi);
             this.groupPanel7.Controls.Add(this.labelX11);
-            this.groupPanel7.Controls.Add(this.txtSoTaiKhoan);
+            this.groupPanel7.Controls.Add(this.txtLyDoNhap);
             this.groupPanel7.Controls.Add(this.labelX10);
-            this.groupPanel7.Controls.Add(this.txtNganHang);
+            this.groupPanel7.Controls.Add(this.txtNguoiNhan);
             this.groupPanel7.Controls.Add(this.labelX9);
-            this.groupPanel7.Controls.Add(this.txtMaSoThue);
-            this.groupPanel7.Controls.Add(this.labelX8);
             this.groupPanel7.Controls.Add(this.txtDienThoai);
             this.groupPanel7.Controls.Add(this.labelX7);
             this.groupPanel7.Controls.Add(this.labelX6);
@@ -966,47 +950,49 @@
             this.groupPanel7.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel7.TabIndex = 4;
             // 
-            // cmbTenNhaCungCap
+            // cmbTenKhachHang
             // 
-            this.cmbTenNhaCungCap.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbTenNhaCungCap.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbTenNhaCungCap.DisplayMember = "Text";
-            this.cmbTenNhaCungCap.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbTenNhaCungCap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTenNhaCungCap.FormattingEnabled = true;
-            this.cmbTenNhaCungCap.ItemHeight = 14;
-            this.cmbTenNhaCungCap.Location = new System.Drawing.Point(320, 33);
-            this.cmbTenNhaCungCap.Name = "cmbTenNhaCungCap";
-            this.cmbTenNhaCungCap.Size = new System.Drawing.Size(203, 20);
-            this.cmbTenNhaCungCap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmbTenNhaCungCap.TabIndex = 22;
+            this.cmbTenKhachHang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbTenKhachHang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbTenKhachHang.DisplayMember = "Text";
+            this.cmbTenKhachHang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbTenKhachHang.FormattingEnabled = true;
+            this.cmbTenKhachHang.ItemHeight = 14;
+            this.cmbTenKhachHang.Location = new System.Drawing.Point(320, 33);
+            this.cmbTenKhachHang.Name = "cmbTenKhachHang";
+            this.cmbTenKhachHang.Size = new System.Drawing.Size(433, 20);
+            this.cmbTenKhachHang.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmbTenKhachHang.TabIndex = 22;
+            this.cmbTenKhachHang.SelectedIndexChanged += new System.EventHandler(this.cmbTenKhachHang_SelectedIndexChanged);
             // 
-            // cmbMaNhaCungCap
+            // cmbMaKhachHang
             // 
-            this.cmbMaNhaCungCap.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbMaNhaCungCap.DisplayMember = "Text";
-            this.cmbMaNhaCungCap.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbMaNhaCungCap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMaNhaCungCap.FormattingEnabled = true;
-            this.cmbMaNhaCungCap.ItemHeight = 14;
-            this.cmbMaNhaCungCap.Location = new System.Drawing.Point(84, 33);
-            this.cmbMaNhaCungCap.Name = "cmbMaNhaCungCap";
-            this.cmbMaNhaCungCap.Size = new System.Drawing.Size(146, 20);
-            this.cmbMaNhaCungCap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmbMaNhaCungCap.TabIndex = 21;
+            this.cmbMaKhachHang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbMaKhachHang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbMaKhachHang.DisplayMember = "Text";
+            this.cmbMaKhachHang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbMaKhachHang.FormattingEnabled = true;
+            this.cmbMaKhachHang.ItemHeight = 14;
+            this.cmbMaKhachHang.Location = new System.Drawing.Point(85, 35);
+            this.cmbMaKhachHang.Name = "cmbMaKhachHang";
+            this.cmbMaKhachHang.Size = new System.Drawing.Size(146, 20);
+            this.cmbMaKhachHang.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmbMaKhachHang.TabIndex = 21;
+            this.cmbMaKhachHang.SelectedIndexChanged += new System.EventHandler(this.cmbMaKhachHang_SelectedIndexChanged);
             // 
-            // btnThemNhaCungCap
+            // btnThemKhachHang
             // 
-            this.btnThemNhaCungCap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnThemNhaCungCap.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnThemNhaCungCap.Image = global::QuanLyKho.Properties.Resources._112_Plus_Green_16x16_72;
-            this.btnThemNhaCungCap.Location = new System.Drawing.Point(529, 32);
-            this.btnThemNhaCungCap.Name = "btnThemNhaCungCap";
-            this.btnThemNhaCungCap.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor();
-            this.btnThemNhaCungCap.Size = new System.Drawing.Size(35, 23);
-            this.btnThemNhaCungCap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnThemNhaCungCap.TabIndex = 20;
-            this.btnThemNhaCungCap.Tooltip = "Nếu chưa có nhà cung cấp, hãy click vào đây.";
+            this.btnThemKhachHang.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnThemKhachHang.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnThemKhachHang.Image = global::QuanLyKho.Properties.Resources._112_Plus_Green_16x16_72;
+            this.btnThemKhachHang.Location = new System.Drawing.Point(759, 35);
+            this.btnThemKhachHang.Name = "btnThemKhachHang";
+            this.btnThemKhachHang.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor();
+            this.btnThemKhachHang.Size = new System.Drawing.Size(35, 18);
+            this.btnThemKhachHang.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnThemKhachHang.TabIndex = 20;
+            this.btnThemKhachHang.Tooltip = "Nếu chưa có nhà cung cấp, hãy click vào đây.";
+            this.btnThemKhachHang.Click += new System.EventHandler(this.btnThemKhachHang_Click);
             // 
             // txtDiaChi
             // 
@@ -1028,23 +1014,23 @@
             // 
             // 
             this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX11.Location = new System.Drawing.Point(236, 64);
+            this.labelX11.Location = new System.Drawing.Point(233, 64);
             this.labelX11.Name = "labelX11";
             this.labelX11.Size = new System.Drawing.Size(57, 23);
             this.labelX11.TabIndex = 18;
             this.labelX11.Text = "Địa chỉ : ";
             // 
-            // txtSoTaiKhoan
+            // txtLyDoNhap
             // 
             // 
             // 
             // 
-            this.txtSoTaiKhoan.Border.Class = "TextBoxBorder";
-            this.txtSoTaiKhoan.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtSoTaiKhoan.Location = new System.Drawing.Point(320, 94);
-            this.txtSoTaiKhoan.Name = "txtSoTaiKhoan";
-            this.txtSoTaiKhoan.Size = new System.Drawing.Size(474, 20);
-            this.txtSoTaiKhoan.TabIndex = 17;
+            this.txtLyDoNhap.Border.Class = "TextBoxBorder";
+            this.txtLyDoNhap.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtLyDoNhap.Location = new System.Drawing.Point(320, 94);
+            this.txtLyDoNhap.Name = "txtLyDoNhap";
+            this.txtLyDoNhap.Size = new System.Drawing.Size(474, 20);
+            this.txtLyDoNhap.TabIndex = 17;
             // 
             // labelX10
             // 
@@ -1057,19 +1043,19 @@
             this.labelX10.Name = "labelX10";
             this.labelX10.Size = new System.Drawing.Size(75, 23);
             this.labelX10.TabIndex = 16;
-            this.labelX10.Text = "Giao hàng :";
+            this.labelX10.Text = "Người nhận : ";
             // 
-            // txtNganHang
-            // 
-            // 
+            // txtNguoiNhan
             // 
             // 
-            this.txtNganHang.Border.Class = "TextBoxBorder";
-            this.txtNganHang.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtNganHang.Location = new System.Drawing.Point(84, 94);
-            this.txtNganHang.Name = "txtNganHang";
-            this.txtNganHang.Size = new System.Drawing.Size(147, 20);
-            this.txtNganHang.TabIndex = 15;
+            // 
+            // 
+            this.txtNguoiNhan.Border.Class = "TextBoxBorder";
+            this.txtNguoiNhan.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtNguoiNhan.Location = new System.Drawing.Point(84, 94);
+            this.txtNguoiNhan.Name = "txtNguoiNhan";
+            this.txtNguoiNhan.Size = new System.Drawing.Size(147, 20);
+            this.txtNguoiNhan.TabIndex = 15;
             // 
             // labelX9
             // 
@@ -1078,37 +1064,11 @@
             // 
             // 
             this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX9.Location = new System.Drawing.Point(235, 91);
+            this.labelX9.Location = new System.Drawing.Point(233, 91);
             this.labelX9.Name = "labelX9";
             this.labelX9.Size = new System.Drawing.Size(72, 23);
             this.labelX9.TabIndex = 14;
             this.labelX9.Text = "Lý do xuất : ";
-            // 
-            // txtMaSoThue
-            // 
-            // 
-            // 
-            // 
-            this.txtMaSoThue.Border.Class = "TextBoxBorder";
-            this.txtMaSoThue.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtMaSoThue.Location = new System.Drawing.Point(84, 64);
-            this.txtMaSoThue.Name = "txtMaSoThue";
-            this.txtMaSoThue.ReadOnly = true;
-            this.txtMaSoThue.Size = new System.Drawing.Size(146, 20);
-            this.txtMaSoThue.TabIndex = 13;
-            // 
-            // labelX8
-            // 
-            this.labelX8.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX8.Location = new System.Drawing.Point(3, 61);
-            this.labelX8.Name = "labelX8";
-            this.labelX8.Size = new System.Drawing.Size(71, 23);
-            this.labelX8.TabIndex = 12;
-            this.labelX8.Text = "Mã số thuế : ";
             // 
             // txtDienThoai
             // 
@@ -1117,10 +1077,10 @@
             // 
             this.txtDienThoai.Border.Class = "TextBoxBorder";
             this.txtDienThoai.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtDienThoai.Location = new System.Drawing.Point(638, 34);
+            this.txtDienThoai.Location = new System.Drawing.Point(84, 64);
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.ReadOnly = true;
-            this.txtDienThoai.Size = new System.Drawing.Size(156, 20);
+            this.txtDienThoai.Size = new System.Drawing.Size(146, 20);
             this.txtDienThoai.TabIndex = 11;
             // 
             // labelX7
@@ -1130,7 +1090,7 @@
             // 
             // 
             this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX7.Location = new System.Drawing.Point(570, 32);
+            this.labelX7.Location = new System.Drawing.Point(3, 61);
             this.labelX7.Name = "labelX7";
             this.labelX7.Size = new System.Drawing.Size(64, 23);
             this.labelX7.TabIndex = 10;
@@ -1143,9 +1103,9 @@
             // 
             // 
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX6.Location = new System.Drawing.Point(235, 32);
+            this.labelX6.Location = new System.Drawing.Point(233, 32);
             this.labelX6.Name = "labelX6";
-            this.labelX6.Size = new System.Drawing.Size(88, 23);
+            this.labelX6.Size = new System.Drawing.Size(85, 23);
             this.labelX6.TabIndex = 8;
             this.labelX6.Text = "Tên khách hàng : ";
             // 
@@ -1158,12 +1118,13 @@
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX5.Location = new System.Drawing.Point(3, 32);
             this.labelX5.Name = "labelX5";
-            this.labelX5.Size = new System.Drawing.Size(83, 23);
+            this.labelX5.Size = new System.Drawing.Size(81, 23);
             this.labelX5.TabIndex = 6;
             this.labelX5.Text = "Mã khách hàng : ";
             // 
             // dtNgayNhap
             // 
+            this.dtNgayNhap.AllowEmptyState = false;
             // 
             // 
             // 
@@ -1272,7 +1233,7 @@
             // 
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(236, 3);
+            this.labelX3.Location = new System.Drawing.Point(233, 3);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(79, 23);
             this.labelX3.TabIndex = 2;
@@ -1286,7 +1247,7 @@
             this.groupPanel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupPanel5.Location = new System.Drawing.Point(3, 3);
             this.groupPanel5.Name = "groupPanel5";
-            this.groupPanel5.Size = new System.Drawing.Size(1084, 45);
+            this.groupPanel5.Size = new System.Drawing.Size(1091, 45);
             // 
             // 
             // 
@@ -1330,27 +1291,27 @@
             this.labelX1.Location = new System.Drawing.Point(0, 0);
             this.labelX1.Name = "labelX1";
             this.labelX1.PaddingLeft = 50;
-            this.labelX1.Size = new System.Drawing.Size(1082, 43);
+            this.labelX1.Size = new System.Drawing.Size(1089, 43);
             this.labelX1.TabIndex = 1;
-            this.labelX1.Text = "    THÔNG TIN PHIẾU XUẤT";
+            this.labelX1.Text = "    THÔNG TIN PHIẾU XUẤT KHO";
             // 
             // FrmXuatKho
             // 
-            this.ClientSize = new System.Drawing.Size(1094, 496);
+            this.ClientSize = new System.Drawing.Size(1101, 533);
             this.Controls.Add(this.groupPanel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmXuatKho";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmXuatKho";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmXuatKho_Load);
             this.groupPanel1.ResumeLayout(false);
             this.expandablePanel1.ResumeLayout(false);
             this.groupPanel4.ResumeLayout(false);
             this.expandablePanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvXuatKho)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMatHang)).EndInit();
             this.groupPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtTienSauThue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTongTien)).EndInit();
             this.groupPanel2.ResumeLayout(false);
             this.groupPanel6.ResumeLayout(false);
             this.groupPanel8.ResumeLayout(false);
@@ -1364,48 +1325,46 @@
 
         #endregion
 
-        private DevComponents.DotNetBar.Controls.TextBoxX txtGhiChu;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
         private DevComponents.DotNetBar.ExpandablePanel expandablePanel1;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel4;
         private DevComponents.DotNetBar.ExpandablePanel expandablePanel3;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dgvXuatKho;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dgvMatHang;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
+        private DevComponents.Editors.DoubleInput txtTienSauThue;
+        private DevComponents.DotNetBar.LabelX labelX19;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbMucThue;
+        private DevComponents.Editors.DoubleInput txtTongTien;
         private DevComponents.DotNetBar.LabelX labelX23;
         private DevComponents.DotNetBar.LabelX labelX22;
         private DevComponents.DotNetBar.LabelX labelX21;
         private DevComponents.DotNetBar.ButtonX btnHuy;
-        private DevComponents.DotNetBar.LabelX labelX20;
-        private DevComponents.DotNetBar.LabelX labelX19;
-        private DevComponents.DotNetBar.Controls.CheckBoxX rdbTienMat;
-        private DevComponents.DotNetBar.Controls.CheckBoxX rdbChuyenKhoan;
         private DevComponents.DotNetBar.LabelX labelX18;
         private DevComponents.DotNetBar.ButtonX btnIn;
         private DevComponents.DotNetBar.ButtonX btnTaoMoi;
         private DevComponents.DotNetBar.LabelX labelX17;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX11;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX10;
         private DevComponents.DotNetBar.LabelX labelX16;
         private DevComponents.DotNetBar.LabelX labelX15;
-        private DevComponents.DotNetBar.ButtonX btnLuuKho;
+        private DevComponents.DotNetBar.ButtonX btnXuatKho;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel2;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel6;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel8;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtGhiChu;
         private DevComponents.DotNetBar.LabelX labelX14;
         private DevComponents.DotNetBar.Controls.TextBoxX txtSoHoaDon;
         private DevComponents.Editors.DateTimeAdv.DateTimeInput dtNgayLap;
         private DevComponents.DotNetBar.LabelX labelX13;
         private DevComponents.DotNetBar.LabelX labelX12;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel7;
-        private DevComponents.DotNetBar.ButtonX btnThemNhaCungCap;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbTenKhachHang;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbMaKhachHang;
+        private DevComponents.DotNetBar.ButtonX btnThemKhachHang;
         private DevComponents.DotNetBar.Controls.TextBoxX txtDiaChi;
         private DevComponents.DotNetBar.LabelX labelX11;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtSoTaiKhoan;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtLyDoNhap;
         private DevComponents.DotNetBar.LabelX labelX10;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtNganHang;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtNguoiNhan;
         private DevComponents.DotNetBar.LabelX labelX9;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtMaSoThue;
-        private DevComponents.DotNetBar.LabelX labelX8;
         private DevComponents.DotNetBar.Controls.TextBoxX txtDienThoai;
         private DevComponents.DotNetBar.LabelX labelX7;
         private DevComponents.DotNetBar.LabelX labelX6;
@@ -1418,14 +1377,14 @@
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel5;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbTenNhaCungCap;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbMaNhaCungCap;
         private DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn colMaMatHang;
         private DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn colTenMatHang;
         private DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn colGia;
+        private DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn colTon;
         private DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn colSoLuong;
         private DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn colDonViTinh;
-        private DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn colMucThue;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colThanhTien;
+        private DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn colThanhTien;
+
+
     }
 }

@@ -32,6 +32,7 @@
             this.txtMaTaiKhoan = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.txtLoaiTien = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtLuongTien = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtNganHang = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
@@ -42,7 +43,6 @@
             this.btnThoat = new DevComponents.DotNetBar.ButtonX();
             this.btnOK = new DevComponents.DotNetBar.ButtonX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.txtLoaiTien = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.groupPanel2.SuspendLayout();
             this.groupPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -132,6 +132,18 @@
             // 
             this.groupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel2.TabIndex = 5;
+            // 
+            // txtLoaiTien
+            // 
+            // 
+            // 
+            // 
+            this.txtLoaiTien.Border.Class = "TextBoxBorder";
+            this.txtLoaiTien.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtLoaiTien.Location = new System.Drawing.Point(99, 130);
+            this.txtLoaiTien.Name = "txtLoaiTien";
+            this.txtLoaiTien.Size = new System.Drawing.Size(251, 20);
+            this.txtLoaiTien.TabIndex = 9;
             // 
             // txtLuongTien
             // 
@@ -275,6 +287,7 @@
             this.btnOK.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnOK.TabIndex = 0;
             this.btnOK.Text = "OK";
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // labelX1
             // 
@@ -294,18 +307,6 @@
             this.labelX1.TabIndex = 3;
             this.labelX1.Text = "TÀI KHOẢN NGÂN HÀNG";
             this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // txtLoaiTien
-            // 
-            // 
-            // 
-            // 
-            this.txtLoaiTien.Border.Class = "TextBoxBorder";
-            this.txtLoaiTien.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtLoaiTien.Location = new System.Drawing.Point(99, 130);
-            this.txtLoaiTien.Name = "txtLoaiTien";
-            this.txtLoaiTien.Size = new System.Drawing.Size(251, 20);
-            this.txtLoaiTien.TabIndex = 9;
             // 
             // FrmNhapTaiKhoanNH
             // 

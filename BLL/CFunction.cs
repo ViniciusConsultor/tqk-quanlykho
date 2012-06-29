@@ -25,9 +25,13 @@ namespace BLL
             string row;
             if (rowCount < 10)
             {
-                row = "00" + rowCount.ToString();
+                row = "000" + rowCount.ToString();
             }
             else if (rowCount >= 10 && rowCount < 100)
+            {
+                row = "00" + rowCount.ToString();
+            }
+            else if (rowCount >= 100 && rowCount < 1000)
             {
                 row = "0" + rowCount.ToString();
             }

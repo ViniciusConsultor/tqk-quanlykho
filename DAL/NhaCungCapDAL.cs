@@ -43,6 +43,7 @@ namespace DAL
             strQuery += "N'" + dtoNhaCungCap.MaSoThue + "',";
             strQuery += "N'" + dtoNhaCungCap.SoTaiKhoan + "',";
             strQuery += "N'" + dtoNhaCungCap.NganHang + "',";
+            strQuery += dtoNhaCungCap.DuNo + ",";
             strQuery += "N'" + dtoNhaCungCap.SoDienThoai + "',";
             strQuery += "N'" + dtoNhaCungCap.Email + "',";
             strQuery += "N'" + dtoNhaCungCap.GhiChu + "', 1)";
@@ -57,12 +58,22 @@ namespace DAL
             strQuery += "MASOTHUE = N'" + dtoNhaCungCap.MaSoThue + "',";
             strQuery += "SOTAIKHOAN = N'" + dtoNhaCungCap.SoTaiKhoan + "',";
             strQuery += "NGANHANG = N'" + dtoNhaCungCap.NganHang + "',";
+            strQuery += "DUNO = " + dtoNhaCungCap.DuNo + ",";
             strQuery += "SODIENTHOAI = N'" + dtoNhaCungCap.SoDienThoai + "',";
             strQuery += "EMAIL = N'" + dtoNhaCungCap.Email + "',";
             strQuery += "GHICHU = N'" + dtoNhaCungCap.GhiChu + "' ";
             strQuery += "Where MANHACUNGCAP = N'" + dtoNhaCungCap.MaNCC + "'";
             return dp.ExecuteNonQuery(strQuery);
             
+        }
+
+        public bool UpdateCongNo(string strMaNhaCC, double dbDuNo)
+        {
+            string strQuery = "Update NHACUNGCAP Set ";
+            strQuery += "DUNO = " + dbDuNo + " ";
+            strQuery += "Where MANHACUNGCAP = N'" + strMaNhaCC + "'";
+            return dp.ExecuteNonQuery(strQuery);
+
         }
 
         public bool DelNhaCungCap(string strMaNCC)
