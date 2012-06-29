@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.expandablePanel1 = new DevComponents.DotNetBar.ExpandablePanel();
             this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
@@ -88,6 +89,8 @@
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel5 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupPanel1.SuspendLayout();
             this.expandablePanel1.SuspendLayout();
             this.groupPanel4.SuspendLayout();
@@ -103,6 +106,7 @@
             this.groupPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgayNhap)).BeginInit();
             this.groupPanel5.SuspendLayout();
+            this.contextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupPanel1
@@ -253,19 +257,20 @@
             this.colSoLuong,
             this.colDonViTinh,
             this.colThanhTien});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMatHang.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvMatHang.ContextMenuStrip = this.contextMenu;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMatHang.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMatHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMatHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvMatHang.Location = new System.Drawing.Point(5, 5);
             this.dgvMatHang.Name = "dgvMatHang";
-            this.dgvMatHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMatHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvMatHang.Size = new System.Drawing.Size(1078, 334);
             this.dgvMatHang.TabIndex = 1;
             this.dgvMatHang.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMatHang_CellEndEdit);
@@ -1290,6 +1295,21 @@
             this.labelX1.TabIndex = 1;
             this.labelX1.Text = "    THÔNG TIN PHIẾU NHẬP KHO";
             // 
+            // contextMenu
+            // 
+            this.contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.xóaToolStripMenuItem});
+            this.contextMenu.Name = "contextMenu";
+            this.contextMenu.Size = new System.Drawing.Size(95, 26);
+            // 
+            // xóaToolStripMenuItem
+            // 
+            this.xóaToolStripMenuItem.Image = global::QuanLyKho.Properties.Resources.DeleteAll;
+            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(94, 22);
+            this.xóaToolStripMenuItem.Text = "Xóa";
+            this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
+            // 
             // FrmNhapKho
             // 
             this.ClientSize = new System.Drawing.Size(1092, 560);
@@ -1314,6 +1334,7 @@
             this.groupPanel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtNgayNhap)).EndInit();
             this.groupPanel5.ResumeLayout(false);
+            this.contextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1379,6 +1400,8 @@
         private DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn colSoLuong;
         private DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn colDonViTinh;
         private DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn colThanhTien;
+        private System.Windows.Forms.ContextMenuStrip contextMenu;
+        private System.Windows.Forms.ToolStripMenuItem xóaToolStripMenuItem;
 
     }
 }

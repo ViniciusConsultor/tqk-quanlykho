@@ -316,5 +316,18 @@ namespace QuanLyKho
             txtTongTien.Value = dbTongTien;
             txtTienSauThue.Text = (dbTongTien + dbThue).ToString();
         }
+
+        private void xóaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int intIndex = dgvMatHang.SelectedCells[0].RowIndex;
+                dgvMatHang.Rows.RemoveAt(intIndex);
+            }
+            catch
+            {
+                MessageBox.Show("Bạn chưa chọn dòng nào để xóa hoặc dòng không có thông tin", "Thông báo");
+            }
+        }
     }
 }
