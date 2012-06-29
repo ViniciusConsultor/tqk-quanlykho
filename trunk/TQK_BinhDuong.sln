@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{95AFB701-A3AC-4845-9BAB-A2821CB78F50}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "setup", "setup\setup.vdproj", "{33CD9742-007E-46B9-916D-2F9EF63A3DDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,12 @@ Global
 		{95AFB701-A3AC-4845-9BAB-A2821CB78F50}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{95AFB701-A3AC-4845-9BAB-A2821CB78F50}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{95AFB701-A3AC-4845-9BAB-A2821CB78F50}.Release|x86.ActiveCfg = Release|Any CPU
+		{33CD9742-007E-46B9-916D-2F9EF63A3DDC}.Debug|Any CPU.ActiveCfg = Debug
+		{33CD9742-007E-46B9-916D-2F9EF63A3DDC}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{33CD9742-007E-46B9-916D-2F9EF63A3DDC}.Debug|x86.ActiveCfg = Debug
+		{33CD9742-007E-46B9-916D-2F9EF63A3DDC}.Release|Any CPU.ActiveCfg = Release
+		{33CD9742-007E-46B9-916D-2F9EF63A3DDC}.Release|Mixed Platforms.ActiveCfg = Release
+		{33CD9742-007E-46B9-916D-2F9EF63A3DDC}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
