@@ -24,15 +24,22 @@ namespace QuanLyKho
         {
             try
             {
-                cmbNhaCC.DataSource = bllNhaCungCap.GetAllNhaCungCap();
-                cmbNhaCC.ValueMember = "MANHACUNGCAP";
-                cmbNhaCC.DisplayMember = "TENNHACUNGCAP";
+                LoadNhaCungCap();
+                string strMaPhieuChi = cf.CreateId("CHI", "PHIEUCHI");
+                txtSoPhieu.Text = strMaPhieuChi;
                 string strNgayThang = "Ngày " + DateTime.Today.Day.ToString();
                 strNgayThang += " tháng " + DateTime.Today.Month.ToString();
                 strNgayThang += " năm " + DateTime.Today.Year.ToString();
-                lbNgay.Text = lbNgayThang.Text = strNgayThang;
             }
             catch { }   
+        }
+
+        private void LoadNhaCungCap()
+        {
+            cmbNhaCC.DataSource = bllNhaCungCap.GetAllNhaCungCap();
+            cmbNhaCC.ValueMember = "MANHACUNGCAP";
+            cmbNhaCC.DisplayMember = "TENNHACUNGCAP";
+            cmbNhaCC.SelectedIndex = Variable.intSelectedIndexPhieuChi;
         }
 
         private void btnLuuKho_Click(object sender, EventArgs e)
@@ -40,25 +47,22 @@ namespace QuanLyKho
             try
             {
                 PhieuChiDTO dtoPhieuChi = new PhieuChiDTO();
-                string strMaPhieuChi = cf.CreateId("PCHI", "PHIEUCHI");
-                dtoPhieuChi.MaPhieuChi = strMaPhieuChi;
+                dtoPhieuChi.MaPhieuChi = txtSoPhieu.Text;
                 dtoPhieuChi.MaNV = Variable.strMaNhanVien;
                 dtoPhieuChi.KhachHang = cmbNhaCC.SelectedValue.ToString();
                 dtoPhieuChi.DiaChi = txtDiaChi.Text;
-                dtoPhieuChi.NgayLap = lbNgay.Text;
+                dtoPhieuChi.NgayLap = dtpNgayChi.Value.ToShortDateString();
                 dtoPhieuChi.SoTien = float.Parse(txtSoTien.Text);
                 dtoPhieuChi.VietBangChu = txtVietBangChu.Text;
                 dtoPhieuChi.LyDoChi = txtLyDoChi.Text;
                 dtoPhieuChi.KemTheo = txtKemTheo.Text;
                 dtoPhieuChi.SoPhieu = txtSoPhieu.Text;
-                dtoPhieuChi.No = int.Parse(txtNo.Text);
-                dtoPhieuChi.Co = int.Parse(txtCo.Text);
-                string strResult = bllPhieuChi.InsertPhieuChi(dtoPhieuChi);
                 LuuPhieuChi();
+                string strResult = bllPhieuChi.InsertPhieuChi(dtoPhieuChi);
                 if (strResult == "ok")
                 {
                     MessageBox.Show("Lưu Phiếu Chi Thành Công!", "Lưu Phiếu Chi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    btnIn.Enabled = true;
                 }
                 else
                 {
@@ -91,6 +95,7 @@ namespace QuanLyKho
                 string strMaNCC = cf.CreateId("CCA", "NHACUNGCAP");
                 frmNhapNCC.txtMaNCC.Text = strMaNCC;
                 frmNhapNCC.ShowDialog();
+                LoadNhaCungCap();
             }
             catch { }
         }
@@ -111,15 +116,6 @@ namespace QuanLyKho
         private void LuuPhieuChi()
         {
             PhieuChiDTO dtoPhieuChi = new PhieuChiDTO();
-            if (txtCo.Text != "")
-                dtoPhieuChi.Co = int.Parse(txtCo.Text);
-            else
-                dtoPhieuChi.Co = 0;
-            if (txtNo.Text != "")
-                dtoPhieuChi.No = int.Parse(txtNo.Text);
-            else
-                dtoPhieuChi.No = 0;
-            dtoPhieuChi.No = int.Parse(txtNo.Text);
             dtoPhieuChi.DiaChi = txtDiaChi.Text;
             dtoPhieuChi.KemTheo = txtKemTheo.Text;
             dtoPhieuChi.KhachHang = cmbNhaCC.Text;
@@ -147,5 +143,12 @@ namespace QuanLyKho
                 e.Handled = true;
             }
         }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+       
     }
 }

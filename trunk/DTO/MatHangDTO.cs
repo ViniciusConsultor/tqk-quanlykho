@@ -54,6 +54,14 @@ namespace DTO
             set { _tonDau = value; }
         }
 
+        private int _soLuongTon;
+
+        public int SoLuongTon
+        {
+            get { return _soLuongTon; }
+            set { _soLuongTon = value; }
+        }
+
         private string _moTa;
 
         public string MoTa

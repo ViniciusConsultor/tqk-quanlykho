@@ -6,6 +6,22 @@ namespace DTO
 {
     public class CT_XuatKhoDTO
     {
+        private string _maCTXuatKho;
+
+        public string MaCTXuatKho
+        {
+            get { return _maCTXuatKho; }
+            set { _maCTXuatKho = value; }
+        }
+
+        private string _maXuatKho;
+
+        public string MaXuatKho
+        {
+            get { return _maXuatKho; }
+            set { _maXuatKho = value; }
+        }
+
         private string _maHoaDonXuat;
 
         public string MaHoaDonXuat
@@ -30,25 +46,17 @@ namespace DTO
             set { _soLuongXuat = value; }
         }
 
-        private float _giaTien;
+        private double _giaTien;
 
-        public float GiaTien
+        public double GiaTien
         {
             get { return _giaTien; }
             set { _giaTien = value; }
         }
 
-        private int _maThue;
+        private double _thanhTien;
 
-        public int MaThue
-        {
-            get { return _maThue; }
-            set { _maThue = value; }
-        }
-
-        private float _thanhTien;
-
-        public float ThanhTien
+        public double ThanhTien
         {
             get { return _thanhTien; }
             set { _thanhTien = value; }

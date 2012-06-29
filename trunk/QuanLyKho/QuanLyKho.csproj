@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QuanLyKho</RootNamespace>
     <AssemblyName>QuanLyKho</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
@@ -27,6 +27,7 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -62,6 +63,10 @@
     <Reference Include="DevComponents.Instrumentation, Version=10.2.0.1, Culture=neutral, PublicKeyToken=bc4a9d761ea44ef0, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.TreeGX, Version=10.2.0.1, Culture=neutral, PublicKeyToken=cfcbd7476b2389d1, processorArchitecture=MSIL" />
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -86,17 +91,59 @@
     <Compile Include="FrmBoPhan.Designer.cs">
       <DependentUpon>FrmBoPhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCNHangTon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCNHangTon.Designer.cs">
+      <DependentUpon>FrmCNHangTon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCNCongNoKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCNCongNoKH.Designer.cs">
+      <DependentUpon>FrmCNCongNoKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCNCongNoNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCNCongNoNCC.Designer.cs">
+      <DependentUpon>FrmCNCongNoNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCTCongNoChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCTCongNoChi.Designer.cs">
+      <DependentUpon>FrmCTCongNoChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCTCongNoThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCTCongNoThu.Designer.cs">
+      <DependentUpon>FrmCTCongNoThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDonViTinh.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmDonViTinh.Designer.cs">
       <DependentUpon>FrmDonViTinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmInNhapKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInNhapKho.Designer.cs">
+      <DependentUpon>FrmInNhapKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInPhieuChi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmInPhieuChi.Designer.cs">
       <DependentUpon>FrmInPhieuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInPhieuThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInPhieuThu.Designer.cs">
+      <DependentUpon>FrmInPhieuThu.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmKhachHang.cs">
       <SubType>Form</SubType>
@@ -224,23 +271,23 @@
     <Compile Include="FrmPhieuThu.Designer.cs">
       <DependentUpon>FrmPhieuThu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmReportNhapKho.cs">
+    <Compile Include="FrmCongNoChi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmReportNhapKho.Designer.cs">
-      <DependentUpon>FrmReportNhapKho.cs</DependentUpon>
+    <Compile Include="FrmCongNoChi.Designer.cs">
+      <DependentUpon>FrmCongNoChi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmTCNhapHang.cs">
+    <Compile Include="FrmCongNoThu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmTCNhapHang.Designer.cs">
-      <DependentUpon>FrmTCNhapHang.cs</DependentUpon>
+    <Compile Include="FrmCongNoThu.Designer.cs">
+      <DependentUpon>FrmCongNoThu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmTCXuatHang.cs">
+    <Compile Include="FrmInXuatKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmTCXuatHang.Designer.cs">
-      <DependentUpon>FrmTCXuatHang.cs</DependentUpon>
+    <Compile Include="FrmInXuatKho.Designer.cs">
+      <DependentUpon>FrmInXuatKho.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmTaiKhoanNganHang.cs">
       <SubType>Form</SubType>
@@ -265,6 +312,12 @@
     </Compile>
     <Compile Include="FrmTienNganHang.Designer.cs">
       <DependentUpon>FrmTienNganHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTonKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTonKho.Designer.cs">
+      <DependentUpon>FrmTonKho.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmTTDoanhNghiep.cs">
       <SubType>Form</SubType>
@@ -324,11 +377,35 @@
     <EmbeddedResource Include="FrmBoPhan.resx">
       <DependentUpon>FrmBoPhan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCNHangTon.resx">
+      <DependentUpon>FrmCNHangTon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCNCongNoKH.resx">
+      <DependentUpon>FrmCNCongNoKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCNCongNoNCC.resx">
+      <DependentUpon>FrmCNCongNoNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCTCongNoChi.resx">
+      <DependentUpon>FrmCTCongNoChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCTCongNoThu.resx">
+      <DependentUpon>FrmCTCongNoThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDonViTinh.resx">
       <DependentUpon>FrmDonViTinh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmInNhapKho.resx">
+      <DependentUpon>FrmInNhapKho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInPhieuChi.resx">
       <DependentUpon>FrmInPhieuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInPhieuThu.resx">
+      <DependentUpon>FrmInPhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInXuatKho.resx">
+      <DependentUpon>FrmInXuatKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmKhachHang.resx">
       <DependentUpon>FrmKhachHang.cs</DependentUpon>
@@ -396,14 +473,11 @@
     <EmbeddedResource Include="FrmPhieuThu.resx">
       <DependentUpon>FrmPhieuThu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmReportNhapKho.resx">
-      <DependentUpon>FrmReportNhapKho.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCongNoChi.resx">
+      <DependentUpon>FrmCongNoChi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmTCNhapHang.resx">
-      <DependentUpon>FrmTCNhapHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmTCXuatHang.resx">
-      <DependentUpon>FrmTCXuatHang.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCongNoThu.resx">
+      <DependentUpon>FrmCongNoThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTaiKhoanNganHang.resx">
       <DependentUpon>FrmTaiKhoanNganHang.cs</DependentUpon>
@@ -416,6 +490,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTienNganHang.resx">
       <DependentUpon>FrmTienNganHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTonKho.resx">
+      <DependentUpon>FrmTonKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTTDoanhNghiep.resx">
       <DependentUpon>FrmTTDoanhNghiep.cs</DependentUpon>
@@ -545,9 +622,19 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
       <Visible>False</Visible>
       <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
@@ -564,7 +651,17 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

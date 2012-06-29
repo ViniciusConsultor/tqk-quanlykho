@@ -59,5 +59,25 @@ namespace BLL
         {
             return dalMatHang.DelMatHang(strMaMH);
         }
+
+        public bool UpdateTonDauKy(string strMaMatHang, int intSoLuong)
+        {
+            return dalMatHang.UpdateTonDauKy(strMaMatHang, intSoLuong);
+        }
+
+        public bool UpdateTonNhap(string strMaMatHang, int intSoLuong)
+        {
+            return dalMatHang.UpdateTonNhap(strMaMatHang, intSoLuong);
+        }
+
+        public bool UpdateTonXuat(string strMaMatHang, int intSoLuong)
+        {
+            return dalMatHang.UpdateTonXuat(strMaMatHang, intSoLuong);
+        }
+
+        public bool UpdateHangTon(string strMaMatHang, int intSoLuongTon, int intTonDau)
+        {
+            return dalMatHang.UpdateHangTon(strMaMatHang, intSoLuongTon, intTonDau);
+        }
     }
 }

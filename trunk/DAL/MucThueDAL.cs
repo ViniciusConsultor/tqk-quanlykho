@@ -16,6 +16,15 @@ namespace DAL
             return dp.ExecuteQuery(strQuery);
         }
 
+        public int GetThueByID(string strMaThue)
+        {
+            string strQuery = " Select * From THUE Where TINHTRANG = 1 and MATHUE = '" + strMaThue + "'";
+            DataTable dt = dp.ExecuteQuery(strQuery);
+            if (dt.Rows.Count > 0)
+                return int.Parse(dt.Rows[0]["SOTHUE"].ToString());
+            return 0;
+        }
+
         public bool InsertThue(MucThueDTO dtoMucThue)
         {
             string strQuery = "Insert Into THUE Values(";

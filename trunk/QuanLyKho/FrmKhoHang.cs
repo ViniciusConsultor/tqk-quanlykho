@@ -64,9 +64,9 @@ namespace QuanLyKho
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
+            FrmNhapKhoHang frmNhapKhoHang = new FrmNhapKhoHang();
             try
             {
-                FrmNhapKhoHang frmNhapKhoHang = new FrmNhapKhoHang();
                 frmNhapKhoHang.btnOK.Tag = "up";
                 int index = dgvKhoHang.SelectedRows[0].Index;
                 string strMaKho = dgvKhoHang.Rows[index].Cells["colMaKho"].Value.ToString();
@@ -88,7 +88,15 @@ namespace QuanLyKho
                 frmNhapKhoHang.ShowDialog();
                 LoadKhoHang();
             }
-            catch { }
+            catch
+            {
+                frmNhapKhoHang.ShowDialog();
+                LoadKhoHang();
+            }
+            finally
+            { 
+            
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

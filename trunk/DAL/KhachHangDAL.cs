@@ -30,6 +30,7 @@ namespace DAL
                 dtoKhachHang.DiaChi = dtKhachHang.Rows[0]["DIACHI"].ToString();
                 dtoKhachHang.SDT = dtKhachHang.Rows[0]["DIENTHOAI"].ToString();
                 dtoKhachHang.Email = dtKhachHang.Rows[0]["EMAIL"].ToString();
+                dtoKhachHang.DuNo = double.Parse(dtKhachHang.Rows[0]["DUNO"].ToString());
             }
             return dtoKhachHang;
         }
@@ -42,6 +43,7 @@ namespace DAL
             strQuery += "N'" + dtoKhachHang.SoTaiKhoan + "',";
             strQuery += "N'" + dtoKhachHang.NganHang + "',";
             strQuery += "N'" + dtoKhachHang.MaSoThue + "',";
+            strQuery += dtoKhachHang.DuNo + ",";
             strQuery += "N'" + dtoKhachHang.DiaChi + "',";
             strQuery += "N'" + dtoKhachHang.SDT + "',";
             strQuery += "N'" + dtoKhachHang.Email + "',";
@@ -56,11 +58,20 @@ namespace DAL
             strQuery += "SOTAIKHOAN = N'" + dtoKhachHang.SoTaiKhoan + "',";
             strQuery += "NGANHANG = N'" + dtoKhachHang.NganHang + "',";
             strQuery += "MASOTHUE = N'" + dtoKhachHang.MaSoThue + "',";
+            strQuery += "DUNO = " + dtoKhachHang.DuNo + ",";
             strQuery += "DIACHI = N'" + dtoKhachHang.DiaChi + "',";
             strQuery += "DIENTHOAI = N'" + dtoKhachHang.SDT + "',";
             strQuery += "EMAIL = N'" + dtoKhachHang.Email + "',";
             strQuery += "GHICHU = N'" + dtoKhachHang.GhiChu + "' ";
             strQuery += "Where MAKHACHHANG = N'" + dtoKhachHang.MaKH + "'";
+            return dp.ExecuteNonQuery(strQuery);
+        }
+
+        public bool UpdateCongNo(string strMaKhachHang, double dbDuNo)
+        {
+            string strQuery = "Update KHACHHANG Set ";
+            strQuery += "DUNO = " + dbDuNo + " ";
+            strQuery += "Where MAKHACHHANG = N'" + strMaKhachHang + "'";
             return dp.ExecuteNonQuery(strQuery);
         }
 
@@ -70,9 +81,5 @@ namespace DAL
             return dp.ExecuteNonQuery(strQuery);
         }
 
-        //public void UpdateKhachHang()
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }

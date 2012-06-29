@@ -15,6 +15,11 @@ namespace BLL
             return dalMucThue.GetMucThue();
         }
 
+        public int GetThueByID(string strMaThue)
+        {
+            return dalMucThue.GetThueByID(strMaThue);
+        }
+
         public string InsertThue(MucThueDTO dtoMucThue)
         {
             string strError = "";

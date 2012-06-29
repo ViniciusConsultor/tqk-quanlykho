@@ -13,6 +13,7 @@ namespace BLL
         {
             return dalKhachHang.GetAllKhachHang();
         }
+
         public string InsertKhachHang(KhachHangDTO dtoKhachHang)
         {
             string strError = "";
@@ -94,6 +95,11 @@ namespace BLL
         public KhachHangDTO GetKhachHangByID(string strID)
         {
             return dalKhachHang.GetKhachHangByID(strID);
+        }
+
+        public bool UpdateCongNo(string strMaKhachHang, double dbDuNo)
+        {
+            return dalKhachHang.UpdateCongNo(strMaKhachHang, dbDuNo);
         }
     }
 }

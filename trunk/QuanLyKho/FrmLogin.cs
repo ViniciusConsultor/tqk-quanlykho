@@ -47,6 +47,7 @@ namespace QuanLyKho
                         Variable.strMaNhanVien = txtMaNV.Text;
                         Variable.strTenNhanVien = strResult;
                         Variable.strMatKhau = txtPassword.Text;
+                        LuuTaiKhoan();
                         FrmMain frmMain = new FrmMain();
                         frmMain.ShowDialog();
                     }
@@ -54,6 +55,15 @@ namespace QuanLyKho
             }
             catch { }
 
+        }
+
+        private void LuuTaiKhoan()
+        {
+            if (cbxGhiNho.Checked == false)
+            {
+                txtMaNV.Text = "";
+                txtPassword.Text = "";
+            }
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

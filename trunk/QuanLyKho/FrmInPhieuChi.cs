@@ -26,8 +26,6 @@ namespace QuanLyKho
             TT_CongTyBLL bllCty = new TT_CongTyBLL();
             dtoPhieuChi = Variable.dtoPhieuChi;
             pc.SetParameterValue("SoPhieu", dtoPhieuChi.SoPhieu);
-            pc.SetParameterValue("No", dtoPhieuChi.No);
-            pc.SetParameterValue("Co", dtoPhieuChi.Co);
             pc.SetParameterValue("NguoiNhanTien", dtoPhieuChi.KhachHang);
             pc.SetParameterValue("DiaChiNguoiNhan", dtoPhieuChi.DiaChi);
             pc.SetParameterValue("LyDoChi", dtoPhieuChi.LyDoChi);

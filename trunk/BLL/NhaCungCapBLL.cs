@@ -105,6 +105,11 @@ namespace BLL
             }
         }
 
+        public bool UpdateCongNo(string strMaNhaCC, double dbDuNo)
+        {
+            return dalNhaCungCap.UpdateCongNo(strMaNhaCC, dbDuNo);
+        }
+
         public bool DelNhaCungCap(string strMaNCC)
         {
             return dalNhaCungCap.DelNhaCungCap(strMaNCC);

@@ -100,6 +100,7 @@ namespace QuanLyKho
             {
                 lbUser.Text = Variable.strTenNhanVien;
             }
+            btnNhapKho_Click(sender, e);
             //FrmLogin frmLogin = new FrmLogin();
             //frmLogin.ShowDialog();
         }
@@ -174,11 +175,6 @@ namespace QuanLyKho
             CreateTab(stcMenu, "Xuất Kho", "stiXuatKho", "stcpXuatKho", frm);
         }
 
-        private void ribbonTabItem2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
             Variable.strMaNhanVien = "";
@@ -196,13 +192,15 @@ namespace QuanLyKho
         private void btnPhieuThu_Click(object sender, EventArgs e)
         {
             FrmPhieuThu frm = new FrmPhieuThu();
-            CreateTab(stcMenu, "Phiếu Thu", "stiPhieuThu", "stcpPhieuThu", frm);
+            frm.Show();
+            //CreateTab(stcMenu, "Phiếu Thu", "stiPhieuThu", "stcpPhieuThu", frm);
         }
 
         private void btnPhieuChi_Click(object sender, EventArgs e)
         {
             FrmPhieuChi frm = new FrmPhieuChi();
-            CreateTab(stcMenu, "Phiếu Chi", "stiPhieuChi", "stcpPhieuChi", frm);
+            frm.Show();
+            //CreateTab(stcMenu, "Phiếu Chi", "stiPhieuChi", "stcpPhieuChi", frm);
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -214,23 +212,21 @@ namespace QuanLyKho
 
         private void btnNhapXuatTon_Click(object sender, EventArgs e)
         {
-            FrmBCNhapXuatTon frm = new FrmBCNhapXuatTon();
-            frm.ShowDialog();
-            //CreateTab(stcMenu, "Báo cáo nhập xuất tồn", "stiNhapXuatTon", "stcpNhapXuatTon", frm);
+            FrmTonKho frm = new FrmTonKho();
+            //frm.ShowDialog();
+            CreateTab(stcMenu, "Tồn kho", "stiTonKho", "stcpTonKho", frm);
         }
 
         private void btnNhapHang_Click(object sender, EventArgs e)
         {
-            FrmTCNhapHang frm = new FrmTCNhapHang();
-            //frm.ShowDialog();
-            CreateTab(stcMenu, "Tra cứu nhập hàng", "stiTCNhapHang", "stcpTCNhapHang", frm);
+            FrmCNHangTon frm = new FrmCNHangTon();
+            CreateTab(stcMenu, "Cập nhật hàng tồn", "stiHangTon", "stcpHangTon", frm);
         }
 
         private void btnXuatHang_Click(object sender, EventArgs e)
         {
-            FrmTCXuatHang frm = new FrmTCXuatHang();
-            //frm.ShowDialog();
-            CreateTab(stcMenu, "Tra cứu xuất hàng", "stiTCXuatHang", "stcpTCXuatHang", frm);
+            FrmCNCongNoKH frm = new FrmCNCongNoKH();
+            CreateTab(stcMenu, "CN Công Nợ Khách Hàng", "stiCNCongNoKH", "stcpCNCongNoKH", frm);
         }
 
         private void buttonItem2_Click(object sender, EventArgs e)
@@ -244,5 +240,27 @@ namespace QuanLyKho
             FrmTienMat frmTienMat = new FrmTienMat();
             frmTienMat.Show();
         }
+
+        private void btnCongNoThu_Click(object sender, EventArgs e)
+        {
+            FrmCongNoThu frm = new FrmCongNoThu();
+            //frm.ShowDialog();
+            CreateTab(stcMenu, "Công Nợ Thu", "stiCNThu", "stcpCNThu", frm);
+        }
+
+        private void btnCongNoChi_Click(object sender, EventArgs e)
+        {
+            FrmCongNoChi frm = new FrmCongNoChi();
+            //frm.ShowDialog();
+            CreateTab(stcMenu, "Công Nợ Chi", "stiCNChi", "stcpCNChi", frm);
+        }
+
+        private void btnCNNhaCungCap_Click(object sender, EventArgs e)
+        {
+            FrmCNCongNoNCC frm = new FrmCNCongNoNCC();
+            //frm.ShowDialog();
+            CreateTab(stcMenu, "CN Công Nợ Nhà Cung Cấp", "stiCNCongNoNCC", "stcpCNCongNoNCC", frm);
+        }
+
     }
 }

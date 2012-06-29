@@ -66,6 +66,7 @@
             this.colDonViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTonDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoLuongTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.btnNext = new DevComponents.DotNetBar.ButtonX();
             this.btnLast = new DevComponents.DotNetBar.ButtonX();
@@ -359,7 +360,8 @@
             this.colKho,
             this.colDonViTinh,
             this.colMoTa,
-            this.colTonDau});
+            this.colTonDau,
+            this.colSoLuongTon});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -449,6 +451,15 @@
             this.colTonDau.HeaderText = "Tồn Đầu";
             this.colTonDau.Name = "colTonDau";
             this.colTonDau.ReadOnly = true;
+            // 
+            // colSoLuongTon
+            // 
+            this.colSoLuongTon.DataPropertyName = "SOLUONGTON";
+            this.colSoLuongTon.HeaderText = "Số Lượng Tồn";
+            this.colSoLuongTon.Name = "colSoLuongTon";
+            this.colSoLuongTon.ReadOnly = true;
+            this.colSoLuongTon.ToolTipText = "Số lượng tồn đã bao gồm tồn đầu";
+            this.colSoLuongTon.Width = 150;
             // 
             // groupPanel4
             // 
@@ -768,5 +779,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colDonViTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMoTa;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTonDau;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSoLuongTon;
     }
 }

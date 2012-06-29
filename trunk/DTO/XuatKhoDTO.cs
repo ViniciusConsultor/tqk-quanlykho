@@ -70,6 +70,22 @@ namespace DTO
             set { _ngayLapHD = value; }
         }
 
+        private string _maThue;
+
+        public string MaThue
+        {
+            get { return _maThue; }
+            set { _maThue = value; }
+        }
+
+        private double _thanhTien;
+
+        public double ThanhTien
+        {
+            get { return _thanhTien; }
+            set { _thanhTien = value; }
+        }
+
         private string _ghiChu;
 
         public string GhiChu
